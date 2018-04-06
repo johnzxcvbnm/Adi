@@ -68,8 +68,3 @@
 | w13d3 |August 22 |Wednesday | [](./unit_5/w13d03/morning_exercise)| [](./unit_5/w13d03/instructor_notes)| [](./unit_5/w13d03/student_labs)|[](./unit_5/w13d03/homework)|
 | w13d4 |August 23 |Thursday | [](./unit_5/w13d04/morning_exercise)| [](./unit_5/w13d04/instructor_notes)| [](./unit_5/w13d04/student_labs)|[](./unit_5/w13d04/homework)|
 | w13d5 |August 24 |Friday | [](./unit_5/w13d05/morning_exercise)| [](./unit_5/w13d05/instructor_notes)| [](./unit_5/w13d05/student_labs)|[](./unit_5/w13d05/homework)|
-| w14d1 |August 27 |Monday | [](./unit_5/w14d01/morning_exercise)| [](./unit_5/w14d01/instructor_notes)| [](./unit_5/w14d01/student_labs)|[](./unit_5/w14d01/homework)|
-| w14d2 |August 28 |Tuesday | [](./unit_5/w14d02/morning_exercise)| [](./unit_5/w14d02/instructor_notes)| [](./unit_5/w14d02/student_labs)|[](./unit_5/w14d02/homework)|
-| w14d3 |August 29 |Wednesday | [](./unit_5/w14d03/morning_exercise)| [](./unit_5/w14d03/instructor_notes)| [](./unit_5/w14d03/student_labs)|[](./unit_5/w14d03/homework)|
-| w14d4 |August 30 |Thursday | [](./unit_5/w14d04/morning_exercise)| [](./unit_5/w14d04/instructor_notes)| [](./unit_5/w14d04/student_labs)|[](./unit_5/w14d04/homework)|
-| w14d5 |August 31 |Friday | [](./unit_5/w14d05/morning_exercise)| [](./unit_5/w14d05/instructor_notes)| [](./unit_5/w14d05/student_labs)|[](./unit_5/w14d05/homework)|
