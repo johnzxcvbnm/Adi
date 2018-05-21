@@ -22,7 +22,6 @@ _After this lesson, students will be able to:_
 	- Headers will be posted for all lessons and labs with links to markdowns and the Zoom channel.
 - Markdown
 	- Markdown contains reference material related to the lesson
-	- Slides from the markdown will be posted into Slack during the lesson
 - Sharing screen
 	- The instructor will screenshare for demonstration purposes. Double-click out of fullscreen.
 - Screen real-estate: markdown, zoom, text editor, terminal, slack
@@ -34,7 +33,7 @@ _After this lesson, students will be able to:_
 - Visibility of instructor code
 	- Speak up if the instructor's code is not visible (eg. too small).
 - Thumbsups
-	- We use the thumbsup emoji to gauge completeness of exercises. Click on the thumb when you are done with an exercise.
+	- We use the thumbsup emoji to gauge completeness of exercises and the pace of the lesson. Click on the thumb when you are done with an exercise.
 
 ## Download and install software necessary for the class
 
@@ -53,7 +52,7 @@ _After this lesson, students will be able to:_
 
 ![](https://i.imgur.com/CvggrYa.png)
 
-- Keep it locked in your dock. Right click on the icon, highlight options, check "Keep in Dock".
+- We will be using Terminal every day! Keep it locked in your dock. Right click on the icon, highlight options, check "Keep in Dock".
 
 ![](https://i.imgur.com/ZrPuVNq.png)
 
@@ -117,12 +116,18 @@ We can navigate to other directories _relative_ to the current working directory
 
 In the long term, reduce your reliance on the mouse. More Bash keyboard shortcuts:
 
-- `⌘ K` Clear the Terminal window
-- `option arrow` Move cursor by word
+Learn at these two for the best improvement in speed/workflow:
 - letter[TAB]
 	- autocompletes (case-sensitive)
 - up / down arrow
 	- cycle command history
+
+
+Other handy ones:
+- `⌘ K` Clear the Terminal window
+- `option arrow` Move cursor by word
+
+[Class Reference](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Adi/wiki/Terminal-Cheatsheet)
 
 ### Code Along
 
@@ -321,4 +326,6 @@ More Bash keyboard shortcuts:
 
 `cd -` toggle previous directory
 
-There are also video tutorials [here](https://www.youtube.com/playlist?list=PLdnONIhPScSToZztXRHyKZTQEsE30luMx)
+There are also video tutorials [here](https://www.youtube.com/playlist?list=PLdnONIhPScSToZztXRHyKZTQEsE30luMx) - start from the beginning if this lesson felt fast/everything is new. Start on a later lesson to learn about more advanced Terminal topics. 
+
+Be sure to also check out the class wiki!
