@@ -93,7 +93,7 @@ Let's take some time to make sure we all submitted hw correctly and we are able 
  - `git push origin master`
 
   **Error:**
-  - ```![rejected  master -> master (fetch first)]
+  ```![rejected  master -> master (fetch first)]
   error: failed to push some refs to 'https://github.com/...'
   ...
    ```
