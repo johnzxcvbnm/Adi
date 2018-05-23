@@ -1,11 +1,6 @@
 # Terminal Navigation
 
-## Lesson Objectives
 
-_After this lesson, students will be able to:_
-
-1. Describe basic aspects of how classes will work
-1. Download and install software necessary for the class
 1. Open Terminal
 1. Describe what a command line interface is
 1. Describe the state of the current directory
@@ -16,33 +11,7 @@ _After this lesson, students will be able to:_
 1. Navigate using absolute pathing on the command line
 1. Run some code
 
-## Describe basic aspects of how classes will work
 
-- Lesson headers
-	- Headers will be posted for all lessons and labs with links to markdowns and the Zoom channel.
-- Markdown
-	- Markdown contains reference material related to the lesson
-- Sharing screen
-	- The instructor will screenshare for demonstration purposes. Double-click out of fullscreen.
-- Screen real-estate: markdown, zoom, text editor, terminal, slack
-	- Command-tab to cycle applications
-- Muting
-	- Be muted unless speaking
-- Asking questions
-	- Ask away! Either in Slack or out loud
-- Visibility of instructor code
-	- Speak up if the instructor's code is not visible (eg. too small).
-- Thumbsups
-	- We use the thumbsup emoji to gauge completeness of exercises and the pace of the lesson. Click on the thumb when you are done with an exercise.
-
-## Download and install software necessary for the class
-
-- Atom installed? Or your favorite text editor.
-	- [Download Atom](https://atom.io/)
-- Node installed?
-	- [Current version](https://nodejs.org/en/download/current/), **not** LTS
-	- Click on "Macintosh Installer"
-	- Install the package
 
 ## Open Terminal
 
@@ -326,6 +295,6 @@ More Bash keyboard shortcuts:
 
 `cd -` toggle previous directory
 
-There are also video tutorials [here](https://www.youtube.com/playlist?list=PLdnONIhPScSToZztXRHyKZTQEsE30luMx) - start from the beginning if this lesson felt fast/everything is new. Start on a later lesson to learn about more advanced Terminal topics. 
+There are also video tutorials [here](https://www.youtube.com/playlist?list=PLdnONIhPScSToZztXRHyKZTQEsE30luMx) - start from the beginning if this lesson felt fast/everything is new. Start on a later lesson to learn about more advanced Terminal topics.
 
 Be sure to also check out the class wiki!
