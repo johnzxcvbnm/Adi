@@ -1,5 +1,6 @@
 # Terminal Navigation
 
+## Learning Objetives
 
 1. Open Terminal
 1. Describe what a command line interface is
@@ -30,7 +31,7 @@
 
 You can change the color of your Terminal and the font size. It is recommended to make your Terminal output easier to read, rather than the tiny default output.
 
-> Terminal > Preferences > Pro
+> Terminal > Preferences > Profiles
 
 ## Describe what a command line interface is
 
@@ -51,7 +52,7 @@ In **Finder**, we can also navigate our computer's folders and files: folders co
 
 The Command Line understands commands written in the `bash scripting language`. The commands are abbreviations of English words, or acronyms.
 
-- `pwd` - will print the current working directory. It shows you a `path`. This `path` shows you where you are currently located in the filesystem. It's like sending up a flare or homing beacon, where you can see how far you have 'traveled' from the root directory.
+- `pwd` - will **print** the current **working** **directory**. It shows you a `path`. This `path` shows you where you are currently located in the filesystem. It's like sending up a flare or homing beacon, where you can see how far you have 'traveled' from the root directory.
 
 ![](https://i.imgur.com/4aaT88x.png)
 
@@ -85,7 +86,7 @@ We can navigate to other directories _relative_ to the current working directory
 
 In the long term, reduce your reliance on the mouse. More Bash keyboard shortcuts:
 
-Learn at these two for the best improvement in speed/workflow:
+Learn at least these two for the best improvement in speed/workflow:
 - letter[TAB]
 	- autocompletes (case-sensitive)
 - up / down arrow
