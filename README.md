@@ -1,4 +1,8 @@
-# Unnamed
+# Adi
+
+Adi Hanash
+
+Adi is the Instructional Designer at GA who conceptualized and developed our remote program with a focus of bringing as much of the classroom experience as possible to the remote environment. It is with tremendous gratitude that we thank Adi for all that he's done for us, and thus, we have chosen to honor him by naming this cohort after him. 
 
 ![ga](ga_cog.png) 
 
