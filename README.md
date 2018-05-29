@@ -13,10 +13,10 @@ Adi is the Instructional Designer at GA who conceptualized and developed our rem
 ## Schedule
 | Day | Date | Weekday | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|:-----------:|:-----------:|
-| w01d2 |May 29 |Tuesday | [](./unit_1/w01d02/morning_exercise)| [](./unit_1/w01d02/instructor_notes)| [](./unit_1/w01d02/student_labs)|[](./unit_1/w01d02/homework)|
-| w01d3 |May 30 |Wednesday | [](./unit_1/w01d03/morning_exercise)| [](./unit_1/w01d03/instructor_notes)| [](./unit_1/w01d03/student_labs)|[](./unit_1/w01d03/homework)|
-| w01d4 |May 31 |Thursday | [](./unit_1/w01d04/morning_exercise)| [](./unit_1/w01d04/instructor_notes)| [](./unit_1/w01d04/student_labs)|[](./unit_1/w01d04/homework)|
-| w01d5 |June 1 |Friday | [](./unit_1/w01d05/morning_exercise)| [](./unit_1/w01d05/instructor_notes)| [](./unit_1/w01d05/student_labs)|[](./unit_1/w01d05/homework)|
+| w01d2 |May 29 |Tuesday | [Intro, Expectations, Culture and Success](./unit_1/w01d02/morning_exercise)| [Intro to Terminal, Intro to JS, Booleans and Loops](./unit_1/w01d02/instructor_notes)| [First Lab](./unit_1/w01d02/student_labs)|[First HW](./unit_1/w01d02/homework)|
+| w01d3 |May 30 |Wednesday | [Setting up For Success](./unit_1/w01d03/morning_exercise)| [Git and Github, CSS Floats and Fluid Layout](./unit_1/w01d03/instructor_notes)| [Lab](./unit_1/w01d03/student_labs)|[HW2](./unit_1/w01d03/homework)|
+| w01d4 |May 31 |Thursday | [Git Pull Upstream Master](./unit_1/w01d04/morning_exercise)| [Conditionals, Loops, Arrays, Iteration](./unit_1/w01d04/instructor_notes)| [Lab](./unit_1/w01d04/student_labs)|[Arrays, Loops, Conditionals Drills](./unit_1/w01d04/homework)|
+| w01d5 |June 1 |Friday | [HTML Mockup](./unit_1/w01d05/morning_exercise)| [Functions and Scope](./unit_1/w01d05/instructor_notes)| [functions and scope labs](./unit_1/w01d05/student_labs)|[Function Drills](./unit_1/w01d05/homework)|
 | w02d1 |June 4 |Monday | [](./unit_1/w02d01/morning_exercise)| [](./unit_1/w02d01/instructor_notes)| [](./unit_1/w02d01/student_labs)|[](./unit_1/w02d01/homework)|
 | w02d2 |June 5 |Tuesday | [](./unit_1/w02d02/morning_exercise)| [](./unit_1/w02d02/instructor_notes)| [](./unit_1/w02d02/student_labs)|[](./unit_1/w02d02/homework)|
 | w02d3 |June 6 |Wednesday | [](./unit_1/w02d03/morning_exercise)| [](./unit_1/w02d03/instructor_notes)| [](./unit_1/w02d03/student_labs)|[](./unit_1/w02d03/homework)|
