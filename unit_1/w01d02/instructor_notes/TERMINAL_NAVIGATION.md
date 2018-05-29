@@ -2,6 +2,7 @@
 
 ## Learning Objetives
 
+1. Quick review of nomenclature of key coding characters
 1. Open Terminal
 1. Describe what a command line interface is
 1. Describe the state of the current directory
@@ -12,6 +13,18 @@
 1. Navigate using absolute pathing on the command line
 1. Run some code
 
+## Nomenclature for Key Coding Characters
+- `/` - **slash** or **forward slash** (above enter/return)
+- `\` - **backslash** (shares key with ?)
+- `~` - **tilda** (upper left, below the `esc` key)
+- ` - **backtick** (shares key with ~)
+- `()` - **parenthesis**
+- `[]` - **brackets**
+- `{}` - **curlies** (non-offial name)
+- `|` - **pipe** (shares key with backslash)
+- `&` - **ampersand** or **and symbol**
+- `;`- **semi-colon**
+- `:` - **colon**
 
 
 ## Open Terminal
