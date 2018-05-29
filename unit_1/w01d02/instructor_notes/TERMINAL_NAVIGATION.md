@@ -17,7 +17,7 @@
 - `/` - **slash** or **forward slash** (above enter/return)
 - `\` - **backslash** (shares key with ?)
 - `~` - **tilda** (upper left, below the `esc` key)
-- ` - **backtick** (shares key with ~)
+- ` - **backtick** (shares key with `~`)
 - `()` - **parenthesis**
 - `[]` - **brackets**
 - `{}` - **curlies** (non-offial name)
