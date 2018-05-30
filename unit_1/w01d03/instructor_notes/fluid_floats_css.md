@@ -1,6 +1,6 @@
 
 Title: Fluid Layout and Floats <br>
-Type: Morning Exercise<br>
+Type: Afternoon Exercise<br>
 Duration: "0:45"<br>
 Instructor:Karolin Rafalski<br>
 Creator: Karolin Rafalski
@@ -8,7 +8,7 @@ Competencies: CSS <br>
 Prerequisites: Basic HTML, CSS 
 
 ---
-# Morning Exercise
+# Afternoon Exercise
 
 ## Fluid Layout Intro
 
