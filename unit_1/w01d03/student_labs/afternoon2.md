@@ -2,6 +2,21 @@
 
 ### Please start this project in today's hw folder, as it will be graded as part of hw. 
 
+## Part 2 - HTML & CSS Videos
+![dog with popcorn](https://i.imgur.com/p7MVTUQ.png)
+
+Feel like you need some more basic HTML and CSS refreshers? Please watch the videos below!
+
+[HTML Intro (tags, content, attributes, semantic HTML](https://www.youtube.com/watch?v=DxhXFpsN5I4&index=1&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)
+
+[HTML Elements (headers, navigation, lists, sections, etc.) and Media (images, audio, videos)](https://www.youtube.com/watch?v=KhbnrDhWDdE&index=2&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)
+
+[CSS Intro (including css files in HTML, elements)](https://www.youtube.com/watch?v=xWiT2TWCFjc&index=3&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)
+
+[CSS Basics (colors, background, font properties)](https://www.youtube.com/watch?v=UMMHsQPmfug&index=4&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)
+
+No commit needed.
+
 
 ## Fake Resume Site
 ![Grumpy Cat](https://i.imgur.com/n8lbaJB.png)
