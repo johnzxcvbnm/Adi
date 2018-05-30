@@ -2,7 +2,7 @@
 
 ### Please start this project in today's hw folder, as it will be graded as part of hw. 
 
-## Part 2 - HTML & CSS Videos
+## HTML & CSS Videos
 ![dog with popcorn](https://i.imgur.com/p7MVTUQ.png)
 
 Feel like you need some more basic HTML and CSS refreshers? Please watch the videos below!
@@ -33,7 +33,8 @@ Note sure if you need to watch the videos? Check yourself: Your resume should in
   - at least one list
   - change the font color in at least one place
   - change the background in at least one place
-  - change the font in at least one plce
+  - change the font in at least one place
+  - Try adding a grid using flex-box - this could be a grid of images, boxes of text, or whatever your imagination comes up with!
 
 
 (Note: You don't need to know real information about Grumpy Cat, just make things up.)
