@@ -1,4 +1,6 @@
+![](/ga_cog.png)
 
+---
 Title: Shortcuts & Setting You Up for Success <br>
 Type: Morning Exercise<br>
 Duration: "0:45"<br>
@@ -102,23 +104,19 @@ Monitors
 |Command-Spacebar| Open Spotlight |
 
 #### :hourglass: Activity (5 minutes)
-- Open our class repo in Atom
-- Go to student examples
-- Make a file
-- Copy ALL (command A)the text from this file
+
+- Make a text file on your Desktop
+- Copy ALL (command A) the text from this markdown
 - Paste (command V) the text into your new file
 - Save (command S) - there is a blue dot on the top tab of your file that should disappear once your file has successfully saved
 - Undo (command Z)  - your text should go away
 - Redo (command Y) - your text should come back
-- Cut (Command X) - the title of your copy of this document
+- Cut (Command X) - the 1st line of the text file
 - Paste (Command V) - to the bottom of your copy the document
 - Save (Command S) - one final time
 - take a screenshot of something
 
 :computer:  [Additional Mac Keyboard Shortcuts](https://support.apple.com/en-us/HT201236)
-
-#### :hourglass: Activity (2 minutes)
-
 
 <hr>
 
@@ -147,7 +145,7 @@ If you would learn any two - learn these!
 
 
 
-:computer: Additional Command Line Shortcuts for Terminal can be found on our [class wiki](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Outrun/wiki/Terminal-Cheatsheet).
+:computer: Additional Command Line Shortcuts for Terminal can be found on our [class wiki](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Adi/wiki/Terminal-Cheatsheet).
 
 #### :hourglass: Activity (5 minutes)
 - Open your terminal and let's try out a few terminal shortcut commands while completing the steps below.  
@@ -223,7 +221,7 @@ Whether you're in an HTML, CSS, or JavaScript file, if you want to comment out y
 - Write some notes to yourself inside your HTML boilerplate `<body>` tag, and then comment them out using the shortcut!   
 
 **Atom has a lot of cool features**
-:computer: Additional Atom Commands can be found on our [class wiki](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Space-Ghost/wiki/Atom-CheatSheet).
+:computer: Additional Atom Commands can be found on our [class wiki](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Adi/wiki/Atom-CheatSheet).
 
 ### Split Screen
 - If you have more than one file that you'd like to look at in Atom, you can go up to `View` and then choose how you would like your panes to be displayed. <br>
@@ -258,7 +256,37 @@ When indenting your code, please use the tab button. [Do not use your spacebar](
 - You can also google `learn to type free` - to find the right typing practice for you, even going back and practicing touch typing regular characters can help you speed up
 
 
-## Misc
+## Part 5 - Atom Packages 
+
+One neat thing about Atom is that you can customize it a lot to help with your workflow. One way to do so is by installing packages! Let's install a few useful ones together. 
+
+### How to Install Packages 
+
+1. Open your Atom preferences 
+
+![](https://i.imgur.com/1Jk8rAO.png)
+
+2. Click the Install tab
+
+![](https://i.imgur.com/qOtFI3x.png)
+
+3. Search for a package 
+
+![](https://i.imgur.com/qrTZkoD.png)
+
+4. Click install! 
+
+![](https://i.imgur.com/n9ZRNoC.png)
+
+### A few useful packages 
+
+1. pigments -- shows colors
+1. file-icons -- gives files an appropriate icon according to file type
+1. highlight-selected -- highlights the current word selected everywhere in the file when double clicking
+
+<hr>
+
+## Part 6 - Misc
 - We covered a lot of different short cuts and tools today. Come back to this markdown as a reference and look up the things we did and keep practicing
 - This course is intense, but it should never get in the way of self-care, make sure you are eating well, getting out of the house, stretching, sleeping enough, and finding ways to unwind that isn't in front of a screen
 - There is an expression: "If you don't have time to do it right the first time, when will you have time to do it right a second time?" So take those extra moments to do it right - your future self will thank you
@@ -266,5 +294,5 @@ When indenting your code, please use the tab button. [Do not use your spacebar](
 ## Additional Resources
 
 - [f.lux](https://justgetflux.com/)<br>
-- [Atom Packages](https://atom.io/packages)<br>
+- [Find more Atom Packages](https://atom.io/packages)<br>
 - [Atom Themes](https://atom.io/themes)<br>
