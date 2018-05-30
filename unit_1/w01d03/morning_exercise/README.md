@@ -145,7 +145,7 @@ If you would learn any two - learn these!
 
 
 
-:computer: Additional Command Line Shortcuts for Terminal can be found on our [class wiki](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Outrun/wiki/Terminal-Cheatsheet).
+:computer: Additional Command Line Shortcuts for Terminal can be found on our [class wiki](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Adi/wiki/Terminal-Cheatsheet).
 
 #### :hourglass: Activity (5 minutes)
 - Open your terminal and let's try out a few terminal shortcut commands while completing the steps below.  
@@ -221,7 +221,7 @@ Whether you're in an HTML, CSS, or JavaScript file, if you want to comment out y
 - Write some notes to yourself inside your HTML boilerplate `<body>` tag, and then comment them out using the shortcut!   
 
 **Atom has a lot of cool features**
-:computer: Additional Atom Commands can be found on our [class wiki](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Space-Ghost/wiki/Atom-CheatSheet).
+:computer: Additional Atom Commands can be found on our [class wiki](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Adi/wiki/Atom-CheatSheet).
 
 ### Split Screen
 - If you have more than one file that you'd like to look at in Atom, you can go up to `View` and then choose how you would like your panes to be displayed. <br>
