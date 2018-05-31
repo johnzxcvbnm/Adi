@@ -37,7 +37,7 @@ Finish watching the following videos on HTML and CSS. You will be working on pra
 
 ##  JavaScript Setup
 
-1) In your terminal, navigate to to the `homework` folder inside today's folder (`w01d03`).
+1) In your terminal, navigate to to the `homework` folder inside today's folder (`w01d04`).
 
 2) Create a javascript file inside your `homework` folder to record your answers (maybe name it `answers.js`).
 
