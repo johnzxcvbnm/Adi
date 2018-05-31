@@ -388,11 +388,12 @@ const runDMC = ["Run", "DMC", "Jam Master Jay"];
 7. slice
 8. splice
 9. sort
-10. every
-11. sum
+10. length
+11. toString
+12. lastIndexOf
 
-*bonus*
-12. map
+**bonus**
+13. map
 
 
 
