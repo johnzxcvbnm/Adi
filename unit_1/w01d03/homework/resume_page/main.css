@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Song+Myung');
+
 /* * {
   border: 1px solid yellow;
 } */
+html {
+  background: #255C7D;
+}
+
+body {
+  background: #255C7D;
+  color: steelblue;
+  background: linear-gradient(#18CB8A 5%, #09B800 10%, #18CB8A 20%, #6C5B7B 30%, #255C7D);
+  letter-spacing: 1px;
+  margin: 0;
+}
 
 h1 {
   text-align: center;
@@ -9,17 +22,64 @@ h1 {
 
 h3 {
   font-family: 'Song Myung', serif;
-  color: #E89A2F
+  color: #59E2A0;
 }
 
 li {
   font-family: 'Inconsolata', monospace;
-}
-/* .Content{
-  float: left;
+  list-style-type: none;
 }
 
-.clearfix:after{
+a {
+  font-family: cursive;
+  text-decoration: none;
+  color: #1AA033;
+}
+
+a:visited {
+  color:#1AA033;
+}
+
+a:hover {
+  color:#1AA033;
+}
+
+a:active {
+  color:#1AA033;
+}
+
+nav > h2 {
+  display: inline-block;
+  width: 10%;
+  text-align: right;
+}
+
+
+.subHeader {
+  color: #59A2E2;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.grumpPic, .prevWork{
+  float: left;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+.grumpPic{
+  width: 20%;
+}
+
+.prevWork{
+  width: 80%;
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+/* .clearfix:after{
   content: "";
   display: table;
   clear: both;
