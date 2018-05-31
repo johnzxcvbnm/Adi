@@ -42,6 +42,9 @@ As you look at older code, you may see vendor prefixes for features that no long
 
 ![vendor prefix](https://i.imgur.com/OCHkMlT.png)
 
+You can also use the tool Pleeease.io to convert your CSS to CSS with the appropriate vendor prefixes :)
+[`Pleeease.io`](http://pleeease.io/play/)
+
 ##  Fluid Layouts and Floats Intro
 
 In order to build web sites that look good on any browser, can be resized, in any orientation, CSS had to have new features added.

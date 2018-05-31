@@ -354,7 +354,7 @@ console.log(arr[num]);
 With the following array:
 
 ```
-const runDMC = ["Run", "DMC, "Jam Master Jay"];
+const runDMC = ["Run", "DMC", "Jam Master Jay"];
 ```
 
 * Console.log the last element in the array using the length of the array inside the square brackets
