@@ -10,7 +10,7 @@ Topics: Using arrays, loops, and conditionals to solve problems.<br>
 
 ## Directions
 
-Use the file `afternoon_lab_solutions.js` to write arrays, loops, `if`, or `if, else` statements to complete the following questions. Refer back to your class notes from today if you need help.
+Use or Create the file `afternoon_lab_solutions.js` to write arrays, loops, `if`, or `if, else` statements to complete the following questions. Refer back to your class notes from today if you need help.
 
 ## Exercises
 
