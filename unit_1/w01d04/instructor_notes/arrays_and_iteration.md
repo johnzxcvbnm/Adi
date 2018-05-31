@@ -380,14 +380,20 @@ const runDMC = ["Run", "DMC", "Jam Master Jay"];
 
 ##### Methods - each group gets one
 1. index of
-1. push
-1. pop
-1. reverse
-1. unshift
-1. shift
-1. slice
-1. splice
-1. sort
+2. push
+3. pop
+4. reverse
+5. unshift
+6. shift
+7. slice
+8. splice
+9. sort
+10. every
+11. sum
+
+*bonus*
+12. map
+
 
 
 
