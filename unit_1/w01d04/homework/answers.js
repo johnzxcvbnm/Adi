@@ -1,3 +1,4 @@
+//----------------------------//
 // Easy Going
 // Write a for loop that will log the numbers 1 through 20.
 
@@ -5,6 +6,7 @@ for(let i = 1; i <= 20; i++){
   console.log(i);
 }
 
+//----------------------------//
 // Get Even
 // Write a for loop that will log only the even numbers in 0 through 200.
 
@@ -14,6 +16,7 @@ for(let i = 0; i < 200; i++){
   }
 }
 
+//----------------------------//
 // Excited Kitten
 // Write code that logs "Love me, pet me! HSSSSSS!" 20 times.
 //
@@ -34,6 +37,7 @@ for(let i = 0; i < 20; i++){
   }
 }
 
+//----------------------------//
 // Fizz Buzz
 // This is a classic problem that you should get really comfortable solving. If you've solved it before, try to make it more elegant and short.
 //
@@ -57,6 +61,7 @@ for(let i = 1; i <= 100; i++){
     }
 }
 
+//----------------------------//
 // Getting to Know You
 // Use the following arrays to answer the questions below (name,species ,age, hometown):
 
@@ -81,3 +86,14 @@ console.log(dart);
 // Porgee decides that Wolfy can't be named "Wolfy" anymore. Remove "Wolfy" from the wolfy array and replace it with "Gameboy".
 wolfy.splice(0, 1, "Gameboy");
 console.log(wolfy);
+
+//----------------------------//
+// Yell at the Ninja Turtles
+// Create an array with the members of the ninja turtles (Donatello, Leonardo, Raphael, Michaelangelo)
+//
+// Use a for of loop (not a typo - try it out! Try a for of loop) to call toUpperCase() on each of them and print out the result.
+
+const ninjaTurtles = ["Donatello", "Leonardo", "Raphael", "Michaelangelo"];
+for(const i of ninjaTurtles){
+  console.log(i.toUpperCase());
+}
