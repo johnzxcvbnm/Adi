@@ -253,7 +253,7 @@ const looneyTunesChars = ["Bugs Bunny", "Daffy Duck", "Tweety",
 ```
 
 * Console.log the even numbered items in the array using a conditional statement.
-* Console.log the even numbered items in the array and the item with the index of 3 using a conditional statement.
+* Console.log the even numbered items in the array or the item with the index of 3 using a conditional statement.
 * Console.log the odd numbered index items in the array using a conditional statement.
 
 
