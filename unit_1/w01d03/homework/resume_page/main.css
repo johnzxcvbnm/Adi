@@ -68,7 +68,7 @@ nav > h2 {
 }
 
 .grumpPic{
-  width: 20%;
+  min-width: 20%;
 }
 
 .prevWork{
