@@ -181,3 +181,17 @@ console.log(favMovies.indexOf("Godfather Part 2"));
 
 // Thought question: that we declared the variable favMovies with const, and yet, we were allowed to change the array. Weird? Should we have used let?
 //When we declare the array favMovies we are actually creating a pointer which simply points to where the variable is in memory, so when we change something in the array we're not changing where it is located in memory.
+
+//----------------------------//
+// Hungry for More?
+//----------------------------//
+// Find the Median
+// Find the median number in the following nums array, then console.log that number.
+// hint if you check the length of the array / 2, you might get not get a whole number. In which case, look into Math.floor( // something )
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+
+// Expected output:
+// => 15
+console.log("--------------------");
+nums.sort();
+console.log(nums[Math.floor(nums.length / 2)]);
