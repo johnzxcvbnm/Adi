@@ -195,3 +195,67 @@ const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,
 console.log("--------------------");
 nums.sort();
 console.log(nums[Math.floor(nums.length / 2)]);
+
+//----------------------------//
+// Return of the Closets
+// Below, we've given you examples of Kristyn and Thom's closets modeled as data in JavaScript. Use this data to answer the following questions.
+
+const kristynsCloset = [
+  "left shoe",
+  "cowboy boots",
+  "right sock",
+  "GA hoodie",
+  "green pants",
+  "yellow knit hat",
+  "marshmallow peeps"
+];
+
+// Thom's closet is more complicated. Check out this nested data structure!!
+const thomsCloset = [
+  [
+    // These are Thom's shirts
+    "grey button-up",
+    "dark grey button-up",
+    "light blue button-up",
+    "blue button-up",
+  ],[
+    // These are Thom's pants
+    "grey jeans",
+    "jeans",
+    "PJs"
+  ],[
+    // Thom's accessories
+    "wool mittens",
+    "wool scarf",
+    "raybans"
+  ]
+];
+
+// Alien Attire
+// Kristyn's left shoe has traveled through time and space and turned up in Thom's accessories drawer! Remove Kristyn's shoe from the array and save it to the variable kristynsShoe. Use that variable to add Kristyn's lost shoe to Thom's accessories array.
+const kristynsShoe = kristynsCloset[kristynsCloset.indexOf("left shoe")];
+thomsCloset[2].push(kristynsShoe);
+console.log(thomsCloset);
+
+// Dress Us Up
+// Modify your code to put together 3 separate outfits for Kristyn and Thom. Put the output in a sentence to tell us what we'll be wearing. Mix and match!
+
+//function returns a random number between 0 and limit, not including limit
+let myThree = function(limit) {
+  let i = Math.round(Math.random() * 10);
+  while(i >= limit){
+    i -= limit;
+  }
+  return i;
+}
+
+//Debugging myThree function
+// for(let i = 0; i < 100; i++){
+//   console.log(myThree(4));
+// }
+
+//For loop randomizes what they end up wearing
+for(let i = 0; i < 3; i++){
+  console.log("Kristyn is wearing a stunning " + kristynsCloset[myThree(kristynsCloset.length)] + "!");
+  console.log("Thom is wearing a daring outfit of " + thomsCloset[0][myThree(thomsCloset[0].length)] + ", " + thomsCloset[1][myThree(thomsCloset[1].length)] + " and " + thomsCloset[2][myThree(thomsCloset[2].length)] + ".  Wow!");
+}
