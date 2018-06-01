@@ -1,0 +1,24 @@
+html {
+  background: purple;
+}
+
+.container {
+  width: 98%;
+  background: purple;
+}
+
+img {
+  max-width: 60%;
+}
+
+main {
+  background: grey;
+}
+
+header, article, footer {
+  background: white;
+}
+
+article {
+  margin: 5% 2%;
+}
