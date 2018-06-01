@@ -203,7 +203,7 @@ const favMovies = ["Black Panther", "V for Vendetta" , "Shawshank Redeption" , "
 
 - Do the following and console.log the final results (I have included some *thought* questions, you don't have to write out an answer for those marked as such):
     
-    1. use the `.sort` method Thought question: what did this do to the array? Did it permanently alter it?
+    1. use the `.sort` method Thought question: what did this do to the array? Did it permanently alter it? 
     1. Use the method `pop`
     1. `push` "Guardians of the Galaxy" 
     1. Reverse the array
@@ -214,7 +214,7 @@ const favMovies = ["Black Panther", "V for Vendetta" , "Shawshank Redeption" , "
     1. store the value of your `slice` in a variable, console.log it - Thought question: what is going on here?
     1. console.log your final results
 
-- Console.log the index of "Godfather Part 2" 
+- After running the above tasks, Console.log the index of "X-Men" 
     -We removed it from the array, what value do we get when we look for the index of something that is not in the array?
 
 - Thought question: that we declared the variable `favMovies` with `const`, and yet, we were allowed to change the array. Weird? Should we have used `let`? 
