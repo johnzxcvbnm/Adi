@@ -259,3 +259,23 @@ for(let i = 0; i < 3; i++){
   console.log("Kristyn is wearing a stunning " + kristynsCloset[myThree(kristynsCloset.length)] + "!");
   console.log("Thom is wearing a daring outfit of " + thomsCloset[0][myThree(thomsCloset[0].length)] + ", " + thomsCloset[1][myThree(thomsCloset[1].length)] + " and " + thomsCloset[2][myThree(thomsCloset[2].length)] + ".  Wow!");
 }
+
+//----------------------------//
+// Dirty Laundry
+// Continue looking at the closet arrays:
+//
+// Time to do laundry - loop through Kristyn's closet and log the sentence "WHIRR: Now washing (item)" for each item in the array.
+console.log("---------------------");
+for(let i = 0; i < kristynsCloset.length; i++){
+  console.log("WHIRR: Now washing " + kristynsCloset[i] + "!");
+}
+
+//----------------------------//
+// Inventory
+// Thom wants to do inventory on his closet. Using bracket notation, log the arrays containing all of Thom's shirts, pants, and accessories.
+console.log("---------------------");
+for(let i = 0; i < thomsCloset.length; i++){
+  for(let x = 0; x < thomsCloset[i].length; x++){
+    console.log("Thom has " + thomsCloset[i][x] + " in his closet.");
+  }
+}
