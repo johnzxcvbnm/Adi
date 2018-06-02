@@ -23,7 +23,9 @@ for(let i = 0; i < 200; i++){
 // For every even number in your loop, log "...human...why you taking pictures of me?...", "...the catnip made me do it...", or "...why does the red dot always get away..." at random.
 
 let meow = 0;
-const kitten = ["...human...why you taking pictures of me?...", "...the catnip made me do it...", "...why does the red dot always get away..."];
+const kitten = ["...human...why you taking pictures of me?...",
+                "...the catnip made me do it...",
+                "...why does the red dot always get away..."];
 
 for(let i = 0; i < 20; i++){
   console.log("Love me, pet me! HSSSSSS!");
@@ -180,7 +182,7 @@ console.log(favMovies.indexOf("Godfather Part 2"));
 //Output should be a '-1'
 
 // Thought question: that we declared the variable favMovies with const, and yet, we were allowed to change the array. Weird? Should we have used let?
-//When we declare the array favMovies we are actually creating a pointer which simply points to where the variable is in memory, so when we change something in the array we're not changing where it is located in memory.
+//When we declare the array favMovies we are actually creating a pointer which simply points to where the variable is in memory, so when we change something in the array we're not changing where it is located in memory. - reference
 
 //----------------------------//
 // Hungry for More?
