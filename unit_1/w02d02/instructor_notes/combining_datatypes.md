@@ -1,10 +1,9 @@
-# Combining data types and Callbacks
+# Combining data types
 
 ## Lesson Objectives
 
 1. Combine objects, arrays, and functions
 1. Combine objects, arrays, and functions more than one level deep
-1. Create a callback
 
 ## Combine objects, arrays, and functions
 
