@@ -156,7 +156,7 @@ if(answer === "Arriving"){
 }
 ```
 
-You can keep getting input until a certain exists like so:
+You can keep getting input until a certain input exists like so:
 
 ```javascript
 let action = null
@@ -270,6 +270,8 @@ Functions encapsulate (isolate) a set of commands pertaining to one set of funct
 
 Try not to have a function that "does" multiple things
 
+Can you explain why we do not want to have functions to multiple things?
+
 ### Loops and Functions
 
 #### When to use which?
@@ -321,7 +323,7 @@ manyGreetings();
 
 ### When/How to use a function in a program
 
-- If you can try to have your functions defined at the top of the javascript file
+- If you can, try to have your functions defined at the top of the javascript file
 - At the bare minimum, make sure you create your functions before calling them
 
 Good:
@@ -362,3 +364,18 @@ const func2 = ()=>{
     alert('oh hai!!!!');
 }
 ```
+
+# HFM
+
+What is going on below?
+
+```x = 5; // Assign 5 to x
+
+elem = document.getElementById("demo"); // Find an element
+elem.innerHTML = x;                     // Display x in the element
+
+var x; // Declare x
+```
+
+
+[more on hoisting](https://www.w3schools.com/js/js_hoisting.asp)
