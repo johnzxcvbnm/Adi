@@ -143,6 +143,8 @@ const playGame = () => {
       buyCommand();
     } else if(answer === "sell" || answer === "Sell"){
       sellCommand();
+    } else if(answer === "reset" || answer === "Reset"){
+      resetGame();
     } else {
       alert("Invalid Command");
     }

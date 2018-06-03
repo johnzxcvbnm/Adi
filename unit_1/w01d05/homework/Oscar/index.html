@@ -2,86 +2,112 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <script src="main.css" charset="utf-8"></script>
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Raleway" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Oscar | A new kind of heath insurance company</title>
   </head>
   <body>
     <div class="container">
       <nav>
-        <a href="#">OSCAR</a>
-        <a href="#">For You & Family</a>
-        <a href="#">For Business</a>
-        <a href="#">For Brokers</a>
-        <a href="#">Location</a>
-        <a href="#">Phone Number</a>
-        <a href="#">Log In</a>
+        <div class="navWrapper">
+          <a class="leftNav" href="#">OSCAR</a>
+          <a class="leftNav" href="#">For You & Family</a>
+          <a class="leftNav" href="#">For Business</a>
+          <a class="leftNav" href="#">For Brokers</a>
+          <div class="rightNav">
+            <a class="rightNav" href="#">Log In</a>
+            <a class="rightNav" href="#">Phone Number</a>
+            <a class="rightNav" href="#">Location</a>
+          </div>
+        </div>
       </nav>
       <main>
-        <div class="mainImage"><img src="images/mainCover.png" alt="Feel Better Cover" title="Feel Better Cover"></div>
-        <article>
-          <h5>Concierge</h5>
-          <p>Get a personal care team with a nurse.</p>
-          <img src=images/concierge.jpg alt="Concierge" title="Concierge">
-        </article>
-        <article>
-          <h5>Doctor on Call</h5>
-          <p>Talk to a doctor for free in 15 minutes, 24/7.</p>
-          <img src=images/doctor.jpg alt="Doctor" title="Doctor">
-        </article>
-        <article>
-          <h5>For you and your family</h5>
-          <p>Need health insurance now?</p>
-          <img src=images/business.jpg alt="Business" title="Business">
-        </article>
-        <div class="botttomSection">
-          <h3>Ready to become an Oscar member?</h3>
-          <h2>Find the right plan.</h2>
-          <button type="button">For Business</button>
-          <button type="button">For You</button>
+        <div class="mainImageWrapper">
+          <img class="mainImage" src="images/mainCover.png" alt="Feel Better Cover" title="Feel Better Cover">
+        </div>
+        <div class="articleWrapper">
+          <article>
+            <h5>Concierge</h5>
+            <p>Get a personal care team with a nurse.</p>
+            <img class="articleImage" src=images/concierge.jpg alt="Concierge" title="Concierge">
+          </article>
+          <article>
+            <h5>Doctor on Call</h5>
+            <p>Talk to a doctor for free in 15 minutes, 24/7.</p>
+            <img class="articleImage" src=images/doctor.jpg alt="Doctor" title="Doctor">
+          </article>
+          <article>
+            <h5>For you and your family</h5>
+            <p>Need health insurance now?</p>
+            <img class="articleImage" src=images/business.jpg alt="Business" title="Business">
+          </article>
         </div>
       </main>
-      <footer>
-        <div>
-          <p>Subscribe to our newsletter</p>
-          <input type="email" placeholder="name@email.com">
+        <div class="footerWrapper">
+          <div class="planWrapper">
+            <h3>Ready to become an Oscar member?</h3>
+            <h1>Find the right plan.</h1>
+          </div>
+          <div class="buttonWrapper">
+            <a class="whiteButton" href="#">For You</a>
+            <a class="blueButton" href="#">For Business</a>
+          </div>
         </div>
-        <div>
-          <p>Products</p>
-          <a href="#">For You & Family</a>
-          <a href="#">For Business</a>
-          <a href="#">For Providers</a>
+        <div class="siteMapWrapper">
+          <div class="siteMap2">
+            <p>Subscribe to our newsletter</p>
+            <input type="email" placeholder="name@email.com">
+          </div>
+          <div class="siteMap2">
+            <ul>
+              <li><p>Products</p></li>
+              <li><a href="#">For You & Family</a></li>
+              <li><a href="#">For Business</a></li>
+              <li><a href="#">For Providers</a></li>
+            </ul>
+          </div>
+          <div class="siteMap2">
+            <ul>
+              <li><p>Features</p></li>
+              <li><a href="#">Oscar App</a></li>
+              <li><a href="#">Concierge Teams</a></li>
+              <li><a href="#">Doctor on Call</a></li>
+            </ul>
+          </div>
+          <div class="siteMap2">
+            <ul>
+              <li><p>Company</p></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="siteMap2">
+            <ul>
+              <li><p>Resources</p></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Brokers</a></li>
+              <li><a href="#">Providers</a></li>
+              <li><a href="#">Search Doctors & Drugs</a></li>
+              <li><a href="#">Find Forms</a></li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <p>Features</p>
-          <a href="#">Oscar App</a>
-          <a href="#">Concierge Teams</a>
-          <a href="#">Doctor on Call</a>
+        <div class="endWrapper">
+          <p>Give us a call <a href="#">1-855-672-2788</a></p>
+          <ul>
+            <li><a class="leftEnd" href="#">En Español</a></li>
+            <li><a class="leftEnd" href="#">Languages</a></li>
+            <li><a class="leftEnd" href="#">Terms of Service</a></li>
+            <li><a class="leftEnd" href="#">Privacy Policy</a></li>
+            <li><a class="leftEnd" href="#">Non-Discrimination Notice</a></li>
+            <li class="rightEnd"><a class="fa fa-instagram" href="#"></a></li>
+            <li class="rightEnd"><a class="fa fa-youtube" href="#"></a></li>
+            <li class="rightEnd"><a class="fa fa-twitter"href="#"></a></li>
+            <li class="rightEnd"><a class="fa fa-facebook" href="#"></a></li>
+          </ul>
         </div>
-        <div>
-          <p>Company</p>
-          <a href="#">Press</a>
-          <a href="#">Careers</a>
-        </div>
-        <div>
-          <p>Resources</p>
-          <a href="#">FAQ</a>
-          <a href="#">Blog</a>
-          <a href="#">Brokers</a>
-          <a href="#">Providers</a>
-          <a href="#">Search Doctors & Drugs</a>
-          <a href="#">Find Forms</a>
-        </div>
-        <p>Give us a call <a href="#">1-855-672-2788</a></p>
-        <a href="#">En Español</a>
-        <a href="#">Languages</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Non-Discrimination Notice</a>
-        <a href="#">FaceBook</a>
-        <a href="#">Twitter</a>
-        <a href="#">YouTuve</a>
-        <a href="#">Instagram</a>
-      </footer>
     </div>
   </body>
 </html>
