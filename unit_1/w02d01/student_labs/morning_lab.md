@@ -39,7 +39,7 @@
 
 ## Setup
 1. Navigate to your `student_labs` folder.
-1. Create a  file called `afternoon_lab.js` and `index.html`. Use this file for doing the activity below.
+1. Use your `morning_lab.js` and create an `index.html`. Use this file for doing the activity below.
 1. Make sure to connect the js file inside your html and test to make sure that it's connected with a console log.
 
 ## Activity
