@@ -1,0 +1,40 @@
+* {
+  /* border: 1px solid gold; */
+}
+
+.container {
+  background-color: #000000;
+  max-width: 98%;
+  height: 200px;
+}
+
+.wrapper {
+  background-color: #DCDCDC;
+  margin: 0 auto;
+  width: 70%;
+  height: 200px;
+}
+
+.articleDiv, .articleDiv2{
+  background-color: #858585;
+  display: inline-block;
+  margin: 0 auto;
+  width: 29%;
+  margin: 2%;
+  height: 100px;
+}
+
+.articleDiv2{
+  height: 150px;
+  float: right;
+}
+
+.articleDiv2:hover {
+  background-color: green;
+}
+
+.footer {
+  background-color: yellow;
+  width: 100%;
+  height: 100px;
+}

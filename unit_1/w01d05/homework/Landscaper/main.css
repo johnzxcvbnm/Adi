@@ -1,0 +1,40 @@
+html {
+  background-color: #00FF7C
+}
+.container {
+  width: 98%;
+  margin: auto;
+}
+
+.title {
+  background-color: #C8C8C8;
+  height: 100px;
+}
+
+.main {
+  background-color: #5A5A5A;
+  height: 200px;
+}
+
+.equipmentTitle {
+  background-color: #920000;
+  height: 100px;
+}
+
+.equipment {
+  background-color: yellow;
+  height: 200px;
+}
+
+.equipmentRowOne, .equipmentRowTwo{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.equipmentTeeth, .equipmentScissors, .equipmentPushMower, .equipmentElecMower, .equipmentStudents {
+  display: inline-block;
+  background-color: #009247;
+  /* height: 150px; */
+  width: 29%;
+  margin: 2%;
+}
