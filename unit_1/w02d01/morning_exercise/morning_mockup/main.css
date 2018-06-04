@@ -1,0 +1,48 @@
+html {
+background: #DACFDB;
+}
+
+.container {
+  width: 96%;
+  background: #DACFDB;
+  margin: auto;
+}
+
+.header, .article, .footer {
+  background: #F0EDF0;
+  margin: 0 auto;
+}
+
+.main {
+  background: #E0E0E0;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.article {
+  width: 90%;
+  margin: 20px auto;
+  padding: 5px;
+}
+
+.footer, .header {
+  padding: 5px;
+}
+
+img {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #625E7F;
+  /* padding: 10px 0 5px 0; */
+}
+
+h3 {
+  text-align: center;
+  color: #9690C9;
+}
