@@ -70,17 +70,17 @@ What was the result?
 ## Now you try
 ### Activity - 30 mins
 
-With the following arrays, define and perform all of the methods below. Each group will then be assigned a method to teach to the class.
+With the following arrays, define and perform all of the methods below. Each group will then be assigned a method to teach to the class. When you present your method to the class, please come up with a real world example of when you might use this method.
 
 1. Every
 1. Filter
 1. Find
 1. Find Index
 1. For Each
-1. Map
+1. Map _(come up with a new example!)_
 1. Reduce
 1. Some
-1. Sort (research how to use sort with a callback)
+1. Sort _(research how to use sort with a callback)_
 
 ```javascript
 const classArray = ['Javascript','HTML','CSS','Data Analysis', 'Marketing', 'Database Design', 'Visual Design'];
@@ -89,3 +89,5 @@ const numberArray =  [31, 203, 30, 84, 5, 62, 770, 8, 99, 10, 0];
 ```
 
 ## Hungry for more
+
+Further Explanations (https://codeburst.io/array-methods-explained-filter-vs-map-vs-reduce-vs-foreach-ea3127c6d319)
