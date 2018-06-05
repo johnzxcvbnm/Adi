@@ -18,6 +18,10 @@ Creator: Thom Page<br>
 
 ## Passing a function as an argument
 
+### Review
+1. What is an argument in terms of a function?
+1. Define what it means to invoke a function.
+
 What datatypes can we pass as arguments to functions?
 
 * strings
@@ -61,6 +65,82 @@ They are used extensively in
 
 <br>
 <hr>
+
+## Putting it together
+
+Let's examine a variable that is a function
+
+```javascript
+const foo = ()=>{
+    console.log("I'm the function 'foo'");
+}
+console.log(foo);
+```
+
+We can pass a function into another function
+
+```javascript
+const foo = ()=>{
+    console.log("I'm the function 'foo'");
+}
+const bar = (param1)=>{
+    console.log(param1);
+}
+bar(foo);
+```
+
+Once we've done this, we can execute the function that is passed in as a parameter (called a callback)
+
+```javascript
+const foo = ()=>{
+    console.log("I'm the function 'foo'");
+}
+const bar = (param1)=>{
+    console.log("I'm about to execute a callback");
+    param1();
+}
+bar(foo);
+```
+
+This is good because it allows us to perform some functionality and then do something unique once that's complete:
+
+```javascript
+const foo = ()=>{
+    console.log("I'm the function 'foo'");
+}
+const awesome = ()=>{
+    console.log("I'm the function 'awesome'");
+}
+const bar = (param1)=>{
+    console.log("I'm about to execute a callback");
+    param1();
+}
+bar(foo);
+bar(awesome);
+```
+
+If we want, we don't even need to assign the functions to variables
+
+```javascript
+const bar = (param1)=>{
+    console.log("I'm about to execute a callback");
+    param1();
+}
+bar(()=>{
+    console.log("I'm the function 'foo'");
+});
+bar(()=>{
+    console.log("I'm the function 'awesome'");
+});
+```
+
+This last form is very common.  For instance:
+
+```javascript
+setTimeout(()=>{
+    console.log('hi');
+}, 2000);
+```
 
 	
 # Electric Mixer
@@ -138,82 +218,6 @@ setInterval(() => {
 
 <hr>
 
-## Lesson Objectives
 
-1. Create a callback
-
-## Create a callback
-
-Let's examine a variable that is a function
-
-```javascript
-const foo = ()=>{
-    console.log("I'm the function 'foo'");
-}
-console.log(foo);
-```
-
-We can pass a function into another function
-
-```javascript
-const foo = ()=>{
-    console.log("I'm the function 'foo'");
-}
-const bar = (param1)=>{
-    console.log(param1);
-}
-bar(foo);
-```
-
-Once we've done this, we can execute the function that is passed in as a parameter (called a callback)
-
-```javascript
-const foo = ()=>{
-    console.log("I'm the function 'foo'");
-}
-const bar = (param1)=>{
-    console.log("I'm about to execute a callback");
-    param1();
-}
-bar(foo);
-```
-
-This is good because it allows us to perform some functionality and then do something unique once that's complete:
-
-```javascript
-const foo = ()=>{
-    console.log("I'm the function 'foo'");
-}
-const awesome = ()=>{
-    console.log("I'm the function 'awesome'");
-}
-const bar = (param1)=>{
-    console.log("I'm about to execute a callback");
-    param1();
-}
-bar(foo);
-bar(awesome);
-```
-
-If we want, we don't even need to assign the functions to variables
-
-```javascript
-const bar = (param1)=>{
-    console.log("I'm about to execute a callback");
-    param1();
-}
-bar(()=>{
-    console.log("I'm the function 'foo'");
-});
-bar(()=>{
-    console.log("I'm the function 'awesome'");
-});
-```
-
-This last form is very common.  For instance:
-
-```javascript
-setTimeout(()=>{
-    console.log('hi');
-}, 2000);
-```
+# Hungry For More
+* On Parameters & Arguments (https://codeburst.io/parameters-arguments-in-javascript-eb1d8bd0ef04)
