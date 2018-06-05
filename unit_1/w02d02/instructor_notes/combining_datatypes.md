@@ -100,6 +100,14 @@ for(row of foo){
 }
 ```
 
+# Activity
+1. Create an object called "bootcamp" with an array called "skills", and a function called "feeling"
+1. In the array add no less than 5 skills you have learned so far in the class.
+1. The function should log how you are feeling about the Bootcamp today from on of these responses ("Im okay, hanging in there!", "ALERT! Panic Zone", "Feeling good, feeling challenged");
+1. Loop over the items in the array
+1. Call the function in the array. 
+
+
 ## Combine objects, arrays, and functions more than one level deep
 
 You can create a function that returns an object.  Just add the `.` after the `()` since the return value of the function is an object
