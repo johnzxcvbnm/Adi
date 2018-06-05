@@ -5,7 +5,7 @@
 1. Define and understand the various different callback methods that can be used on an array.
 2. Understand what each method does and when we might want to use it.
 
-** Question: What array methods have we used before? **
+**Question: What array methods have we used before?**
 
 ### Callback Methods
 
