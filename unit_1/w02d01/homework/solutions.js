@@ -128,3 +128,25 @@ const printPrimes = (num) => {
 }
 
 printPrimes(97);
+
+//---Insert Dash---//
+// Write a function insertDash that accepts a number as a parameter and returns a string with a dash inserted between any consecutive odd numbers. There should not be a dash at the end, it goes only between numbers.
+
+const insertDash = (num) => {
+  let temp = num.toString();
+  console.log(temp.slice(0, 3));
+  console.log(temp.slice(3, temp.length));
+  for(let i = 0; i < temp.length - 1; i++){
+      if(parseInt(temp.charAt(i)) % 2 === 1){
+        if(parseInt(temp.charAt(i + 1)) % 2 === 1){
+          temp = temp.slice(0, i + 1) + "-" + temp.slice(i + 1, temp.length);
+          i++;
+        }
+      }
+    }
+  return temp;
+}
+
+console.log(insertDash(454793));
+// => 4547-9-3
+// sum += parseInt(temp[i]);
