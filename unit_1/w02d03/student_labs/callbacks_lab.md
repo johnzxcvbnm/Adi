@@ -51,7 +51,7 @@ const bar = (param, param2) => {
 foo(bar, 'hi');
 ```
 
-Run the code and see what happens. 
+Run the code and see what happens.
 
 Follow the following steps:
 
@@ -65,10 +65,16 @@ Expected Output:
       repMaster("Never give your heart to a blockhead", wordReverse);
  ```
 >    "blockhead a to heart your give never proves that I am the rep MASTER!"
-  
+
   ```javascript
       repMaster("I finished this practice", toUpperCase);
   ```
 
 >  "I FINISHED THIS PRACTICE proves that I am the rep MASTER!"
 
+## Hungry for More
+
+ Javascript is a great language but it can always be improved!
+
+1. We need a `.count` method and we need you to write it! The method should take an array and count how many elements are the same in that array, returning that number. *hint: remember to make an array that has duplicate elements!!*
+1. Write a `.unique` method that creates a new array out of all the unique values in an array.

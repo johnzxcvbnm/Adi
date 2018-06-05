@@ -1,3 +1,82 @@
+// const foo = {
+//   someMethod:()=> {
+//     console.log('oh Hai');
+//   }
+// }
+//
+// foo.someMethod();
+
+// const foo = {
+//   someArray: [1,2,3]
+// }
+//
+// for (element of foo.someArray) {
+//   console.log(element);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const bootcamp = {
+//   skills: ["arrays","loops",'variables', 'objects', 'while loops'],
+//   feeling:() =>{
+//     console.log( "Feeling Good, Feeling Challenged");
+//   }
+// }
+//
+// for (x in bootcamp.skills) {
+//   console.log(bootcamp.skills[x]);
+// }
+//
+// bootcamp.feeling();
+//
+
+
+
+
+
+// WEEKEND
+
+// const fWeekend = () => {
+//   return {
+//     activity: "Fishing"
+//   }
+// }
+//
+// console.log(fWeekend().activity);
+
+
+
+// FAV BAND
+// const favBand = () => {
+//   return {
+//     favSong:() =>{
+//       console.log('Africa');
+//     }
+//   }
+// }
+//
+// favBand().favSong();
+
+// // faveFood
+// const favFood = () => {
+//   return()=>{
+//     console.log('Avocado');
+//   }
+// }
+//
+// favFood()();
+
 // const body = {
 //     arm: {
 //         elbow: 'pointy'
