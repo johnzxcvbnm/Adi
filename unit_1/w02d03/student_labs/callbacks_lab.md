@@ -10,7 +10,7 @@ Adapted by: Thom Page<br>
 
 ---
 
-## Afternoon Lab
+## Morning Lab
 
 Follow the following steps:
 
