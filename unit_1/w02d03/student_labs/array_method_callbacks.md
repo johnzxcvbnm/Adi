@@ -20,7 +20,7 @@ const panagrams = [ 'The','job', 'requires', 'extra', 'pluck', 'and', 'zeal', 'f
 
 ## Every
 
-1. Determine if every number is greater than or equal to
+1. Determine if every number is greater than or equal to 0
 1. determine if every word shorter than 8 characters
 
 ## Filter
