@@ -70,10 +70,22 @@ What was the result?
 ## Now you try
 ### Activity - 30 mins
 
-With the following arrays, define and perform the previous methods. Each group will then be assigned a method to teach to the class.
+With the following arrays, define and perform all of the methods below. Each group will then be assigned a method to teach to the class.
+
+1. Every
+1. Filter
+1. Find
+1. Find Index
+1. For Each
+1. Map
+1. Reduce
+1. Some
+1. Sort (research how to use sort with a callback)
 
 ```javascript
 const classArray = ['Javascript','HTML','CSS','Data Analysis', 'Marketing', 'Database Design', 'Visual Design'];
 
 const numberArray =  [31, 203, 30, 84, 5, 62, 770, 8, 99, 10, 0];
 ```
+
+## Hungry for more
