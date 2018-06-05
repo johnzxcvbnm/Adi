@@ -210,6 +210,8 @@ setInterval(() => {
 
 > Use SetInterval to display a number that increases by 1 each second (it's a clock!)
 
+**Food for thought: Give a real world example of when you would use setTimeout or setInterval**
+
 <hr>
 
 
