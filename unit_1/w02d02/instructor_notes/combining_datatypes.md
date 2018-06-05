@@ -184,6 +184,11 @@ const foo = ()=>{
 foo()(); //logs 'whaaaa?'
 ```
 
+# Activity - Returning Functions
+1. Create a function that returns an object called "Weekend" that returns one thing you are excited for this weeked. Log the return value of the function.
+1. Create a function that returns an object called "favBand" that has a method which returns your favorite song from that band. Log the result of the method!
+1. Create a function called "favFood" that returns a function that logs your favorite food. Log the result!
+
 You can create an object that has a method that returns an object
 
 ```javascript
