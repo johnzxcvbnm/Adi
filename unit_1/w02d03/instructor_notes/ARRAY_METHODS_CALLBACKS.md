@@ -51,6 +51,22 @@ console.log(updateIceCream);
 
 **Food for thought: Does the `map` method mutate the original array?**
 
+### Lets try that again!
+
+Use the `map` method with the following array to multiply each item by 2 and log the new array.
+
+```javascript
+const multiplyNum = [2,4,6,8,10];
+
+const newNumArr = multiplyNum.map(x => x*2);
+
+console.log(newNumArr);
+```
+
+What was the result?
+
+###### // expected: [4, 8, 12, 16, 20]
+
 ## Now you try
 ### Activity - 30 mins
 
