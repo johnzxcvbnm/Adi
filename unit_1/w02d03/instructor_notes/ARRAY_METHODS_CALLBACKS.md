@@ -35,10 +35,19 @@ What if I want to go over each item in this array and add the word Ice Cream to 
 
 Lucky for us we have the `.map` method.
 
-``` const iceCream = ['Vanilla','Chocolate','Strawberry','Rocky Road'];```
+```
+const iceCream = ['Vanilla','Chocolate','Strawberry','Rocky Road'];
+
+var updateIceCream = iceCream.map(x => x +" Ice Cream");
+
+console.log(updateIceCream);
+```
+
+*What is happening here?**
 
 
-## Activity - 30 mins
+## Now you try
+### Activity - 30 mins
 
 With the following arrays, define and perform the previous methods. Each group will then be assigned a method to teach to the class.
 
