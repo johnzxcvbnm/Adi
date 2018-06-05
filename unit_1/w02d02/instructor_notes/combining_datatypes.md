@@ -189,6 +189,9 @@ foo()(); //logs 'whaaaa?'
 1. Create a function that returns an object called "favBand" that has a method which returns your favorite song from that band. Log the result of the method!
 1. Create a function called "favFood" that returns a function that logs your favorite food. Log the result!
 
+
+## Combine objects, arrays, and functions more than one level deep - Con't
+
 You can create an object that has a method that returns an object
 
 ```javascript
