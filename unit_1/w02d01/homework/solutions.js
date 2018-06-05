@@ -68,3 +68,63 @@ const sumArray = (myArray) => {
 }
 console.log(sumArray([1, 2, 3, 4, 5, 6]));
 // => 21
+
+//---Triangle---//
+// Write a loop that console logs a right isosceles triangle made of '#' that has the height and length of the argument.
+
+//Recursive function that prints a triangle to the console with a base length of 'number'
+const printTriangle = (number) => {
+
+  //Breaks out of the recursive function
+  if(number == 0){
+    return;
+  }
+
+  //Sets base to the legth of number
+  let base = "";
+  for(let i = 0; i < number; i++){
+    base += "#";
+  }
+
+  //Calls the THIS function with the number less one until the base case happens (when number == 0)
+  //Reversing these two statements will make an upside down triangle
+  printTriangle(number - 1);
+  console.log(base);
+}
+
+printTriangle(10);
+
+
+//---Prime Numbers---//
+// A Prime number is a number that is not evenly divisible by another number except 1 and itself. If you want to read more deeply about it, go here. To test whether a number is Prime, you only need to test as far as the square root of that number. This is advisable for optimization and testing large numbers.
+//
+// Step One
+// Write a function called checkPrime that will test whether a number is Prime. The function will return true (Boolean) if Prime, false if not.
+//
+// Hint: Check every number up to the square root. To do this, try a for loop.
+const checkPrime = (num) => {
+  for(let i = 2; i < Math.sqrt(num); i++){
+    if(num % i == 0){
+      return false;
+    }
+  }
+
+  return true;
+}
+
+console.log("40 is prime.  " + checkPrime(40));
+
+// Step Two
+// Write another function called printPrimes that will print (console log) all the Primes up to an arbitrary limit. For example, if you invoke your function with printPrimes(97), it will print all the Prime numbers up to and including 97.
+//
+// This function can call on the previous checkPrime function.
+
+const printPrimes = (num) => {
+  for(let i = 0; i <= num; i++) {
+    if(checkPrime(i)){
+      console.log(i);
+    }
+  }
+}
+
+printPrimes(97);
