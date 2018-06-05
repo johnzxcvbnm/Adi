@@ -1,3 +1,9 @@
+# Callbacks
+
+## Lesson Objectives
+
+1. Create a callback
+
 ## Create a callback
 
 Let's examine a variable that is a function

@@ -109,7 +109,8 @@ const foo = [
 ];
 ```
 
-# Callbacks and methods
+# Hungry For More
+## Callbacks and methods
 
 Call the `someMethod` function, passing in `myFunc`.  It should log `About to invoke the callback` and then `I have been called!`
 
@@ -146,7 +147,7 @@ Create a method called combineColor on the shirtColor object that combines all t
 
 ```
 const shirtColor = {
-  color: ["red", 'blue, 'green', 'white', 'pink'],
+  color: ['red', 'blue', 'green', 'white', 'pink'],
 }
 ```
 Expected Output:  ```"red, green, white, pink"```
