@@ -1,4 +1,4 @@
-# CALLBACKS
+# Callbacks
 
 ---
 Title: Callbacks<br>
@@ -134,13 +134,7 @@ bar(()=>{
 });
 ```
 
-This last form is very common.  For instance:
-
-```javascript
-setTimeout(()=>{
-    console.log('hi');
-}, 2000);
-```
+** Have you used these before??**
 
 	
 # Electric Mixer
