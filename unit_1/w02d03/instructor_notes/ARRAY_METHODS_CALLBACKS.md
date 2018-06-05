@@ -47,6 +47,9 @@ console.log(updateIceCream);
 
 *What is happening here?*
 
+`map` calls a provided callback function once for each element in an array, in order, and constructs a new array from the results.
+
+**Food for thought: Does the `map` method mutate the original array?**
 
 ## Now you try
 ### Activity - 30 mins
