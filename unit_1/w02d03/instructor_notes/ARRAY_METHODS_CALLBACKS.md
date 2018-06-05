@@ -27,7 +27,9 @@ An array method that accepts with a callback is executes a function on the eleme
 
 Lets take a look:
 
-``` const iceCream = ['Vanilla','Chocolate','Strawberry','Rocky Road'];```
+```javascript
+const iceCream = ['Vanilla','Chocolate','Strawberry','Rocky Road'];
+```
 
 What if I want to go over each item in this array and add the word Ice Cream to these items?
 
@@ -35,7 +37,7 @@ What if I want to go over each item in this array and add the word Ice Cream to 
 
 Lucky for us we have the `.map` method.
 
-```
+```javascript
 const iceCream = ['Vanilla','Chocolate','Strawberry','Rocky Road'];
 
 var updateIceCream = iceCream.map(x => x +" Ice Cream");
@@ -43,7 +45,7 @@ var updateIceCream = iceCream.map(x => x +" Ice Cream");
 console.log(updateIceCream);
 ```
 
-*What is happening here?**
+*What is happening here?*
 
 
 ## Now you try
@@ -51,6 +53,8 @@ console.log(updateIceCream);
 
 With the following arrays, define and perform the previous methods. Each group will then be assigned a method to teach to the class.
 
+```javascript
 const classArray = ['Javascript','HTML','CSS','Data Analysis', 'Marketing', 'Database Design', 'Visual Design'];
 
 const numberArray =  [31, 203, 30, 84, 5, 62, 770, 8, 99, 10, 0];
+```
