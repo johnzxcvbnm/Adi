@@ -149,4 +149,29 @@ const insertDash = (num) => {
 
 console.log(insertDash(454793));
 // => 4547-9-3
-// sum += parseInt(temp[i]);
+
+//---Hungry for more---//
+// Return of the Triangle
+// Write a loop that console logs an upside down right isosceles triangle made of '#' that has the height and length of the argument.
+
+//Recursive function that prints a triangle to the console with a base length of 'number'
+const printUpsideDown = (number) => {
+
+  //Breaks out of the recursive function
+  if(number == 0){
+    return;
+  }
+
+  //Sets base to the legth of number
+  let base = "";
+  for(let i = 0; i < number; i++){
+    base += "#";
+  }
+
+  //Calls the THIS function with the number less one until the base case happens (when number == 0)
+  //Reversing these two statements will make an upside down triangle
+  console.log(base);
+  printUpsideDown(number - 1);
+}
+
+printUpsideDown(10);
