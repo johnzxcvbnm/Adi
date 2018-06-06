@@ -119,7 +119,7 @@ bar(foo);
 bar(awesome);
 ```
 
-If we want, we don't even need to assign the functions to variables
+If we want, we don't even need to assign the callback functions to variables
 
 ```javascript
 const bar = (param1)=>{
@@ -133,8 +133,6 @@ bar(()=>{
     console.log("I'm the function 'awesome'");
 });
 ```
-
-** Have you used these before??**
 
 	
 # Electric Mixer
@@ -209,6 +207,8 @@ setInterval(() => {
 ```
 
 > Use SetInterval to display a number that increases by 1 each second (it's a clock!)
+
+**Food for thought: Give a real world example of when you would use setTimeout or setInterval**
 
 <hr>
 

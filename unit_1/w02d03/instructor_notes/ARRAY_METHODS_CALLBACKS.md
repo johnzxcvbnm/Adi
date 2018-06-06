@@ -21,7 +21,7 @@
 
 ## What is an Array Method with a Callback?
 
-An array method that accepts with a callback is executes a function on the element of the given array and returns some output.
+An array method that accepts a callback executes a function on the index of the given array and returns some output.
 
 **Okay...but what does that mean?**
 
@@ -47,7 +47,7 @@ console.log(updateIceCream);
 
 *What is happening here?*
 
-`map` calls a provided callback function once for each element in an array, in order, and constructs a new array from the results.
+`map` calls a provided callback function once for each element in an array, in order, and constructs a new array from the return values.
 
 **Food for thought: Does the `map` method mutate the original array?**
 
