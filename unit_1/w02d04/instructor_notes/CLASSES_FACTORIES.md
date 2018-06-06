@@ -14,7 +14,66 @@
 
 ## Explain why we need classes
 
-Sometimes we need to repetitively create new objects with the same attributes.  Imagine we wanted to create multiple people.  All people have the same basic attributes, so it would be great if we could create a blueprint for our person creation process.
+Sometimes we need to repetitively create new objects with the same attributes.  Imagine we wanted to create a bunch of hotels for a boutique travel agency.
+
+We'd need at least:
+- name
+- location
+- rating
+- vacancies
+- tags describing the hotel
+- rooms (an array of objects with details of the rooms)
+
+
+```
+{
+name: "Hotel California",
+location: "California",
+rating: 4,
+vacancies: true,
+tags: [
+	"pink champagne",
+	"wine",
+	"lovely",
+	"can't leave"
+],
+rooms: [
+	{
+	"roomNumber": 102,
+	"size": "Queen Double",
+	"price": 55,
+	"booked": true
+	},
+	{
+	"roomNumber": 202,
+	"size": "King Suite",
+	"price": 68,
+	"booked": false
+	},
+	{
+	"roomNumber": 404,
+	"size": "Queen Double",
+	"booked": false
+	},
+	{
+	"roomNumber": 605,
+	"size": "King Suite",
+	"price": 68,
+	"booked": true
+	},
+	{
+	"roomNumber": 777,
+	"size": "Penthouse",
+	"price": 888,
+	"booked": false
+	}
+]
+```
+
+Great! One object. How can we create another one? How about copy pasting, then changing all the details? Typing it all from scratch? What if someone makes a typo with a key? What if our boutique expands to 1000 hotels?
+
+There is a better way! We can create a class, which will be a blueprint or template for similar objects. Not only can we add data, we can also include functionality.
+
 
 ## Create a class to define the blueprint for creating objects
 
@@ -30,11 +89,11 @@ Now we can "instantiate" or create new objects using this class.  We do this by 
 
 ```javascript
 const me = new Person();
-const bob = new Person();
+const you = new Person();
 console.log(me);
-console.log(bob);
+console.log(you);
 console.log(typeof(me));
-console.log(typeof(bob));
+console.log(typeof(you));
 ```
 
 ## Add methods to a class
@@ -49,6 +108,7 @@ class Person {
 };
 const me = new Person();
 me.greet();
+you.greet();
 ```
 
 These methods can of course take parameters:
@@ -56,12 +116,16 @@ These methods can of course take parameters:
 ```javascript
 class Person {
 	greet(otherPerson){
-		console.log('hi ' + otherPerson + '!');
+		console.log('hi ' + otherPerson.name + '!');
 	}
 };
 const me = new Person();
-me.greet('bob');
+const you = new Person();
+me.greet('you');
+you.greet('me')
 ```
+
+We only had to update our code in one place, and then every instance of the class now has the updated functionality. Sweet!
 
 If we have multiple methods, don't put commas between them:
 
@@ -70,14 +134,18 @@ class Person {
 	greet(otherPerson){
 		console.log('hi ' + otherPerson + '!');
 	}
-	jump(){
-		console.log('weeee!');
+	walk(){
+		console.log('I hate when my Segway is in the shop.');
 	}
 };
 const me = new Person();
+const you = new Person();
 me.greet('bob');
-me.jump();
+me.walk();
+you.greet('bob');
+you.walk();
 ```
+
 
 ## Set properties on an instance of a class
 
@@ -88,12 +156,14 @@ class Person {
 	greet(otherPerson){
 		console.log('hi ' + otherPerson + '!');
 	}
-	jump(){
-		console.log('weeee!');
+	walk(){
+		console.log('I hate when my Segway is in the shop.');
 	}
 };
 const me = new Person();
+const you = new Person();
 console.log(me);
+console.log(you);
 ```
 
 Let's add some properties with a constructor function.  This is a function that gets called once, each time an object is created:
@@ -134,20 +204,51 @@ class Person {
 	greet(otherPerson){
 		console.log('hi ' + otherPerson + '!');
 	}
-	jump(){
-		console.log('weeee!');
+	walk(){
+		console.log('I hate when my Segway is in the shop.');
 	}
 };
-const me = new Person('Matt', 36, 'blue', 'blonde');
+const me = new Person('Karolin', 40, 'green', 'copper dark ash blonde');
 console.log(me);
 ```
+
+## Create default values
+Sometimes, you want to create default values that can be overwritten.
+
+There are two ways to write it, writing it in the constructor with an `=` is the newer way. Using `||` is the older way and does work, but the argument must be at the end.
+
+```javascript
+class Person {
+	constructor(name, age, eyes, hair, lovesCats = true, lovesDogs){
+		this.legs = 2;
+		this.arms = 2;
+		this.name = name;
+		this.age = age;
+		this.eyes = eyes;
+		this.hair = hair;
+    this.lovesCats = lovesCats;
+    this.lovesDogs = lovesDogs || true;
+	}
+	greet(otherPerson){
+		console.log('hi ' + otherPerson + '!');
+	}
+	walk(){
+		console.log('I hate when my Segway is in the shop.');
+	}
+};
+const me = new Person('Karolin', 40, 'green', 'copper dark ash blonde');
+const you = new Person('Karolin', 40, 'green', 'copper dark ash blonde', false, false);
+console.log(me);
+console.log(you);
+```
+
 
 ## Create methods to alter the properties of an instance
 
 We can of course, alter the properties of an instance, after it is created:
 
 ```javascript
-me.hair = 'red';
+me.hair = 'supernova red';
 console.log(me);
 ```
 
@@ -155,32 +256,70 @@ But it's a nice practice to define a method that will alter that:
 
 ```javascript
 class Person {
-	constructor(name, age, eyes, hair){
+	constructor(name, age, eyes, hair, lovesCats = true, lovesDogs){
 		this.legs = 2;
 		this.arms = 2;
 		this.name = name;
 		this.age = age;
 		this.eyes = eyes;
 		this.hair = hair;
-	}
-	setHair(hairColor){
-		this.hair = hairColor;
+    this.lovesCats = lovesCats;
+    this.lovesDogs = lovesDogs || true;
 	}
 	greet(otherPerson){
 		console.log('hi ' + otherPerson + '!');
 	}
-	jump(){
-		console.log('weeee!');
+	setHair(hairColor){
+		this.hair = hairColor;
+	}
+	walk(){
+		console.log('I hate when my Segway is in the shop.');
 	}
 };
-const me = new Person('Matt', 36, 'blue', 'blonde');
-console.log(me);
-me.setHair('red');
-console.log(me);
+
+const matt = new Person('Matt', 36, 'blue', 'blonde');
+console.log(matt);
+matt.setHair('red');
+console.log(matt);
 ```
 
 - This way, everything is done with methods
 - Other developers can quickly scan the class definition to determine what you'd like them to be able to do with the class
+
+## Objects interacting with other objects
+
+We can pass an object to another object to have them interact
+```javascript
+class Person {
+	constructor(name, age, eyes, hair, lovesCats = true, lovesDogs){
+		this.legs = 2;
+		this.arms = 2;
+		this.name = name;
+		this.age = age;
+		this.eyes = eyes;
+		this.hair = hair;
+		this.lovesCats = lovesCats;
+		this.lovesDogs = lovesDogs || true;
+	}
+	greet(otherPerson){
+		console.log('hi ' + otherPerson + '!');
+	}
+	classyGreeting(otherClassyPerson){
+		console.log('Greetings ' + otherClassyPerson.name + '!');
+	}
+	setHair(hairColor){
+		this.hair = hairColor;
+	}
+	walk(){
+		console.log('I hate when my Segway is in the shop.');
+	}
+};
+const me = new Person('Karolin', 40, 'green', 'copper dark ash blonde');
+const matt = new Person('Matt', 36, 'blue', 'blonde', false);
+
+me.classyGreeting(matt);
+matt.classyGreeting(me);
+```
 
 ## Make a class inherit attributes from a "parent class"
 
@@ -188,22 +327,27 @@ Sometimes we want to have a "parent" class that will have some basic attributes 
 
 ```javascript
 class Person {
-	constructor(name, age, eyes, hair){
+	constructor(name, age, eyes, hair, lovesCats = true, lovesDogs){
 		this.legs = 2;
 		this.arms = 2;
 		this.name = name;
 		this.age = age;
 		this.eyes = eyes;
 		this.hair = hair;
-	}
-	setHair(hairColor){
-		this.hair = hairColor;
+		this.lovesCats = lovesCats;
+		this.lovesDogs = lovesDogs || true;
 	}
 	greet(otherPerson){
 		console.log('hi ' + otherPerson + '!');
 	}
-	jump(){
-		console.log('weeee!');
+	classyGreeting(otherClassyPerson){
+		console.log('Howdy ' + otherClassyPerson.name + '!');
+	}
+	setHair(hairColor){
+		this.hair = hairColor;
+	}
+	walk(){
+		console.log('I hate when my Segway is in the shop.');
 	}
 };
 
@@ -223,6 +367,7 @@ class SuperHero extends Person {
 	}
 };
 const superman = new SuperHero('Clark Kent', 30, 'blue', 'black')
+superman.walk();
 superman.fly();
 ```
 
@@ -251,13 +396,13 @@ class SuperHero extends Person {
 	greet(otherPerson){
 		console.log('Greetings ' + otherPerson);
 	}
-	jump(){
-		super.jump();
+	walk(){
+		super.walk();
 		this.fly();
 	}
 };
 const superman = new SuperHero('Clark Kent', 30, 'blue', 'black')
-superman.jump();
+superman.walk();
 ```
 
 This is most useful on the constructor:
@@ -274,8 +419,8 @@ class SuperHero extends Person {
 	greet(otherPerson){
 		console.log('Greetings ' + otherPerson);
 	}
-	jump(){
-		super.jump();
+	walk(){
+		super.walk();
 		this.fly();
 	}
 };
@@ -311,7 +456,7 @@ class Car {
 		this.serialNumber = serialNumber;
 	}
 	drive(){
-		console.log('Vroom');
+		console.log('Vroom Vroom');
 	}
 }
 const factory = {

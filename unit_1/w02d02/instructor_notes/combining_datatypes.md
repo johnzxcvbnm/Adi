@@ -100,6 +100,14 @@ for(row of foo){
 }
 ```
 
+## Activity
+1. Create an object called "bootcamp" with an array called "skills", and a function called "feeling".
+1. In the array add no less than 5 skills you have learned so far in the class.
+1. The function should log how you are feeling about the Bootcamp today from one of these responses ("Im okay, hanging in there!", "ALERT! Panic Zone", "Feeling good, feeling challenged");
+1. Loop over the items in the array
+1. Call the function in the array. 
+
+
 ## Combine objects, arrays, and functions more than one level deep
 
 You can create a function that returns an object.  Just add the `.` after the `()` since the return value of the function is an object
@@ -175,6 +183,14 @@ const foo = ()=>{
 
 foo()(); //logs 'whaaaa?'
 ```
+
+## Activity - Returning Functions
+1. Create a function that returns an object called "Weekend" that returns one thing you are excited for this weeked. Log the return value of the function.
+1. Create a function that returns an object called "favBand" that has a method which returns your favorite song from that band. Log the result of the method!
+1. Create a function called "favFood" that returns a function that logs your favorite food. Log the result!
+
+
+## Combine objects, arrays, and functions more than one level deep - Con't
 
 You can create an object that has a method that returns an object
 

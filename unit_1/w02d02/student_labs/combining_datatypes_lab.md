@@ -11,9 +11,9 @@ Adapted by: Thom Page<br>
 
 ---
 
-## Morning Lab
+## Afternoon Lab
 
-Make a file `morning_lab.js` in your `student_labs` folder.
+Make a file `afternoon_lab.js` in your `student_labs` folder.
 
 # Part one
 

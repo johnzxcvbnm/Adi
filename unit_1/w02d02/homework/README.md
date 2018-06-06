@@ -142,6 +142,20 @@ The commit message should read: <br>
 "accessed limbo"
 <hr>
 
+## Combining Datatypes
+
+Model a vending machine
+1. a vending machine is an object
+1. it has an array of snacks (make 3 snacks)
+1. snacks are objects that have a name and a price
+1. a vending machine has a function `vend` that allows user to enter the array position (a number) of the snack and then that snack will be returned
+
+1. Be able to call VendingMachine.vend() with a valid integer to return a snack
+
+**Bonus:**
+- remove the snack from the array
+- return an error message if an invalid number/input is used
+
 ## Bond Films
 
 ### Array of objects:
