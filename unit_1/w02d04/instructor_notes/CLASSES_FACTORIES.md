@@ -304,7 +304,7 @@ class Person {
     this.lovesDogs = lovesDogs || false
   }
   classyGreeting(otherClassyPerson){
-    console.log('Greetings ' + otherClassyPerson.name + '.');
+    console.log('Howdy ' + otherClassyPerson.name + '!');
   }
   greet(otherPerson){
     console.log('hi ' + otherPerson + '!');
@@ -347,7 +347,7 @@ class Person {
     this.lovesDogs = lovesDogs || false
   }
   classyGreeting(otherClassyPerson){
-    console.log('Greetings ' + otherClassyPerson.name + '.');
+    console.log('Howdy ' + otherClassyPerson.name + '!');
   }
   greet(otherPerson){
     console.log('hi ' + otherPerson + '!');
