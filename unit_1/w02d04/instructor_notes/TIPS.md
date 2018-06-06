@@ -2,7 +2,6 @@
 
 ## Lesson Objectives
 
-1. Use the Javascript Debugger in the Browser
 1. Use the Javascript Debugger in Node
 1. Use Proper Indentation
 1. Name Variables Semantically
@@ -11,23 +10,6 @@
 1. Use Common Programming Principles
 1. Describe How to Read Errors
 1. Coerce Data Types
-
-## Use the Javascript Debugger in the Browser
-
-A debugger allows you to stop execution of your program to examine variables at any point using the `debugger` keyword
-
-```javascript
-const a = 2 + 2;
-debugger
-console.log(a);
-```
-
-1. Right click on page and choose Inspect
-1. Click on sources (you may need to refresh the page to have files show up)
-1. Click the blue play button to continue to next debugger statement
-1. Use the console to examine variables (or you can hover over their names in the source code)
-
-![browser debugger](https://i.imgur.com/C0F2tTB.png)
 
 ## Use the Javascript Debugger in Node
 
