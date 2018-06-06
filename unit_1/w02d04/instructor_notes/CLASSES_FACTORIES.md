@@ -116,7 +116,7 @@ These methods can of course take parameters:
 ```javascript
 class Person {
 	greet(otherPerson){
-		console.log('hi ' + otherPerson.name + '!');
+		console.log('hi ' + otherPerson + '!');
 	}
 };
 const me = new Person();
