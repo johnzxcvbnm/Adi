@@ -119,7 +119,7 @@ bar(foo);
 bar(awesome);
 ```
 
-If we want, we don't even need to assign the functions to variables
+If we want, we don't even need to assign the callback functions to variables
 
 ```javascript
 const bar = (param1)=>{
@@ -134,7 +134,7 @@ bar(()=>{
 });
 ```
 
-** Have you used these before??**
+**Food for thought: Have you used these before??**
 
 	
 # Electric Mixer
