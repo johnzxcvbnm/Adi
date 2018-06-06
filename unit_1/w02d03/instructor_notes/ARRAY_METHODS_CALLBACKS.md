@@ -90,4 +90,5 @@ const numberArray =  [31, 203, 30, 84, 5, 62, 770, 8, 99, 10, 0];
 
 ## Hungry for more
 
+Tips & Tricks (https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Adi/blob/master/unit_1/w02d03/instructor_notes/TIPS.md)
 Further Explanations (https://codeburst.io/array-methods-explained-filter-vs-map-vs-reduce-vs-foreach-ea3127c6d319)
