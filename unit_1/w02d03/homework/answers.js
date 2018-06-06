@@ -45,5 +45,23 @@
 // }
 
 // Create an array that has an array as one of its elements. Loop over the second array and log each individual element.
-//
+// const myArray = [
+//   [12, 13, 14, 15, 16],
+//   [133],
+//   [143, 0, 1337],
+//   [153, 1516, 8674, 29];
+//   for(let i of myArray[0])
+//     console.log(i);
+
 // Bonus: make each element of the outer array an array as well. Using two for loops, loop over each array in the outer array and log those elements.
+// const myArray = [
+//   [12, 13, 14, 15, 16],
+//   [133],
+//   [143, 0, 1337],
+//   [153, 1516, 8674, 29]];
+//
+// for(let subArray of myArray){
+//   for(let i of subArray){
+//     console.log(i);
+//   }
+// }
