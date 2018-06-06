@@ -142,3 +142,33 @@ const inception = {
 
 inception.reality.dreamLayer1.dreamLayer2.dreamLayer3.dreamLayer4.dreamLayer5.dreamLayer6.limbo = null;
 console.log(inception.reality.dreamLayer1.dreamLayer2.dreamLayer3.dreamLayer4.dreamLayer5.dreamLayer6.limbo);
+
+//---Combining Datatypes---//
+// Model a vending machine
+// a vending machine is an object
+// it has an array of snacks (make 3 snacks)
+// snacks are objects that have a name and a price
+// a vending machine has a function vend that allows user to enter the array position (a number) of the snack and then that snack will be returned
+// Be able to call VendingMachine.vend() with a valid integer to return a snack
+//
+// Bonus:
+// remove the snack from the array
+// return an error message if an invalid number/input is used
+
+const vendingMachine = {
+  snacks: [
+    { name: "KitKat", price: 2 },
+    { name: "Reeces", price: 2 },
+    { name: "Apple", price: 3}],
+   buySnack: (num) => {
+     if(num >= 0 && num < vendingMachine.snacks.length){
+       return vendingMachine.snacks.slice(num, 1);
+     } else {
+       return "Error";
+     }
+   }
+}
+console.log("---------------------");
+// console.log(vendingMachine);
+console.log(vendingMachine.buySnack(0));
+console.log(vendingMachine.buySnack(10));
