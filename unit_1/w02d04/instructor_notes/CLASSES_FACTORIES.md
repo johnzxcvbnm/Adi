@@ -179,8 +179,8 @@ class Person {
 	greet(otherPerson){
 		console.log('hi ' + otherPerson + '!');
 	}
-	jump(){
-		console.log('weeee!');
+	walk(){
+		console.log('I hate when my Segway is in the shop.');
 	}
 };
 const me = new Person();
