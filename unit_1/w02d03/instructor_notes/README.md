@@ -134,8 +134,6 @@ bar(()=>{
 });
 ```
 
-**Food for thought: Have you used these before??**
-
 	
 # Electric Mixer
 
