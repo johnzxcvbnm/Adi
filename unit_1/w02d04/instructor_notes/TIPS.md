@@ -9,6 +9,7 @@
 1. Use Common Programming Principles
 1. Describe How to Read Errors
 1. Coerce Data Types
+1. Become an awesome Googler and a Stackoverlow frequenter!
 
 ## Use Proper Indentation
 
@@ -169,3 +170,9 @@ Always make sure you know what your data types are:
 const a = "1";
 typeof a;
 ```
+
+### Googling and Using Stackoverflow
+
+- Don't forget to google your answers! Become an expert at using keywords in your searches and reading other peoples code!
+- Stackoverflow is a developers best friend! Ask a question on it if you are really stuck!
+
