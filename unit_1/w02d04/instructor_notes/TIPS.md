@@ -2,7 +2,6 @@
 
 ## Lesson Objectives
 
-1. Use the Javascript Debugger in Node
 1. Use Proper Indentation
 1. Name Variables Semantically
 1. Define Functions at the Top of the File
@@ -10,14 +9,6 @@
 1. Use Common Programming Principles
 1. Describe How to Read Errors
 1. Coerce Data Types
-
-## Use the Javascript Debugger in Node
-
-You can execute in node with `node debug test.js`
-
-- Type `c` to continue to next debugger statement
-- Type `quit` to quit
-- Type `repl` to examine variables
 
 ## Use Proper Indentation
 
