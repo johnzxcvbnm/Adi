@@ -219,3 +219,23 @@ for(let movie of bondFilms){
 }
 
 console.log(oddBonds);
+
+// Determine the total cumulative gross of the Bond franchise, and console.log the result. hint To make the grosses into usable numbers, look into the .replace Javascript method (there are many ways to do this, however). Look into parseInt also.
+let sum = 0;
+for(let movie of bondFilms){
+
+  //Removes the $ in front of the string
+  let temp = movie.gross.substring(1);
+
+  //Iterates through the string and removes all the commas
+  for(let i = 0; i < temp.length; i++){
+    if(temp.charAt(i) === ","){
+      temp = temp.substring(0, i) + temp.substring(i + 1);
+    }
+  }
+
+  //Turns the strings into integers and adds it to the sum
+  sum += parseInt(temp);
+}
+
+console.log(sum);
