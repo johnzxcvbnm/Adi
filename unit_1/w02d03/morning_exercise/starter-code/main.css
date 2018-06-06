@@ -1,0 +1,29 @@
+/* * { border: 1px solid gold; } */
+
+.flex-container {
+  display: flex;
+  background-color: #E9ECE5;
+  width: 90%;
+  margin: auto;
+  /* overflow: scroll; */
+  flex-wrap: wrap;
+  /* flex-direction: column;
+  height: 400px; */
+  justify-content: space-around;
+}
+
+.card {
+  color: white;
+  background-color: #B3C2BF;
+  padding: .5em;
+  margin: .3em;
+  flex-basis: 1em;
+  text-align: center;
+}
+
+.selected {
+  background-color: #fae596;
+  color: #40a69a;
+  flex-grow: 2;
+  order: -1;
+}
