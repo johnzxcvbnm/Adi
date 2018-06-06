@@ -21,7 +21,7 @@
 
 ## What is an Array Method with a Callback?
 
-An array method that accepts with a callback is executes a function on the element of the given array and returns some output.
+An array method that accepts a callback executes a function on the index of the given array and returns some output.
 
 **Okay...but what does that mean?**
 
