@@ -237,7 +237,7 @@ class Person {
 	}
 };
 const me = new Person('Karolin', 40, 'green', 'copper dark ash blonde');
-const you = new Person('Karolin', 40, 'green', 'copper dark ash blonde', false, false);
+const you = new Person('Matt', 36, 'blue', 'blonde', false, false);
 console.log(me);
 console.log(you);
 ```
