@@ -219,25 +219,27 @@ There are two ways to write it, writing it in the constructor with an `=` is the
 
 ```javascript
 class Person {
-	constructor(name, age, eyes, hair, lovesCats = true, lovesDogs){
-		this.legs = 2;
-		this.arms = 2;
-		this.name = name;
-		this.age = age;
-		this.eyes = eyes;
-		this.hair = hair;
-    this.lovesCats = lovesCats;
-    this.lovesDogs = lovesDogs || true;
-	}
-	greet(otherPerson){
-		console.log('hi ' + otherPerson + '!');
-	}
-	walk(){
-		console.log('I hate when my Segway is in the shop.');
-	}
-};
+  constructor (name, age, eyes, hair, lovesCats = false, lovesDogs){
+    this.legs = 2
+    this.arms = 2
+    this.eyes = eyes
+    this.hair = hair
+    this.name = name
+    this.age = age
+    this.lovesCats = lovesCats
+    this.lovesDogs = lovesDogs || false
+  }
+  greet(otherPerson){
+    console.log('hi ' + otherPerson + '!');
+  }
+  walk(){
+    console.log('I hate when my Segway is in the shop.');
+  }
+}
+
 const me = new Person('Karolin', 40, 'green', 'copper dark ash blonde');
-const you = new Person('Matt', 36, 'blue', 'blonde', false, false);
+const you = new Person('Matt', 36, 'blue', 'blonde', true, true);
+
 console.log(me);
 console.log(you);
 ```
