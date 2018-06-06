@@ -239,3 +239,35 @@ for(let movie of bondFilms){
 }
 
 console.log(sum);
+console.log("-----------------------")
+
+//---Hungry For More?---//
+// CHALLENGE
+// bondFilms again!
+// Console log the single movie object that contains the actor who starred in the least number of films.
+// Expected result:
+// { "title" : "On Her Majesty's Secret Service", "year" : 1969, "actor" : "George Lazenby", "gross" : "$505,899,782" }
+
+//Create a new array to list the actors and how many films they've been in
+const bondActors = [];
+
+//Populates the bondActors array
+for(let movie of bondFilms){
+
+    //If the actor isn't there yet, push them onto the array
+    if(bondActors.findIndex(x => x.name === movie.actor) == -1) {
+      bondActors.push({ name: movie.actor, numFilms: 1 });
+
+    //Else incriment the numFilms by one
+    } else {
+      bondActors[bondActors.findIndex(x => x.name === movie.actor)].numFilms++;
+    }
+}
+
+//Sort bondActors by the numFilms
+bondActors.sort(function (a, b) {
+  return a.numFilms - b.numFilms;
+});
+
+//Console log bondActors[0] which will have the lowest numFilms
+console.log(bondFilms[bondFilms.findIndex(x => x.actor === bondActors[0].name)]);
