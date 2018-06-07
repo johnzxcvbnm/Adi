@@ -171,15 +171,15 @@ const myNumberArray = [2, 4, 6, 8, 10];
 //--------------------Function definition placement
 //Clean up this code, so that it works and has function definitions in the correct place
 
-const bar = () => {
-    console.log('bar here');
-}
-bar();
-
-const foo = () => {
-    console.log('foo here');
-}
-foo();
+// const bar = () => {
+//     console.log('bar here');
+// }
+// bar();
+//
+// const foo = () => {
+//     console.log('foo here');
+// }
+// foo();
 
 
 //-------------------Commenting code
@@ -194,3 +194,16 @@ const addTwoNums = (firstNum, secondNum)=>{
   //The result is then returned
   return finalValue;
 }
+
+//-----------Error reading
+//What is meant by the error this produces?
+
+// foo();
+//
+// const foo () =>{
+//     console.log('hi');
+// }
+
+// SyntaxError: Missing initializer in const declaration
+ // - A syntax error is an error in coding, either the programmer forgot to add the proper syntax or mistyped something.  In this case it's here because it should be 'const foo = () => {'
+//ReferenceError: foo is not defined - foo is called before it has been declared.  This is fixed by simply moving the function call after the function declaration.
