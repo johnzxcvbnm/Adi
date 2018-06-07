@@ -179,8 +179,8 @@ class Person {
 	greet(otherPerson){
 		console.log('hi ' + otherPerson + '!');
 	}
-	jump(){
-		console.log('weeee!');
+	walk(){
+		console.log('I hate when my Segway is in the shop.');
 	}
 };
 const me = new Person();
@@ -296,25 +296,27 @@ There are two ways to write it, writing it in the constructor with an `=` is the
 
 ```javascript
 class Person {
-	constructor(name, age, eyes, hair, lovesCats = true, lovesDogs){
-		this.legs = 2;
-		this.arms = 2;
-		this.name = name;
-		this.age = age;
-		this.eyes = eyes;
-		this.hair = hair;
-    this.lovesCats = lovesCats;
-    this.lovesDogs = lovesDogs || true;
-	}
-	greet(otherPerson){
-		console.log('hi ' + otherPerson + '!');
-	}
-	walk(){
-		console.log('I hate when my Segway is in the shop.');
-	}
-};
+  constructor (name, age, eyes, hair, lovesCats = false, lovesDogs){
+    this.legs = 2
+    this.arms = 2
+    this.eyes = eyes
+    this.hair = hair
+    this.name = name
+    this.age = age
+    this.lovesCats = lovesCats
+    this.lovesDogs = lovesDogs || false
+  }
+  greet(otherPerson){
+    console.log('hi ' + otherPerson + '!');
+  }
+  walk(){
+    console.log('I hate when my Segway is in the shop.');
+  }
+}
+
 const me = new Person('Karolin', 40, 'green', 'copper dark ash blonde');
-const you = new Person('Matt', 36, 'blue', 'blonde', false, false);
+const you = new Person('Matt', 36, 'blue', 'blonde', true, true);
+
 console.log(me);
 console.log(you);
 ```
@@ -368,34 +370,41 @@ console.log(matt);
 We can pass an object to another object to have them interact
 ```javascript
 class Person {
-	constructor(name, age, eyes, hair, lovesCats = true, lovesDogs){
-		this.legs = 2;
-		this.arms = 2;
-		this.name = name;
-		this.age = age;
-		this.eyes = eyes;
-		this.hair = hair;
-		this.lovesCats = lovesCats;
-		this.lovesDogs = lovesDogs || true;
-	}
-	greet(otherPerson){
-		console.log('hi ' + otherPerson + '!');
-	}
-	classyGreeting(otherClassyPerson){
-		console.log('Greetings ' + otherClassyPerson.name + '!');
-	}
-	setHair(hairColor){
-		this.hair = hairColor;
-	}
-	walk(){
-		console.log('I hate when my Segway is in the shop.');
-	}
-};
-const me = new Person('Karolin', 40, 'green', 'copper dark ash blonde');
-const matt = new Person('Matt', 36, 'blue', 'blonde', false);
+  constructor (name, age, eyes, hair, lovesCats = false, lovesDogs){
+    this.legs = 2
+    this.arms = 2
+    this.eyes = eyes
+    this.hair = hair
+    this.name = name
+    this.age = age
+    this.lovesCats = lovesCats
+    this.lovesDogs = lovesDogs || false
+  }
+  classyGreeting(otherClassyPerson){
+    console.log('Howdy ' + otherClassyPerson.name + '!');
+  }
+  greet(otherPerson){
+    console.log('hi ' + otherPerson + '!');
+  }
+  setHair(hairColor){
+    this.hair = hairColor;
+  }
+  walk(){
+    console.log('I hate when my Segway is in the shop.');
+  }
+}
 
-me.classyGreeting(matt);
-matt.classyGreeting(me);
+const me = new Person('Karolin', 40, 'green', 'copper dark ash blonde');
+const you = new Person('Matt', 36, 'blue', 'blonde', true, true);
+
+me.hair = 'supernova red'
+you.setHair('red')
+
+console.log(me);
+console.log(you);
+
+me.classyGreeting(you)
+you.classyGreeting(me)
 ```
 
 ## Make a class inherit attributes from a "parent class"
@@ -404,29 +413,29 @@ Sometimes we want to have a "parent" class that will have some basic attributes 
 
 ```javascript
 class Person {
-	constructor(name, age, eyes, hair, lovesCats = true, lovesDogs){
-		this.legs = 2;
-		this.arms = 2;
-		this.name = name;
-		this.age = age;
-		this.eyes = eyes;
-		this.hair = hair;
-		this.lovesCats = lovesCats;
-		this.lovesDogs = lovesDogs || true;
-	}
-	greet(otherPerson){
-		console.log('hi ' + otherPerson + '!');
-	}
-	classyGreeting(otherClassyPerson){
-		console.log('Howdy ' + otherClassyPerson.name + '!');
-	}
-	setHair(hairColor){
-		this.hair = hairColor;
-	}
-	walk(){
-		console.log('I hate when my Segway is in the shop.');
-	}
-};
+  constructor (name, age, eyes, hair, lovesCats = false, lovesDogs){
+    this.legs = 2
+    this.arms = 2
+    this.eyes = eyes
+    this.hair = hair
+    this.name = name
+    this.age = age
+    this.lovesCats = lovesCats
+    this.lovesDogs = lovesDogs || false
+  }
+  classyGreeting(otherClassyPerson){
+    console.log('Howdy ' + otherClassyPerson.name + '!');
+  }
+  greet(otherPerson){
+    console.log('hi ' + otherPerson + '!');
+  }
+  setHair(hairColor){
+    this.hair = hairColor;
+  }
+  walk(){
+    console.log('I hate when my Segway is in the shop.');
+  }
+}
 
 class SuperHero extends Person {
 
