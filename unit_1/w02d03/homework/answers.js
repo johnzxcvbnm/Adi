@@ -65,3 +65,39 @@
 //     console.log(i);
 //   }
 // }
+
+//--------------------------Combine objects, arrays, and functions more than one level deep
+// COMPLETE ANY 5
+//
+// Create a function that returns an object. Log a value of that object (hint: call the function and then call a property on the return value).
+// const myFunction = (myObj) => {
+//   return myObj;
+// }
+// console.log(myFunction({ name: "John" }));
+
+// Create a function that returns an array. Log an element of the array.
+// const myFunction = () => {
+//   return [0, 1, 2, 3];
+// }
+// console.log(myFunction());
+
+// Create a function that returns an object that has an array. Log one of the elements of that array.
+// const myFunction = () => {
+//   return { name: "John", subArray: [0, 1, 2]};
+// }
+// console.log(myFunction().subArray[1]);
+
+// Create a function that returns an object that has an object. Log one of the properties of the inner object.
+// const myFunction = () => {
+//   return { name: "John", jobHistory: { title: "Student", date: "June 2018"} }
+// }
+//
+// console.log(myFunction().jobHistory.title);
+
+
+// Create a function that returns a function. Call that inner function
+// const myFunction = () => {
+//   return x => console.log("YOLO");
+// }
+//
+// myFunction()();
