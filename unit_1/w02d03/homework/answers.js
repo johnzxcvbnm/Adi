@@ -180,3 +180,17 @@ const foo = () => {
     console.log('foo here');
 }
 foo();
+
+
+//-------------------Commenting code
+//Write your own comments for each line of code:
+
+//Function addTwoNums takes in two parameters, firstNum and secondNum
+const addTwoNums = (firstNum, secondNum)=>{
+
+  //finalValue is assigned the sum (or concatenation) of the two variables
+  const finalValue = firstNum + secondNum;
+
+  //The result is then returned
+  return finalValue;
+}
