@@ -102,6 +102,11 @@
 //
 // myFunction()();
 
+// Create an array that has a function that returns an object. Log a property of the object.
+// Create an array that has a function that returns an object that has an array. Log an element of the inner array.
+// Create an array that has a function that returns an object that has an object. Log a property of the inner object.
+// Create an array that has a function that returns a function. Call the inner function.
+
 //-----------------Callbacks
 // Make a function operateNums that takes two arguments. Assume the two arguments are a number and a function (a callback).
 // Make it so that when operateNums is invoked, the callback "operates" on the number.
@@ -109,7 +114,7 @@ const operateNums = (input, func) => {
   func(input);
 }
 
-operateNums(1337, console.log);
+// operateNums(1337, console.log);
 
 // Create a function called multByTwo that accepts a number as an argument and multiplies that number by two.
 const multByTwo = (input) => {
@@ -122,28 +127,28 @@ const squareNum = (input) => {
 }
 
 // Use multByTwo and squareNum as callbacks when invoking operateNums.
-operateNums(6, multByTwo);
-operateNums(6, squareNum);
+// operateNums(6, multByTwo);
+// operateNums(6, squareNum);
 
 
 //-------------------------.forEach
-console.log("----------------");
+// console.log("----------------");
 const nums = [5, 10, 15, 16, 17, 18, 19, 20];
 // Using a for loop, iterate through the nums array and print only the numbers that are evenly divisible by 5.
 for(let i of nums){
   if(i % 5 == 0){
-    console.log(i);
+    // console.log(i);
   }
 }
 // Now, use JavaScript's built-in .forEach function instead to iterate over the nums array and print only those numbers that are evenly divisible by 5.
-console.log("----------------");
+// console.log("----------------");
 const myDiv = (num) => {
   if(num % 5 == 0){
     console.log(num);
   }
 }
 
-nums.forEach(myDiv);
+// nums.forEach(myDiv);
 
 // Write a sentence or two comparing and contrasting the two methods.
 //They both practically do the same thing, they both iterate over each element of the array and apply the funtion (if statement) to the element
