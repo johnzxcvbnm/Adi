@@ -147,3 +147,18 @@ nums.forEach(myDiv);
 
 // Write a sentence or two comparing and contrasting the two methods.
 //They both practically do the same thing, they both iterate over each element of the array and apply the funtion (if statement) to the element
+
+//---------------------------Indentation
+// Correctly indent the following code:
+
+// if(true){
+//   const a = 2 + 2;
+//   console.log(a);
+// }
+//
+// if(true){
+//   if(false){
+//     console.log('hi');
+//   }
+// }
+//
