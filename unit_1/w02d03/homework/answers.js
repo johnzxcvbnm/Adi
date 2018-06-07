@@ -101,3 +101,26 @@
 // }
 //
 // myFunction()();
+
+//-----------------Callbacks
+// Make a function operateNums that takes two arguments. Assume the two arguments are a number and a function (a callback).
+// Make it so that when operateNums is invoked, the callback "operates" on the number.
+const operateNums = (input, func) => {
+  func(input);
+}
+
+operateNums(1337, console.log);
+
+// Create a function called multByTwo that accepts a number as an argument and multiplies that number by two.
+const multByTwo = (input) => {
+  console.log(input * 2);
+}
+
+// Create a function called squareNum that accepts a number as an argument and squares that number.
+const squareNum = (input) => {
+  console.log(input * input);
+}
+
+// Use multByTwo and squareNum as callbacks when invoking operateNums.
+operateNums(6, multByTwo);
+operateNums(6, squareNum);
