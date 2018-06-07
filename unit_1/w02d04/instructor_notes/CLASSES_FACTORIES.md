@@ -6,6 +6,7 @@
 1. Create a class to define the blueprint for creating objects
 1. Add methods to a class
 1. Set properties on an instance of a class
+1. What is `this`? Why do we need it?
 1. Make an instance of each class customizable
 1. Create methods to alter the properties of an instance
 1. Make a class inherit attributes from a "parent class"
