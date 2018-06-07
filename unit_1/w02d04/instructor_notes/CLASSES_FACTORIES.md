@@ -187,6 +187,83 @@ const me = new Person();
 console.log(me);
 ```
 
+## What is `this`?
+
+What is `this`? Let's think back to our hw problem on making a vending machine:
+
+```
+Model a vending machine
+
+a vending machine is an object
+
+it has an array of snacks (make 3 snacks)
+
+snacks are objects that have a name and a price
+
+a vending machine has a function vend that allows user to enter the array position (a number) of the snack and then that snack will be returned
+
+Be able to call VendingMachine.vend() with a valid integer to return a snack
+```
+
+When we wanted to access snacks within our object we had to put the name of the object in it to access the snacks
+
+```js
+const vendingMachine = {
+  snacks: [
+    {
+      name: 'kitkat',
+      price: 6
+    },
+    {
+      name: 'sun chips',
+      price: 7
+    },
+    {
+      name: 'apple',
+      price: 12
+    },
+  ],
+  vend(input){
+    console.log('vending', vendingMachine.snacks[input]);
+  }
+}
+
+vendingMachine.vend(1)
+```
+
+This worked just fine, because we knew what the name of the object would be.
+
+But now we are making new objects that can be named anything. So we need a way to say `this` object's snacks or `this` object's legs property - a pronoun, a generic term to refer to whatever the name of the object is.
+
+JavaScript uses `this`. So we can access things within an object this way. We can update our vendingMachine to use `this` instead:
+
+```js
+const vendingMachine = {
+  snacks: [
+    {
+      name: 'kitkat',
+      price: 6
+    },
+    {
+      name: 'sun chips',
+      price: 7
+    },
+    {
+      name: 'apple',
+      price: 12
+    },
+  ],
+  vend(input){
+    console.log('vending', this.snacks[input]);
+  }
+}
+
+vendingMachine.vend(1)
+```
+
+
+
+
 ## Make an instance of each class customizable
 
 Of course, our constructor function can take params which we can use to alter the properties of the object instantiated.  This allows us to customize each instance:
