@@ -1,22 +1,16 @@
 # Lab - Classes
 
 
-## Car
-
-1. Write a class called `Car`.<br>
-2. New `Car` instances should have properties `make`, `model`, and `year`<br>
-3. These properties will be given to a new `Car` when it is created; however, if `year` is not defined, it should default to being the current year. <br>
-4. Create a new `Car` instance and store it inside a variable called `firstExampleCar`. Give it a `make` and `model` of "Ford" and "Fusion", and a year of 2010.<br>
-5. Create another new `Car` instance and store it inside a variable called `secondExampleCar`. Give it a `make` and `model` but do not give it a year. Check to see what the year is on this `secondExampleCar`
-
 ## Create the following objects
 
 1. Create a class for a Pet
     - attributes
         - owner - string
         - name - string
+        - walk - a method that logs 'walka walka'
     - instantiating a new pet takes the pets name as a parameter and sets the attribute;
     - create one pet and log it
+    - run the walk method to make sure it works as expected
 
 1. Create a class for a Dog
     - this should inherit from Pet
@@ -27,6 +21,7 @@
         - chaseTail() - log "oh boy oh boy oh boy"
         - getPrice() - return price
     - create a new dog and log it
+    - test all the methods to make sure they work as expected
 
 
 1. Create a class for a Cat
@@ -37,13 +32,23 @@
         - purr() - log "purrrrr"
         - clean() - log "cleaning"
         - getPrice() - return price
+        - walk() - overwrite the method to console.log 'strut strut'
     - create a new cat and log it
+    - test all the methods to make sure they work as expected
+    
+1. update one property of the dog after it has been created and log it to check
+1. updated one property of the cat after it has been creatd and log it to check
 
 
 
 ## Stretch
 
 - Using classes, generate a deck of cards, stored in an array
-- Figure out how to shuffle the array and `console.log` the top card
+    - cards are objects and should have a value, a face, a suit, a boolean of whether they are faceUp etc.
+    - there are 13 cards per suit, values should match what they are in BlackJack (or another game), 
+            - Ace, by default is equal to 11, 
+            - cards 2-10 share the same face and value
+            - Jack, Queen and King have a value of 10
+- Figure out how to shuffle the array and `console.log` the top card (Hint: google it)
 - Figure out how to compare the top and bottom card and `console.log` both cards and a message that says which card is bigger (or a tie)
 

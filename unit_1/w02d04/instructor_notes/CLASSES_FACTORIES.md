@@ -294,7 +294,7 @@ There are two ways to write it, writing it in the constructor with an `=` is the
 
 ```javascript
 class Person {
-	constructor(name, age, eyes, hair, lovesCats = true, lovesDogs){
+	constructor(name, age, eyes, hair, lovesCats = false, lovesDogs){
 		this.legs = 2;
 		this.arms = 2;
 		this.name = name;
@@ -302,7 +302,7 @@ class Person {
 		this.eyes = eyes;
 		this.hair = hair;
     this.lovesCats = lovesCats;
-    this.lovesDogs = lovesDogs || true;
+    this.lovesDogs = lovesDogs || false;
 	}
 	greet(otherPerson){
 		console.log('hi ' + otherPerson + '!');
@@ -311,8 +311,8 @@ class Person {
 		console.log('I hate when my Segway is in the shop.');
 	}
 };
-const me = new Person('Karolin', 40, 'green', 'copper dark ash blonde');
-const you = new Person('Matt', 36, 'blue', 'blonde', false, false);
+const me = new Person('Karolin', 40, 'green', 'copper dark ash blonde', true, true);
+const you = new Person('Matt', 36, 'blue', 'blonde');
 console.log(me);
 console.log(you);
 ```
@@ -366,7 +366,7 @@ console.log(matt);
 We can pass an object to another object to have them interact
 ```javascript
 class Person {
-	constructor(name, age, eyes, hair, lovesCats = true, lovesDogs){
+	constructor(name, age, eyes, hair, lovesCats = false, lovesDogs){
 		this.legs = 2;
 		this.arms = 2;
 		this.name = name;
@@ -374,7 +374,7 @@ class Person {
 		this.eyes = eyes;
 		this.hair = hair;
 		this.lovesCats = lovesCats;
-		this.lovesDogs = lovesDogs || true;
+		this.lovesDogs = lovesDogs || false;
 	}
 	greet(otherPerson){
 		console.log('hi ' + otherPerson + '!');
@@ -389,10 +389,10 @@ class Person {
 		console.log('I hate when my Segway is in the shop.');
 	}
 };
-const me = new Person('Karolin', 40, 'green', 'copper dark ash blonde');
-const matt = new Person('Matt', 36, 'blue', 'blonde', false);
+const me = new Person('Karolin', 40, 'green', 'copper dark ash blonde', true, true);
+const you = new Person('Matt', 36, 'blue', 'blonde');
 
-me.classyGreeting(matt);
+me.classyGreeting(you);
 matt.classyGreeting(me);
 ```
 
