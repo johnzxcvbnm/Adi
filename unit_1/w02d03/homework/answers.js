@@ -124,3 +124,26 @@ const squareNum = (input) => {
 // Use multByTwo and squareNum as callbacks when invoking operateNums.
 operateNums(6, multByTwo);
 operateNums(6, squareNum);
+
+
+//-------------------------.forEach
+console.log("----------------");
+const nums = [5, 10, 15, 16, 17, 18, 19, 20];
+// Using a for loop, iterate through the nums array and print only the numbers that are evenly divisible by 5.
+for(let i of nums){
+  if(i % 5 == 0){
+    console.log(i);
+  }
+}
+// Now, use JavaScript's built-in .forEach function instead to iterate over the nums array and print only those numbers that are evenly divisible by 5.
+console.log("----------------");
+const myDiv = (num) => {
+  if(num % 5 == 0){
+    console.log(num);
+  }
+}
+
+nums.forEach(myDiv);
+
+// Write a sentence or two comparing and contrasting the two methods.
+//They both practically do the same thing, they both iterate over each element of the array and apply the funtion (if statement) to the element
