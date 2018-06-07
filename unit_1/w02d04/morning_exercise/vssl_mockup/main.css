@@ -1,0 +1,57 @@
+/* * { border: 1px solid gold; } */
+
+div {
+  /* width: 600px; */
+  /* height: 200px; */
+  border: 1px solid gold;
+}
+
+img {
+  width: 100%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+.topNav {
+  background-color: #000000;
+}
+
+.navLinks {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navL {
+  margin: 20px;
+  color: #FFFFFF;
+  font-size: 50px;
+}
+
+.bigQuote {
+  margin: 40px;
+  text-align: center;
+}
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.articleOne {
+  width: 28%;
+  margin: 2%;
+}
