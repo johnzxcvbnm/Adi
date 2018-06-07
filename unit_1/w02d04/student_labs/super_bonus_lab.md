@@ -1,7 +1,7 @@
 ![Hangman](http://www.roomrecess.com/Pictures/HangmanTitle.png)
 # HANGMAN
 
-This weekend you will be creating the popular game of Hangman as a JavaScript console game!
+You will be creating the popular game of Hangman as a JavaScript console game!
 
 Make sure you break the problem down and timebox. You are encouraged to base your solution on the functions/objects below (You don't have to write the objects/functions in order , but make a plan on how to tackle this project in small steps and commit often)
 
@@ -33,7 +33,7 @@ An object literal that has the following attributes
 
 ## Letter()
 
-Letter is a constructor function. In order to play Hangman, you will need information about each letter - what is its value? Is it hidden? You will also need a way to change its state (from hidden to not hidden), depending if the player has guessed the letter. 
+Letter is a constructor function(ES5) or class(ES6). In order to play Hangman, you will need information about each letter - what is its value? Is it hidden? You will also need a way to change its state (from hidden to not hidden), depending if the player has guessed the letter. 
 
 #### Object Attributes
 
@@ -48,7 +48,7 @@ Letter is a constructor function. In order to play Hangman, you will need inform
 
 ## Word()
 
-Word is a constructor function. This constructor has a function to generate the Letter objects called `getLetters` and stores each letter as an object inside an array called `letters`.
+Letter is a constructor function(ES5) or class(ES6). This constructor has a function to generate the Letter objects called `getLetters` and stores each letter as an object inside an array called `letters`.
 
 #### Object Attributes
 
