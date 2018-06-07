@@ -1,4 +1,6 @@
+![](/ga_cog.png)
 
+---
 Title: Space Battle<br>
 Type: Workshop<br>
 Creator: Akira Wong, adapted by Thom Page <br>
@@ -55,9 +57,11 @@ A game round would look like this:
 * **firepower** is the amount of damage done to the **hull** of the target with a successful hit.
 
 * **accuracy** is the chance between 0 and 1 that the ship will hit its target.
- - Every time the ship will attack, calculate the chance that the damage will hit the opposing ship using `Math.random()` 
- - If the ship's accuracy is `0.8` - then if the number generated from `Math.random()` is less than or equal to `0.8` then the attack will be successful. If the value is greater than  `0.8` then the attack has missed. 
- - Adjust the accuracy based on the specs for each ship
+	 - Every time the ship will attack, calculate the chance that the damage will hit the opposing ship using `Math.random()` 
+	 - An example of how to determine if the hit is successful: 
+	 	- If the ship has an accuracy of `0.8` and the random number generated from `Math.random()` is less than or equal to `0.8`, then the attack will be successful. 
+		- If the random number generated is greater than  `0.8`, then the attack has missed. 
+	 - Adjust the accuracy based on the specs for each ship
 
 **Your spaceship, the USS Schwarzenegger** should have the following properties:
 
@@ -67,9 +71,9 @@ A game round would look like this:
 
 **The alien ships** should each have the following _ranged_ properties determined randomly:
 
-* hull - between `3` and `6`
-* firepower - between `2` and `4`
-* accuracy - between `.6` and `.8`
+* **hull** - between `3` and `6`
+* **firepower** - between `2` and `4`
+* **accuracy** - between `.6` and `.8`
 
 You could be battling six alien ships each with unique values. 
 
@@ -163,7 +167,7 @@ A repeating action in the game is that these ships attack each other until one o
 
 ## &#x1F47E; Start simpler than the instructions suggest
 
-Keep these five things in mind when planning and coding your game:
+Keep these four things in mind when planning and coding your game:
 
 1. Begin even simpler than the specifications suggest. In this case, how about we just start with one alien ship instead of many alien ships, and get the code for one ship working first.
 
@@ -228,6 +232,28 @@ Your code should be as coherent to another developer as possible.
 <br>
 <hr>
 
+# Style the console
+
+Output in Chrome console: 
+
+![](https://i.imgur.com/ehyNTL0.png)
+
+You can use CSS in your Chrome console messages. Above is a simple example where messages are easier to differentiate.
+
+Formula, use `%c` in the first argument to console log, and provide CSS to the second argument:
+
+```javascript
+console.log('%c spacebattle', 'font-size: 40px');
+```
+
+Use multiple CSS properties:
+
+```javascript
+console.log('%c You have done ' + player.firepower + ' damage ', 'font-style: italic; background: azure; border: 1px solid grey;');
+```
+
+<br>
+<hr>
 
 
 # Cheat codes &#x2B06; &#x2197; &#x27A1;
@@ -294,24 +320,4 @@ Move functions into the game object.
 Move on to the bonuses.
 
 <br>
-<hr>
 
-# Style the console
-
-Output in Chrome console: 
-
-![](https://i.imgur.com/ehyNTL0.png)
-
-You can use CSS in your Chrome console messages. Above is a simple example where messages are easier to differentiate.
-
-Formula, use `%c` in the first argument to console log, and provide CSS to the second argument:
-
-```javascript
-console.log('%c spacebattle', 'font-size: 40px');
-```
-
-Use multiple CSS properties:
-
-```javascript
-console.log('%c You have done ' + player.firepower + ' damage ', 'font-style: italic; background: azure; border: 1px solid grey;');
-```
