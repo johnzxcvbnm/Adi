@@ -6,6 +6,7 @@
 1. Create a class to define the blueprint for creating objects
 1. Add methods to a class
 1. Set properties on an instance of a class
+1. What is `this`? Why do we need it?
 1. Make an instance of each class customizable
 1. Create methods to alter the properties of an instance
 1. Make a class inherit attributes from a "parent class"
@@ -25,7 +26,7 @@ We'd need at least:
 - rooms (an array of objects with details of the rooms)
 
 
-```
+```js
 {
 name: "Hotel California",
 location: "California",
@@ -111,12 +112,12 @@ me.greet();
 you.greet();
 ```
 
-These methods can of course take parameters:
+These methods can, of course, take parameters:
 
 ```javascript
 class Person {
 	greet(otherPerson){
-		console.log('hi ' + otherPerson.name + '!');
+		console.log('hi ' + otherPerson + '!');
 	}
 };
 const me = new Person();
@@ -187,6 +188,80 @@ const me = new Person();
 console.log(me);
 ```
 
+## What is `this`?
+
+What is `this`? Let's think back to our hw problem on making a vending machine:
+
+```
+Model a vending machine
+
+a vending machine is an object
+
+it has an array of snacks (make 3 snacks)
+
+snacks are objects that have a name and a price
+
+a vending machine has a function vend that allows user to enter the array position (a number) of the snack and then that snack will be returned
+
+Be able to call vendingMachine.vend() with a valid integer to return a snack
+```
+
+When we wanted to access snacks within our object we had to put the name of the object in it to access the snacks
+
+```js
+const vendingMachine = {
+  snacks: [
+    {
+      name: 'kitkat',
+      price: 6
+    },
+    {
+      name: 'sun chips',
+      price: 7
+    },
+    {
+      name: 'apple',
+      price: 12
+    },
+  ],
+  vend(input){
+    console.log('vending', vendingMachine.snacks[input]);
+  }
+}
+
+vendingMachine.vend(1)
+```
+
+This worked just fine, because we knew what the name of the object would be.
+
+But now we are making new objects that can be named anything. So we need a way to say `this` object's snacks or `this` object's legs property - We need a pronoun, a generic term to refer to whatever the name of the object is.
+
+JavaScript uses `this`. So we can access things within an object this way. We can update our vendingMachine to use `this` instead:
+
+```js
+const vendingMachine = {
+  snacks: [
+    {
+      name: 'kitkat',
+      price: 6
+    },
+    {
+      name: 'sun chips',
+      price: 7
+    },
+    {
+      name: 'apple',
+      price: 12
+    },
+  ],
+  vend(input){
+    console.log('vending', this.snacks[input]);
+  }
+}
+
+vendingMachine.vend(1)
+```
+
 ## Make an instance of each class customizable
 
 Of course, our constructor function can take params which we can use to alter the properties of the object instantiated.  This allows us to customize each instance:
@@ -237,7 +312,7 @@ class Person {
 	}
 };
 const me = new Person('Karolin', 40, 'green', 'copper dark ash blonde');
-const you = new Person('Karolin', 40, 'green', 'copper dark ash blonde', false, false);
+const you = new Person('Matt', 36, 'blue', 'blonde', false, false);
 console.log(me);
 console.log(you);
 ```
