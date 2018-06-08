@@ -1,6 +1,8 @@
 // Heroes and Enemies have a bunch in common
 // This is a parent class
 class Denizen {
+  // only name was required, for hw, everyone started with a health of 100
+  // during review, we decided to upgrade to enter a health when creating a new denizen/hero/enemy
   constructor(name, health){
     this.name = name
     this.health = health
