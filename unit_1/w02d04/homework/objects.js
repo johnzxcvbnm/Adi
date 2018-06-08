@@ -69,4 +69,67 @@ class Protagonist {
       console.log("You can't afford one!");
     }
   }
+
+  //Calls ageUp() 'times' number of times
+  ageMore(times) {
+    for(let i = 0; i < times; i++){
+      this.ageUp();
+    }
+  }
+
+  //Calls exercise() 'times' number of times
+  exerciseMore(times) {
+    for(let i = 0; i < times; i++){
+      this.exercise();
+    }
+  }
+
+  //Calls eat() 'times' number of times
+  eatMore(times){
+    for(let i = 0; i < times; i++){
+      this.eat();
+    }
+  }
 }
+
+// // //Function takes in two variables, times is the number of times you want to task to be done, task is the function that is to be called
+// const repeatTask = (times, task) => {
+//   for(let i = 0; i < times; i++){
+//     task();
+//   }
+// }
+
+//--------------------------Creating a story
+// Feel free to update or add methods to automate some of these tasks.
+//
+// Instantiate a new Protagonist named Timmy
+const timmy = new Protagonist("Timmy");
+
+// Age Timmy five years
+timmy.ageMore(5);
+
+// At this point Timmy's a little bummed. As a precocious child, he feels he's "seen it all" already. Have him eat five times.
+timmy.eatMore(5);
+
+// Now Timmy's a little heavier than he wants to be. Kindergarten's coming up and he wants to look good. Have him exercise five times
+timmy.exerciseMore(5);
+
+// Age Timmy 9 years
+timmy.ageMore(9);
+
+// Create a hamster named "Gus"
+const myHamster = "Gus";
+
+// Set Gus's owner to the string "Timmy"
+// Have Timmy "buy" Gus
+timmy.buyHamster(myHamster);
+
+// Age Timmy 15 years
+timmy.ageMore(15);
+
+// Have Timmy eat twice
+timmy.eatMore(2);
+
+// Have Timmy exercise twice
+timmy.exerciseMore(2);
+console.log(timmy);
