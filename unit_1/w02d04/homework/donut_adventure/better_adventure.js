@@ -8,7 +8,7 @@ class Hero {
 
   //Randomly logs one of the catch phrases
   talkSass() {
-    console.log(this.catchPhrases[Math.floor(Math.random() * this.catchPhrases.length)]);
+    return this.catchPhrases[Math.floor(Math.random() * this.catchPhrases.length)];
   }
 
   //Logs current heath
@@ -18,14 +18,13 @@ class Hero {
 
   //Logs ready to rumble
   fight(foe) {
-    console.log("I\'m ready to rumble!");
     let weaponChoice = Math.floor(Math.random() * 2);
     if(weaponChoice == 0){
       foe.health -= 5;
-      console.log(foe.name + " was hit by Sprinkle Spray!  His health is now at " + foe.health + ".");
+      return foe.name + " was hit by Sprinkle Spray!  His health is now at " + foe.health + ".";
     } else {
       foe.health -= 10;
-      console.log(foe.name + " was hit by Sugar Shock!  His health is now at " + foe.health + ".");
+      return foe.name + " was hit by Sugar Shock!  His health is now at " + foe.health + ".";
     }
   }
 }
@@ -41,7 +40,7 @@ class Enemy {
 
   //Randomly logs one of the catch phrases
   talkSmack() {
-    console.log(this.catchPhrases[Math.floor(Math.random() * this.catchPhrases.length)]);
+    return this.catchPhrases[Math.floor(Math.random() * this.catchPhrases.length)];
   }
 
   //Logs current heath
@@ -51,17 +50,51 @@ class Enemy {
 
   //Logs ready to rumble
   fight(foe) {
-    console.log("I\'m gonna flatten you like a slice of pepperoni!");
     let weaponChoice = Math.floor(Math.random() * 2);
     if(weaponChoice == 0){
       foe.health -= 5;
-      console.log(foe.name + " got hit by Pepperoni Stars!  His health is now at " + foe.health + ".");
+      return foe.name + " got hit by Pepperoni Stars!  His health is now at " + foe.health + ".";
     } else {
       foe.health -= 10;
-      console.log(foe.name + " was hit by Cheese Grease!  His health is now at " + foe.health + ".");
+      return foe.name + " was hit by Cheese Grease!  His health is now at " + foe.health + ".";
     }
   }
 }
 
-const dougie = new Hero("Dougie");
-const remy = new Enemy("Remy");
+//Resets Dougie's and Remy's health back to the default 100 and clears the battle text.
+const resetFunction = (guy1, guy2, text) => {
+  guy1.health = 100;
+  guy2.health = 100;
+  text.innerHTML = "";
+}
+
+
+
+const startFunction = () => {
+  const dougie = new Hero("Dougie");
+  const remy = new Enemy("Remy");
+  const text = document.getElementById("battleText");
+  const attackB = document.getElementById("attackButton");
+  const catchB = document.getElementById("catchButton");
+  const resetB = document.getElementById("resetButton");
+
+  attackB.addEventListener('click', function(){
+    text.innerHTML += "<br>" + dougie.fight(remy);
+    setTimeout(function() { text.innerHTML += "<br>" + remy.fight(dougie); }, 1000);
+  }, false);
+
+  catchB.addEventListener('click', function(){
+    text.innerHTML += "<br>" + dougie.talkSass();
+    setTimeout(function() { text.innerHTML += "<br>" + remy.talkSmack(); }, 1000);
+}, false);
+
+  resetB.addEventListener('click', function() {resetFunction(dougie, remy, text);}, false);
+
+  // dougie.health = 10;
+  // dougie.announceHealth();
+  // resetFunction(dougie, remy, text);
+  // dougie.announceHealth();
+
+}
+
+startFunction();
