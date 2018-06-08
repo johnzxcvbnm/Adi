@@ -16,7 +16,8 @@ class Hero {
     console.log("I " + this.name + " am currently at " + this.health + " HP.");
   }
 
-  //Logs ready to rumble
+  //Randomly chooses a weapon and subtracts the correct amount of damage from the 'foe's health.
+  //function returns a string to push to the text box
   fight(foe) {
     let weaponChoice = Math.floor(Math.random() * 2);
     if(weaponChoice == 0){
@@ -48,7 +49,8 @@ class Enemy {
     console.log("I, " + this.name + " am currently at " + this.health + " HP.");
   }
 
-  //Logs ready to rumble
+  //Randomly chooses a weapon and subtracts the correct amount of damage from the 'foe's health.
+  //function returns a string to push to the text box
   fight(foe) {
     let weaponChoice = Math.floor(Math.random() * 2);
     if(weaponChoice == 0){
@@ -61,6 +63,48 @@ class Enemy {
   }
 }
 
+//Pushes combat text to the textBox
+//The hero attacks first, then after a (one) second delay the enemy attacks
+const pushFightText = (myHero, myEnemy, text) => {
+  text.innerHTML += "<br>" + myHero.fight(myEnemy);
+  setTimeout(function() { text.innerHTML += "<br>" + myEnemy.fight(myHero); }, 1000);
+}
+
+//Pushes catch phrases to the textBox
+//The hero goes first, then after a (one) second delay the enemy goes
+const pushCatchText = (myHero, myEnemy, text) => {
+  text.innerHTML += "<br>" + myHero.talkSass();
+  setTimeout(function() { text.innerHTML += "<br>" + myEnemy.talkSmack(); }, 1000);
+}
+
+//Adds eventListeners to the 'Attack' and 'Catch Phrase' buttons.  Was suppose to be used in conjunction of disable button, but time ran out.
+const enableButtons = (atkButton, ctchButton, myHero, myEnemy, text) => {
+  atkButton.addEventListener('click', function(){
+    pushFightText(myHero, myEnemy, text);
+  }, false);
+
+  ctchButton.addEventListener('click', function(){
+    pushCatchText(myHero, myEnemy, text);
+  }, false);
+
+}
+
+//Could not get disable buttons to work
+// const disableButtons = (atkButton, ctchButton, myHero, myEnemy, text) => {
+//   atkButton.removeEventListener('click', function(){}, true);
+//   ctchButton.removeEventListener('click', function(){}, true);
+  // atkButton.removeEventListener('click', function(){
+  //   pushFightText(myHero, myEnemy, text);
+  // }, true);
+  //
+  // ctchButton.removeEventListener('click', function(){
+  //   pushCatchText(myHero, myEnemy, text);
+  // }, true);
+// }
+
+
+
+
 //Resets Dougie's and Remy's health back to the default 100 and clears the battle text.
 const resetFunction = (guy1, guy2, text) => {
   guy1.health = 100;
@@ -68,33 +112,28 @@ const resetFunction = (guy1, guy2, text) => {
   text.innerHTML = "";
 }
 
-
-
+//"Main" function, which starts the game
 const startFunction = () => {
   const dougie = new Hero("Dougie");
   const remy = new Enemy("Remy");
-  const text = document.getElementById("battleText");
-  const attackB = document.getElementById("attackButton");
-  const catchB = document.getElementById("catchButton");
-  const resetB = document.getElementById("resetButton");
+  const text = document.getElementById("battleText"); //textBox which has all the text from 'combat'
+  const attackB = document.getElementById("attackButton"); //the attack button
+  const catchB = document.getElementById("catchButton"); //the catch phrase button
+  const resetB = document.getElementById("resetButton"); //the reset button
 
+  // enableButtons(attackB, catchB, dougie, remy, text);
+  // disableButtons(attackB, catchB, dougie, remy, text);
+
+  //Adds eventlisteners to the buttons
   attackB.addEventListener('click', function(){
-    text.innerHTML += "<br>" + dougie.fight(remy);
-    setTimeout(function() { text.innerHTML += "<br>" + remy.fight(dougie); }, 1000);
+    pushFightText(dougie, remy, text);
   }, false);
 
   catchB.addEventListener('click', function(){
-    text.innerHTML += "<br>" + dougie.talkSass();
-    setTimeout(function() { text.innerHTML += "<br>" + remy.talkSmack(); }, 1000);
-}, false);
+    pushCatchText(dougie, remy, text);
+  }, false);
 
   resetB.addEventListener('click', function() {resetFunction(dougie, remy, text);}, false);
-
-  // dougie.health = 10;
-  // dougie.announceHealth();
-  // resetFunction(dougie, remy, text);
-  // dougie.announceHealth();
-
 }
 
 startFunction();
