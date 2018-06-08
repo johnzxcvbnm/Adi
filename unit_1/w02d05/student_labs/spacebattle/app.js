@@ -35,7 +35,7 @@ const alienShips = []; //Enemy Ships
 const reset = (shipArray, playerShip) =>{
   playerShip.hull = 20;
 
-  for(let x = 0; x < shipArray.length; x++){
+  for(let x = 0; x < 6; x++){
     shipArray.pop();
   }
 
@@ -50,16 +50,21 @@ const reset = (shipArray, playerShip) =>{
 reset(alienShips, myShip);
 
 const mainTurn = () => {
-  let cmd = "";
-  let retreat = false;
+  let cmd = ""; //User's input
+  let retreat = false; //Sets weither or not the user has retreated
 
+  //Alert for beggining story line
   alert("Aliens are attacking!");
+
+  //Looping turn
+  //Exits the loop if the player dies, retreats, or if there are no more aliens
   while(!myShip.isDead() && !retreat && alienShips.length > 0)
   {
     cmd = prompt("What will you do?\n Attack?  Retreat?", "Attack/Retreat").toLowerCase();
     if(cmd === "retreat"){
       retreat = true;
     } else if(cmd === "attack"){
+      //While the player and the alien ship is alive, keep attacking until one of them dies.
       while(!myShip.isDead() && !alienShips[0].isDead()){
         alert(myShip.attackShip(alienShips[0]));
         if(!alienShips[0].isDead()){
@@ -68,22 +73,28 @@ const mainTurn = () => {
           alert("You blew up " + alienShips[0].name + " into a million bits!");
         }
       }
+
+      //The alien ship was destroyed so remove it from the array
       alienShips.shift();
+    } else if(cmd === "reset"){
+        reset(alienShips, myShip);
     }
   }
 
+  //Alert if you died
   if(myShip.hull <= 0){
     alert("You died!");
   }
 
+  //Alert if you ran away from the fight
   if(retreat){
     alert("Coward!");
   }
 
+  //Alert if you won the game
   if(alienShips.length == 0){
     alert("You win!");
   }
-
 }
 
 mainTurn();
