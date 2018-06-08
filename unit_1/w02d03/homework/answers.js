@@ -114,8 +114,6 @@ const operateNums = (input, func) => {
   func(input);
 }
 
-// operateNums(1337, console.log);
-
 // Create a function called multByTwo that accepts a number as an argument and multiplies that number by two.
 const multByTwo = (input) => {
   console.log(input * 2);
@@ -140,15 +138,22 @@ for(let i of nums){
     // console.log(i);
   }
 }
-// Now, use JavaScript's built-in .forEach function instead to iterate over the nums array and print only those numbers that are evenly divisible by 5.
 // console.log("----------------");
+
+// Now, use JavaScript's built-in .forEach function instead to iterate over the nums array and print only those numbers that are evenly divisible by 5.
 const myDiv = (num) => {
   if(num % 5 == 0){
     console.log(num);
   }
 }
 
-// nums.forEach(myDiv);
+nums.forEach(myDiv);
+
+// nums.forEach( x => {
+//   if(x % 5 == 0) {
+//     console.log(x);
+//   }
+// });
 
 // Write a sentence or two comparing and contrasting the two methods.
 //They both practically do the same thing, they both iterate over each element of the array and apply the funtion (if statement) to the element
