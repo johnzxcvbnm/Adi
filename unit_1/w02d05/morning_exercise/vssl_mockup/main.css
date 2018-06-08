@@ -1,0 +1,97 @@
+/* * { border: 1px solid gold; } */
+
+div {
+  /* width: 600px; */
+  /* height: 200px; */
+  /* border: 1px solid gold; */
+  font-family: 'Roboto', sans-serif;
+}
+
+
+img {
+  /* height: 600px; */
+  width: 100%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  color: white;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.topNav {
+  background-color: #000000;
+  /* justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 400px;
+  background-size: cover;
+  background-image: url("/img/sailboat.jpg");
+  text-align: center; */
+}
+
+.VSSL {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 70px;
+  font-weight: 700;
+  color: white;
+  padding: 0;
+}
+
+.titleText {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.navLinks {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navL {
+  font-family: 'Roboto', sans-serif;
+  margin: 20px;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.bigQuote {
+  width: 80%;
+  margin: 40px auto;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.articleOne {
+  width: 28%;
+  margin: 2%;
+}
