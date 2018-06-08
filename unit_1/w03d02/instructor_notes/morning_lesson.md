@@ -1,4 +1,4 @@
-# Programmatic DOM
+# Programmatic DOM manipulation with functions and loops
 
 ## Lesson objectives
 
