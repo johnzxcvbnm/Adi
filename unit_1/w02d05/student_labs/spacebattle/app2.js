@@ -78,7 +78,7 @@ const pushText = (text) => {
 //When the player chooses to retreat
 //Function disables the attack and retreat buttons
 const fullRetreat = () =>{
-  pushText("<br><br>Congradulations, just when the Earth needs you, you dicided to tuck your tail between your legs and fly off.  Do you even know where you're going?  Did you even think that far ahead, or did you just decide that dying wasn't worth the minimum wage that they pay you?  Either way you lose.  I guess you ended up dying because you chocked on a ham sandwich or something, I don't know.  The end.");
+  pushText("<br><br>Congradulations, just when the Earth needs you, you dicided to tuck your tail between your legs and fly off.  Do you even know where you're going?  Did you even think that far ahead, or did you just decide that dying wasn't worth the minimum wage that they pay you?  Either way you lose.  I guess you ended up dying because you chocked on a ham sandwich or something, I don't know and frankly I don't care.  The end.");
   disableButtons();
 }
 
@@ -86,13 +86,13 @@ const fullRetreat = () =>{
 const winCheck = () => {
   //If the player has exited out of combat and died, display this message and disable the buttons
   if(myShip.isDead()){
-    setTimeout(pushText, 3000, "<br><br>You died!  Well, no one case say that you didn't try, mainly because they're all dead.  Great Job!");
+    pushText("<br><br>You died!  Well, no one case say that you didn't try, mainly because they're all dead too.  Great Job!");
     disableButtons();
   }
 
   //If there are no more aliens to fight, then the player has won.  Display the message and disable the buttons
   if(alienShips.length == 0){
-    setTimeout(pushText, 3000, "<br><br>You braved the alien attack and have defeated the invaders! Unfortunately someone else takes all the credit so you get nothing.  Sorry.");
+    pushText("<br><br>You braved the alien attack and have defeated the invaders! Unfortunately someone else takes all the credit so you get nothing.  Sorry.");
     disableButtons();
   }
 }
@@ -104,15 +104,15 @@ const combat = () => {
   while(!myShip.isDead() && !alienShips[0].isDead()){
 
     //Player automatically attacks first
-    setTimeout(pushText, 1000, myShip.attackShip(alienShips[0]));
+    pushText(myShip.attackShip(alienShips[0]));
 
     //If the alien survives, then (s)he attacks
     if(!alienShips[0].isDead()){
-      setTimeout(pushText, 2000, alienShips[0].attackShip(myShip));
+      pushText(alienShips[0].attackShip(myShip));
 
       //If the alien died, alert the player
     } else {
-      setTimeout(pushText, 2000, ("<br>You blew up " + alienShips[0].name + " into a million bits!"));
+      pushText("<br>You blew up " + alienShips[0].name + " into a million bits!<br>");
     }
   }//End of Loop
 
