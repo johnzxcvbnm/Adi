@@ -1,10 +1,14 @@
 html {
   background-color: #D6D6D6;
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.7;
+  font-weight: 500;
   /* border: 1px solid gold; */
 }
 
 div {
-  border: 1px solid gold;
+  /* border: 1px solid gold; */
   /* width: 400px;
   height: 400px; */
 }
@@ -12,7 +16,26 @@ div {
 img {
   /* display: flex;
   justify-content: center; */
-  margin: auto;
+  /* margin: auto; */
+}
+
+li {
+  list-style-type: none;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+a {
+  font-weight: 800;
+  color: #FF3300;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .container {
@@ -43,16 +66,39 @@ img {
   justify-content: center;
 }
 
+.headerLink {
+  color: black;
+}
+
 .articleColumn {
   width: 60%;
   margin: 1%;
   background-color: white;
 }
 
+.article {
+  padding: 20px;
+}
+
+.borderDot {
+  padding-bottom: 10px;
+  border-bottom: 2px dotted black;
+}
+
+.borderSolid {
+  padding-bottom: 10px;
+  border-bottom: 2px solid black;
+}
+
 .sideColumn {
+  padding-top: 20px;
   width: 25%;
   margin: 1%;
   background-color: white;
+}
+
+.sideLinks {
+  color: black;
 }
 
 .adBox {
@@ -65,4 +111,8 @@ img {
   display: flex;
   justify-content: center;
   margin: 10px auto;
+}
+
+.socialImage {
+  margin: 3px;
 }
