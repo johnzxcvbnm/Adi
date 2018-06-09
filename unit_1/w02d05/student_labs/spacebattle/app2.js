@@ -35,12 +35,19 @@ const combatText = document.getElementById("battleText"); //textBox which has al
 const enableButtons = () => {
   document.getElementById("attackButton").addEventListener('click', combat);
   document.getElementById("retreatButton").addEventListener('click', fullRetreat);
+  document.getElementById("scanButton").addEventListener('click', getStatus);
 }
 
 //Disables the Attack and Retreat Buttons
 const disableButtons = () => {
   document.getElementById("attackButton").removeEventListener('click', combat);
   document.getElementById("retreatButton").removeEventListener('click', fullRetreat);
+  document.getElementById("scanButton").removeEventListener('click', getStatus);
+}
+
+//Adds text to the combat log
+const pushText = (text) => {
+  combatText.innerHTML += text;
 }
 
 //Resets the game and sets default values
@@ -57,12 +64,11 @@ const reset = () =>{
   myShip.hull = 20;
 
   //Empty out the alien ship array
-  for(let x = 0; x < 6; x++){
-    alienShips.pop();
-  }
+  alienShips.splice(0, alienShips.length);
 
-  //Adds in six alien ships
-  for(let i = 0; i < 6; i++){
+  //Adds in 5 to 10 alien ships
+  const random = Math.floor(Math.random() * 6) + 5;
+  for(let i = 0; i < random; i++){
     let hull = Math.floor(Math.random() * 4) + 3; //Hull is 3-6
     let firepower = Math.floor(Math.random() * 3) + 2; //Firepower is 2-4
     let accuracy = (Math.floor(Math.random() * 3) + 6) / 10; //Accuracy is 0.6-0.8
@@ -70,15 +76,21 @@ const reset = () =>{
   }
 }
 
-//Adds text to the combat log
-const pushText = (text) => {
-  combatText.innerHTML += text;
+//Gives a full status update on your ship as well as the alien ships
+//All the information from your ship and the remaining alien ships is stored on a string which is then pushed into the combat textbox
+const getStatus = () => {
+  let temp = `<br>My ship - ${ myShip.name }<br>Hull - ${myShip.hull}<br>Firepower - ${myShip.firepower}<br>Accuracy - ${myShip.accuracy}<br>`;
+
+  for(let alien of alienShips){
+    temp += `<br>${ alien.name }<br>Hull - ${ alien.hull }<br>Firepower - ${ alien.firepower }<br>Accuracy - ${ alien.accuracy }<br>`
+  }
+  pushText(temp);
 }
 
 //When the player chooses to retreat
 //Function disables the attack and retreat buttons
 const fullRetreat = () =>{
-  pushText("<br><br>Congradulations, just when the Earth needs you, you dicided to tuck your tail between your legs and fly off.  Do you even know where you're going?  Did you even think that far ahead, or did you just decide that dying wasn't worth the minimum wage that they pay you?  Either way you lose.  I guess you ended up dying because you chocked on a ham sandwich or something, I don't know and frankly I don't care.  The end.");
+  pushText("<br><br>Congradulations, just when the Earth needs you, you decided to tuck your tail between your legs and fly off.  Do you even know where you're going?  Did you even think that far ahead, or did you just decide that dying wasn't worth the minimum wage that they pay you?  Either way you lose.  I guess you ended up dying because you chocked on a ham sandwich or something, I don't know and frankly I don't care.  The end.");
   disableButtons();
 }
 
@@ -122,6 +134,7 @@ const combat = () => {
   //Checks to see if the player has won or lost
   winCheck();
 }
+
 
 reset();
 document.getElementById("resetButton").addEventListener("click", reset, false);

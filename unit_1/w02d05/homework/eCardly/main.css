@@ -1,0 +1,68 @@
+html {
+  background-color: #D6D6D6;
+  /* border: 1px solid gold; */
+}
+
+div {
+  border: 1px solid gold;
+  /* width: 400px;
+  height: 400px; */
+}
+
+img {
+  /* display: flex;
+  justify-content: center; */
+  margin: auto;
+}
+
+.container {
+  width: 100%;
+  background-color: #D6D6D6;
+}
+
+.headerSection {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  background-image: url("images/background.jpg");
+
+
+}
+
+/* .backgroundImage {
+  float: left;
+  width: 100%;
+  height: 150px;
+  background-image: url("images/background.jpg");
+} */
+
+.mainSection {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.articleColumn {
+  width: 60%;
+  margin: 1%;
+  background-color: white;
+}
+
+.sideColumn {
+  width: 25%;
+  margin: 1%;
+  background-color: white;
+}
+
+.adBox {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.footerSection {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+}
