@@ -1,10 +1,16 @@
 html {
   background-color: #D6D6D6;
+  /* border: 1px solid gold; */
+}
+
+body {
+  background-image: url(images/background.jpg);
+  background-repeat: repeat-x;
+  background-color: #D6D6D6;
   font-family: Helvetica, sans-serif;
   font-size: 12px;
   line-height: 1.7;
   font-weight: 500;
-  /* border: 1px solid gold; */
 }
 
 div {
@@ -40,14 +46,14 @@ a:hover {
 
 .container {
   width: 100%;
-  background-color: #D6D6D6;
+  /* background-color: #D6D6D6; */
 }
 
 .headerSection {
   display: flex;
   justify-content: center;
   margin: auto;
-  background-image: url("images/background.jpg");
+  /* background-image: url("images/background.jpg"); */
 
 
 }
@@ -91,13 +97,21 @@ a:hover {
 }
 
 .sideColumn {
-  padding-top: 20px;
-  width: 25%;
-  margin: 1%;
+  /* padding-top: 20px; */
+  /* width: 25%;
+  margin: 1%; */
+  /* background-color: white; */
+}
+
+.siteMap {
   background-color: white;
 }
 
 .sideLinks {
+  padding-top: 40px;
+  width: 25%;
+  margin: 1%;
+
   color: black;
 }
 
