@@ -1,4 +1,14 @@
 body {
   background-color: #F8F7FF;
+  text-align: center;
 
+}
+
+.cat {
+  font-family: fantasy;
+  opacity: 0.5;
+}
+
+ul {
+  text-decoration: none;
 }
