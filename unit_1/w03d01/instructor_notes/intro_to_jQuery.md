@@ -293,7 +293,7 @@ That seems kinda long... jQuery let's us chain things together. Let's refactor t
 
 #### jQuery Cheatsheet
 
-- We've been covering a lot of things with a lot of little details. No need to memorize, [just keep this cheatsheet handy](./wiki/JQuery-Cheatsheet-as-Tables)! or [this one](./wiki/jQuery-Cheatsheet) - they have the same information but are formatted differently, use the one that is easier for you to read
+- We've been covering a lot of things with a lot of little details. No need to memorize, [just keep this cheatsheet handy](../../../wiki/JQuery-Cheatsheet-as-Tables)! or [this one](../../../wiki/jQuery-Cheatsheet) - they have the same information but are formatted differently, use the one that is easier for you to read
 
 
 #### Activity
