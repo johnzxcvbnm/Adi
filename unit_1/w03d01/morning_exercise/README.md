@@ -10,10 +10,6 @@ Prerequisites: CSS, HTML <br>
 
 ---
 
-
-## Choices
-Work on the mockup in a breakout room or stay in the main room and do a code-along lead by Jerrica to build out the Supply mockup.
-
 ![](mockup.png)
 
 ## Setup
