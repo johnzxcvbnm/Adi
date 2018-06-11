@@ -1,0 +1,53 @@
+div {
+  /* height: 400px; */
+  /* width: 400px; */
+  border: 1px solid gold;
+  /* background-color: grey; */
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 95%;
+  padding: 5%;
+  display: flex;
+  background-color: white;
+}
+
+.sideCol {
+  width: 20%;
+}
+
+.mainSection {
+  width: 80%;
+}
+
+.topSection, .middleSection, .bottomSection {
+  width: 100%;
+}
+
+.mainArticle {
+  width: 96%;
+  margin: 2%;
+}
+
+.middleSection {
+  display: flex;
+}
+
+.article {
+  margin: 2%;
+  width: 29%;
+}
+
+.bottomSection {
+  display: flex;
+}
+
+.footer{
+  margin: 2%;
+  width: 46%;
+}
