@@ -99,7 +99,7 @@ crossorigin="anonymous"></script>
 
 **Important** : You are encouraged to comment out console.logs that you no longer need. There will be no further prompts for this advice.
 
-- [Open up your jQuery magic markdown file](../../../../../JQuery-Cheatsheet-as-Tables )- for reference
+- [Open up your jQuery magic markdown file](../../../../../wiki/JQuery-Cheatsheet-as-Tables )- for reference
 
 - Make sure that your pages loads completely before you start using magical jQuery by adding
 
