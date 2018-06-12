@@ -27,7 +27,7 @@ $( () => {
             .append( $("<h4>").text("Hawthorn Wand") );
   // $(".cat").css("font-family", "fantasy");
 
-  //----------Year Two-------------//
+  //----------Year Three-------------//
   // Following what you did in previous years, add the following into an unordered list (with the attribute of storage and a value of trunk):
   //
   // list items of
@@ -55,5 +55,37 @@ $( () => {
 
 // $(".cat").css("opacity", "0.5");
 // $("ul").css("text-decoration", "none");
+
+//----------Year Four-------------//
+  // You want to show off how many classes you are taking
+  //
+  // Make a table
+  // Hint: Look under More Examples, <p>Simple table with header</p> at MDN to see the correct HTML element layout
+  //
+  // Right above your table add an h5 that says 'Spring 2017'
+  // Inside the table add a thead element
+  // Inside the thead element add two th elements
+  // in the first th add the text Day
+  // in the second th add the text Classes
+  // Create a tr element and add two td elements inside.
+  // in the first td add the day Monday
+  // in the second td add the classes you are taking ( Herbology, Divination, History of Magic, Charms, Potions, Transfiguration, Defense Against the Dark Arts, Quidditch practice, etc.)
+  // Create more tr elements with tds inside so that you have Monday - Friday and classes each of those days
+  // In your main.css file, add a gray 1px solid border around your table, th elements and td elements
+  // In your main.css file, add a rule that will center your table on the page
+
+  $container.append( $("<h5>").text("Spring 2017") );
+  $container.append( $("<table>").append( $("<tr>").append( $("<th>").text("Day") )
+                              .append( $("<th>").text("Classes") ) )
+            .append( $("<tr>").append( $("<td>").text("Monday") )
+                              .append( $("<td>").text("History of Magic") ) )
+            .append( $("<tr>").append( $("<td>").text("Tuesday") )
+                              .append( $("<td>").text("Herbology") ) )
+            .append( $("<tr>").append( $("<td>").text("Wednesday") )
+                              .append( $("<td>").text("Potions") ) )
+            .append( $("<tr>").append( $("<td>").text("Thrusday") )
+                              .append( $("<td>").text("Divination") ) )
+            .append( $("<tr>").append( $("<td>").text("Friday") )
+                              .append( $("<td>").text("Defense Against the Dark Arts") ) ) );
 
 })// End of Document Ready Function
