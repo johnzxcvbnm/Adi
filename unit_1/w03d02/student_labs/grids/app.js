@@ -43,5 +43,5 @@ const generateTriangleRow = (num) => {
 $( () => {
   // generateSquares();
 
-  generateTriangleRow(8);
+  generateTriangleRow(10);
 });//End of On Ready Function

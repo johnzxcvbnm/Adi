@@ -1,4 +1,4 @@
-console.log("LINKED");
+// console.log("LINKED");
 
 // Dramatis Personae
 const hobbits = [
@@ -23,7 +23,6 @@ const baddies = [
   "Orcs"
 ];
 
-
 // Our Setting
 const lands = ['The-Shire', 'Rivendell', 'Mordor'];
 
@@ -38,23 +37,26 @@ const lands = ['The-Shire', 'Rivendell', 'Mordor'];
 const makeMiddleEarth = () => {
 
   // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
-  console.log('making Middle Earth');
+  // console.log('making Middle Earth');
   // console.log("Trying to make middle earth.");
 
   // 1. create a section tag with an id of middle-earth
+  const $mySection = $("<section>").attr("id", "middle-earth");
 
   // 2. append the section to the body of the DOM.
+  $("body").append($mySection);
 
   // 3. use a for loop to iterate over the lands array that does the following:
-
   //   3a. creates an article tag (there should be one for each land when the loop is done)
-
   //   3b. gives each land article an `id` tag of the corresponding land name
-
   //   3c. includes an h1 with the name of the land inside each land article
-
   //   3d. appends each land to the middle-earth section
 
+  for(let i = 0; i < lands.length; i++){
+    const $myLand = $("<article>").attr("id", lands[i]);
+    $myLand.append( $("<h1>").text(lands[i]) );
+    $mySection.append($myLand);
+  }
 };
 
 // COMMIT YOUR WORK
