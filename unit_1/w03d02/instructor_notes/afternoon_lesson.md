@@ -198,7 +198,7 @@ $('#btn').on('click', changeClass);
 CSS:
 
 ```css
-.black {
+.orhcid {
   background-color: black;
 }
 ```
