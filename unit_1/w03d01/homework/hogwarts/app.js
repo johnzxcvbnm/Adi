@@ -88,4 +88,21 @@ $( () => {
             .append( $("<tr>").append( $("<td>").text("Friday") )
                               .append( $("<td>").text("Defense Against the Dark Arts") ) ) );
 
+  //----------Year Five-------------//
+  // Things get interesting
+  //
+  // Break your wand! (select the element that contains your wand and remove it)
+  // Class was hard! Drink all your butter beer! (remove just the butter beer from your list)
+  // Get a new wand (add the same element back with new text describing your new wand. Be sure to insert it after your pet in the DOM)
+  // Make your new wand stand out by adding a color of indigo (or whatever color you like). But do it with magic (jQuery): Don't add this css in your main.css file
+  // Send your pet on a spy mission (remove your pet from the DOM, put it somewhere else in your HTML). Make sure your pet's leash stays in your trunk (list item with the same class as your pet inside unordered list)
+  // Have your pet come back (remove your pet from the DOM, put it back in its original location)
+
+  $("h4").eq(1).remove();
+  $("li").eq(0).remove();
+  $("ul").before( $("<h4>").text("Black Wand").css("color", "indigo") );
+  $("table").append( $(".cat").eq(0).remove() );
+  $("h4").eq(0).before( $(".cat").eq(1).remove() );
+
+
 })// End of Document Ready Function
