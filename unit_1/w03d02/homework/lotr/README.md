@@ -12,7 +12,7 @@ Prerequisites: Javascript, jQuery, DOM
 
 ## Lord of the Rings
 
-![LOTR](https://imgur.com/a/YmS9f.png)
+![LOTR](https://i.ytimg.com/vi/iL0okEl7Ono/maxresdefault.jpg)
 
 ## Learning Objectives
 
