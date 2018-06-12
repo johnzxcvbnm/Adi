@@ -30,3 +30,11 @@ button:hover{
   background: var(--calm-aqua);
   color: rgba(250,250,250, .9);
 }
+
+.black {
+  background-color: black;
+}
+
+.newColor {
+  color: blue;
+}
