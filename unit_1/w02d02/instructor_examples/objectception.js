@@ -106,6 +106,6 @@ const movie = {
 
 // console.log(Object.keys(movie));
 
-for (let i = 0; i < Object.keys(movie).length; i++) {
-  console.log(movie[Object.keys(movie)[i]]);
-}
+// for (let i = 0; i < Object.keys(movie).length; i++) {
+//   console.log(movie[Object.keys(movie)[i]]);
+// }

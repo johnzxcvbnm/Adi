@@ -2,8 +2,6 @@
 
 ## Lesson Objectives
 
-1. Use the Javascript Debugger in the Browser
-1. Use the Javascript Debugger in Node
 1. Use Proper Indentation
 1. Name Variables Semantically
 1. Define Functions at the Top of the File
@@ -11,31 +9,7 @@
 1. Use Common Programming Principles
 1. Describe How to Read Errors
 1. Coerce Data Types
-
-## Use the Javascript Debugger in the Browser
-
-A debugger allows you to stop execution of your program to examine variables at any point using the `debugger` keyword
-
-```javascript
-const a = 2 + 2;
-debugger
-console.log(a);
-```
-
-1. Right click on page and choose Inspect
-1. Click on sources (you may need to refresh the page to have files show up)
-1. Click the blue play button to continue to next debugger statement
-1. Use the console to examine variables (or you can hover over their names in the source code)
-
-![browser debugger](https://i.imgur.com/C0F2tTB.png)
-
-## Use the Javascript Debugger in Node
-
-You can execute in node with `node debug test.js`
-
-- Type `c` to continue to next debugger statement
-- Type `quit` to quit
-- Type `repl` to examine variables
+1. Become an awesome Googler and a Stackoverlow frequenter!
 
 ## Use Proper Indentation
 
@@ -196,3 +170,9 @@ Always make sure you know what your data types are:
 const a = "1";
 typeof a;
 ```
+
+### Googling and Using Stackoverflow
+
+- Don't forget to google your answers! Become an expert at using keywords in your searches and reading other peoples code!
+- Stackoverflow is a developers best friend! Ask a question on it if you are really stuck!
+
