@@ -16,10 +16,10 @@ Provide a means for the user to provide input, and capture that input with an ev
 Make an input field and a button in index.html
 
 ```javascript
-    <form>
+
       <input type="text" id="input-box" />
       <input type="submit" id="submit-btn" />
-    </form>
+
 ```
 
 Set an event on the submit
@@ -30,15 +30,6 @@ $('#submit-btn').on('click', () => {
 });
 ```
 
-
-Hrmmm, our page keeps reloading?! That submit button's default behavoir is to reload the page. Let's prevent that default
-
-```javascript
-  $('#submit-btn').on('click', (event) => {
-    event.preventDefault();
-    console.log('clicked');
-  });
-```
 
 Make it so the handler grabs the value inside the input box (and logs it to check)
 
