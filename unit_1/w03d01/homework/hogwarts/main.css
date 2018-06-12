@@ -1,7 +1,6 @@
 body {
   background-color: #F8F7FF;
   text-align: center;
-
 }
 
 .cat {
@@ -10,7 +9,7 @@ body {
 }
 
 ul {
-  text-decoration: none;
+  list-style-type: none;
 }
 
 table, th, td {
@@ -21,4 +20,8 @@ table, th, td {
 
 .cabbage {
   color: CHARTREUSE;
+}
+
+div {
+  /* border: 1px solid gold; */
 }

@@ -6,9 +6,9 @@ $( () => {
   // Add some text inside the h1 element. Example text: 'Hogwarts'
   // Why isn't your $h1 it appearing on your page?
 
-  const $container = $("#container");
-  const $h1 = $("<h1>").text("Hogwarts");
-  $container.append($h1);
+  const $container = $("#container").append( $("<h1>").text("Hogwarts") );
+  // const $h1 = $("<h1>").text("Hogwarts");
+  // $container.append($h1);
   // $("body").css("text-align", "center");
 
   //----------Year Two-------------//
@@ -21,9 +21,10 @@ $( () => {
   // h4 element with your wand (You can make it whatever you want. Need help coming up with one? Here is one of many websites to help you find your wand playbuzz.com )
   // In your main.css add an attribute of font-family: fantasy; to all elements that have a class that matches your pet's class
 
+  //Adds basic text to the bottom of the container class
   $container.append( $("<h2>").text("John Kusching") )
-            .append( $("<h3>").text("Slytherin") )
-            .append( $("<h4>").text("James").attr("class", "cat") )
+            .append( $("<h3>").text("of House Slytherin") )
+            .append( $("<h4>").text("Jamie the Cat").attr("class", "cat") )
             .append( $("<h4>").text("Hawthorn Wand") );
   // $(".cat").css("font-family", "fantasy");
 
@@ -43,18 +44,16 @@ $( () => {
   //
   // In your main.css file, remove the bullet points from the list items
 
+  //Adds an unordered list complete with filled in list values to the end of the container class
+  //Also sets the attribute of the 'ul' to 'storage' and the value to 'trunk'
+  $container.append( $("<ul>").attr("attribute", "storage").attr("value", "trunk")
+            .append( $("<li>").text("Butter Beer") )
+            .append( $("<li>").text("Invisibility Cloak").attr("class", "secret") )
+            .append( $("<li>").text("Magic Map").attr("class", "secret") )
+            .append( $("<li>").text("Time Turner").attr("class", "secret") )
+            .append( $("<li>").text("Leash").attr("class", "cat") )
+            .append( $("<li>").text("Bertie Bott's Every Flavor [Jelly] Beans") ) );
 
-  $container.append( $("<ul>").attr("attribute", "storage").attr("value", "trunk") );
-  // $container.append( $("<ul>") );
-  $("ul").append( $("<li>").text("Butter Beer") )
-         .append( $("<li>").text("Invisibility Cloak").attr("class", "secret") )
-         .append( $("<li>").text("Magic Map").attr("class", "secret") )
-         .append( $("<li>").text("Time Turner").attr("class", "secret") )
-         .append( $("<li>").text("Leash").attr("class", "cat") )
-         .append( $("<li>").text("Bertie Bott's Every Flavor [Jelly] Beans") );
-
-// $(".cat").css("opacity", "0.5");
-// $("ul").css("text-decoration", "none");
 
 //----------Year Four-------------//
   // You want to show off how many classes you are taking
@@ -74,19 +73,21 @@ $( () => {
   // In your main.css file, add a gray 1px solid border around your table, th elements and td elements
   // In your main.css file, add a rule that will center your table on the page
 
+  //Title for the Table
   $container.append( $("<h5>").text("Spring 2017") );
+  //Creates a new table with two coloumns and fills them in, all in one line.  Spaced so it's easier to read and understand.
   $container.append( $("<table>").append( $("<tr>").append( $("<th>").text("Day") )
-                              .append( $("<th>").text("Classes") ) )
-            .append( $("<tr>").append( $("<td>").text("Monday") )
-                              .append( $("<td>").text("History of Magic") ) )
-            .append( $("<tr>").append( $("<td>").text("Tuesday") )
-                              .append( $("<td>").text("Herbology") ) )
-            .append( $("<tr>").append( $("<td>").text("Wednesday") )
-                              .append( $("<td>").text("Potions") ) )
-            .append( $("<tr>").append( $("<td>").text("Thrusday") )
-                              .append( $("<td>").text("Divination") ) )
-            .append( $("<tr>").append( $("<td>").text("Friday") )
-                              .append( $("<td>").text("Defense Against the Dark Arts") ) ) );
+                                                   .append( $("<th>").text("Classes") ) )
+               .append( $("<tr>").append( $("<td>").text("Monday") )
+                                 .append( $("<td>").text("History of Magic") ) )
+               .append( $("<tr>").append( $("<td>").text("Tuesday") )
+                                 .append( $("<td>").text("Herbology") ) )
+               .append( $("<tr>").append( $("<td>").text("Wednesday") )
+                                 .append( $("<td>").text("Potions") ) )
+               .append( $("<tr>").append( $("<td>").text("Thrusday") )
+                                 .append( $("<td>").text("Divination") ) )
+               .append( $("<tr>").append( $("<td>").text("Friday") )
+                                 .append( $("<td>").text("Defense Against the Dark Arts") ) ) );
 
   //----------Year Five-------------//
   // Things get interesting
@@ -98,11 +99,11 @@ $( () => {
   // Send your pet on a spy mission (remove your pet from the DOM, put it somewhere else in your HTML). Make sure your pet's leash stays in your trunk (list item with the same class as your pet inside unordered list)
   // Have your pet come back (remove your pet from the DOM, put it back in its original location)
 
-  $("h4").eq(1).remove();
-  $("li").eq(0).remove();
-  $("ul").before( $("<h4>").text("Black Wand").css("color", "indigo") );
-  $("table").append( $(".cat").eq(0).remove() );
-  $("h4").eq(0).before( $(".cat").eq(1).remove() );
+  $("h4").eq(1).remove(); //Removes the 'Wand' h4
+  $("li").eq(0).remove(); //Removes the 'Butter Beer'
+  $("ul").before( $("<h4>").text("Black Wand").css("color", "indigo") ); //Creates a new h4 'Wand', changes it's text color and places it back where the old wand was
+  $("table").append( $(".cat").eq(0).remove() ); //Removes 'Jamie the Cat' from the top and adds him to the bottom of the table
+  $("h4").eq(0).before( $(".cat").eq(1).remove() ); //Removes 'Jamie the Cat' from the bottom of the table and places him back where he was
 
   //----------Year Six-------------//
 
@@ -116,6 +117,43 @@ $( () => {
   // add an attribute of color:CHARTREUSE; in your main.css for all elements that have a class of cabbage
   // Fix your pet's leash by removing the class of cabbage (be sure to keep your pet's leash's original class)
 
+  //Hides everything with the class of secret, then waits two seconds, then shows them again, all with the slow animation
   $(".secret").hide("slow").delay("2000").show("slow");
+
+  //Add the class 'cabbage' to the 'leash' item, then promptly removes the class 'cabbage'
   $(".cat").eq(1).addClass("cabbage").removeClass("cabbage");
+
+  //----------Year Seven-------------//
+  //   Though your time at Hogwarts is nearly over, your journey of learning has just begun
+  //
+  // Update your class schedule to read 'Fall 2018'
+  // Celebrate by buying more butter beer! Append a list item with the text 'Butter beer' as the first list item inside your unordered list with the value of trunk
+  // Whoops! You broke your trunk when you stood on it while singing karaoke. Get a new storage container for your stuff; replace the unodered list's property of trunk with a new property of chest
+  // Add some CSS to your page. Feel free to experiment and make this page your own
+  // Take a screenshot of your page and add it to your homework folder
+
+  //Changes Spring 2018 to Fall 2018
+  $("h5").text("Fall 2018");
+
+  //Adds 'Butter Beer' back to the top of the 'ul'
+  $("li").eq(0).before( $("<li>").text("Butter Beer") );
+
+  //Changes the value of the 'ul' to 'chest'
+  $("<ul>").attr("value", "chest");
+
+  //Creates a new div, adds the 'Fall 2018' h5 and the table as children, then styles the div with some CSS
+  const $myLeftDiv = $("<div>").append( $("h5") ).append( $("table") ).css("background-color", "#91FCC5").css("padding", "1.5% 4% 4% 4%");
+
+  //Creates a new div, add the unordered list as a child, then styles the div
+  const $myRightDiv = $("<div>").append( $("ul") ).css("background-color", "#BE8A4F").css("border", "2px solid black").css("padding", "2% 5% 2% 2%");
+
+  //Creates a new div at the now empty bottom of the container class div, adds the $myLeftDiv and $myRightDiv as children, then uses flexbox to display them side by side
+  $container.append( $("<div>").append($myLeftDiv).append($myRightDiv).css("display", "flex").css("justify-content", "space-evenly") );
+
+  //Adds text above the unordered list to give meaning to the list
+  $("li").eq(0).before( $("<h5>").text("My Chest") );
+
+  //Adding CSS
+  $("ul").css("margin", "auto");
+  $("h5").css("text-decoration", "underline").css("font-weight", "700");
 })// End of Document Ready Function
