@@ -104,5 +104,18 @@ $( () => {
   $("table").append( $(".cat").eq(0).remove() );
   $("h4").eq(0).before( $(".cat").eq(1).remove() );
 
+  //----------Year Six-------------//
 
+  // School is so fun!
+  //
+  // Nosey roommate alert! hide (use jQuery method hide) to hide all your belongings with a class of secret (give an argument of 'slow' - to see this function in action)
+  // Nosey roommate falls asleep 2 seconds later (chain the jQuery method delay on your hide method (give argument of at least 2000) to prevent showing your secret elements too soon.
+  // Use jQuery method show to reveal all of your belongings with a class of secret (give an argument of 'slow' - to see this function in action)
+  // Accident! You transmogrified your pet's leash into half cabbage
+  // add the class cabbage to your pet's leash. Do not replace your pet's leash's original class. Your pet, which also has the same class should remain unaffected
+  // add an attribute of color:CHARTREUSE; in your main.css for all elements that have a class of cabbage
+  // Fix your pet's leash by removing the class of cabbage (be sure to keep your pet's leash's original class)
+
+  $(".secret").hide("slow").delay("2000").show("slow");
+  $(".cat").eq(1).addClass("cabbage").removeClass("cabbage");
 })// End of Document Ready Function
