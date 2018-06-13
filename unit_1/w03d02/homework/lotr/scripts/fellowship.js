@@ -60,7 +60,7 @@ const makeMiddleEarth = () => {
   }
 
   //Chapter 6 - Stretch - Clicking on the shire will have the hobbits go to Rivendell
-  $mySection.eq(0).on("click", leaveTheShire);
+  // $mySection.eq(0).on("click", leaveTheShire);
 };
 
 // COMMIT YOUR WORK
@@ -279,7 +279,17 @@ const itsDangerousToGoAlone = () => {
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
 
+  //Pulls all the elements with the class of 'hobbit' and removes the first element 'Frodo' from the DOM
+  const $myFrodo = $(".hobbit").eq(0).remove();
+
+  //Pulls all the elements with the class of 'hobbit' and removes the first element 'Sam' from the DOM
+  const $mySam = $(".hobbit").eq(0).remove();
+
+  //Appends 'Frodo' and 'Sam' to 'Mordor'
+  $("#Mordor").append($myFrodo).append($mySam);
+
   // 2. add a div with an id of 'mount-doom' to Mordor
+  $("#Mordor").append( $("<div>").attr("id", "mount-doom") );
 
 };
 
@@ -344,5 +354,5 @@ $(()=>{
   $('#12').on('click', weWantsIt);
   $('#13').on('click', thereAndBackAgain);
 
-  $("#The-Shire").on("click", leaveTheShire);
+  $('body').on('click', '#The-Shire h1', leaveTheShire)
 });
