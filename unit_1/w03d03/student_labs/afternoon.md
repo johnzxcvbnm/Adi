@@ -5,7 +5,7 @@
 ---
 Title: To-Do List <br>
 Type: Homework<br>
-Duration: "3:00 - 4:00"<br>
+Duration: lab + hw time<br>
 Creator: Thom Page<br>
     Modified by: Kristyn Bryan<br>
     CSS Modernization: Karolin Rafalski<br>
