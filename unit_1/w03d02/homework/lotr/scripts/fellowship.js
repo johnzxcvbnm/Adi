@@ -52,13 +52,14 @@ const makeMiddleEarth = () => {
   //   3c. includes an h1 with the name of the land inside each land article
   //   3d. appends each land to the middle-earth section
 
+  //Loop creates a new land, sets it with an id and text of that land, then appends it to 'middle-earth'
   for(let i = 0; i < lands.length; i++){
     const $myLand = $("<article>").attr("id", lands[i]);
     $myLand.append( $("<h1>").text(lands[i]) );
     $mySection.append($myLand);
   }
 
-  //Chapter 6 - Stretch
+  //Chapter 6 - Stretch - Clicking on the shire will have the hobbits go to Rivendell
   $mySection.eq(0).on("click", leaveTheShire);
 };
 
@@ -78,6 +79,9 @@ const makeHobbits = () => {
   // 2. make each hobbit an li element and append it to the 'ul' you just created
     // hint: use the given 'hobbits' array and use a for loop
   // 3. also, give each hobbit (`li`) a class of "hobbit"
+
+  //Each iteration of the loop creates a new 'hobbit' with their name and the class 'hobbit'
+  //The new item is then appended onto the Unordered List
   for(let i = 0; i < hobbits.length; i++){
     const $myListItem = $("<li>").text(hobbits[i]);
     $myListItem.addClass("hobbit");
@@ -104,6 +108,7 @@ const keepItSecretKeepItSafe = () => {
   // 2. add the ring as a child of Frodo
     // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
     // when you think you have given Frodo the ring, check in your Elements tab to see that it works correctly
+  //Grabs all the list items and adds 'the-ring' to the first one (Frodo)
   $("li").eq(0).append($theOne);
 
 };
@@ -120,6 +125,9 @@ const makeBaddies = () => {
   const $myBad = $("<ul>");
 
   // 2. give each of the baddies a class of "baddy"
+
+  //Each iteration of the loop creates a new 'baddy', with their name and the class 'baddy'
+  //The new item is then appended onto the Unordered List
   for(let i = 0; i < baddies.length; i++){
     const $myListItem = $("<li>").text(baddies[i]);
     $myListItem.addClass("baddy");
@@ -146,6 +154,9 @@ const makeBuddies = () => {
   const $myUL = $("<ul>");
 
   // 3. give each of the buddies a class of "buddy"
+
+  //Each iteration of the loop creates a new 'buddy' and gives them a name and the class of 'buddy'
+  //The new item is then appeded onto the Unordered List
   for(let i = 0; i < buddies.length; i++){
     const $myListItem = $("<li>").text(buddies[i]);
     $myListItem.addClass("buddy");
@@ -183,8 +194,10 @@ const leaveTheShire = () => {
 // ============
 const beautifulStranger = () => {
 
-  // 1. change the buddy 'Strider' textnode to "Aragorn" 3rd
+  // 1. change the buddy 'Strider' textnode to "Aragorn"
      // hint: You can get a list of elements by tag name, such as 'aside'
+
+  //Pulls all elements with the class of 'buddy' and changes name of the fourth one
   $(".buddy").eq(3).text("Aragorn");
 };
 
@@ -197,12 +210,20 @@ const beautifulStranger = () => {
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
+  const $myDiv = $("<div>").attr("id", "the-fellowship");
 
   // 2. add an h1 with the text 'The Fellowship' to this new div
+  $myDiv.append( $("<h1>").text("The Fellowship") );
 
   // 3. append the fellowship to middle-earth
+  $("#middle-earth").append($myDiv);
 
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
+
+  //Pulls the parent of the list items (Unordered Lists) and adds them to the new 'the-fellowship' Div
+  const $myHobbits = $(".hobbit").parent();
+  const $myBuddies = $(".buddy").parent();
+  $myDiv.append($myHobbits).append($myBuddies);
 
 };
 
