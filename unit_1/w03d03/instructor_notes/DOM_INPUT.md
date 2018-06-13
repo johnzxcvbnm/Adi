@@ -16,8 +16,10 @@ Provide a means for the user to provide input, and capture that input with an ev
 Make an input field and a button in index.html
 
 ```javascript
-<input type="text" id="input-box" />
-<input type="submit" id="submit-btn" />
+
+      <input type="text" id="input-box" />
+      <input type="submit" id="submit-btn" />
+
 ```
 
 Set an event on the submit
@@ -27,6 +29,7 @@ $('#submit-btn').on('click', () => {
   console.log('clicked');
 });
 ```
+
 
 Make it so the handler grabs the value inside the input box (and logs it to check)
 

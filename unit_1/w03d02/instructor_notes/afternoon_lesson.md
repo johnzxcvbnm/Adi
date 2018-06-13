@@ -189,7 +189,7 @@ Let's do something fancier, and toggle the background-color of the page using `.
 
 ```javascript
 const changeClass = () => {
-  $('body').toggleClass('black');
+  $('body').toggleClass('orchid');
 }
 
 $('#btn').on('click', changeClass);
@@ -198,7 +198,7 @@ $('#btn').on('click', changeClass);
 CSS:
 
 ```css
-.black {
+.orhcid {
   background-color: black;
 }
 ```
