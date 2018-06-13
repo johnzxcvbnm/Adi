@@ -57,6 +57,9 @@ const makeMiddleEarth = () => {
     $myLand.append( $("<h1>").text(lands[i]) );
     $mySection.append($myLand);
   }
+
+  //Chapter 6 - Stretch
+  $mySection.eq(0).on("click", leaveTheShire);
 };
 
 // COMMIT YOUR WORK
@@ -164,9 +167,12 @@ const makeBuddies = () => {
 const leaveTheShire = () => {
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
       // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
+  // const $myHobbits = $("#The-Shire").children.eq(0);
+  const $myHobbits = $("#The-Shire").children().eq(1).remove();
+  $("#Rivendell").append($myHobbits);
 
   //Stretch: add an event handler/listener so that when you click on the `h1` The Shire, this function will be called (be sure to do it in the window.onload/document.ready function)
-
+  //--------Added Code to chapter one section----------//
 };
 
 // COMMIT YOUR WORK
@@ -306,4 +312,6 @@ $(()=>{
   $('#11').on('click', itsDangerousToGoAlone);
   $('#12').on('click', weWantsIt);
   $('#13').on('click', thereAndBackAgain);
+
+  $("#The-Shire").on("click", leaveTheShire);
 });
