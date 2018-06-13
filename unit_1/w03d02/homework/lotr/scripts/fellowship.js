@@ -236,8 +236,11 @@ const forgeTheFellowShip = () => {
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' text to 'Gandalf the White' 4th
+
+  //Pulls all the items with the class of 'buddy' and changes the first one ('Gandalf') to 'Gandalf the White'
   const $myWizard = $(".buddy").eq(0);
   $myWizard.text("Gandalf the White");
+
   // 2. add a class "the-white" to this element
   $myWizard.addClass("the-white");
 
@@ -254,10 +257,15 @@ const theBalrog = () => {
 const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
+  alert("The Horn of Gondor has been blown! Quickly now!");
 
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
+  //Pulls all the items with the class of 'buddy' and adds CSS styling to put a line through 'Boromir's' name
+  $(".buddy").eq(4).css("text-decoration", "line-through");
 
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
+  //Pulls all the items with the class of 'baddy' and removes 'Uruk-Hai' completely
+  $(".baddy").eq(2).remove();
 
 };
 
