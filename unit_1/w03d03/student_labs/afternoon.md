@@ -8,7 +8,7 @@ Type: Homework<br>
 Duration: "3:00 - 4:00"<br>
 Creator: Thom Page<br>
     Modified by: Kristyn Bryan<br>
-    CSS Modernization: Karolin Rafalski
+    CSS Modernization: Karolin Rafalski<br>
 Competencies: jQuery, Javascript, DOM <br>
 
 ---
