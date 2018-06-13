@@ -1,4 +1,4 @@
-# Madeline Tips For Success
+# Madeline's Tips For Success
 
 ## Web inspector
 
@@ -24,7 +24,7 @@ _I use the style inspector all the time to figure out the styles I want to use! 
 1. When you are clicked on an element in the elements tab, scroll to the very bottom of the style module of your web inspector.
 1. Here you will see a visual rendering of the elements box model. This can be a very helpful tool in understanding what the box model of your element looks like!
 
-![Box Model](/images/box_model.png)
+![Box Model](images/box_model.png)
 
 
 **Other resources**
