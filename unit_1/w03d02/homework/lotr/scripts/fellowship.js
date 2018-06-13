@@ -235,9 +235,11 @@ const forgeTheFellowShip = () => {
 // ============
 const theBalrog = () => {
 
-  // 1. change the 'Gandalf' text to 'Gandalf the White'
-
+  // 1. change the 'Gandalf' text to 'Gandalf the White' 4th
+  const $myWizard = $(".buddy").eq(0);
+  $myWizard.text("Gandalf the White");
   // 2. add a class "the-white" to this element
+  $myWizard.addClass("the-white");
 
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
