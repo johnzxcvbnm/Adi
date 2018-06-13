@@ -302,10 +302,14 @@ const itsDangerousToGoAlone = () => {
 const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
+  const $myGollum = $("<div>").attr("id", "gollum");
+  $("#Mordor").append($myGollum);
 
   // 2. Move the ring from Frodo and give it to Gollum
+  $myGollum.append( $("#the-ring").remove() );
 
   // 3. Move Gollum into Mount Doom
+  $("#mount-doom").append($myGollum);
 
 };
 
