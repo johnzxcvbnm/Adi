@@ -12,7 +12,7 @@ We have been using the web inspector to log to the console and to check for Java
 1. Open up the elements tab of your inspector module so you are able to see the elements on your page.
 1. In the elements console click on the element you wish to look at. Once the element is clicked on it will turn blue.
 
-![Blue Element](/images/blue_element.png)
+![Blue Element](images/blue_element.png)
 
 1. Look at the right side styles module - this will now show the styles that are inherited by this element with the closest styles to the element at the top and the furtherest styles at the bottom (reverse waterfall).
 1. In the style editor we are able to click on and off different styles by clicking on the checkbox next to each property!
