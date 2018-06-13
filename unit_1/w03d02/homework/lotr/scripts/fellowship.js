@@ -58,9 +58,6 @@ const makeMiddleEarth = () => {
     $myLand.append( $("<h1>").text(lands[i]) );
     $mySection.append($myLand);
   }
-
-  //Chapter 6 - Stretch - Clicking on the shire will have the hobbits go to Rivendell
-  // $mySection.eq(0).on("click", leaveTheShire);
 };
 
 // COMMIT YOUR WORK
@@ -183,7 +180,7 @@ const leaveTheShire = () => {
   $("#Rivendell").append($myHobbits);
 
   //Stretch: add an event handler/listener so that when you click on the `h1` The Shire, this function will be called (be sure to do it in the window.onload/document.ready function)
-  //--------Added Code to chapter one section----------//
+  //--------Added Code to the ready document function ----------//
 };
 
 // COMMIT YOUR WORK
