@@ -58,7 +58,7 @@ makePalette();
 Make it so each square will have a random color
 
 ```javascript
-const randHex = '#' + Math.floor(Math.random() * 16777215).toString(16);
+const randHex = ‘#’ + Math.floor(Math.random() * 16777215).toString(16).padStart(6,‘0’);
 $square.css('background-color', randHex);
 ```
 

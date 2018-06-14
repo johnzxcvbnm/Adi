@@ -52,7 +52,7 @@ Even though we set the _same_ click listener and handler on each div, we can tar
 $(() => {
 
   const changeColor = (event) => {
-    console.log('clicked');
+    console.log('moused over');
     $(event.target).addClass('pink');
   }
 
@@ -110,13 +110,11 @@ SUPER FIGURE IT OUT
 
 * Make it so that the square divs are contained inside a container div of fixed height and width. Depending on how many divs the user decides to make, the divs should alter their _size_ to fit the container!
 
-### Show (5 mins)
-
-Show your sketchpad!
-
-### Review (5 mins)
+### Review (10 mins)
 
 What are the steps involved in setting a single click listener and handler on multiple elements?
+
+Come up with your own custom example to do the following: 
 
 1. Make a loop that runs x amount of times
 2. Generate an element and append it to the page
@@ -124,6 +122,10 @@ What are the steps involved in setting a single click listener and handler on mu
 4. Set an event listener on the element
 5. Write an event handler for the event listener (either anonymous or named)
 6. Use the `$(event.target)` to refer to the target element within the event handler
+
+### Show (5 mins)
+
+Show your sketchpad!
 
 ## JQUERY COMMANDS
 

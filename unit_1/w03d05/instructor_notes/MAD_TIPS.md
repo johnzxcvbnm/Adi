@@ -66,17 +66,44 @@ when working on your website always make sure to crop your images and compress t
 
 I use [tiny png](https://tinypng.com/) to compress my images and it always saved me load time and maintains the quality of the images!
 
-** Rules of thumb**
+**Rules of thumb**
 
 * Full page web images 80KB - 100KB at most.
 * Part of a page (e.g. half the width of a blog post) 20kb-30kb is usually fine.
 
+### Wireframe mapping!
+
+Short and sweet tip I have picked up that has helped a lot of students is mapping out your wireframe to decide what elements should be on your HTML before you begin coding.
+
+![Image Map](images/project_map.png)
 
 ### Define Variables at the top of the page
 
 In Jquery we often grab elements from the DOM. Then we are able to grab elements on the fly to access different parts of the DOM throughout our development.
 
-### Scope & Contracts
+However, when you are creating different elements for your page you should define the ones you will be working with at the top of the page otherwise each time you go to find the element you are calling `$('.post')` your browsers will traverse the DOM to find the element and show down your performance.
+
+What we don't want to do:
+
+```Javascript
+$('.post').each( element =>{
+  $('body').append(element);
+});
+```
+
+Instead we want our code to be something like this:
+
+```Javascript
+let $body = $('body');
+let $postDivs = $('.post');
+
+$postDivs.each( element =>{
+  console.log(element);
+  $($body).append(element);
+});
+```
+
+:)
 
 
 # **Most important**
