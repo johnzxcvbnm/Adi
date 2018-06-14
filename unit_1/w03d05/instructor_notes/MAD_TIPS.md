@@ -105,10 +105,10 @@ $postDivs.each( element =>{
 
 :)
 
-### Freelancing
+## Freelancing
 
-1. Contracts - Define scope 
-1. !/2 payment upfront!
+1. Contracts - Define scope in your contracts so you can refer back to it! No one wants scope creep!
+1. 1/2 payment upfront!
 1. Charge for content management!
 1. Create a community of other developers/freelancers/designers!
 
