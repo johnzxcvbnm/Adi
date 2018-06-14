@@ -4,6 +4,7 @@
 Title: Corgi Carousel<br>
 Type: Morning Exercise<br>
 Creator: Jerrica Bobadilla<br>
+Adapted From: Madeline O'Moore<br>
 Competencies: CSS, HTML, jQuery
 
 ---
@@ -19,7 +20,7 @@ Carousels are essentially slideshows used to cycle through a series of content. 
 Starter code has been provided for you with all the files linked together and the jQuery library.
   1. `git pull upstream master`
   1. Navigate to the `morning_exercise/corgi-carousel-starter` folder for today.
-  1. Open the entire folder atom to follow along and create a carousel with cute little corgis.
+  1. Open the entire folder in atom to follow along and create a carousel with cute little corgis.
   1. Open the `index.html` in your browser.
   
 ## CSS
@@ -62,12 +63,12 @@ Before we can move onto the javascript file to give our carousel buttons some fu
 ##### Great, now our next button works and we can cycle through all the images -- but then it breaks when we reach the last one! Let's fix that!
 
 
-1. Define another global variable named `numOfImages` so we can count how many images we have in our carousel by using: `$('.carousel-images').children().length - 1` 
-    - :red_circle: Remember! `.length` gives us an exact count of how long an array is, but indexes in JavaScript start with 0, so we need to account for that by subtracting 1 from the .length
+1. Define another global variable named `highestIndex` so we can count the highest index of images we have in our carousel by using: `$('.carousel-images').children().length - 1` 
+    - :red_circle: Remember! `.length` gives us an exact count of how long an array is, but indexes in JavaScript start counting from 0, so we need to account for that by subtracting 1 from the value .length gives us
 1. Back inside our event handler for our next class, let's write an if/else statement so that if we go above the amount of images we have, it'll reset the currentImgIndex back to the first one 
     - :red_circle: Remember to watch where you place this if/else statement! Should it go before you hide the current image or after?
   ```
-   if(currentImgIndex < numOfImages) {
+   if(currentImgIndex < highestIndex) {
     currentImgIndex ++
    } else {
     currentImgIndex = 0
@@ -84,8 +85,8 @@ Before we can move onto the javascript file to give our carousel buttons some fu
   ```
 1. Add the hide/show code like we did for the next button:
   ```
-  `$('.carousel-images').children().eq(currentImgIndex).css('display', 'none')`
-  `$('.carousel-images').children().eq(currentImgIndex).css('display', 'block')`
+  $('.carousel-images').children().eq(currentImgIndex).css('display', 'none')
+  $('.carousel-images').children().eq(currentImgIndex).css('display', 'block')
   ```
 1. For our previous button, we want to _decrement_ the image index this time. So, write an if/else statment that says, as long as currentImgIndex is greater than 0, we can keep decrementing. But once it hits 0, reset the currentImgIndex back to the _last_ image index: 
     - :red_circle: Remember again to watch where you place this!
@@ -93,7 +94,7 @@ Before we can move onto the javascript file to give our carousel buttons some fu
   if(currentImgIndex > 0) {
     currentImgIndex --
   } else {
-    currentImgIndex = numOfImages
+    currentImgIndex = highestIndex
   }
   ```
 
