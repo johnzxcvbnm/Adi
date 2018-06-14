@@ -117,3 +117,13 @@ div {
          -o-transform-origin: 100% 100%;
             transform-origin :100% 100%;
 }
+
+.focus.square, .focus.circle, .focus.octagon, .focus.heart:before, .focus.heart:after {
+  background: black;
+}
+.focus.triangle, .focus.octagon:before {
+  border-bottom-color: black;
+}
+.focus.triangle-down, .focus.octagon:after {
+  border-top-color: black;
+}
