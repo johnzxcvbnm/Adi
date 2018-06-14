@@ -52,7 +52,7 @@ Even though we set the _same_ click listener and handler on each div, we can tar
 $(() => {
 
   const changeColor = (event) => {
-    console.log('clicked');
+    console.log('moused over');
     $(event.target).addClass('pink');
   }
 
