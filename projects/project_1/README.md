@@ -59,9 +59,13 @@ Your game must meet these requirements:
 
 1. After your project has been approved, [make a new github repo for your project](https://help.github.com/articles/create-a-repo/). Name your project appropriately.  For example, the name of your game, _not_ 'project 1 wdir'.  
 
+**Use github.io** We'll be hosting this project on github.io and a have a lesson on how to do it. But it is just a couple more easy steps beyond creating a new repo. More info here: https://pages.github.com/
+
+You can also host your github pages with your own domain name. Here is a walktrhough from namecheap, one web hosting service. https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages
+
 2. [Clone your repo onto your machine](https://help.github.com/articles/cloning-a-repository/).  Suggestion _inside_ the `dev` folder _on the same level_ as your WDIR repo.  Note, you do not have to `mkdir` a project folder, cloning will complete that step for you.
 
-Your project will be hosted on GitHub Pages.  More information on hosting will be provided in week 4.  
+AGAIN: Your project will be hosted on GitHub Pages.  More information on hosting will be provided in week 4.  
 
 ## Technical Demonstration
 
