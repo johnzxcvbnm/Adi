@@ -82,7 +82,6 @@ Also, the order in which you place these can have different effects
 <br>
 Gotcha do not put commas in between!
 <br>
-Do css rules look like objects to you too?
 
 
 
