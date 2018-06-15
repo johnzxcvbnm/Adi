@@ -1,4 +1,4 @@
-# Madeline's Tips For Success
+# Tips For Success
 
 ## Web inspector
 
