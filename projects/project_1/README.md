@@ -1,12 +1,12 @@
 # Project #1: The Game
 
 ## Attendance
-There are no full day classes during project weeks, but we expect you to be working on your project from 10 AM - 6 PM EST during class days and be available during that time for TA hours or any meetings with instructors as needed.  
+There are no full day classes during project weeks, but we expect you to be working on your project from at least 10 AM - 6 PM EST during class days and be available during that time for TA hours or any meetings with instructors as needed.  
 
 We also will **still have some attendance checks** during project week, as follows:
 
   - **Monday**: You're required to show up in the class zoom at 10:00 AM EST to learn how to deploy your project on GitHub Pages
-  - **Tuesday**: You're required to show up to Outcomes at 4:00 PM EST 
+  - **Tuesday**: You're required to show up to Outcomes at 4:30 PM EST 
   - **Friday**: Project presentation day! You're required to be in the class zoom starting at 10:00 AM EST
 
 _Failure to make an attendance check will result in an unexcused absence for both morning and afternoon for that day_.
