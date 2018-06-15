@@ -88,19 +88,27 @@ const winCondition = () => {
       $("div").off();
       //Exit the loop so you don't get multiple alerts
       return;
+      //If there is a winning col
     } else if(checkCol(i) > -1){
+      //Alert the user who won
       pullWin(0, checkCol(i));
+      //Turn off all the handlers
       $("div").off();
+      //Exit the loop
       return;
-    } else if(checkDia() > -1)
-    {
+      //If there is a winning Diagonal
+    } else if(checkDia() > -1){
+      //Alert the user who won
       pullWin(0, checkDia());
+      //Turn off all the handlers
       $("div").off();
+      //Exit the loop
       return;
     }
   }
 }
 
+//Function loops through every square, if there are no more moves left, alert the user that there is a tie
 const tieCheck = () => {
   const $myH2 = $("h2");
   for(let i of $myH2){
@@ -111,9 +119,11 @@ const tieCheck = () => {
   alert("Game is a tie!");
 }
 
+//Function determines if a space can be played on
 const canPlay = ($target) => {
   return $target.children().text() === "";
 }
+
 
 const playSquare = (event) => {
   const $myTarget = $(event.currentTarget);
