@@ -1,3 +1,5 @@
+![](/ga_cog.png)
+
 <hr>
 
 Title: C.R.A.P. Web Design <br>
