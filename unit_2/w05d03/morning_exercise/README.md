@@ -1,3 +1,4 @@
+![](/ga_cog.png)
 
 ---
 Title:WORD FREQUENCY<br>
