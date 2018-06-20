@@ -63,6 +63,9 @@ console.log(state)
 
 </details>
 
+<br>
+<hr>
+<br>
 
 ```
 =====================
