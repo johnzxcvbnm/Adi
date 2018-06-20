@@ -3,7 +3,12 @@
 ## Lesson Objectives
 
 1. Read URL parameters
-1. Place routes in correct order
+1. Common error: two responses
+1. Common error: Place routes in correct order
+1. Multiple Params
+1. Request Object
+1. URL Queries
+1. Extra: Environment Variables
 
 ## Read URL parameters
 
@@ -79,11 +84,39 @@ Let's breakdown the contents of our localhost URL:
 
 Path can be a URL or a URL parameter: it will look the same in the browser. The difference will be in the server.
 
+## A Common Error
+
+You can only have one response for every request. If you try to send multiple responses you'll get an error. Let's try it!
+
+```js
+app.get('/oops/:index', (req, res) => {
+    res.send(plants[req.params.index]);
+    // error cannot send more than one response!
+    res.send('this is the index: ' + req.params.index);
+});
+
+```
+
+We can, however, have multiple statements if we use our `if` statements or other program logic correctly:
+
+
+```js
+app.get('/fixed/:index', (req, res) => {
+    if (plants[req.params.index]) {
+          res.send(plants[req.params.index]);
+    } else {
+      res.send('cannot find anything at this index: ' + req.params.index);
+    }
+
+});
+
+```
+
 
 
 ## Place routes in correct order
 
-- Express starts at the top of your server.js file and attempts to match the url being used by the browser with routes in the order in which they're defined
+- Express starts at the top of your `server.js` file and attempts to match the url being used by the browser with routes in the order in which they're defined
 - URL params (e.g. :foo, :example, :index) can be anything, a number, or even a string
   - Therefore if you have these routes in this order in your `server.js`:
     - `/:color`
@@ -95,7 +128,7 @@ Path can be a URL or a URL parameter: it will look the same in the browser. The 
   Now, from top to bottom, the more specific route `/plants` will be triggered when the URL has `plants` and if it doesn't match `plants`, it will go to the next route.
 
 
-Let's code it together
+Let's code an example of this together:
 
 
 
@@ -170,7 +203,6 @@ app.get('/hello/:firstname/:lastname', (req, res) => {
 
 <br>
 <hr>
-4:00
 
 
 # The Request object
@@ -183,7 +215,7 @@ What happens if we console.log the entire Request Object?
 
 In the `hello/:firstname/:lastname` route, before `res.send`, write in:
 
-```
+```js
   console.log('=========================================');
   console.log('This is the entire Request Object sent from the browser to the server: ');
   console.log(req);
@@ -199,7 +231,7 @@ This will allow you to see the **entire request object**. This object contains a
 
 * In the browser, go to the firstname/lastname route
 * Have a look through the entire request object in Terminal
-* Find the `req.params` object within it. 
+* Find the `req.params` object within it.
 * The `req` object is where the `req.params` object is stored when the browser makes a request to the server.
 
 `req.params` is an object nested within the `req` object.
@@ -233,7 +265,77 @@ localhost:3000/hello?title=duke?year=2001
 
 Spaces are represented with a `%`.
 
-<br>
-<hr>
-License
-<hr>
+## Extra
+
+### Environment Variables
+
+Currently you are using your computer's `nodejs` as your environment.
+
+If you wanted to collaborate on this project, you'd likely have your collaborator get a copy of your code from github.
+
+They would be running the app on their environment.
+
+If you were to host your app on the internet, you'd likely need to set different environment variables than the ones you have on your computer.
+
+This is a contrived example, but simple enough to demonstrate the problem and a solution:
+
+Let's say you want to run this app on port `3000`. Your collaborator wants to run it on port `3001` and your hosted version on the internet wants to run it on port `8888`.
+
+You could, constantly update it in your `server.js`... but that seems problematic.
+
+A better option would be to add another npm package like `dotenv`
+
+Go ahead and run:
+
+`npm i dotenv`
+
+At the top of `server.js` add, as per the [docs](https://www.npmjs.com/package/dotenv)
+
+```js
+require('dotenv').config()
+```
+
+`touch .env` on the same level of `server.js`
+
+`touch .gitignore` (if you haven't already), be sure to add `node_modules` and `.env`
+
+Your environmental variables are yours, and should be private. If you put them on github everyone can see!  So you should have git ignore them.
+
+Port numbers aren't sensitive, but you could use this file to store passwords, api keys and encryption codes and more. So you want to be mindful of this file and keep it safe.
+
+Inside your `.env` file, let's set up your port
+
+**.env**
+```
+PORT=3000
+```
+As per the docs, no spaces, no commas, no semi-colons. If you have a second variable, you would put it on the next line.
+
+let's see if we can access this variable
+
+**server.js**
+```js
+require('dotenv').config()
+const express = require('express'); //from documentation: express is function
+const app = express();//app is an object
+
+console.log(process.env.PORT);
+
+```
+
+We should see the port number we put inside our `.env` file
+
+We can now update our port. We can use `||` to also set a default.
+
+```js
+const port = process.env.PORT || 3003;
+```
+
+and update our `app.listen`
+
+```js
+app.listen(port, () => {
+    console.log("I am listening on port", port);
+});
+
+```

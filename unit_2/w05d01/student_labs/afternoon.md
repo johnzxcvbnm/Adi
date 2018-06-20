@@ -15,8 +15,8 @@ Make a calculator that takes two params from the URI and sends the sum to the br
 In the `student_labs` directory for today:
 
 * Make a directory `express_calculator`. `cd` into the directory.
-* `npm init`
 * `touch server.js` and open the project.
+* `npm init`
 * Enter `server.js` as the entry point (if it hasn't already defaulted to it)
 * `npm i express`
 
@@ -71,7 +71,7 @@ We _could_ make a route for each arithmetic expression (addition, multiplication
 Example server route:
 
 ```
-app.get('/someroute', function(req, res) {
+app.get('/someroute', (req, res) => {
   console.log('req.query: ', req.query);
   res.send('someroute accessed');
 });
@@ -103,7 +103,7 @@ Make a new route for the URI `calcquery`, with the same `:num1` and `:num2` para
 Copy and paste your calculator code into the route.
 
 ```
-app.get('/calcquery/:num1/:num2', function(req, res) {
+app.get('/calcquery/:num1/:num2', (req, res) => {
 
 	// calculator code
 
@@ -114,9 +114,14 @@ Add in `if` statement that checks for a key within `req.query` called `operation
 
 If the value is "multiply", perform multiplication.
 
-Do the same for substraction, division, and exponents.
+Do the same for subtraction, division, and exponents.
 
 Add in an `else` to to send a message: "no operation"
 
 
 NOTE: We are allowed have many res.sends within a single route _if_ they send independently, ie. they are inside **if statements** and have no risk of running at the same time.
+
+## Bonus
+
+- Finish the morning lab
+- Work on the Super Bonus
