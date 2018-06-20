@@ -16,9 +16,48 @@ Walking into the office you make yourself comfortable and start exploring their 
 
 Write a command line application called `helper.js` which Scully can use to find all sightings within a given state. Have the application take one command line argument which contains the name of the state and log to the console a summary of each sighting in that state. For example:
 
+<details><summary>Hints</summary>
+1. require the `sightings.json` file as data
 
-```sh
-node helper.js state=SC
+**helper.js**
+
+```js
+// access the data in this file
+const sightingsData = require('./sightings.json')
+
+// test it
+console.log(sightingsData[0]) 
+
+// expected output
+// { date: '1/31/15 22:00',
+//  city: 'Lancaster',
+//  state: 'CA',
+//  shape: 'Sphere',
+//  duration: 'several minutes',
+ // description: 'Orange lights.' }
+
+```
+
+1. Access the firsts argument from terminal
+
+**Bash:** `node helper.js state=SC`
+
+
+```js
+// access the argument
+const state = process.argv[2]
+
+// test it
+console.log(state) 
+
+// expected output
+// state=SC
+```
+
+
+</details>
+
+
 
 =====================
 Date: 1/31/15/ 21:30
