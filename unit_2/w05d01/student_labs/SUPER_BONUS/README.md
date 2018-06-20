@@ -1,5 +1,9 @@
 # First Contact
 
+##### Origins: NYC Campus ~2015
+##### Modified by Peter Petrov
+##### Hints and clarifications by Karolin Rafalski
+
 ![XFiles](./xfiles.jpeg)
 
 The FBI has resurrected the X-Files. Agent Mulder has resurfaced and his search for the truth remains unabated. *It is out there*.
@@ -15,6 +19,8 @@ You have been contracted by the scientifically rigorous Agent Skully to help in 
 Walking into the office you make yourself comfortable and start exploring their systems. Agent Scully has asked you to provide them with a way in which they would be able to list all UFO sightings in a given location. In your search you stumble upon a file called `sightings.json`. It looks promising and, after some investigation, it appears to have data about UFO sightings over the past year or so.
 
 Write a command line application called `helper.js` which Scully can use to find all sightings within a given state. Have the application take one command line argument which contains the name of the state and log to the console a summary of each sighting in that state. For example:
+
+<br>
 
 <details><summary>Hints</summary>
 1. require the `sightings.json` file as data
@@ -94,6 +100,9 @@ node helper.js city=Sherwood
 ```
 
 **BONUS BONUS**
+
+Recommended: skip this bonus and come back to it after you've implemented Part 2
+
 Implement composite query functionality, to incorporate `&` and date range functionality
 
 For Example
@@ -122,6 +131,15 @@ The users request should go to `youripaddress/sightings[query]`. The user should
 1. Allow the user to send multiple parameters in their query string and return a list of sightings which matches only those parameters. If the user sends a request to
 `youripaddress/sightings?shape=sphere&city=henderson&state nv` your server should respond with a list of all of the sphere shaped UFOs in Henderson, NV.
 2. Format you response with html and css, so Mulder can go to Agent Skinner and justify the meager salary they've been paying you.
+3. Use HTML inputs that update the URL
+
+
+<details><summary>Hints</summary>
+
+
+  ![html query params form hint](https://i.imgur.com/AHn9H5O.png)
+
+</details>
 
 ## Ultra Bonus
 Scully and Mulder have encountered a bizarre case of a serial killer which could date back tens of years. They would like you to give them access to sighting information from the 80s. The file you luckily stumbled on only contains sightings from the last year. Agent Skinner has given you his personal guarantee that if you complete this assignment he will pull some strings and get you into the FBI field training program, so you can become a fully functioning member of the team. Soon you will be able to carry a gun and experience the paranormal first hand.
