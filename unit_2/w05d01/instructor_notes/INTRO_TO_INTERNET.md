@@ -97,14 +97,23 @@ Always sent, which give details about the request/response. Things like:
 - Date: the date
 - Host: domain name of host
 <br>
+
 [A more complete list here](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
+
 <br>
+
 The other portion is the `body` of the request. The `body` may be empty, but generally includes the actual content being sent. 
+
 <br>
+
 `Express` and our browser will be handling most of the details of our request/response headers. 
+
 <br>
+
 However, we often will want to send HTTP Status Codes. The most common ones we encounter is propbably `404` Not Found. 
+
 <br>
+
 We can get a sampling of codes, with memorable visuals [here](https://www.flickr.com/photos/girliemac/sets/72157628409467125/) or [here](https://httpstatusdogs.com/)
 <br>
 Or, [here is a link to the offical documents](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
@@ -116,7 +125,7 @@ Domain Name Servers help convert a domain (example.com) to an IP address. Simila
 
 #### What is the Resolution Process:
 
-![DNS Resolution](http://www.tcpipguide.com/free/diagrams/dnsresolution.png)
+![DNS Resolution](https://en.wikipedia.org/wiki/File:Tcp_state_diagram.png
 
 - [DNS Explained](https://www.youtube.com/watch?v=72snZctFFtA)
 
