@@ -114,7 +114,6 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const db = mongoose.connection;
-const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 ```
 
