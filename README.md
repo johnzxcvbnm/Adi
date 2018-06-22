@@ -10,42 +10,54 @@ Adi is the Instructional Designer at GA who conceptualized and developed our rem
 1. All content is licensed under a CC­BY­NC­SA 4.0 license
 1. All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co
 
+## Unit 1
+
 ## Schedule
 | Day | Date | Weekday | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|:-----------:|:-----------:|
-| w01d2 |May 29 |Tuesday | [Intro, Expectations, Culture and Success](./unit_1/w01d02/morning_exercise)| [Intro to Terminal, Intro to JS, Booleans and Loops](./unit_1/w01d02/instructor_notes)| [First Lab](./unit_1/w01d02/student_labs)|[First HW](./unit_1/w01d02/homework)|
+| w01d2 |May 29 |Tuesday | [Intro, Expectations, Culture and Success](./unit_1/w01d02/instructor_notes)| [Intro to Terminal, Intro to JS, Booleans and Loops](./unit_1/w01d02/instructor_notes)| [First Lab](./unit_1/w01d02/student_labs)|[First HW](./unit_1/w01d02/homework)|
 | w01d3 |May 30 |Wednesday | [Setting up For Success](./unit_1/w01d03/morning_exercise)| [Git and Github, CSS Floats and Fluid Layout](./unit_1/w01d03/instructor_notes)| [Lab](./unit_1/w01d03/student_labs)|[HW2](./unit_1/w01d03/homework)|
 | w01d4 |May 31 |Thursday | [Git Pull Upstream Master](./unit_1/w01d04/morning_exercise)| [Conditionals, Loops, Arrays, Iteration](./unit_1/w01d04/instructor_notes)| [Lab](./unit_1/w01d04/student_labs)|[Arrays, Loops, Conditionals Drills](./unit_1/w01d04/homework)|
-| w01d5 |June 1 |Friday | [HTML Mockup](./unit_1/w01d05/morning_exercise)| [Functions and Scope](./unit_1/w01d05/instructor_notes)| [functions and scope labs](./unit_1/w01d05/student_labs)|[Function Drills](./unit_1/w01d05/homework)|
-| w02d1 |June 4 |Monday | [HTML Mockup CSS Cont.](./unit_1/w02d01/morning_exercise)| [Program Design](./unit_1/w02d01/instructor_notes)| [Waffles](./unit_1/w02d01/student_labs)|[Landscaper](./unit_1/w02d01/homework)|
-| w02d2 |June 5 |Tuesday | [tbd](./unit_1/w02d02/morning_exercise)| [Objects, Objectception](./unit_1/w02d02/instructor_notes)| [Objects, Solar System](./unit_1/w02d02/student_labs)|[Data Structure Drills](./unit_1/w02d02/homework)|
-| w02d3 |June 6 |Wednesday | [Intro to UX](./unit_1/w02d03/morning_exercise)| [Combining Datatypes, Callbacks](./unit_1/w02d03/instructor_notes)| [Rep Master](./unit_1/w02d03/student_labs)|[Callback Drills](./unit_1/w02d03/homework)|
-| w02d4 |June 7 |Thursday | [Intro to Flexbox](./unit_1/w02d04/morning_exercise)| [OOP Methods, Classes](./unit_1/w02d04/instructor_notes)| [Westworld](./unit_1/w02d04/student_labs)|[Donut Adventure](./unit_1/w02d04/homework)|
-| w02d5 |June 8 |Friday | [Wireframes VSSL Mockup](./unit_1/w02d05/morning_exercise)| [Spacebattle](./unit_1/w02d05/instructor_notes)| [](./unit_1/w02d05/student_labs)|[](./unit_1/w02d05/homework)|
-| w03d1 |June 11 |Monday | [VSSL Cont](./unit_1/w03d01/morning_exercise)| [DOM Intro, jQuery Intro](./unit_1/w03d01/instructor_notes)| [My Hometown, Trois Colors Lumpy Space Princess](./unit_1/w03d01/student_labs)|[jQuery Magic](./unit_1/w03d01/homework)|
-| w03d2 |June 12 |Tuesday | [DOM Manipulation w. Loops and Functions, DOM Events](./unit_1/w03d02/morning_exercise)| [Grids and Pyramids, Random Imager](./unit_1/w03d02/instructor_notes)| [LOTR](./unit_1/w03d02/student_labs)|[](./unit_1/w03d02/homework)|
-| w03d3 |June 13 |Wednesday | [](./unit_1/w03d03/morning_exercise)| [](./unit_1/w03d03/instructor_notes)| [](./unit_1/w03d03/student_labs)|[](./unit_1/w03d03/homework)|
-| w03d4 |June 14 |Thursday | [](./unit_1/w03d04/morning_exercise)| [](./unit_1/w03d04/instructor_notes)| [](./unit_1/w03d04/student_labs)|[](./unit_1/w03d04/homework)|
-| w03d5 |June 15 |Friday | [](./unit_1/w03d05/morning_exercise)| [](./unit_1/w03d05/instructor_notes)| [](./unit_1/w03d05/student_labs)|[](./unit_1/w03d05/homework)|
-| w04d1 |June 18 |Monday | [](./unit_1/w04d01/morning_exercise)| [](./unit_1/w04d01/instructor_notes)| [](./unit_1/w04d01/student_labs)|[](./unit_1/w04d01/homework)|
-| w04d2 |June 19 |Tuesday | [](./unit_1/w04d02/morning_exercise)| [](./unit_1/w04d02/instructor_notes)| [](./unit_1/w04d02/student_labs)|[](./unit_1/w04d02/homework)|
-| w04d3 |June 20 |Wednesday | [](./unit_1/w04d03/morning_exercise)| [](./unit_1/w04d03/instructor_notes)| [](./unit_1/w04d03/student_labs)|[](./unit_1/w04d03/homework)|
-| w04d4 |June 21 |Thursday | [](./unit_1/w04d04/morning_exercise)| [](./unit_1/w04d04/instructor_notes)| [](./unit_1/w04d04/student_labs)|[](./unit_1/w04d04/homework)|
-| w04d5 |June 22 |Friday | [](./unit_1/w04d05/morning_exercise)| [](./unit_1/w04d05/instructor_notes)| [](./unit_1/w04d05/student_labs)|[](./unit_1/w04d05/homework)|
-| w05d1 |June 25 |Monday | [](./unit_2/w05d01/morning_exercise)| [](./unit_2/w05d01/instructor_notes)| [](./unit_2/w05d01/student_labs)|[](./unit_2/w05d01/homework)|
-| w05d2 |June 26 |Tuesday | [](./unit_2/w05d02/morning_exercise)| [](./unit_2/w05d02/instructor_notes)| [](./unit_2/w05d02/student_labs)|[](./unit_2/w05d02/homework)|
-| w05d3 |June 27 |Wednesday | [](./unit_2/w05d03/morning_exercise)| [](./unit_2/w05d03/instructor_notes)| [](./unit_2/w05d03/student_labs)|[](./unit_2/w05d03/homework)|
-| w05d4 |June 28 |Thursday | [](./unit_2/w05d04/morning_exercise)| [](./unit_2/w05d04/instructor_notes)| [](./unit_2/w05d04/student_labs)|[](./unit_2/w05d04/homework)|
-| w05d5 |June 29 |Friday | [](./unit_2/w05d05/morning_exercise)| [](./unit_2/w05d05/instructor_notes)| [](./unit_2/w05d05/student_labs)|[](./unit_2/w05d05/homework)|
-| w06d1 |July 2 |Monday | [](./unit_2/w06d01/morning_exercise)| [](./unit_2/w06d01/instructor_notes)| [](./unit_2/w06d01/student_labs)|[](./unit_2/w06d01/homework)|
-| w06d2 |July 3 |Tuesday | [](./unit_2/w06d02/morning_exercise)| [](./unit_2/w06d02/instructor_notes)| [](./unit_2/w06d02/student_labs)|[](./unit_2/w06d02/homework)|
-| w06d3 |July 4 |Wednesday | [](./unit_2/w06d03/morning_exercise)| [](./unit_2/w06d03/instructor_notes)| [](./unit_2/w06d03/student_labs)|[](./unit_2/w06d03/homework)|
-| w06d4 |July 5 |Thursday | [](./unit_2/w06d04/morning_exercise)| [](./unit_2/w06d04/instructor_notes)| [](./unit_2/w06d04/student_labs)|[](./unit_2/w06d04/homework)|
+| w01d5 |June 1 |Friday | [HTML Mockup](./unit_1/w01d05/morning_exercise)| [Functions and Scope](./unit_1/w01d05/instructor_notes)| [functions and scope labs](./unit_1/w01d05/student_labs)|[Landscaper](./unit_1/w01d05/homework)|
+| w02d1 |June 4 |Monday | [HTML Mockup CSS Cont.](./unit_1/w02d01/morning_exercise)| [Program Design, Objects](./unit_1/w02d01/instructor_notes)| [Waffles, Objects](./unit_1/w02d01/student_labs)|[Function Drills](./unit_1/w02d01/homework)|
+| w02d2 |June 5 |Tuesday | [Intro to UX](./unit_1/w02d02/morning_exercise)| [Objectception, Combining Datatypes](./unit_1/w02d02/instructor_notes)| [Solar System, Combining Datatypes](./unit_1/w02d02/student_labs)|[Data Structure Drills](./unit_1/w02d02/homework)|
+| w02d3 |June 6 |Wednesday | [Intro to Flexbox](./unit_1/w02d03/morning_exercise)| [ Callbacks, Array Callback Methods](./unit_1/w02d03/instructor_notes)| [Rep Master, Array Callback Methods](./unit_1/w02d03/student_labs)|[Callback Drills](./unit_1/w02d03/homework)|
+| w02d4 |June 7 |Thursday | [Wireframes VSSL Mockup](./unit_1/w02d04/morning_exercise)| [OOP Methods, Classes](./unit_1/w02d04/instructor_notes)| [Westworld](./unit_1/w02d04/student_labs)|[Donut Adventure](./unit_1/w02d04/homework)|
+| w02d5 |June 8 |Friday | [VSSL Cont.](./unit_1/w02d05/morning_exercise)| [Spacebattle](./unit_1/w02d05/instructor_notes)| [](./unit_1/w02d05/student_labs)|[](./unit_1/w02d05/homework)|
+| w03d1 |June 11 |Monday | [Supply Mockup](./unit_1/w03d01/morning_exercise)| [DOM Intro, jQuery Intro](./unit_1/w03d01/instructor_notes)| [My Hometown, Trois Colors Lumpy Space Princess](./unit_1/w03d01/student_labs)|[jQuery Magic](./unit_1/w03d01/homework)|
+| w03d2 |June 12 |Tuesday | [Supply Mockup Walkthrough](./unit_1/w03d02/morning_exercise)| [DOM Manipulation w. Loops and Functions, DOM Events](./unit_1/w03d02/instructor_notes)| [Grids and Pyramids, Random Imager](./unit_1/w03d02/student_labs)|[LOTR](./unit_1/w03d02/homework)|
+| w03d3 |June 13 |Wednesday | [Modal](./unit_1/w03d03/morning_exercise)| [Event Bubbling, DOM - capturing input, iteration, more on targets](./unit_1/w03d03/instructor_notes)| [Calculator, To Do List](./unit_1/w03d03/student_labs)|[To Do List](./unit_1/w03d03/homework)|
+| w03d4 |June 14 |Thursday | [Carousel](./unit_1/w03d04/morning_exercise)| [DOM using events in a loop](./unit_1/w03d04/instructor_notes)| [Shape Clicker, Tic Tac Toe](./unit_1/w03d04/student_labs)|[Tic Tac Toe](./unit_1/w03d04/homework)|
+| w03d5 |June 15 |Friday | [CSS Animations](./unit_1/w03d05/morning_exercise)| [Code Organization](./unit_1/w03d05/instructor_notes)| [](./unit_1/w03d05/student_labs)|Start Project 1|
+| w04d1 |June 18 |Monday | Project 1|
+| w04d2 |June 19 |Tuesday | Project 1|
+| w04d3 |June 20 |Wednesday | Project 1|
+| w04d4 |June 21 |Thursday | Project 1|
+| w04d5 |June 22 |Friday | **Project 1 Presentations** |[Intro to Unit 2](./unit_2/w04d05/homework)|
+
+## Unit 2 
+## Schedule
+| Day | Date | Weekday | Morning Exercise | Lectures | Labs | Homework |
+|:---:|:-----------:|:-------:|:-----------:|:-----------:|:-----------:|:-----------:|
+| w05d1 |June 25 |Monday | [](./unit_2/w05d01/morning_exercise)| [Intro to Express, Params and Routing](./unit_2/w05d01/instructor_notes)| [tv shows, express calculator](./unit_2/w05d01/student_labs)|[](./unit_2/w05d01/homework)|
+| w05d2 |June 26 |Tuesday | [](./unit_2/w05d02/morning_exercise)| [Index and Show, MVC, EJS](./unit_2/w05d02/instructor_notes)| [superhereos, fruits](./unit_2/w05d02/student_labs)|[](./unit_2/w05d02/homework)|
+| w05d3 |June 27 |Wednesday | [](./unit_2/w05d03/morning_exercise)| [REST, New, Create, cURL, Static Assets](./unit_2/w05d03/instructor_notes)| [Products](./unit_2/w05d03/student_labs)|[](./unit_2/w05d03/homework)|
+| w05d4 |June 28 |Thursday | [](./unit_2/w05d04/morning_exercise)| [REST, Delete, method-override, Edit, Update](./unit_2/w05d04/instructor_notes)| [Exobiology](./unit_2/w05d04/student_labs)|[](./unit_2/w05d04/homework)|
+| w05d5 |June 29 |Friday | [](./unit_2/w05d05/morning_exercise)| [Intro to Mongo, Mongoose, Schemas](./unit_2/w05d05/instructor_notes)| [Intergalactic Bounty Hunters, Mongoose Vampires](./unit_2/w05d05/student_labs)|[](./unit_2/w05d05/homework)|
+| w06d1 |July 2 |Monday | [](./unit_2/w06d01/morning_exercise)| [Build App with Mongo](./unit_2/w06d01/instructor_notes)| [Captain's Log](./unit_2/w06d01/student_labs)|[](./unit_2/w06d01/homework)|
+| w06d2 |July 3 |Tuesday | [](./unit_2/w06d02/morning_exercise)| [Build App Cont.](./unit_2/w06d02/instructor_notes)| [Captain's Log Cont](./unit_2/w06d02/student_labs)|[](./unit_2/w06d02/homework)|
+| w06d3 |July 4 |Wednesday | **No Class Today** |
+| w06d4 |July 5 |Thursday | [](./unit_2/w06d04/morning_exercise)| [Sessions, Auth](./unit_2/w06d04/instructor_notes)| [](./unit_2/w06d04/student_labs)|[](./unit_2/w06d04/homework)|
 | w06d5 |July 6 |Friday | [](./unit_2/w06d05/morning_exercise)| [](./unit_2/w06d05/instructor_notes)| [](./unit_2/w06d05/student_labs)|[](./unit_2/w06d05/homework)|
 | w07d1 |July 9 |Monday | [](./unit_2/w07d01/morning_exercise)| [](./unit_2/w07d01/instructor_notes)| [](./unit_2/w07d01/student_labs)|[](./unit_2/w07d01/homework)|
 | w07d2 |July 10 |Tuesday | [](./unit_2/w07d02/morning_exercise)| [](./unit_2/w07d02/instructor_notes)| [](./unit_2/w07d02/student_labs)|[](./unit_2/w07d02/homework)|
 | w07d3 |July 11 |Wednesday | [](./unit_2/w07d03/morning_exercise)| [](./unit_2/w07d03/instructor_notes)| [](./unit_2/w07d03/student_labs)|[](./unit_2/w07d03/homework)|
 | w07d4 |July 12 |Thursday | [](./unit_2/w07d04/morning_exercise)| [](./unit_2/w07d04/instructor_notes)| [](./unit_2/w07d04/student_labs)|[](./unit_2/w07d04/homework)|
+
+## Unit 3
+## Schedule
+| Day | Date | Weekday | Morning Exercise | Lectures | Labs | Homework |
+|:---:|:-----------:|:-------:|:-----------:|:-----------:|:-----------:|:-----------:|
 | w07d5 |July 13 |Friday | [](./unit_2/w07d05/morning_exercise)| [](./unit_2/w07d05/instructor_notes)| [](./unit_2/w07d05/student_labs)|[](./unit_2/w07d05/homework)|
 | w08d1 |July 16 |Monday | [](./unit_3/w08d01/morning_exercise)| [](./unit_3/w08d01/instructor_notes)| [](./unit_3/w08d01/student_labs)|[](./unit_3/w08d01/homework)|
 | w08d2 |July 17 |Tuesday | [](./unit_3/w08d02/morning_exercise)| [](./unit_3/w08d02/instructor_notes)| [](./unit_3/w08d02/student_labs)|[](./unit_3/w08d02/homework)|
