@@ -32,7 +32,7 @@ The entire route:
 
 ```js
 app.get('/:indexOfPlantsArray', (req, res) => {
-    res.send(plants[req.params.index]);
+    res.send(plants[req.params.indexOfPlantsArray]);
 });
 ```
 
