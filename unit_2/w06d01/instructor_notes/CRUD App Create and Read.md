@@ -83,13 +83,10 @@ app.post('/fruits/', (req, res)=>{
 });
 ```
 
-1. `npm install body-parser`
 1. Use body parser in server.js:
 
 ```javascript
-const bodyParser = require('body-parser');
-
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.urlencoded({extended:true}));
 ```
 
 Check to see if req.body works:
