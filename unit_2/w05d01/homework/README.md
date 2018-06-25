@@ -84,10 +84,6 @@ Install express. `npm i express`. Check your files.
 <hr>
 
 
-## Old Glory Mockup
-
-Complete the Old Glory Mockup in the `old_glory` folder using Bootstrap. For more information, look at the [README.md](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Outrun/blob/master/unit_2/w04d05/homework/old_glory/README.md) in the `old_glory` folder.
-
 
 # Hungry for more?
 
