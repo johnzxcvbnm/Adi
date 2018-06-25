@@ -11,11 +11,11 @@
   <!-- add bootstrap classes as needed to get the look of the mockup -->
   <!-- look at the bootstrap documentation to decide what classes you'll need to add -->
   <!-- throughout the html, every element that has an empty class="" requires one or more bootstrap class(es) -->
-  <div class="">
+  <div class="container">
     <div id="star-five"></div>
-    <h1 class="">OLD GLORY <span>Insurance Company</span></h1>
-    <section class="">
-      <article class="">
+    <h1 class="display-3">OLD GLORY <span>Insurance Company</span></h1>
+    <section class="row">
+      <article class="col-sm">
         <h5>The Threat of Robots is Everywhere!</h5>
         <ul>
           <li>Robots have innately nefarious agendas!</li>
@@ -25,7 +25,7 @@
           <li>Robots can strike at any time!</li>
         </ul>
       </article>
-      <article class="">
+      <article class="col-sm">
         <br>
         <p>
           As a modern citizen, you're probably aware of the <strong>threat</strong> that robots pose!
@@ -42,9 +42,9 @@
       </article>
     </section>
     <hr>
-    <section class="">
-      <article class="">
-        <table class="">
+    <section class="row">
+      <article class="col">
+        <table class="table">
           <thead>
             <th>Insurance</th>
             <th>Level of Coverage*</th>
@@ -82,22 +82,22 @@
           </caption>
         </table>
       </article>
-      <article class="">
+      <article class="col-sm-3">
         <h3>Warning</h3>
         <p>Persons denying the existence of robots may be robots themselves!</p>
       </article>
     </section>
     <section>
-      <h4 class="">Don't cower on under your snuggie any longer! Make a choice now!</h4>
+      <h4 class="display-4">Don't cower on under your snuggie any longer! Make a choice now!</h4>
       <form>
-        <div class="">
-          <div class="">
-            <label for="email">Your email</label>
-            <input class="" type="email" placeholder="test@mailbox.com" id="email" />
+        <div class="input-group mb-3">
+          <div class="input-group-append input-group col">
+            <label class="input-group" for="email">Your email</label>
+            <input class="form-control" type="email" placeholder="test@mailbox.com" id="email" />
           </div>
-          <div class="">
+          <div class="input-group-append input-group col">
             <label for="coverage">Choose Your Coverage</label>
-            <select class="" id="coverage">
+            <select class="input-group" id="coverage">
               <option value="Option 1">Aluminum</option>
               <option value="Option 2">Copper</option>
               <option value="Option 3">Tylium</option>
@@ -105,21 +105,21 @@
             </select>
           </div>
         </div>
-        <div class="">
+        <div class="input-group mb-3">
           <label for="exampleMessage">Tell us how great we are!</label>
-          <textarea class="" placeholder="Old Glory Insurance is the best thing since the invention of sliced bread!" id="exampleMessage"></textarea>
+          <textarea class="input-group" placeholder="Old Glory Insurance is the best thing since the invention of sliced bread!" id="exampleMessage"></textarea>
         </div>
         <div class="row form-group form-check">
           <input type="checkbox" class="form-check-input" id="formCheckBox">
           <label class="form-check-label" for="formCheckBox">Battlestar Galactica is one of the greatest shows of all time</label>
         </div>
-        <div class="">
+        <div class="input-group mb-3">
           <button type="submit" class="btn btn-primary">Cover Me</button>
         </div>
       </form>
     </section>
-    <h4 class="">Old Glory: For when the metal ones decide to come for you...</h4>
-    <h4 class="">And they will!</h4>
+    <h4 class="display-4">Old Glory: For when the metal ones decide to come for you...</h4>
+    <h4 class="display-4">And they will!</h4>
   </div>
 </body>
 </html>
