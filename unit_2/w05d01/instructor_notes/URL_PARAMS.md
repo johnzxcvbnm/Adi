@@ -32,11 +32,11 @@ The entire route:
 
 ```js
 app.get('/:indexOfPlantsArray', (req, res) => {
-    res.send(plants[req.params.index]);
+    res.send(plants[req.params.indexOfPlantsArray]);
 });
 ```
 
-We can access the value of `:indexOfPlantsArray` with `req.params.index`
+We can access the value of `:indexOfPlantsArray` with `req.params.indexOfPlantsArray`
 
 Let's code together to see this in action.
 
@@ -55,7 +55,7 @@ const port = 3000;
 const plants = ['Monstera Deliciosa', 'Corpse Flower', 'Elephant-Foot Yam', "Witches' Butter",];
 
 app.get('/:indexOfPlantsArray', (req, res) => {
-    res.send(plants[req.params.index]);
+    res.send(plants[req.params.indexOfPlantsArray]);
 });
 
 app.listen(port,() => {
@@ -140,7 +140,7 @@ const port = 3000;
 const plants = ['Monstera Deliciosa', 'Corpse Flower', 'Elephant-Foot Yam',  "Witches' Butter",];
 
 app.get('/:indexOfPlantsArray', (req, res) => { //:indexOfPlantsArray can be anything, even awesome
-    res.send(plants[req.params.index]);
+    res.send(plants[req.params.indexOfPlantsArray]);
 });
 
 app.get('/awesome', (req, res) => { //this will never be reached
@@ -172,7 +172,7 @@ app.get('/awesome', (req, res) => {
 });
 
 app.get('/:indexOfPlantsArray', (req, res) => {
-    res.send(plants[req.params.index]);
+    res.send(plants[req.params.indexofPlantsArray]);
 });
 
 app.listen(port,() => {
@@ -263,7 +263,7 @@ You can add multiple queries
 localhost:3000/hello?title=duke?year=2001
 ```
 
-Spaces are represented with a `%`.
+Spaces are represented with a `%20`.
 
 ## Extra
 
