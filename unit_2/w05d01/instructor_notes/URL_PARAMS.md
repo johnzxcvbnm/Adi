@@ -26,17 +26,17 @@ To set URL parameters in your `server.js` , just add a colon after the forward s
 `/plants`
 
 URL parameter:
-`/:index`
+`/:indexOfPlantsArray`
 
 The entire route:
 
 ```js
-app.get('/:index', (req, res) => {
+app.get('/:indexOfPlantsArray', (req, res) => {
     res.send(plants[req.params.index]);
 });
 ```
 
-We can access the value of `:index` with `req.params.index`
+We can access the value of `:indexOfPlantsArray` with `req.params.index`
 
 Let's code together to see this in action.
 
@@ -54,7 +54,7 @@ const port = 3000;
 
 const plants = ['Monstera Deliciosa', 'Corpse Flower', 'Elephant-Foot Yam', "Witches' Butter",];
 
-app.get('/:index', (req, res) => {
+app.get('/:indexOfPlantsArray', (req, res) => {
     res.send(plants[req.params.index]);
 });
 
@@ -89,7 +89,7 @@ Path can be a URL or a URL parameter: it will look the same in the browser. The 
 You can only have one response for every request. If you try to send multiple responses you'll get an error. Let's try it!
 
 ```js
-app.get('/oops/:index', (req, res) => {
+app.get('/oops/:indexOfPlantsArray', (req, res) => {
     res.send(plants[req.params.index]);
     // error cannot send more than one response!
     res.send('this is the index: ' + req.params.index);
@@ -101,7 +101,7 @@ We can, however, have multiple statements if we use our `if` statements or other
 
 
 ```js
-app.get('/fixed/:index', (req, res) => {
+app.get('/fixed/:indexOfPlantsArray', (req, res) => {
     if (plants[req.params.index]) {
           res.send(plants[req.params.index]);
     } else {
@@ -117,7 +117,7 @@ app.get('/fixed/:index', (req, res) => {
 ## Place routes in correct order
 
 - Express starts at the top of your `server.js` file and attempts to match the url being used by the browser with routes in the order in which they're defined
-- URL params (e.g. :foo, :example, :index) can be anything, a number, or even a string
+- URL params (e.g. :foo, :example, :indexOfPlantsArray) can be anything, a number, or even a string
   - Therefore if you have these routes in this order in your `server.js`:
     - `/:color`
     - `/plants`
@@ -139,7 +139,7 @@ const port = 3000;
 
 const plants = ['Monstera Deliciosa', 'Corpse Flower', 'Elephant-Foot Yam',  "Witches' Butter",];
 
-app.get('/:index', (req, res) => { //:index can be anything, even awesome
+app.get('/:indexOfPlantsArray', (req, res) => { //:indexOfPlantsArray can be anything, even awesome
     res.send(plants[req.params.index]);
 });
 
@@ -171,7 +171,7 @@ app.get('/awesome', (req, res) => {
   `);
 });
 
-app.get('/:index', (req, res) => {
+app.get('/:indexOfPlantsArray', (req, res) => {
     res.send(plants[req.params.index]);
 });
 

@@ -210,13 +210,10 @@ module.exports = Author;
 
 ## Create Authors Create Route
 
-1. `npm install body-parser --save`
 1. use body parser in server.js
 
 ```javascript
-const bodyParser = require('body-parser');
-
-app.use(bodyParser.urlencoded({extended:false}));
+app.use(express.urlencoded({extended:false}));
 ```
 
 controllers/authors.js
