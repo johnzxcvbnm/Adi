@@ -36,7 +36,7 @@ app.get('/:indexOfPlantsArray', (req, res) => {
 });
 ```
 
-We can access the value of `:indexOfPlantsArray` with `req.params.index`
+We can access the value of `:indexOfPlantsArray` with `req.params.indexOfPlantsArray`
 
 Let's code together to see this in action.
 
