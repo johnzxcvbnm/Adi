@@ -126,7 +126,7 @@ Both sets of data will be in JSON format:
 
  #### 2c
 
- Create a view `restaurants.html.ejs` which displays cards for each restaurant, which matches your query. Keep in mind that each restaurant has violations, each of which is its own card. CARDCEPTION!
+ Create a view `restaurants.ejs` which displays cards for each restaurant, which matches your query. Keep in mind that each restaurant has violations, each of which is its own card. CARDCEPTION!
 
  ![cardception](cardception.jpg)
 
