@@ -1,0 +1,15 @@
+{
+  "name": "homework",
+  "version": "1.0.0",
+  "description": "--- Title: JS Express & Routes Practice<br> Type: Homework<br> Creator: lost in the mists of time<br> Heavily adapted by: Kristyn Bryan, Thom Page, Jerrica Bobadilla, Karolin Rafalski<br> Competencies: Javascript, Express, Routes, Node<br> Prerequisites: Javascript <br>",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "John Kusching",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
