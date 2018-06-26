@@ -104,3 +104,27 @@ app.get("/fibonacci/:input", (req, res) => {
     res.send("I can tell this is not a Fibonacci number");
   }
 });
+
+//Request
+const request = require("request");
+
+
+const myFunction = (response, otherFunction) => {
+  request("http://jservice.io/api/random", (error, res, body) => {
+    // console.log(`Error: ${error}`);
+    // console.log(`StatusCode: ${res}`);
+    // console.log(`Body: ${body}`);
+    const myJ = JSON.parse(body);
+    // console.log(`Question: ${myJ[0]["question"]}`);
+    otherFunction(response, myJ[0]["question"], myJ[0]["answer"]);
+  });
+}
+
+const printFunction = (response, question, answer) => {
+  response.send(`<h3>Question: ${question}?</h3>
+                 <h3>Answer: ${answer}!</h3>`);
+}
+
+app.get("/request", (req, res) => {
+  myFunction(res, printFunction);
+});
