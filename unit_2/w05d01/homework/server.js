@@ -69,3 +69,38 @@ app.get("/magic/:question", (req, res) => {
   res.send(`<h3>Question: ${myQ}?</h3>
             <h1>Answer: ${myAnswer}!!!</h1>`);
 });
+
+//Fibonacci
+app.get("/fibonacci/:input", (req, res) => {
+  //Create two initial numbers for the sequence
+  let num1 = 0;
+  let num2 = 1;
+
+  //Create a variable to swap with
+  let swap = 0;
+
+  //Get the user input and turn it into an int
+  const myInput = parseInt(req.params.input);
+
+  //While either number is less than the input
+  //Cycle through the fibonacci sequence
+  while(num2 < myInput){
+    swap = num1 + num2;
+    num1 = num2;
+    num2 = swap;
+  }
+
+  //Error Testing
+  // console.log(`Num1: ${num1}`);
+  // console.log(`Num2: ${num2}`);
+  // console.log(`MyInput: ${myInput}`);
+
+  //If either number matches the input
+  //Output that it is part of the sequence
+  //Otherwise output that it is not part of the sequence
+  if( (num1 === myInput) || (num2 === myInput) ){
+    res.send("Very good.  It is Fibonacci!");
+  } else {
+    res.send("I can tell this is not a Fibonacci number");
+  }
+});
