@@ -1,3 +1,73 @@
 body {
   background: rgba(233, 244, 255 , 1);
 }
+
+/* div {
+  height: 200px;
+} */
+
+.a, .b, .c, .d, .e, .f {
+  height: 200px;
+}
+
+.a {
+  width: 100%;
+  background: purple;
+}
+
+.bcdef {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bcde {
+  width: 80%;
+  /* display: flex;
+  flex-wrap: wrap; */
+}
+
+.cde {
+  width: 100%;
+  display: flex;
+}
+
+.b {
+  width: 100%;
+  background: green;
+}
+
+.c {
+  width: 33.33%;
+  background: blue;
+}
+
+.d {
+  width: 33.33%;
+  background: gray;
+}
+
+.e {
+  width: 33.33%;
+  background: orange;
+}
+
+.f {
+  width: 20%;
+  background: thistle;
+  height: 400px;
+}
+
+@media(max-width: 600px) {
+  .f {
+    width: 100%;
+    background: thistle;
+    height: 400px;
+  }
+
+  .bcde {
+    width: 100%;
+    /* display: flex;
+    flex-wrap: wrap; */
+  }
+}

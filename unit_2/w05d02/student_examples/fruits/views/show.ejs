@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Fruits Show Page</h1>
+    The <%=fruit.name; %> is <%=fruit.color; %>.
+    <% if(fruit.readyToEat){ %>
+      <p>It is ready to eat</p>
+    <% } else { %>
+      <p>It is not ready to eat</p>
+    <% } %>
+    <a href="./">Index</a>
+    <!-- <ul>
+      <% for(let i = 0; i < 5; i++){ %>
+        <li><%= i %></li>
+      <% } %>
+    </ul> -->
+  </body>
+</html>

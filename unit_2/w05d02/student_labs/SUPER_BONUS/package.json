@@ -1,0 +1,15 @@
+{
+  "name": "super_bonus",
+  "version": "1.0.0",
+  "description": "#### Origins: NYC Campus ~ Spring 2016",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "John Kusching",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
