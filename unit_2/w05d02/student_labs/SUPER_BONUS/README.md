@@ -2,7 +2,7 @@
 
 #### Origins: NYC Campus ~ Spring 2016
 
- The new Tourist of NYC has commissioned you to find the out how well restaurants in NYC are dealing with the ever-powerful, ever-clever rat population.
+ The new Tourist of NYC Department has commissioned you to find the out how well restaurants in NYC are dealing with the ever-powerful, ever-clever rat population.
 
  New York City has a web site with open data. [NYC Open Data](https://opendata.cityofnewyork.us/)
 
