@@ -53,8 +53,8 @@ Both sets of data will be in JSON format:
  #### 1b:
  Make these views:
 
- `rat_sighting_results.html.ejs`
- `violation_results.html.ejs`
+ `rat_sighting_results.ejs`
+ `violation_results.ejs`
 
  Now that we have the right data for each request let's style it and make it more user friendly.
 
