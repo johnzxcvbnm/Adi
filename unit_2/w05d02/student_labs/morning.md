@@ -41,4 +41,4 @@
 
 ## Bonus
 
-Go back to the X-Files lab from the previous day
+Go back to the X-Files lab from the previous day and/or check out the new Super Bonus!
