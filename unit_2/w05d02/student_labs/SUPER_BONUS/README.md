@@ -2,7 +2,7 @@
 
 #### Origins: NYC Campus ~ Spring 2016
 
- The new Tourist of NYC has commissioned you to find the out how well restaurants in NYC are dealing with the ever-powerful, ever-clever rat population.
+ The new Tourist of NYC Department has commissioned you to find the out how well restaurants in NYC are dealing with the ever-powerful, ever-clever rat population.
 
  New York City has a web site with open data. [NYC Open Data](https://opendata.cityofnewyork.us/)
 
@@ -53,8 +53,8 @@ Both sets of data will be in JSON format:
  #### 1b:
  Make these views:
 
- `rat_sighting_results.html.ejs`
- `violation_results.html.ejs`
+ `rat_sighting_results.ejs`
+ `violation_results.ejs`
 
  Now that we have the right data for each request let's style it and make it more user friendly.
 
@@ -126,7 +126,7 @@ Both sets of data will be in JSON format:
 
  #### 2c
 
- Create a view `restaurants.html.ejs` which displays cards for each restaurant, which matches your query. Keep in mind that each restaurant has violations, each of which is its own card. CARDCEPTION!
+ Create a view `restaurants.ejs` which displays cards for each restaurant, which matches your query. Keep in mind that each restaurant has violations, each of which is its own card. CARDCEPTION!
 
  ![cardception](cardception.jpg)
 
