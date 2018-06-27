@@ -17,3 +17,7 @@ app.get("/pokemon", (req, res) => {
     pokemon: myPokemon
   });
 });
+
+app.get("/pokemon/:index", (req, res) => {
+  res.send(req.params.index);
+});
