@@ -2,10 +2,22 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
     <title></title>
   </head>
   <body>
-    <h1>Index</h1>
-
+    <div class=container>
+      <h1>Hello Adult Life</h1>
+      <table>
+        <% for(let i = 0; i < Budget.length; i++){ %>
+          <tr>
+            <td><%= Budget[i]["date"] %></td>
+            <td><a><%= Budget[i]["name"] %></a></td>
+            <td><%= Budget[i]["amount"] %></td>
+          </tr>
+        <% } %>
+      </table>
+    </div>
   </body>
 </html>
