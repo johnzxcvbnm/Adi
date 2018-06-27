@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="/skeleton.css">
   </head>
   <body>
-
+    <div class="container">
+      <h1><%= budget["name"] %></h1>
+      <form action="./">
+        <button>Back</button>
+      </form>
+      <ul>
+        <li>Date: <%= budget["date"] %></li>
+        <li>Name: <%= budget["name"] %></li>
+        <li>From: <%= budget["from"] %></li>
+        <li>Amount: <%= budget["amount"] %></li>
+        <li>Tags: <%= budget["tags"] %></li>
+      </ul>
+    </div>
   </body>
 </html>

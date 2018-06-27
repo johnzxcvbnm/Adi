@@ -1,4 +1,4 @@
-const budget = require("./models/budget.js");
+const myBudget = require("./models/budget.js");
 const express = require("express");
 const app = express();
 const port = 3000;
@@ -14,8 +14,15 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
-app.get("/index", (req, res) => {
+app.get("/show", (req, res) => {
   res.render("index.ejs", {
-    Budget:budget
+    budget: myBudget
+  });
+});
+
+app.get("/show/:index", (req, res) => {
+  // res.send("You made it!" + req.params.index);
+  res.render("show.ejs", {
+    budget: myBudget[req.params.index]
   });
 });

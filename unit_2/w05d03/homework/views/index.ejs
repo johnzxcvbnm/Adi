@@ -7,14 +7,14 @@
     <title></title>
   </head>
   <body>
-    <div class=container>
+    <div class="container">
       <h1>Hello Adult Life</h1>
       <table>
-        <% for(let i = 0; i < Budget.length; i++){ %>
+        <% for(let i = 0; i < budget.length; i++){ %>
           <tr>
-            <td><%= Budget[i]["date"] %></td>
-            <td><a><%= Budget[i]["name"] %></a></td>
-            <td><%= Budget[i]["amount"] %></td>
+            <td><%= budget[i]["date"] %></td>
+            <td><a href="<%= i %>"><%= budget[i]["name"] %></a></td>
+            <td><%= budget[i]["amount"] %></td>
           </tr>
         <% } %>
       </table>
