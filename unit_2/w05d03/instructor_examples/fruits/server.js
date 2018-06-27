@@ -2,8 +2,31 @@ const express = require('express');
 const app = express();
 const fruits = require('./models/fruits.js');
 
+// app.use((request, response, next)=>{
+//     console.log('a request has been received');
+//     next();
+// })
+
+app.use(express.urlencoded({extended:false}));
+
 app.get('/fruits', (request, response)=>{
-    response.send(fruits)
+    response.render('index.ejs', {
+        fruits: fruits
+    });
+});
+
+app.post('/fruits', (request, response)=>{
+    if(request.body.readyToEat === 'on'){
+        request.body.readyToEat = true;
+    } else {
+        request.body.readyToEat = false;
+    }
+    fruits.push(request.body);
+    response.redirect('/fruits');
+})
+
+app.get('/fruits/new', (request, response)=>{
+    response.render('new.ejs');
 });
 
 app.get('/fruits/:indexOfFruitsArray', (request, response)=>{
