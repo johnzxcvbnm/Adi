@@ -13,5 +13,5 @@ app.get("/", (request, response) => {
 });
 
 app.get("/pokemon", (req, res) => {
-  res.send(pokemon);
+  res.render("index.ejs");
 });
