@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Product Listing</h1>
+    <% for(let i = 0; i < product.length; i++) { %>
+      <li>
+        <a href=<%= "/products/" + i %>>
+          <%= product[i]["name"] %>
+        </a>
+      </li>
+    <% } %>
+    <nav>
+    </br><a href="/products/new">Create a New Product</a>
+    </nav>
+  </body>
+</html>
