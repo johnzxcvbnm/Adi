@@ -5,12 +5,17 @@
     <title></title>
   </head>
   <body>
-    <h1>See All The Pokemon</h1>
     <style type="text/css">
       body {
         color: blanchedalmond;
         background-color: steelblue;
       }
     </style>
+    <h1>See All The Pokemon</h1>
+    <ul>
+      <% for(let i = 0; i < pokemon.length; i++) { %>
+        <li><%= pokemon[i]["name"] %></li>
+      <% } %>
+    </ul>
   </body>
 </html>
