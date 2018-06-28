@@ -84,6 +84,7 @@ There are a lot of different input types (see the resources below), but for toda
   - _password_ makes it so that whatever the user types into the input field is hidden like a password should be!
   - _email_ makes it so that the form will automatically validate if the user actually entered an email upon submission.
   - _submit_ makes the input a button and indicates that when the user clicks this button, the form should be submitted.
+    - Note: The default text inside a submit button is "submit", if you want it to say something different, add an attribute of `value="whatever you want the button to say"`
   
 #### Styling Inputs 
 
