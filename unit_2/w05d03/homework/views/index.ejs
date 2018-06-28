@@ -13,11 +13,14 @@
         <% for(let i = 0; i < budget.length; i++){ %>
           <tr>
             <td><%= budget[i]["date"] %></td>
-            <td><a href="<%= i %>"><%= budget[i]["name"] %></a></td>
+            <td><a href="/show/<%= i %>"><%= budget[i]["name"] %></a></td>
             <td><%= budget[i]["amount"] %></td>
           </tr>
         <% } %>
       </table>
+      <form action="/show/new">
+        <button>NEW</button>
+      </form>
     </div>
   </body>
 </html>

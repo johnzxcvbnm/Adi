@@ -10,6 +10,11 @@ app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
+app.post("/show", (req, res) => {
+  myBudget.push(req.body);
+  res.redirect("/show");
+})
+
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
@@ -18,6 +23,10 @@ app.get("/show", (req, res) => {
   res.render("index.ejs", {
     budget: myBudget
   });
+});
+
+app.get("/show/new", (req, res) => {
+  res.render("new.ejs");
 });
 
 app.get("/show/:index", (req, res) => {
