@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/main.css">
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <div class="container">
+    <h1>Pokedex</h1>
+    <table>
+      <% for(let i = 0; i < pokemon.length; i += 5){ %>
+        <tr>
+          <% for(let x = i; (x < pokemon.length) && (x < i + 5); x++){ %>
+            <td>
+              <div class="pokedexPreview">
+                <a href="/pokedex/<%= x + 1 %>"><%= pokemon[x]["name"] %></a><br/>
+                <img src="<%= pokemon[x]["img"] %>" />
+              </div>
+            </td>
+          <% } %>
+        </tr>
+      <% } %>
+    </table>
+  </body>
+</html>

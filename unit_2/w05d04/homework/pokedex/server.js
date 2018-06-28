@@ -23,6 +23,23 @@ app.listen(port, () => {
 
 //------Get Routes----------//
 
+app.get("/pokedex", (req, res) => {
+  res.render("index.ejs", {
+    pokemon: myPokemon
+  });
+});
+
+app.get("/pokedex/new", (req, res) => {
+  res.send("NEW POKEMON");
+});
+
+app.get("/pokedex/:index", (req, res) => {
+  res.render("show.ejs", {
+    index: req.params.index,
+    pokemon: myPokemon[req.params.index - 1]
+  });
+});
+
 app.get("/", (req, res) => {
-  res.send("YOLO");
+  res.send(myPokemon);
 });

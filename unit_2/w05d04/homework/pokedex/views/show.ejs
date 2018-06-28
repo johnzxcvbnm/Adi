@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/main.css">
+    <title><%= pokemon["name"] %></title>
+  </head>
+  <body>
+    <div class="container">
+      <a href="./">INDEX</a><br/>
+      <img src="<%= pokemon["img"] %>" />
+      <table>
+        <tr>
+          <td>ID:</td>
+          <td><%= pokemon["id"]%></td>
+        </tr>
+        <tr>
+          <td>NAME:</td>
+          <td><%= pokemon["name"] %></td>
+        </tr>
+        <tr>
+          <td>TYPE:</td>
+          <td><%= pokemon["type"] %></td>
+        </tr>
+        <tr>
+          <td>STATS:</td>
+          <td>
+            <table>
+              <tr>
+                <td>HP:</td>
+                <td><%= pokemon["stats"]["hp"] %></td>
+              </tr>
+              <tr>
+                <td>ATTACK:</td>
+                <td><%= pokemon["stats"]["attack"] %></td>
+              </tr>
+              <tr>
+                <td>DEFENSE:</td>
+                <td><%= pokemon["stats"]["defense"] %></td>
+              </tr>
+              <tr>
+                <td>SP ATTACK:</td>
+                <td><%= pokemon["stats"]["spattack"] %></td>
+              </tr>
+              <tr>
+                <td>SP DEFENSE:</td>
+                <td><%= pokemon["stats"]["spdefense"] %></td>
+              </tr>
+              <tr>
+                <td>SPEED:</td>
+                <td><%= pokemon["stats"]["speed"] %></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
