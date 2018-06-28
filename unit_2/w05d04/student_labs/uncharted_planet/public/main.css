@@ -1,0 +1,48 @@
+body {
+  background-color: steelblue;
+  /* background-image: @url("https://i.imgur.com/naenSjp.png"); */
+}
+
+h1 {
+  /* text-align: center; */
+}
+
+div {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+nav {
+  font-size: 1.2em;
+}
+
+table {
+  font-size: 1.2em;
+}
+
+td > form {
+  margin-left: 10px;
+}
+
+li {
+  font-size: 1.2em;
+  display: flex;
+}
+
+li > input {
+  margin-left: 10px;
+}
+
+li > form {
+  margin-left: 30px;
+}
+
+a {
+  color: #D9DB56;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}

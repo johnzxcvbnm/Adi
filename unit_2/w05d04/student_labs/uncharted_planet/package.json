@@ -1,12 +1,12 @@
 {
-  "name": "fruits",
+  "name": "uncharted_planet",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "John Kusching",
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.6.1",

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/main.css">
+
+  </head>
+  <body>
+    <h1>Edit Person</h1>
+    <table>
+      <form action="/main/<%=index%>?_method=PUT" method="POST">
+        <tr>
+          <td>Name:</td>
+          <td><input type="text" name="name" value="<%= peps.name %>"/></td>
+        </tr>
+        <tr>
+          <td>Age:</td>
+          <td><input type="text" name="age" value="<%= peps.age %>"/></td>
+        </tr>
+        <tr>
+          <td>Description:</td>
+          <td><input type="text" name="description" value="<%= peps.description %>"/></td>
+        </tr>
+        <tr>
+          <td>Protect:</td>
+          <td><input type="checkbox" name="protect"
+              <% if(peps.protect) {%>
+                checked
+              <% } %>
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><input type="submit" value="Edit Person" /></td>
+        </tr>
+      </form>
+    </table>
+  </body>
+</html>

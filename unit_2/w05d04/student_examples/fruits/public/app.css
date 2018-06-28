@@ -1,3 +1,29 @@
 body {
-    background: red;
+    background: thistle;
+}
+
+a {
+  text-decoration: none;
+  color: green;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+a:visited {
+  color: green;
+}
+
+li {
+  display: flex;
+}
+
+li > form {
+  margin-left: 20px;
+}
+
+li > a {
+  margin-left: 20px;
 }

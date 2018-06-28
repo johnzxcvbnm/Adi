@@ -2,15 +2,16 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="/app.css">
         <title></title>
     </head>
     <body>
         <h1>Fruits show page</h1>
-        The  <%=fruit.name; %> is <%=fruit.color%>
+        <p>The  <%=fruit.name; %> is <%=fruit.color%></p>
         <% if(fruit.readyToEat === true){ %>
-            It is ready to eat
+            <p>It is ready to eat</p>
         <% } else { %>
-            It is not ready to eat
+            <p>It is not ready to eat</p>
         <% } %>
         <!-- <ul>
             <% for(let i = 0; i < 25; i++){ %>
