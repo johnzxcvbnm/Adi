@@ -7,6 +7,7 @@ const fruits = require('./models/fruits.js');
 //     next();
 // })
 
+app.use(express.static('public'));
 app.use(express.urlencoded({extended:false}));
 
 app.get('/fruits', (request, response)=>{
@@ -14,6 +15,12 @@ app.get('/fruits', (request, response)=>{
         fruits: fruits
     });
 });
+
+// app.post('/products', (req, res)=>{
+//     console.log('create route accessed!');
+//     console.log('Req.body is: ', req.body);
+//     res.send(req.body);
+// });
 
 app.post('/fruits', (request, response)=>{
     if(request.body.readyToEat === 'on'){
