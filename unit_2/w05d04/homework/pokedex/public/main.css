@@ -1,20 +1,130 @@
+
+
 body {
   background: thistle;
+  font-family: 'Audiowide', cursive;
 }
 
 .container {
   width: 95%;
   margin: auto;
+  padding: 40px 0;
+}
+
+a {
+  color: blue;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 2px;
+  margin: 0 10px;
+  font-size: 1.3em;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+/****** INDEX PAGE *******/
+
+.pokedex {
+  width: 90%;
+  background-color: red;
+  margin: auto;
+  padding: 80px 40px;
+  border-radius: 20px;
+}
+
+.pokedexWrap {
+  margin: auto;
+  max-height: 500px;
+  overflow-y: scroll;
+  width: 90%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.flexMe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .pokedexPreview {
   /* width: 200px;
   height: 200px; */
+  margin: 20px;
   text-align: center;
   background-color: white;
 }
+
+/* .pokedexPreview > a {
+  margin: 100px 0;
+} */
 
 .pokedexPreview > img {
   width: 200px;
   height: 200px;
 }
+
+/********** SHOW PAGE **********/
+
+.mainBack{
+  background-color: red;
+  width: 80%;
+  height: 500px;
+  padding: 40px;
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showLeft, .showRight, .showRight2 {
+  display: block;
+  width: 36%;
+  height: 400px;
+  padding: 40px;
+  border-radius: 20px;
+  margin: auto;
+}
+
+img {
+  width: 80%;
+  max-height: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.showLeft {
+  text-align: center;
+  background-color: white;
+}
+
+.showRight {
+  background-color: steelblue;
+  font-size: 1.4em;
+  letter-spacing: 1px;
+}
+
+.showRight2 {
+  background-color: steelblue;
+  font-size: 1.0em;
+  letter-spacing: 1px;
+  /* padding: 40px 40px; */
+}
+
+.showTitle {
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.showSubTitle {
+  font-style: italic;
+  font-weight: 700;
+}
+
+/******* NEW PAGE *******/

@@ -16,13 +16,40 @@ app.listen(port, () => {
 });
 
 //-------Edit Routes--------//
+app.put("/pokedex/:index", (req, res) => {
+  // console.log(req.body);
+  const myStats = {
+              hp: req.body.hp,
+              attack: req.body.attack,
+              defense: req.body.defense,
+              spattack: req.body.spattack,
+              spdefense: req.body.spdefense,
+              speed: req.body.speed
+              };
+  req.body.stats = myStats;
+  myPokemon[req.params.index - 1] = req.body;
+  res.redirect("/pokedex");
+});
 
 //-------Delete Routes------//
 
 //------Post Routes---------//
+app.post("/pokedex", (req, res) => {
+  console.log(req.body);
+  const myStats = {
+              hp: req.body.hp,
+              attack: req.body.attack,
+              defense: req.body.defense,
+              spattack: req.body.spattack,
+              spdefense: req.body.spdefense,
+              speed: req.body.speed
+              };
+  req.body.stats = myStats;
+  myPokemon.push(req.body);
+  res.redirect("/pokedex");
+});
 
 //------Get Routes----------//
-
 app.get("/pokedex", (req, res) => {
   res.render("index.ejs", {
     pokemon: myPokemon
@@ -30,7 +57,19 @@ app.get("/pokedex", (req, res) => {
 });
 
 app.get("/pokedex/new", (req, res) => {
-  res.send("NEW POKEMON");
+  res.render("new.ejs");
+});
+
+app.get("/pokedex/:index/edit", (req, res) => {
+  // res.send("I AM HERE");
+  res.render("edit.ejs", {
+    index: req.params.index,
+    pokemon: myPokemon[req.params.index - 1]
+  });
+  // res.render("edit.ejs", {
+  //   index: req.params.index,
+  //   pokemon: myPokemon[req.params.index - 1]
+  // });
 });
 
 app.get("/pokedex/:index", (req, res) => {
@@ -41,5 +80,5 @@ app.get("/pokedex/:index", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send(myPokemon);
+  res.redirect("/pokedex");
 });

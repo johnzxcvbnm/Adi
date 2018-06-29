@@ -8424,8 +8424,8 @@ module.exports = [
     }
   }, {
     id: "029",
-    name: "Nidoran?",
-    img: "http://img.pokemondb.net/artwork/nidoran?.jpg",
+    name: "Nidoran Female",
+    img: "https://img.pokemondb.net/artwork/nidoran-f.jpg",
     type: [
       "Poison"
     ],
@@ -9501,8 +9501,8 @@ module.exports = [
     }
   }, {
     id: "032",
-    name: "Nidoran?",
-    img: "http://img.pokemondb.net/artwork/nidoran?.jpg",
+    name: "Nidoran Male",
+    img: "https://img.pokemondb.net/artwork/nidoran-m.jpg",
     type: [
       "Poison"
     ],
@@ -27194,7 +27194,7 @@ module.exports = [
   }, {
     id: "083",
     name: "Farfetch'd",
-    img: "http://img.pokemondb.net/artwork/farfetch'd.jpg",
+    img: "https://img.pokemondb.net/artwork/farfetchd.jpg",
     type: [
       "Normal",
       "Flying"
@@ -40532,7 +40532,7 @@ module.exports = [
   }, {
     id: "122",
     name: "Mr. Mime",
-    img: "http://img.pokemondb.net/artwork/mr. mime.jpg",
+    img: "https://img.pokemondb.net/artwork/mr-mime.jpg",
     type: [
       "Psychic"
     ],

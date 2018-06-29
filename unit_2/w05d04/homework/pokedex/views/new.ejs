@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/main.css">
+    <title>A New Pokemon</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="mainBack">
+        <div class="showLeft">
+          <img src="http://www.heraldscotland.com/resources/images/5283517.png?display=1&htype=0&type=responsive-gallery" /><br/>
+          <a href="./">INDEX</a>
+        </div>
+        <div class="showRight2">
+          <form action="/pokedex" method="POST">
+            <table>
+              <tr>
+                <td class="showTitle">ID:</td>
+                <td><input type="text" name="id" /></td>
+              </tr>
+              <tr>
+                <td class="showTitle">NAME:</td>
+                <td><input type="text" name="name" /></td>
+              </tr>
+              <tr>
+                <td class="showTitle">TYPE:</td>
+                <td><input type="text" name="type" /></td>
+              </tr>
+              <tr>
+                <td class="showTitle">STATS:</td>
+                <td>
+                  <table>
+                    <tr>
+                      <td class="showSubTitle">HP:</td>
+                      <td><input type="text" name="hp" /></td>
+                    </tr>
+                    <tr>
+                      <td class="showSubTitle">ATTACK:</td>
+                      <td><input type="text" name="attack" /></td>
+                    </tr>
+                    <tr>
+                      <td class="showSubTitle">DEFENSE:</td>
+                      <td><input type="text" name="defense" /></td>
+                    </tr>
+                    <tr>
+                      <td class="showSubTitle">SP ATTACK:</td>
+                      <td><input type="text" name="spattack" /></td>
+                    </tr>
+                    <tr>
+                      <td class="showSubTitle">SP DEFENSE:</td>
+                      <td><input type="text" name="spdefense" /></td>
+                    </tr>
+                    <tr>
+                      <td class="showSubTitle">SPEED:</td>
+                      <td><input type="text" name="speed" /></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td class="shotTitle">IMG: </td>
+                <td><input type="text" name="img" /></td>
+              </tr>
+              <tr>
+                <td><input type="submit" value="Add Pokemon"></td>
+              </tr>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

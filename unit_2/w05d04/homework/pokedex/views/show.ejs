@@ -7,53 +7,61 @@
   </head>
   <body>
     <div class="container">
-      <a href="./">INDEX</a><br/>
-      <img src="<%= pokemon["img"] %>" />
-      <table>
-        <tr>
-          <td>ID:</td>
-          <td><%= pokemon["id"]%></td>
-        </tr>
-        <tr>
-          <td>NAME:</td>
-          <td><%= pokemon["name"] %></td>
-        </tr>
-        <tr>
-          <td>TYPE:</td>
-          <td><%= pokemon["type"] %></td>
-        </tr>
-        <tr>
-          <td>STATS:</td>
-          <td>
-            <table>
-              <tr>
-                <td>HP:</td>
-                <td><%= pokemon["stats"]["hp"] %></td>
-              </tr>
-              <tr>
-                <td>ATTACK:</td>
-                <td><%= pokemon["stats"]["attack"] %></td>
-              </tr>
-              <tr>
-                <td>DEFENSE:</td>
-                <td><%= pokemon["stats"]["defense"] %></td>
-              </tr>
-              <tr>
-                <td>SP ATTACK:</td>
-                <td><%= pokemon["stats"]["spattack"] %></td>
-              </tr>
-              <tr>
-                <td>SP DEFENSE:</td>
-                <td><%= pokemon["stats"]["spdefense"] %></td>
-              </tr>
-              <tr>
-                <td>SPEED:</td>
-                <td><%= pokemon["stats"]["speed"] %></td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
+      <div class="mainBack">
+        <div class="showLeft">
+          <img src="<%= pokemon["img"] %>" /><br/>
+          <a href="./">INDEX</a>
+          <a href="/pokedex/<%= index %>/edit">EDIT</a>
+          <a href="#">DELETE</a>
+        </div>
+        <div class="showRight">
+          <table>
+            <tr>
+              <td class="showTitle">ID:</td>
+              <td><%= pokemon["id"]%></td>
+            </tr>
+            <tr>
+              <td class="showTitle">NAME:</td>
+              <td><%= pokemon["name"] %></td>
+            </tr>
+            <tr>
+              <td class="showTitle">TYPE:</td>
+              <td><%= pokemon["type"] %></td>
+            </tr>
+            <tr>
+              <td class="showTitle">STATS:</td>
+              <td>
+                <table>
+                  <tr>
+                    <td class="showSubTitle">HP:</td>
+                    <td><%= pokemon["stats"]["hp"] %></td>
+                  </tr>
+                  <tr>
+                    <td class="showSubTitle">ATTACK:</td>
+                    <td><%= pokemon["stats"]["attack"] %></td>
+                  </tr>
+                  <tr>
+                    <td class="showSubTitle">DEFENSE:</td>
+                    <td><%= pokemon["stats"]["defense"] %></td>
+                  </tr>
+                  <tr>
+                    <td class="showSubTitle">SP ATTACK:</td>
+                    <td><%= pokemon["stats"]["spattack"] %></td>
+                  </tr>
+                  <tr>
+                    <td class="showSubTitle">SP DEFENSE:</td>
+                    <td><%= pokemon["stats"]["spdefense"] %></td>
+                  </tr>
+                  <tr>
+                    <td class="showSubTitle">SPEED:</td>
+                    <td><%= pokemon["stats"]["speed"] %></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
     </div>
   </body>
 </html>
