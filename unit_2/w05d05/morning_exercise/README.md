@@ -233,7 +233,7 @@ Textarea is essentially just another type of input box, but is not an actual inp
  }
  ```
 
-## QUICK NOTE ABOUT: VALUE VS. PLACEHOLDER 
+## VALUE VS. PLACEHOLDER 
 
 `value` and `placeholder` are both attributes that you can add on to `input` and, to an extent, `textarea` elements. They're similar in that they place text into the forms, but different in how they do so. Let's see how: 
 
