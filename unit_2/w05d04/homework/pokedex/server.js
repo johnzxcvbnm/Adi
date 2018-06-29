@@ -32,6 +32,10 @@ app.put("/pokedex/:index", (req, res) => {
 });
 
 //-------Delete Routes------//
+app.delete("/pokedex/:index", (req, res) => {
+  myPokemon.splice(req.params.index - 1, 1);
+  res.redirect("/pokedex");
+})
 
 //------Post Routes---------//
 app.post("/pokedex", (req, res) => {
