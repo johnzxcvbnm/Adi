@@ -59,8 +59,8 @@ _click on the mockup name to reveal the mockup image_
 Not sure what type of form elements there are? 
   - [W3 has a list of them](https://www.w3schools.com/html/html_form_elements.asp)
   - [We have a video on them](https://www.youtube.com/watch?v=-5tH2qnTnH0&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J&index=16)
-  - [We have notes on them](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Outrun/wiki/FORMS)
-  - [Look back at the tables provided in the morning exercise](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Outrun/blob/master/unit_2/w05d05/morning_exercise/README.md)
+  - We have notes on them [here](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Adi/wiki/FORMS) and [here](/unit_2/w05d05/morning_exercise/README.md)
+  - [We have a 'cheatsheet' provided in the student wiki](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Adi/wiki/HTML-Forms-Cheatsheet)
 
 Note: if you grab a chunk of CSS from somewhere online be sure to include an acknowledgement of where you got in somewhere in your file!
 
