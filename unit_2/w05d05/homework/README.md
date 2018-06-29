@@ -9,7 +9,7 @@ Creator: Karolin Rafalski, Jerrica Bobadilla
 
 # Activities
 
-Tonight's homework is in three-parts, first start with [Mongo Burgers](unit_2/w05d05/homework/mongo_burgers/README.md) in the `mongo_burgers` folder<br>
+Tonight's homework is in three-parts, first start with [Mongo Burgers](/unit_2/w05d05/homework/mongo_burgers/README.md) in the `mongo_burgers` folder<br>
 
 Then once you finish Mongo Burgers, move on to [Mongoose Hotels](/unit_2/w05d05/homework/hotels_app/README.md) in the `hotels_app` folder
 <br>
