@@ -1,6 +1,7 @@
 # Mongo Database
 
 ## Lesson Objectives
+1. Describe what is a Database
 1. Describe what is Mongo
 1. Understand the difference between a Mongo database, sub-database, collection, and document
 1. Get Mongo running
@@ -14,21 +15,43 @@
 1. update a set of documents
 1. drop a Collection or sub-database
 
+# What is a Database
+
+A database is an organized collection of data, stored and accessed electronically.
+
+For our CRUD apps so far we've been hard coding some data. We've been able to make temporary changes, but as soon as we shut down our servers, those changes are gone.
+
+We need a way to make our data persist.
+
+We'll do that by storing/accessing our data from a database.
+
+There are many databases. We'll use MongoDB.
+
 ## What is Mongo
+
 MongoDB is a database that holds JavaScript Objects. The database itself is an application that runs quietly on a computer and waits for connections that make requests and then sends responses (much like a web server).
 
 Mongo is designed to be a database that is flexible and easily scalable.
 
+
 [Our Cheatsheet](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Outrun/wiki/Mongo-Cheatsheet)
 
 ## Mongo Sub-Databases
+
 You can have multiple smaller databases stored and available in Mongo.
 
 Imagine a company like Google, they would have multiple databases: one for mail, one for maps, one for drive documents...
 
-For us, we'll have multiple sub-databases, typically one for each lesson, homework and project
+For us, we'll have multiple sub-databases, typically one for each lesson, homework and project.
+
+Here is a way you _COULD_ split up sub-databases for an app
+
+![sub database example](https://i.imgur.com/rHgjaUM.png)
 
 # Mongo Collections and Documents
+
+MongoDB is considered a NoSQL (not only SQL, non SQL or non relational), rather than storing things in tables with rows and columns, NoSQL databases use other means. In the case of MongoDB, data is stored in JavaScript objects.
+
 A collection is a set of documents. Documents are a set of data records. This is very abstract. Let's use a simplified real world example of an address book.
 
 Here is one document:
@@ -46,10 +69,21 @@ Here is one document:
 
 A collection, would be many documents: In our case, many contacts.
 
+Remember: having a collection of documents sounds quite reasonable. But having a document of collections is ... kind of odd. 
+
+If you're coming from a background where you are used to thinking of data in terms of columns and rows, reading the following could be helpful in transitioning into this new way of modeling data:
+
+[Thinking in Documents Part 1](https://www.mongodb.com/blog/post/thinking-documents-part-1?jmp=docs&_ga=2.202168721.1294830246.1530196908-30583944.1529350623)
+
+[Thinging in Documents Part 2](https://www.mongodb.com/blog/post/thinking-documents-part-2)
+
 ## Install Mongo
+
 We already installed Mongo, if you need to reinstall, [follow the directions here](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Outrun/wiki/New-Computer-Setup#install-mongo)
 
 ## Get Mongo Running
+
+Let's use three terminal tabs. One to keep bash open and available, open a new one to start `mongod` and one more to run the mongo shell.
 
 In terminal, type `mongod`
 
