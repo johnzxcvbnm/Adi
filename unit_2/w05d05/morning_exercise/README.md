@@ -55,6 +55,26 @@ You can either _nest_ your input inside a label or you can _put the label first 
     ```
 #### :sparkles:Let's Style Our Fieldsets, Legends, and Labels!
 
+**In our HTML:** Update all our inputs, textareas, and labels so that they have matching variables
+```
+<!-- username -->
+<label for="username">USERNAME</label>
+<input type="text" id="username"/>
+<!-- password -->
+<label for="password">PASSWORD</label>
+<input type="text" id="password">
+<!-- email -->
+<label for="email">E-MAIL</label>
+<input type="text" id="email"/>
+
+/* further down */
+<!-- biography -->
+<label for="biography">BIOGRAPHY</label>
+<!-- textarea for larger bodies of text -->
+<textarea id="biography"></textarea>
+```
+
+**In our CSS:**
 ```
 fieldset {
   border: 1px solid #ccc;
@@ -122,6 +142,14 @@ Pseudo classes are keywords tacked onto an element that specifies a special stat
     
 #### :sparkles:Let's Style Our Input Boxes! 
 
+**In our HTML:** Update the input type of our password and email fields
+```
+<input type="password" id="password">
+
+<input type="email" id="email"/>
+```
+
+**In our CSS:**
 ```
 input {
   width: 100%;
@@ -138,6 +166,13 @@ input:focus {
 ```
 
 #### :sparkles:Let's Style Our Submit Button! 
+
+**In our HTML:** Update the submit button so that it has a value of REGISTER
+```
+<input type="submit" value="REGISTER">
+```
+
+**In our CSS:**
 ```
 input[type="submit"] {
   width: 100%;
@@ -190,7 +225,7 @@ Textarea is essentially just another type of input box, but is not an actual inp
  
  #### :sparkles: Let's Style Our Textarea!
  
- We want our textarea to look identical to our `input` elements from earlier, so let's just tack on `textarea` to those styles instead of repeating ourselves! Then, specific to just our textarea, we don't want it to resize and we want a specific height:
+ **In our CSS**: We want our textarea to look identical to our `input` elements from earlier, so let's just tack on `textarea` to those styles instead of repeating ourselves! Then, specific to just our textarea, we don't want it to resize and we want a specific height:
  ```
  textarea {
   resize: none;
@@ -216,6 +251,13 @@ Textarea is essentially just another type of input box, but is not an actual inp
      /* textarea with pre-filled value */
      <textarea>hello world!</textarea>
     ```
+#### :sparkles: Let's Add a Placeholder to our Textarea!
+
+**In our HTML:** Update it so that it has a placeholder with a value of whatever you want it to say.
+```
+<textarea id="biography" placeholder="Say something about yourself (e.g. Hi, my name is Connor. I'm the android sent by CyberLife)"></textarea>
+```
+    
 
 ## RESOURCES
 
