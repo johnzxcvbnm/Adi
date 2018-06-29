@@ -80,7 +80,6 @@ fieldset {
   border: 1px solid #ccc;
   padding: 20px;
   margin: 20px 0;
-  text-align: left;
 }
 legend {
   padding: 0px 10px;
