@@ -28,6 +28,7 @@ You are now starting a [boutique travel travel boutique](http://pushing-daisies.
 **Inside this folder**
 - `touch app.js`
 - directory `models` should already be made and have a `seed.js` file
+- make sure to export the `seed.js` file in order to be able to import it
 - `touch models/hotel.js`
 - `npm init`
 - `npm install mongoose`
