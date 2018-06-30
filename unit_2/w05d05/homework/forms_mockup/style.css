@@ -1,0 +1,79 @@
+html {
+  background: thistle;
+}
+
+div {
+  border: 1px solid gold;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 95%;
+  display: flex;
+  text-align: center;
+  margin: 30px auto;
+}
+
+.leftDiv {
+  width: 65%;
+  min-height: 500px;
+}
+
+.rightDiv {
+  width: 35%;
+  min-height: 500px;
+}
+
+.buttonWrap {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.button {
+  width: 125px;
+  height: 75px;
+  background: white;
+}
+
+.button:hover {
+  background: grey;
+}
+
+p {
+  width: 90%;
+  margin: 50px auto;
+}
+
+.form1, .form2, .form3, .form4, .form5 {
+  width: 100%;
+  height: 100%;
+  /* display: none; */
+}
+
+.form1{
+  background-color: green;
+}
+
+.form2 {
+  background-color: blue;
+}
+
+.form3 {
+  background-color: orange;
+}
+
+.form4 {
+  background-color: red;
+}
+
+.form5 {
+  background-color: yellow;
+}
+
+.form1 * {
+  display: block;
+}
+/* label {
+  display: block;
+} */

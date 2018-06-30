@@ -174,3 +174,11 @@ const myHotel =   {
 //   else{console.log(`Updated Hotel: ${hotel}`);}
 //   db.close();
 // });
+
+//------------------- Hungry for More -----------------//
+// Don't need express for the following:
+// update the prices of each of the rooms at Fawlty Towers
+// find the hotel with an indoor pool as a tag
+// The PR firm for the Hyperion Hotel has demanded that 'crime' is taken off as a keyword, remove that keyword
+
+// Hotel.find

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- Link Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Import Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Like JavaScript file for button functionality -->
+    <script src="app.js" charset="utf-8"></script>
+    <title>Form Style Practice</title>
+  </head>
+  <body>
+    <!-- Container Div for the entire page -->
+    <div class="container">
+      <!-- Left half of the page containing the buttons and description text -->
+      <div class="leftDiv">
+        <!-- Wrapper for the button divs to display them with flex box -->
+        <div class="buttonWrap">
+          <div class="button" id="actForm1">
+            <h2>Form 1</h2>
+          </div>
+          <div class="button" id="actForm2">
+            <h2>Form 2</h2>
+          </div>
+          <div class="button" id="actForm3">
+            <h2>Form 3</h2>
+          </div>
+          <div class="button" id="actForm4">
+            <h2>Form 4</h2>
+          </div>
+          <div class="button" id="actForm5">
+            <h2>Form 5</h2>
+          </div>
+        </div>
+        <!-- Short Description -->
+        <p>This is my practice page on trying to make a few different good looking forms as part of my homework.  Try clicking on a button to make one of the forms appear on the right side.</p>
+      </div>
+      <!-- Right section of the page containing all the form data -->
+      <div class="rightDiv">
+        <div class="form1">
+          <h1>LOGIN TO YOUR ACCOUNT</h1>
+          <form>
+            <label for="fullName">Full Name</label>
+            <input id="fullName" type="text" />
+            <label for="email">Email</label>
+            <input id="email" type="email" />
+            <label for="website">Website</label>
+            <!-- Check for Website Input -->
+            <input id="website" type="text" />
+            <label for="message">Message</label>
+            <input id="message" type="text" />
+            <!-- Submit Button -->
+            <input type="submit" value="SEND MESSAGE" />
+          </form>
+        </div>
+        <div class="form2">
+        </div>
+        <div class="form3">
+        </div>
+        <div class="form4">
+        </div>
+        <div class="form5">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
