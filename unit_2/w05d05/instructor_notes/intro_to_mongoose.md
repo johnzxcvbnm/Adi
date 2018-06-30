@@ -91,7 +91,7 @@ const Tweet = require('./tweet.js')
 - set `mongoose.connection` to a shorter variable name
 
 ```js
-// Configuration
+// Global configuration
 const mongoURI = 'mongodb://localhost:27017/'+ 'tweets';
  const db = mongoose.connection;
 ```
@@ -106,6 +106,7 @@ mongoose.connect( mongoURI );
 
 ```js
 // Connection Error/Success
+// Define callback functions for various events
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
 db.on('connected', () => console.log('mongo connected: ', mongoURI));
 db.on('disconnected', () => console.log('mongo disconnected'));
@@ -124,6 +125,8 @@ Let's set leave the connection open for 5 seconds to demonstrate that the app wi
 Otherwise we have to press `control c`. When we run an express app, we typically want to leave the connection open, we don't need to get control of terminal back, we just let the app run.  
 
 ```js
+// Automatically close after 5 seconds
+// for demonstration purposes to see that you must use `db.close()` in order to regain control of Terminal tab
 setTimeout(()=>{db.close()}, 5000)
 ```
 
@@ -136,18 +139,21 @@ setTimeout(()=>{db.close()}, 5000)
 const mongoose = require('mongoose');
 const Tweet = require('./tweet.js');
 
-// Configuration
+// Global Configuration
 const mongoURI = 'mongodb://localhost:27017/'+ 'tweets';
 const db = mongoose.connection;
 
 // Connect to Mongo
 mongoose.connect( mongoURI );
 
-// Connection Error/Success
+// Connection Error/Success - optional but can be helpful
+// Define callback functions for various events
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
 db.on('connected', () => console.log('mongo connected: ', mongoURI));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
+
+// Open the Connection
 db.on( 'open' , ()=>{
   console.log('Connection made!');
 });
