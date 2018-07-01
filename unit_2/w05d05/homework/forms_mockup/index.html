@@ -39,22 +39,34 @@
       <!-- Right section of the page containing all the form data -->
       <div class="rightDiv">
         <div class="form1">
-          <h1>LOGIN TO YOUR ACCOUNT</h1>
+          <div class="header">
+            <h4>LOGIN TO YOUR ACCOUNT</h4>
+          </div>
           <form>
-            <label for="fullName">Full Name</label>
-            <input id="fullName" type="text" />
-            <label for="email">Email</label>
-            <input id="email" type="email" />
-            <label for="website">Website</label>
+            <!-- <label for="fullName">Full Name</label> -->
+            <input id="fullName" type="text" placeholder="Full Name"/>
+            <!-- <label for="email">Email</label> -->
+            <input id="email" type="email" placeholder="Email"/>
+            <!-- <label for="website">Website</label> -->
             <!-- Check for Website Input -->
-            <input id="website" type="text" />
-            <label for="message">Message</label>
-            <input id="message" type="text" />
+            <input id="website" type="text" placeholder="Website"/>
+            <!-- <label for="message">Message</label> -->
+            <!-- <input id="message" type="text" /> -->
+            <textarea placeholder="Message"></textarea>
             <!-- Submit Button -->
             <input type="submit" value="SEND MESSAGE" />
           </form>
         </div>
         <div class="form2">
+          <div class="header">
+            <h4>Contact Us</h4>
+          </div>
+          <form>
+            <input type="text" name="name" placeholder="Your Name" />
+            <input type="email" name="email" placeholder="Email Address" />
+            <textarea placeholder="Type your Message"></textarea>
+            <input type="submit" value="Send" />
+          </form>
         </div>
         <div class="form3">
         </div>
