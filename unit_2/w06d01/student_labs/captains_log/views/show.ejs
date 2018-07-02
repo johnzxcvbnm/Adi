@@ -5,11 +5,21 @@
     <title>Entry <%= log.title %></title>
   </head>
   <body>
-    <ul>
-      <li><%= log.title %></li>
-      <li><%= log.entry %></li>
-      <li>Broke: <%= log.shipIsBroken%></li>
-    </ul>
+    <h1>Log Entry <%= log.title %></h1>
+
+    <p>Created on: <%= log.createdAt %></p>
+    <p>Last Updated: <%= log.updatedAt %></p>
+    <p>Entry:  <%= log.entry %></p>
+    <!-- <br/> -->
+    <% if(log.shipIsBroken){ %>
+      <p>Unfortunately we are stuck here until repairs are complete.</p>
+    <% } else { %>
+      <p>Thankfully the ship continues to operate</p>
+    <% } %>
+    <br/>
+    <form action="/logs/<%= log._id %>?_method=DELETE" method="POST">
+      <input type="submit" value="DELETE LOG">
+    </form>
     <a href="/logs">Index</a>
   </body>
 </html>
