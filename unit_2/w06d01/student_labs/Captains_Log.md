@@ -58,7 +58,7 @@ Index, New and Create has been completed for you.
 ### Create
 1. create a `create` route in your `server.js` - be sure to follow the Restful convention
  1. just have it `res.send('received')` as the response for now
-1. install `body-parser` and configure it in your `server.js`
+1. use and configure `body-parser` and configure it in your `server.js` (note, this package was once separate, but has been added back in to express [more details](https://expressjs.com/en/4x/api.html#express.urlencoded)
 1. check to make sure it works by changing the `res.send` from a string to sending the `req.body` - it should send the data you inputted to your `new` form
 1. upgrade your data
   1. change the input of your checkbox to be true/false rather than `on`
