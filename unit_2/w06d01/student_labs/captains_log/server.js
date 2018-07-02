@@ -35,8 +35,22 @@ app.post("/logs/", (req, res) => {
 
 //Delete Routes
 app.delete("/logs/:id", (req, res) => {
-  CapLog.remove( { _id: req.params.id }, (err, myLog) => {
+  CapLog.remove( { _id: req.params.id }, (err) => {
     res.redirect("/logs");
+  });
+});
+
+// Put Routes
+app.put("/logs/:id", (req, res) => {
+  const myLog = req.body;
+  if(myLog.shipIsBroken === "on"){
+    myLog.shipIsBroken = true;
+  } else {
+    myLog.shipIsBroken = false;
+  }
+
+  CapLog.findByIdAndUpdate( req.params.id, {title: myLog.title, entry: myLog.entry, shipIsBroken: myLog.shipIsBroken}, (err) => {
+    res.redirect(`/logs`);
   });
 });
 
@@ -62,6 +76,14 @@ app.get("/logs/seed", (req, res) => {
 
   CapLog.create( mySeedData, (err, data) => {
     res.redirect("/logs");
+  });
+});
+
+app.get("/logs/:index/edit", (req, res) => {
+  CapLog.findById( req.params.index, (err, myLog) => {
+    res.render("edit.ejs", {
+      log: myLog
+    });
   });
 });
 

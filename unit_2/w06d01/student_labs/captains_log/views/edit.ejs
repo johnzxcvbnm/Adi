@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Log</title>
+  </head>
+  <body>
+    <h1>Edit Log Entry</h1>
+    <form action="/logs/<%= log._id %>?_method=PUT" method="POST">
+      <input type="text" placeholder="Title" name="title" value="<%= log.title %>"/><br/>
+      <textarea name="entry" placeholder="Entry Text"><%= log.entry %></textarea><br/>
+      <input type="checkbox" name="shipIsBroken"
+      <% if(log.shipIsBroken){ %>
+        checked
+      <% } %>
+      /><br/>
+      <input type="submit" value="Update Log" /><br/>
+    </form>
+    <a href="/logs">Index</a>
+  </body>
+</html>
