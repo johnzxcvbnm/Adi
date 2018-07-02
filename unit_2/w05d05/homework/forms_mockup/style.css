@@ -186,7 +186,7 @@ p {
   text-align: left;
 }
 
-.form3 label, .form3 input, .form3 textarea {
+.form3 label, .form3 input, .form3 textarea, .form3 .nameWrapper {
   width: 80%;
   display: block;
   padding: 5px;
@@ -194,10 +194,18 @@ p {
   box-sizing: border-box;
 }
 
+.form3 .nameWrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
 .form3 #firstName, .form3 #lastName {
-  width: 40%;
-  display: inline-block;
-  margin: auto;
+  width: 48%;
+  padding: 5px;
+  box-sizing: border-box;
+  margin: 0;
+  /* display: inline-block; */
+  /* margin-right: 10px; */
 }
 
 .form3 input[type="submit"] {
@@ -208,7 +216,13 @@ p {
 }
 
 .form3 label {
+  font-weight: bold;
   margin: 10px auto 2px auto;
+}
+
+.form3 textarea {
+  padding: 30px;
+  box-sizing: border-box;
 }
 
 .form3 .required {
