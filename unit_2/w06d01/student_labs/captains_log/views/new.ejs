@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>New Log</title>
+  </head>
+  <body>
+    <h1>New Log Entry</h1>
+    <form action="/logs" method="POST">
+      <input type="text" placeholder="Title" name="title" /><br/>
+      <textarea name="entry" placeholder="Entry Text"></textarea><br/>
+      <input type="checkbox" name="shipIsBroken" /><br/>
+      <input type="submit" value="Create Log" /><br/>
+    </form>
+    <a href="/logs">Index</a>
+  </body>
+</html>
