@@ -15,7 +15,7 @@ Competencies: Full CRUD in Express with Mongoose <br>
 
 ## Homework Submission
 
-Remember this assignment spans over two class days.
+This assignment spans over two class days.
 
 You will be required to submit this particular assignment just once before Thursday at 10 AM. We suggest that you try not to save it all for Wednesday night (that should be your day off, after all!) and at least try to do the following:
 
