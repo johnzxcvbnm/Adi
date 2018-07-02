@@ -16,6 +16,7 @@ If you finish lab early consider:
   - adding some CSS and practice styling your app
   - try working with the date object! Try to make it look human readable in HTML. It's tricky!
   - try working through the next section of the lab before it is covered in lecture - see what you can figure out
+  - **SUPER BONUS** - Once you finish this whole lab, add a second model for comments, it should have the name of the person who wrote it, and some text for the comment (maybe time stamps?). This model should 'belong' the the post, the data should be related in some way. Do you own research of how to set up a `One-to-many` relationship (one post can have many comments, one comment only belongs to one post), in MongoDB. Use Mongo Documents, Google, or [Matt's Notes](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Adi/tree/master/unit_2/w06d05/instructor_notes) - note we will not have class time to teach a second, related model. 
 
 ### Set up
 
