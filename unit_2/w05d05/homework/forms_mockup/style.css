@@ -181,8 +181,40 @@ p {
 /*****************************************/
 
 .form3 {
-  background-color: orange;
+  background-color: white;
+  padding: 10px;
+  text-align: left;
 }
+
+.form3 label, .form3 input, .form3 textarea {
+  width: 80%;
+  display: block;
+  padding: 5px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.form3 #firstName, .form3 #lastName {
+  width: 40%;
+  display: inline-block;
+  margin: auto;
+}
+
+.form3 input[type="submit"] {
+  width: auto;
+  padding: 30px;
+  box-sizing: border-box;
+  margin: 10px auto 10px 0;
+}
+
+.form3 label {
+  margin: 10px auto 2px auto;
+}
+
+.form3 .required {
+  color: red;
+}
+
 
 /*****************************************/
 /************ Form Four CSS **************/

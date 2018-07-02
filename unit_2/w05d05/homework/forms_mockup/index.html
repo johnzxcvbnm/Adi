@@ -26,12 +26,12 @@
           <div class="button" id="actForm3">
             <h2>Form 3</h2>
           </div>
-          <div class="button" id="actForm4">
+          <!-- <div class="button" id="actForm4">
             <h2>Form 4</h2>
           </div>
           <div class="button" id="actForm5">
             <h2>Form 5</h2>
-          </div>
+          </div> -->
         </div>
         <!-- Short Description -->
         <p>This is my practice page on trying to make a few different good looking forms as part of my homework.  Try clicking on a button to make one of the forms appear on the right side.</p>
@@ -43,15 +43,9 @@
             <h4>LOGIN TO YOUR ACCOUNT</h4>
           </div>
           <form>
-            <!-- <label for="fullName">Full Name</label> -->
             <input id="fullName" type="text" placeholder="Full Name"/>
-            <!-- <label for="email">Email</label> -->
             <input id="email" type="email" placeholder="Email"/>
-            <!-- <label for="website">Website</label> -->
-            <!-- Check for Website Input -->
-            <input id="website" type="text" placeholder="Website"/>
-            <!-- <label for="message">Message</label> -->
-            <!-- <input id="message" type="text" /> -->
+            <input id="website" type="url" placeholder="Website"/>
             <textarea placeholder="Message"></textarea>
             <!-- Submit Button -->
             <input type="submit" value="SEND MESSAGE" />
@@ -69,11 +63,21 @@
           </form>
         </div>
         <div class="form3">
+          <label>Full Name<a class="required"> *</a></label>
+          <input id="firstName" type="text" placeholder="First" />
+          <input id="lastName" type="text" placeholder="Last" />
+          <label for="email">Email<a class="required"> *</a></label>
+          <input id="email" type="email" />
+          <label for="subject">Subject</label>
+          <input id="subject" type="text" />
+          <label for="yourMessage">Your Message<a class="required"> *</a></label>
+          <textarea id="yourMessage"></textarea>
+          <input type="submit" value="Submit" />
         </div>
-        <div class="form4">
+        <!-- <div class="form4">
         </div>
         <div class="form5">
-        </div>
+        </div> -->
       </div>
     </div>
   </body>
