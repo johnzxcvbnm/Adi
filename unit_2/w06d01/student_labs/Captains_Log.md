@@ -141,7 +141,7 @@ Index, New and Create has been completed for you.
 
 
 ### Bonuses
-1. make a new set of routes in a new file in your controller folder called foodlogs
+1. The captain wants to keep track of eating habits: make a new set of routes in a new file in your controller folder called foodlogs
   1. build out the 7 restful routes for foodlogs, include a new model with whatever properties make sense
 1. make a seed file and seed it
 1. have your update route redirect to the show page of the log that was edited
