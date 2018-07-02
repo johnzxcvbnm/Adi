@@ -181,7 +181,7 @@ You can use these seeds to get some starting data if you so choose.
 
 Handy hint:  Make a route in your products controller `/seed/newproducts` (you can do that by pasting the code below into your controller), and to seed your database, just visit the route **once** in your browser.
 
-```
+```javascript
 app.get('/seed', async (req, res) => {
   const newProducts =
     [
