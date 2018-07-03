@@ -49,8 +49,9 @@ app.put("/logs/:id", (req, res) => {
     myLog.shipIsBroken = false;
   }
 
-  CapLog.findByIdAndUpdate( req.params.id, {title: myLog.title, entry: myLog.entry, shipIsBroken: myLog.shipIsBroken}, (err) => {
-    res.redirect(`/logs`);
+  CapLog.findByIdAndUpdate( req.params.id,
+    {title: myLog.title, entry: myLog.entry, shipIsBroken: myLog.shipIsBroken}, (err) => {
+    res.redirect(`/logs/${req.params.id}`);
   });
 });
 
