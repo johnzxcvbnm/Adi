@@ -50,7 +50,7 @@ app.put("/logs/:id", (req, res) => {
   }
 
   CapLog.findByIdAndUpdate( req.params.id,
-    {title: myLog.title, entry: myLog.entry, shipIsBroken: myLog.shipIsBroken}, (err) => {
+    req.body, (err) => {
     res.redirect(`/logs/${req.params.id}`);
   });
 });

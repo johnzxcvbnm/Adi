@@ -1,13 +1,25 @@
 //Dependencies
 const mongoose = require("mongoose");
 const express = require("express");
+const methodOverride = require("method-override");
+const MyProducts = require("./models/product.js");
 
 const app = express();
 const port = 3000;
 
 //Middleware
+app.use( methodOverride("_method") );
 app.use( express.static("public") );
 app.use( express.urlencoded( {extended: true} ) );
+
+// const getTitle = () => {
+//   switch( Math.floor(Math.random() * 4) ){
+//     case 0:
+//     case 1: return "Welcome to the Jonk Store";
+//     case 2: return "Please Buy My Jonk"
+//   }
+// }
+
 
 //Listening
 app.listen(port, () => {
@@ -40,17 +52,34 @@ app.get('/jonk/seed', async (req, res) => {
 	];
 
 	try {
-		const seedItems = await Product.create(newProducts);
+		const seedItems = await MyProducts.create(newProducts);
 		res.send(seedItems);
 	} catch (err) {
 		res.send(err.message);
 	}
 });
 
+app.get("/jonk/:index", (req, res) => {
+  MyProducts.findById( req.params.index, (err, myPro) => {
+    res.render("show.ejs", {
+      product: myPro
+    });
+  });
+});
+
 app.get("/jonk", (req, res) => {
-  res.send("Welcome to the Jonk Store!");
+  MyProducts.find( {}, (err, allPro) => {
+    res.render("index.ejs", {
+      products: allPro
+    });
+  });
 });
 
 app.get("/", (req, res) => {
   res.redirect("/jonk");
+});
+
+mongoose.connect("mongodb://localhost:27017/product");
+mongoose.connection.once("open", () => {
+  console.log("Connected to Mongo");
 });
