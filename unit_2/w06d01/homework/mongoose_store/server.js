@@ -40,9 +40,19 @@ app.delete("/jonk/:id", (req, res) => {
   });
 });
 
+app.get("/jonk/deleteall", (req, res) => {
+  MyProducts.remove( (err) => {
+    res.redirect("/jonk");
+  });
+});
+
 // Post Routes
-app.post("/jonk/", (req, res) => {
-  res.send("POST?");
+app.post("/jonk", (req, res) => {
+  // res.send("POST?");
+  // console.log(req.body);
+  MyProducts.create(req.body, (err) => {
+    res.redirect("/jonk");
+  });
 });
 
 // Seed Data
@@ -80,6 +90,12 @@ app.get('/jonk/seed', async (req, res) => {
 });
 
 // Get Routes
+app.get("/jonk/new", (req, res) => {
+  res.render("new.ejs", {
+    title: getTitle()
+  });
+});
+
 app.get("/jonk/:index", (req, res) => {
   MyProducts.findById( req.params.index, (err, myPro) => {
     res.render("show.ejs", {
