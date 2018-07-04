@@ -1,20 +1,48 @@
 :root {
+  --headerBack: #062F4F;
+  --mainBack: #000000;
+  --cardBack: #062F4F;
+  --buttonBack: #062F4F;
+  --inputBorder: #B82601;
+  --linkColor: #87B3BC;
+  --linkOffColor: #FFFFFF;
+}
+
+/* :root {
   --headerBack: steelblue;
   --mainBack: steelblue;
   --cardBack: tan;
   --buttonBack: tan;
   --inputBorder: black;
-}
+  --linkColor: black;
+  --linkOffColor: blue;
+} */
 
 html{
   background: var(--mainBack);
   text-align: center;
+  font-family: 'Boogaloo', cursive;
+  color: #FFFFFF;
+}
+
+body {
+  margin: 0;
 }
 
 .container {
-  width: 95%;
+  /* width: 95%; */
+  width: 100%;
   min-width: 650px;
-  margin: auto;
+  /* margin: auto; */
+  letter-spacing: 1px;
+}
+
+.header {
+  width: 100%;
+  background: var(--headerBack);
+  padding: 3px;
+  margin: 0 0 10px 0;
+  /* box-sizing: border-box; */
 }
 
 div {
@@ -22,13 +50,35 @@ div {
 }
 
 h1 {
-  margin: 20px 0 5px 0;
+  margin: 10px 0 5px 0;
+  font-family: 'Rock Salt', cursive;
+  letter-spacing: 2px;
 }
 
 h3 {
   margin: 0 0 20px 0;
+  font-size: 1.7em;
+  letter-spacing: 1px;
 }
 
+h4 {
+  font-size: 1.2em;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+a {
+  font-size: 1.1em;
+  color: var(--linkColor);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--linkOffColor);
+  text-decoration: underline;
+}
 
 .productWrapper {
   display: flex;
@@ -65,6 +115,9 @@ img {
   background: var(--cardBack);
   display: flex;
   min-width: 550px;
+  width: 100%;
+  padding: 3px;
+  margin-top: 20px;
 }
 
 .showImage {
@@ -107,6 +160,23 @@ input {
   padding: 5px;
   margin-bottom: 10px;
   box-sizing: border-box;
+  font-family: 'Boogaloo', cursive;
+  letter-spacing: 1px;
+  font-size: 1.1em;
+  color: #000000;
+  outline: 0;
+  border: 0px transparent var(--inputBorder);
+}
+
+input[type="submit"] {
+  color: var(--linkColor);
+  border: 0 transparent white;
+}
+
+input[type="submit"]:hover {
+  color: var(--linkOffColor);
+  text-decoration: underline;
+  border: 0 transparent white;
 }
 
 textarea {
@@ -115,9 +185,12 @@ textarea {
   height: 50px;
   padding: 5px;
   box-sizing: border-box;
+  font-family: 'Boogaloo', cursive;
+  letter-spacing: 1px;
+  font-size: 1.1em;
 }
 
 input:focus, textarea:focus {
   outline: 0;
-  border: 1px solid var(--inputBorder);
+  border: 2px solid var(--inputBorder);
 }
