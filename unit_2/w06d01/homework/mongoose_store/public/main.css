@@ -63,6 +63,7 @@ img {
   text-align: left;
   background: var(--cardBack);
   display: flex;
+  min-width: 550px;
 }
 
 .showImage {

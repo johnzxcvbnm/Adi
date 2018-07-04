@@ -26,11 +26,18 @@ app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
+// Put Routes
 app.put("/jonk/:id/buy/:productQty", (req, res) => {
   MyProducts.findByIdAndUpdate ( req.params.id, { qty: (req.params.productQty - 1) }, (err) => {
     res.redirect(`/jonk/${req.params.id}`);
   })
   // res.send("BUYING");
+});
+
+app.put("/jonk/:id", (req, res) => {
+  MyProducts.findByIdAndUpdate( req.params.id, req.body, (err) => {
+    res.redirect(`/jonk/${req.params.id}`);
+  });
 });
 
 // Delete Routes
@@ -90,6 +97,15 @@ app.get('/jonk/seed', async (req, res) => {
 });
 
 // Get Routes
+app.get("/jonk/:id/edit", (req, res) => {
+  MyProducts.findById( req.params.id, (err, myPro) => {
+    res.render("edit.ejs", {
+      title: getTitle(),
+      product: myPro
+    });
+  });
+});
+
 app.get("/jonk/new", (req, res) => {
   res.render("new.ejs", {
     title: getTitle()

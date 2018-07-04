@@ -3,29 +3,39 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/main.css">
-    <title>Edit Jonk</title>
+    <title>Some Jonk</title>
   </head>
   <body>
     <div class="container">
-      <h1><%= title %></h1>
-      <h3>Edit Some Jonk</h3>
-      <h3><%= product.name %></h3>
-      <div class="productWrapper">
-        <div class="productCard">
-          <img src="<%= product.img%>" />
-          <p><%= product.description %></p>
-          <p>Price: $<%= product.price %></p>
-          <% if(product.qty > 0){%>
-            <p>Units Left: <%= product.qty %></p>
-            <p>Buy!</p>
-          <% } else { %>
-            <p>Sold Out!</p>
-          <% } %>
-          <p>Edit Dis Jonk</p>
-          <p><a href="/jonk">See More Jonk</a></p>
+      <form action="/jonk/<%= product._id %>?_method=PUT" method="POST">
+        <div class="header">
+          <h1><%= title %></h1>
+          <h3>My World Class Junk Store</h3>
         </div>
-      </div>
-      <p>Get Rid of Dat Jonk</p>
+        <div class="showProduct">
+          <div class="showImage">
+            <img src="<%= product.img %>" />
+          </div>
+          <div class="showDescription">
+              <label for="proName">Name</label>
+              <input id="proName" type="text" name="name" value="<%= product.name %>"/>
+              <label for="proPrice">Price:</label>
+              <input id="proPrice" type="text" name="price" value="<%= product.price %>"/>
+              <label for="proQty">Units Left:</label>
+              <input id="proQty" type="text" name="qty" value="<%= product.qty %>"/>
+              <label for="proImage">Image URL:</label>
+              <input id="proImage" type="text" name="img" value="<%= product.img %>"/>
+              <label for="proDesc">Description:</label>
+              <textarea id="proDesc" name="description"><%= product.description %></textarea>
+          </div>
+        </div>
+        <div class="footer">
+          <input type="submit" value="Fix This Jonk" class="button inputButton">
+          <a href="/jonk" class="button">
+            See More Jonk
+          </a>
+        </div>
+      </form>
     </div>
   </body>
 </html>

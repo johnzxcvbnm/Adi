@@ -8,38 +8,34 @@
   <body>
     <div class="container">
       <form action="/jonk" method="POST">
-      <div class="header">
-        <h1><%= title %></h1>
-        <h3>My World Class Junk Store</h3>
-      </div>
-      <div class="showProduct">
-        <div class="showImage">
-          <img src="https://vignette.wikia.nocookie.net/etniczna/images/d/d0/Pytajnik.jpg/revision/latest/scale-to-width-down/480?cb=20160502160744&path-prefix=pl" />
+        <div class="header">
+          <h1><%= title %></h1>
+          <h3>My World Class Junk Store</h3>
         </div>
-        <div class="showDescription">
-          <!-- <form> -->
-            <label for="proName">Name</label>
-            <input id="proName" type="text" name="name"/>
-            <label for="proPrice">Price:</label>
-            <input id="proPrice" type="text" name="price"/>
-            <label for="proQty">Units Left:</label>
-            <input id="proQty" type="text" name="qty"/>
-            <label for="proImage">Image URL:</label>
-            <input id="proImage" type="text" name="img"/>
-            <label for="proDesc">Description:</label>
-            <textarea id="proDesc" name="description"></textarea>
-          <!-- </form> -->
+        <div class="showProduct">
+          <div class="showImage">
+            <img src="https://vignette.wikia.nocookie.net/etniczna/images/d/d0/Pytajnik.jpg/revision/latest/scale-to-width-down/480?cb=20160502160744&path-prefix=pl" />
+          </div>
+          <div class="showDescription">
+              <label for="proName">Name</label>
+              <input id="proName" type="text" name="name"/>
+              <label for="proPrice">Price:</label>
+              <input id="proPrice" type="text" name="price"/>
+              <label for="proQty">Units Left:</label>
+              <input id="proQty" type="text" name="qty"/>
+              <label for="proImage">Image URL:</label>
+              <input id="proImage" type="text" name="img"/>
+              <label for="proDesc">Description:</label>
+              <textarea id="proDesc" name="description"></textarea>
+          </div>
         </div>
-      </div>
-      <div class="footer">
-        <!-- <form action="/jonk" method="POST"> -->
+        <div class="footer">
           <input type="submit" value="Add This Jonk" class="button inputButton">
-        <!-- </form> -->
-        <a href="/jonk" class="button">
-          See More Jonk
-        </a>
-      </div>
-    </form>
+          <a href="/jonk" class="button">
+            See More Jonk
+          </a>
+        </div>
+      </form>
     </div>
   </body>
 </html>
