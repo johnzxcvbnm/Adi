@@ -59,6 +59,7 @@ app.get('/jonk/seed', async (req, res) => {
 	}
 });
 
+// Get Routes
 app.get("/jonk/:index", (req, res) => {
   MyProducts.findById( req.params.index, (err, myPro) => {
     res.render("show.ejs", {

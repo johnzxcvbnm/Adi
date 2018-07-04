@@ -12,14 +12,25 @@
       <div class="productWrapper">
         <% for(let i = 0; i < products.length; i++) {%>
           <div class="productCard">
-            <h4><%= products[i].name %></h4>
-            <img src="<%= products[i].img%>" />
+            <h4>
+              <a href="/jonk/<%= products[i].id %>">
+                <%= products[i].name %>
+              </a>
+            </h4>
+            <a href="/jonk/<%= products[i].id %>">
+              <img src="<%= products[i].img%>" />
+            </a>
             <p>Price: $<%= products[i].price %></p>
           </div>
         <% } %>
         <div class="productCard">
-          <h4>Add New Jonk</h4>
-          <img src="https://vignette.wikia.nocookie.net/etniczna/images/d/d0/Pytajnik.jpg/revision/latest/scale-to-width-down/480?cb=20160502160744&path-prefix=pl" />
+          <a href="#">
+            <h4>Add New Jonk</h4>
+          </a>
+          <a href="#">
+            <img src="https://vignette.wikia.nocookie.net/etniczna/images/d/d0/Pytajnik.jpg/revision/latest/scale-to-width-down/480?cb=20160502160744&path-prefix=pl" />
+          </a>
+          <p>Price: ???</p>
         </div>
       </div>
     </div>
