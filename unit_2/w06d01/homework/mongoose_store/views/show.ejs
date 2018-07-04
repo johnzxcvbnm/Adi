@@ -24,7 +24,7 @@
       </div>
       <div class="footer">
         <% if(product.qty > 0) { %>
-          <form action="/jonk/<%= product.id %>?_method=BUY" method="POST">
+          <form action="/jonk/<%= product.id %>/buy/<%= product.qty %>?_method=PUT" method="POST">
             <input type="submit" value="Buy Some Jonk" class="button inputButton" />
           </form>
         <% } else { %>

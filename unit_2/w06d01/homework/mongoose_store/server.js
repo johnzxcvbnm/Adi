@@ -26,6 +26,13 @@ app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
+app.put("/jonk/:id/buy/:productQty", (req, res) => {
+  MyProducts.findByIdAndUpdate ( req.params.id, { qty: (req.params.productQty - 1) }, (err) => {
+    res.redirect(`/jonk/${req.params.id}`);
+  })
+  // res.send("BUYING");
+});
+
 // Delete Routes
 app.delete("/jonk/:id", (req, res) => {
   MyProducts.findByIdAndRemove( req.params.id, (err) => {
