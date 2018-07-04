@@ -12,13 +12,13 @@ app.use( methodOverride("_method") );
 app.use( express.static("public") );
 app.use( express.urlencoded( {extended: true} ) );
 
-// const getTitle = () => {
-//   switch( Math.floor(Math.random() * 4) ){
-//     case 0:
-//     case 1: return "Welcome to the Jonk Store";
-//     case 2: return "Please Buy My Jonk"
-//   }
-// }
+const getTitle = () => {
+  switch( Math.floor(Math.random() * 6) ){
+    case 0: return "You Can Never Have Too Much Jonk";
+    case 1: return "Please Buy My Jonk";
+    default: return "Welcome to the Jonk Store";
+  }
+}
 
 
 //Listening
@@ -62,6 +62,7 @@ app.get('/jonk/seed', async (req, res) => {
 app.get("/jonk/:index", (req, res) => {
   MyProducts.findById( req.params.index, (err, myPro) => {
     res.render("show.ejs", {
+      title: getTitle(),
       product: myPro
     });
   });
@@ -70,6 +71,7 @@ app.get("/jonk/:index", (req, res) => {
 app.get("/jonk", (req, res) => {
   MyProducts.find( {}, (err, allPro) => {
     res.render("index.ejs", {
+      title: getTitle(),
       products: allPro
     });
   });

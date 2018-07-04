@@ -1,0 +1,50 @@
+html{
+  background: steelblue;
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+div {
+  /* border: 1px solid gold; */
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0 5px 0;
+}
+
+h3 {
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+
+.productWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.productCard {
+  text-align: center;
+  margin: 10px auto;
+  background: tan;
+  width: 30%;
+}
+
+h4 {
+
+}
+
+p {
+
+}
+
+img {
+  width: 250px;
+  height: 250px;
+  margin: auto;
+}

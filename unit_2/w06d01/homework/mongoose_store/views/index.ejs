@@ -2,17 +2,26 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/main.css">
     <title>The Jonk Store</title>
   </head>
   <body>
-    <h1>Welcome to the Jonk Store</h1>
-    <ul>
-      <%= for(let i = 0; i < products.length; i++) {%>
-        <li>
-          <a href="/jonk/<%= products[i].id %>"><%= products[i].name %></a>
-        </li>
-      <% } %>
-    </ul>
-    <a href="#">Create New Product</a>
+    <div class="container">
+      <h1><%= title %></h1>
+      <h3>My World Class Junk Store</h3>
+      <div class="productWrapper">
+        <% for(let i = 0; i < products.length; i++) {%>
+          <div class="productCard">
+            <h4><%= products[i].name %></h4>
+            <img src="<%= products[i].img%>" />
+            <p>Price: $<%= products[i].price %></p>
+          </div>
+        <% } %>
+        <div class="productCard">
+          <h4>Add New Jonk</h4>
+          <img src="https://vignette.wikia.nocookie.net/etniczna/images/d/d0/Pytajnik.jpg/revision/latest/scale-to-width-down/480?cb=20160502160744&path-prefix=pl" />
+        </div>
+      </div>
+    </div>
   </body>
 </html>
