@@ -26,6 +26,18 @@ app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
+// Delete Routes
+app.delete("/jonk/:id", (req, res) => {
+  MyProducts.findByIdAndRemove( req.params.id, (err) => {
+    res.redirect("/jonk");
+  });
+});
+
+// Post Routes
+app.post("/jonk/", (req, res) => {
+  res.send("POST?");
+});
+
 // Seed Data
 app.get('/jonk/seed', async (req, res) => {
 
@@ -53,7 +65,8 @@ app.get('/jonk/seed', async (req, res) => {
 
 	try {
 		const seedItems = await MyProducts.create(newProducts);
-		res.send(seedItems);
+		// res.send(seedItems);
+    res.redirect("/jonk");
 	} catch (err) {
 		res.send(err.message);
 	}

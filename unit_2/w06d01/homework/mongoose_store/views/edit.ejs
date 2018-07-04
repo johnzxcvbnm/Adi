@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/main.css">
+    <title>Edit Jonk</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1><%= title %></h1>
+      <h3>Edit Some Jonk</h3>
+      <h3><%= product.name %></h3>
+      <div class="productWrapper">
+        <div class="productCard">
+          <img src="<%= product.img%>" />
+          <p><%= product.description %></p>
+          <p>Price: $<%= product.price %></p>
+          <% if(product.qty > 0){%>
+            <p>Units Left: <%= product.qty %></p>
+            <p>Buy!</p>
+          <% } else { %>
+            <p>Sold Out!</p>
+          <% } %>
+          <p>Edit Dis Jonk</p>
+          <p><a href="/jonk">See More Jonk</a></p>
+        </div>
+      </div>
+      <p>Get Rid of Dat Jonk</p>
+    </div>
+  </body>
+</html>

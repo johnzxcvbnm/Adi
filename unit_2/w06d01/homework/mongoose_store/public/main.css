@@ -30,20 +30,58 @@ h3 {
 .productCard {
   margin: 20px auto;
   background: tan;
-  width: 30%;
+  /* width: 30%; */
+  width: 300px;
 }
 
-h4 {
+.productWrapper h4 {
   margin: 20px 0 0 0;
 }
 
-p {
+.productWrapper p {
   margin: 20px 10px;
 }
 
+.productWrapper img {
+  margin: 30px auto 5px auto;
+}
 
 img {
   width: 250px;
   height: 250px;
-  margin: 30px auto 5px auto;
+}
+
+.showProduct {
+  text-align: left;
+  background: tan;
+  display: flex;
+}
+
+.showImage {
+  margin: 30px;
+}
+
+.showDescription {
+  margin: 30px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.button {
+  background: tan;
+  width: 200px;
+  height: 50px;
+  padding-top: 15px;
+  margin: 20px 20px 0 20px;
+  box-sizing: border-box;
+}
+
+.inputButton {
+  padding-top: 0px;
 }
