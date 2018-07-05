@@ -15,9 +15,9 @@ require('pretty-error').start()
 const PORT = process.env.PORT || 3000
 
 // ___________________
-// Database
+// Database (set up for hosting w. heroku w. mLab add on)
 // ___________________
-const mongoURI = 'mongodb://localhost:27017/karolin_mongoose_store'
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/karolin_mongoose_store'
 
 // Connect to Mongo
 mongoose.connect(mongoURI, { useNewUrlParser: true },
