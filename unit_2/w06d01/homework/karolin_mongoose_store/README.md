@@ -1,1 +1,2 @@
-# super-duper-guacamole
+- `npm i`
+- run `mongod`
