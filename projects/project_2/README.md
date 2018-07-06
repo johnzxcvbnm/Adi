@@ -97,7 +97,8 @@ Your project is due on Thursday, July 12 at 10:00 AM ET. You will present your p
 
 **TA Hours** (all times ET):
 
-- Monday - Wednesday: 1-4PM, 7-10PM
+- Monday, Wednesday: 2-5PM, 7-10PM
+- Tuesday: 1:30-4:30PM, 7-10PM
 
 ## Etc.
 
