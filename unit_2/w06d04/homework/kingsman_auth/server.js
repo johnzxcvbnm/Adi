@@ -7,6 +7,11 @@ const methodOverride = require('method-override');
 const bcrypt = require('bcrypt');
 const port = 3000;
 
+app.use(session({
+  secret: "feedmeseymour",
+  resave: false,
+  saveUninitialized: false
+}));
 
 // MIDDLEWARE
 // body parser middleware
@@ -23,6 +28,9 @@ app.use('/room', roomController);
 
 const usersController = require("./controllers/users.js");
 app.use("/users", usersController);
+
+const sessionsController = require("./controllers/sessions.js");
+app.use("/sessions", sessionsController);
 
 // GET INDEX
 app.get('/', (req, res) => {

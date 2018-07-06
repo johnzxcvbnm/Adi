@@ -1,0 +1,15 @@
+* {
+  /* background: thistle; */
+}
+
+input {
+  margin: 10px;
+  display: block;
+  width: 20%;
+}
+
+textarea {
+  width: 20%;
+  margin: 10px;
+  resize: none;
+}
