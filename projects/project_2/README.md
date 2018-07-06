@@ -26,8 +26,8 @@ _Failure to make attendance check will result in an unexcused absence for both m
 #### Recommended Features
 
 * Add additional relationships (models can be related in a one-to-many relationship, for example)
-  - [Optional notes on having two models](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Outrun/tree/master/unit_2/w06d05/instructor_notes)
-  - [Optional notes on relating two models](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Outrun/tree/master/unit_2/w07d01/instructor_notes)
+  - [Optional notes on having two models](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Adi/tree/master/unit_2/w06d05/instructor_notes)
+  - [Optional notes on relating two models](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Adi/tree/master/unit_2/w07d01/instructor_notes)
 * Include **sign up/log in** functionality, with encrypted passwords & an authorization flow
 * Use EJS Partials
 * Include portfolio-quality styling
@@ -45,7 +45,7 @@ Before you begin coding, make a new GitHub repo for your project. _Take the foll
 1. Make a new github repo for your project **outside** of our class repo.
 
 2. Inside this new repo, create a `.gitignore` file in the root of the repository directory. Put `node_modules` as the content of this file.
-     - :arrow_right: _After installing express, do a `git status` before adding and committing.  Make sure node modules are not being pushed up to the repo and are correctly in your `.gitignore`!  You can also copy the [class repo's .gitignore](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Outrun/blob/master/.gitignore)_
+     - :arrow_right: _After installing express, do a `git status` before adding and committing.  Make sure node modules are not being pushed up to the repo and are correctly in your `.gitignore`!  You can also copy the [class repo's .gitignore](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Adi/blob/master/.gitignore)_
      - If you see the `node_modules` folder on your github repo, you haven't properly ignored it! 
         - [Read here](https://github.com/Krafalski/probable-meme/blob/master/README.md) on how to get rid of `node_modules` if you didn't ignore properly
 
@@ -132,7 +132,7 @@ Are you able to defend why you implemented your solution in a certain way? Can y
 * **[Presenting Information Architecture](http://webstyleguide.com/wsg3/3-information-architecture/4-presenting-information.html)** 
 * **[Mongo Documentation](https://docs.mongodb.com/manual/)**
 * **[Mongoose Documentation](http://mongoosejs.com/docs/guide.html)**
-* **[Mongo Cheatsheet](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Outrun/wiki/Mongo-Cheatsheet)**
+* **[Mongo Cheatsheet](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Adi/wiki/Mongo-Cheatsheet)**
 </details>
 <hr>  
 
