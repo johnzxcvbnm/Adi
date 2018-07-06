@@ -23,7 +23,9 @@
               <a href="/room">fitting room three</a>
           </li>
           <!-- add your link to create a user here -->
+          <% if(currentUser){ %>
           <li><a href="/users/new">New Kingsman</a></li>
+          <% } %>
           <!-- add your link to the log in page here -->
           <li><a href="/sessions/new">Log On</a></li>
           <!-- add your form button to log out here -->
