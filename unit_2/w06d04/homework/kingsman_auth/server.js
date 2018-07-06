@@ -19,6 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 // static files middleware
 app.use(express.static('public'))
+app.use( methodOverride("_method") );
 
 
 // CONTROLLERS
@@ -35,7 +36,7 @@ app.use("/sessions", sessionsController);
 // GET INDEX
 app.get('/', (req, res) => {
   res.render('index.ejs', {
-    currentUser: req.session.currentUser 
+    currentUser: req.session.currentUser
   });
 });
 
