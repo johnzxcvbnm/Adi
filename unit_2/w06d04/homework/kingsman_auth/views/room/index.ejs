@@ -25,6 +25,9 @@
           <li><a href="/room">fitting room three</a></li>
           <!-- add your form button to log out here -->
           <li>
+            <form action="/sessions?_method=DELETE" method="POST">
+              <input type="submit" value="Log Out" />
+            </form>
           </li>
         </ul>
       </div>
@@ -49,11 +52,16 @@
         <!-- displays all messages -->
         <h1>the message board</h1>
         <% users.forEach((user) => { %>
-            <% user.messages.forEach((message) => { %>
-              <div class="main-message">
-                <%= message %>
-              </div>
-            <% }) %>
+          <% if(user.messages.length > 0){ %>
+            <div class="main-Message">
+              <%= user.name %>
+              <% user.messages.forEach((message) => { %>
+                <div class="main-message">
+                  <%= message %>
+                </div>
+              <% }) %>
+            </div>
+          <% } %>
         <% }) %>
       </div>
     </div>

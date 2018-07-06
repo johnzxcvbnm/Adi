@@ -19,9 +19,9 @@
       <!-- navigation -->
       <div class="header-nav">
         <ul>
-          <li>
-              <a href="/room">fitting room three</a>
-          </li>
+          <% if(currentUser){ %>
+            <li><a href="/room">fitting room three</a></li>
+          <% } %>
           <!-- add your link to create a user here -->
           <% if(currentUser){ %>
           <li><a href="/users/new">New Kingsman</a></li>

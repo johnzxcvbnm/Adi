@@ -6,14 +6,18 @@ const User = require('../models/users.js');
 // ROUTES
 // get index
 router.get('/', (req, res) => {
+  if(req.session.currentUser){
   // finds all users
-  User.find({}, (err, foundUsers) => {
-    // renders the room page
-    res.render('room/index.ejs', {
-      // passes the found users to the room page
-      users: foundUsers
+    User.find({}, (err, foundUsers) => {
+      // renders the room page
+      res.render('room/index.ejs', {
+        // passes the found users to the room page
+        users: foundUsers
+      });
     });
-  });
+  } else {
+    res.redirect("../sessions/new");
+  }
 });
 
 // post a new message
