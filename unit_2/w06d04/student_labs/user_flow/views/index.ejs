@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>New Sessions Practice</title>
+  </head>
+  <body>
+    <h1>
+      <% if(currentUser) { %>
+        Welcome <%= currentUser.username %>
+      <% } else { %>
+        Welcome!
+      <% } %>
+    </h1>
+    <ul>
+      <li><a href="sessions/new">Log In</a></li>
+      <li><a href="users/new">Register</a></li>
+      <% if(currentUser) { %>
+        <li>
+          <form action="/sessions?_method=DELETE" method="POST">
+            <input type="submit" value="Logout" />
+          </form>
+        </li>
+      <% } %>
+    </ul>
+    <% if(currentUser) { %>
+      <main>Welcome <%= currentUser.username %>, to the <a href="/secret">Secret Store</a></main>
+    <% } %>
+  </body>
+</html>

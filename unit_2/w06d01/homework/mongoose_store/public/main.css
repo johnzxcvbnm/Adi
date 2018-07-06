@@ -99,6 +99,7 @@ a:hover {
 
 .productWrapper p {
   margin: 20px 10px;
+  letter-spacing: 2px;
 }
 
 .productWrapper img {
