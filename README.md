@@ -58,7 +58,7 @@ Adi is the Instructional Designer at GA who conceptualized and developed our rem
 ## Schedule
 | Day | Date | Weekday | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|:-----------:|:-----------:|
-| w07d5 |July 13 |Friday | [Luhn Algorithm](./unit_2/w07d05/morning_exercise)| [Intro to Angular, AJAX](./unit_2/w07d05/instructor_notes)| [Data Represent, Movies](./unit_2/w07d05/student_labs)|[](./unit_2/w07d05/homework)|
+| w07d5 |July 13 |Friday | [Luhn Algorithm](./unit_3/w07d05/morning_exercise)| [Intro to Angular, AJAX](./unit_3/w07d05/instructor_notes)| [Data Represent, Movies](./unit_3/w07d05/student_labs)|[](./unit_3/w07d05/homework)|
 | w08d1 |July 16 |Monday | [Happy Fun Ball (Git Branching and Merging) ](./unit_3/w08d01/morning_exercise)| [Express API, Consume API with Angular - CREATE, READ](./unit_3/w08d01/instructor_notes)| [Animal Shelter](./unit_3/w08d01/student_labs)|[Bookmark'd](./unit_3/w08d01/homework)|
 | w08d2 |July 17 |Tuesday | [](./unit_3/w08d02/morning_exercise)| [Conusme API with Angular EDIT/DELETE, Auth](./unit_3/w08d02/instructor_notes)| [Animal Shelter cont.](./unit_3/w08d02/student_labs)|[](./unit_3/w08d02/homework)|
 | w08d3 |July 18 |Wednesday | [Pairing](./unit_3/w08d03/morning_exercise)| [Full CRUD Build](./unit_3/w08d03/instructor_notes)| [Continue Build](./unit_3/w08d03/student_labs)|[Coder's Choice](./unit_3/w08d03/homework)|
@@ -66,14 +66,14 @@ Adi is the Instructional Designer at GA who conceptualized and developed our rem
 | w08d5 |July 20 |Friday |  **Project 3**|
 | w09d1 |July 23 |Monday |  **Project 3**|
 | w09d2 |July 24 |Tuesday |  **Project 3**|
-| w09d3 |July 25 |Wednesday |   **Project 3 Presentations **| Install Ruby, Rails, Postgres |[](./unit_3/w09d03/homework)|
+| w09d3 |July 25 |Wednesday |   **Project 3 Presentations **| Install Ruby, Rails, Postgres |[](./unit_4/w09d03/homework)|
 
 ## Unit 4
 ## Schedule
 | Day | Date | Weekday | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|:-----------:|:-----------:|
-| w09d4 |July 26 |Thursday | [](./unit_3/w09d04/morning_exercise)| [](./unit_3/w09d04/instructor_notes)| [](./unit_3/w09d04/student_labs)|[](./unit_3/w09d04/homework)|
-| w09d5 |July 27 |Friday | [](./unit_3/w09d05/morning_exercise)| [](./unit_3/w09d05/instructor_notes)| [](./unit_3/w09d05/student_labs)|[](./unit_3/w09d05/homework)|
+| w09d4 |July 26 |Thursday | [](./unit_4/w09d04/morning_exercise)| [](./unit_4/w09d04/instructor_notes)| [](./unit_3/w09d04/student_labs)|[](./unit_4/w09d04/homework)|
+| w09d5 |July 27 |Friday | [](./unit_4/w09d05/morning_exercise)| [](./unit_4/w09d05/instructor_notes)| [](./unit_3/w09d05/student_labs)|[](./unit_4/w09d05/homework)|
 | w10d1 |July 30 |Monday | [](./unit_4/w10d01/morning_exercise)| [](./unit_4/w10d01/instructor_notes)| [](./unit_4/w10d01/student_labs)|[](./unit_4/w10d01/homework)|
 | w10d2 |July 31 |Tuesday | [](./unit_4/w10d02/morning_exercise)| [](./unit_4/w10d02/instructor_notes)| [](./unit_4/w10d02/student_labs)|[](./unit_4/w10d02/homework)|
 | w10d3 |August 1 |Wednesday | [](./unit_4/w10d03/morning_exercise)| [](./unit_4/w10d03/instructor_notes)| [](./unit_4/w10d03/student_labs)|[](./unit_4/w10d03/homework)|
