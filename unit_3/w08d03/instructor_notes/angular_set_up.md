@@ -2,7 +2,7 @@
 
 ## Lesson Objectives
 
-1. Complete [install_test_api.md](install_test_api.md)
+1. Complete `install_test_api.md`
 1. Set up Angular
 1. Create App/Controller
 
@@ -35,7 +35,7 @@ MEAN stack is just a collection of tech that work well together
 <html ng-app>
     <head>
       <!-- ...  -->
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" charset="utf-8"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js" charset="utf-8"></script>
       <!-- ...  -->
     </head>
     <body>
@@ -46,16 +46,14 @@ MEAN stack is just a collection of tech that work well together
 
 ## Create App/Controller
 
-Note: We know we'll need `$http`, so let's just set up our controller with it, even though we won't need it until the next part. 
-
 **In `js/app.js`**
 
 ```javascript
 const app = angular.module('HolidaysApp', []);
 
-app.controller('MainController',['$http',  function( $http ){
+app.controller('MainController', function(){
     this.h5 = 'Holidays! Celebrate!';
-}]);
+});
 ```
 
 **Note**: We may be tempted to write `()=>{}` as the callback in `app.controller`, but it won't work as expected, we have to use `function(){}` for this particular callback
@@ -77,7 +75,7 @@ public/index.html:
   <head>
     <meta charset="utf-8">
     <title>Holiday Celebrations</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js" charset="utf-8"></script>
     <script src="/js/app.js" charset="utf-8"></script>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/skeleton.css">
