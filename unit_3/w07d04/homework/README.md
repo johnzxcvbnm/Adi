@@ -17,7 +17,7 @@ After reading the above articles, create a markdown file (`.md`) and  in your ow
 4. Give two pros of a SPA
 5. Give two cons of a SPA
 6. Give two pros of a MPA
-7. GIve two cons of a MPA
+7. Give two cons of a MPA
 
 [The Secret Startup That Saved the Worst Website in America](https://www.theatlantic.com/technology/archive/2015/07/the-secret-startup-saved-healthcare-gov-the-worst-website-in-america/397784/)
 
@@ -39,4 +39,4 @@ After reading the above article, in your own words answer:
 
 - [Try this Angular tutorial](https://www.codeschool.com/courses/shaping-up-with-angularjs)
 
-Note: We'll be learning Angular 1.6. Be sure to research the right version, since the difference between 1 and 2 is quite drastic
+Note: We'll be learning Angular 1.6. Be sure to research the right version, since the difference between 1 and 2-6+ is quite drastic
