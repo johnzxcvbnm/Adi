@@ -48,25 +48,25 @@ Adi is the Instructional Designer at GA who conceptualized and developed our rem
 | w06d2 |July 3 |Tuesday | [](./unit_2/w06d02/morning_exercise)| [Build App Cont.](./unit_2/w06d02/instructor_notes)| [Captain's Log Cont](./unit_2/w06d02/student_labs)|[Mongoose Store Cont.](./unit_2/w06d02/homework)|
 | w06d3 |July 4 |Wednesday | **No Class Today** |
 | w06d4 |July 5 |Thursday | [EJS Partials](./unit_2/w06d04/morning_exercise)| [Sessions, Auth](./unit_2/w06d04/instructor_notes)| [Rep Master](./unit_2/w06d04/student_labs)|[Kingsmen](./unit_2/w06d04/homework)|
-| w06d5 |July 6 |Friday | **Project 2**)|
-| w07d1 |July 9 |Monday | **Project 2**)|
-| w07d2 |July 10 |Tuesday | **Project 2**)|
-| w07d3 |July 11 |Wednesday |  **Project 2**)|
-| w07d4 |July 12 |Thursday | | **Project 2 Presentations | **Ruby, Rails Postgres Install** ||
+| w06d5 |July 6 |Friday | **Project 2**|
+| w07d1 |July 9 |Monday | **Project 2**|
+| w07d2 |July 10 |Tuesday | **Project 2**|
+| w07d3 |July 11 |Wednesday |  **Project 2**|
+| w07d4 |July 12 |Thursday | | **Project 2 Presentations** | **Ruby, Rails Postgres Install** ||
 
 ## Unit 3
 ## Schedule
 | Day | Date | Weekday | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|:-----------:|:-----------:|
 | w07d5 |July 13 |Friday | [Luhn Algorithm](./unit_2/w07d05/morning_exercise)| [Intro to Angular, AJAX](./unit_2/w07d05/instructor_notes)| [Data Represent, Movies](./unit_2/w07d05/student_labs)|[](./unit_2/w07d05/homework)|
-| w08d1 |July 16 |Monday | [Happy Fun Ball (Git Branching and Mergin) ](./unit_3/w08d01/morning_exercise)| [Express API, Consume API with Angular - CREATE, READ](./unit_3/w08d01/instructor_notes)| [Animal Shelter](./unit_3/w08d01/student_labs)|[Bookmark'd](./unit_3/w08d01/homework)|
+| w08d1 |July 16 |Monday | [Happy Fun Ball (Git Branching and Merging) ](./unit_3/w08d01/morning_exercise)| [Express API, Consume API with Angular - CREATE, READ](./unit_3/w08d01/instructor_notes)| [Animal Shelter](./unit_3/w08d01/student_labs)|[Bookmark'd](./unit_3/w08d01/homework)|
 | w08d2 |July 17 |Tuesday | [](./unit_3/w08d02/morning_exercise)| [Conusme API with Angular EDIT/DELETE, Auth](./unit_3/w08d02/instructor_notes)| [Animal Shelter cont.](./unit_3/w08d02/student_labs)|[](./unit_3/w08d02/homework)|
 | w08d3 |July 18 |Wednesday | [Pairing](./unit_3/w08d03/morning_exercise)| [Full CRUD Build](./unit_3/w08d03/instructor_notes)| [Continue Build](./unit_3/w08d03/student_labs)|[Coder's Choice](./unit_3/w08d03/homework)|
 | w08d4 |July 19 |Thursday | [Project Management](./unit_3/w08d04/morning_exercise)| [Intermediate/Advanced Angular](./unit_3/w08d04/instructor_notes)| [Project 3 Announcement]()|[](./unit_3/w08d04/homework)|
-| w08d5 |July 20 |Friday |  **Project 3**)|
-| w09d1 |July 23 |Monday |  **Project 3**)|
-| w09d2 |July 24 |Tuesday |  **Project 3**)|
-| w09d3 |July 25 |Wednesday |   **Project 3 Presentations **)| Install Ruby, Rails, Postgres |[](./unit_3/w09d03/homework)|
+| w08d5 |July 20 |Friday |  **Project 3**|
+| w09d1 |July 23 |Monday |  **Project 3**|
+| w09d2 |July 24 |Tuesday |  **Project 3**|
+| w09d3 |July 25 |Wednesday |   **Project 3 Presentations **| Install Ruby, Rails, Postgres |[](./unit_3/w09d03/homework)|
 
 ## Unit 4
 ## Schedule
