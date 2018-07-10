@@ -97,6 +97,12 @@ Create a new app (new index.html, new app.js)
 - make a reset button that resents the counter to 0
 - if the counter shows a negative number change the css to have a background color that is red or red-ish.
 
+#### Additional Angualar Directives
+
+- `ng-class`
+or
+- `ng-style`
+
 
 ## Bonus Bonus
 ## Caesar Cipher
