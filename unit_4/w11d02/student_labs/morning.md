@@ -1,206 +1,181 @@
-# React Roasts Lab
+# Doctor Who's Police Box
 
-## Set up
-- `mkdir react_roasts`
-- `cd react_roasts `
-- `touch app.js index.html`
-- `atom .`
+![10th Doctors Box](https://www.bigchiefstudios.co.uk/media/product/feature/doctor-who/product-feature-10th-doctor-tardis.jpg)
 
-**index.html**
-- add html boilerplate
-- add script tags
-- add a `main` tag inside the `body`
+## Objectives
 
-```html
+Learn about Thinking in React, use the activity to apply what you've learned.
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.3.2/umd/react.production.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.3.2/umd/react-dom.production.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
-<script type="text/babel" src="app.js"></script>
-```
+Doctor Who's Police Box is a T.A.R.D.I.S (Time and Relative Dimension In Space), a fantastical space ship that can fly through time and space and other mind-bending-ly impossible situations. It can go _anywhere_.
 
-**app.js**
-
-- render and `h1` tag using react
-
-```jsx
-ReactDOM.render(
-  <h1 className="shop-name">React Roasts Coffee Shop</h1>,
-  document.querySelector('main')
-);
-```
-
-#### Run a simple server:
-- If you have python 2.x
-  - `python -m SimpleHTTPServer`
-
-- If you have python 3.x
-  - `python -m http.server [<portNo>]`
-    ex:`python -m http.server 8080`
-
-- If you want to use npm
-    - Install, if you haven't already, with `npm install -g http-server` (might need to run `sudo npm install -g http-server`)
-    - run `http-server -o`
-
-### Important Note
-- To see updates you must refresh your browser, all three of the servers above do cache things, so you may have to do a hard refresh (hold shift key when doing a refresh) to see your changes. Remember `command shift r` as the hot keys
-
-Example Appearance:
-
-![React App Started](https://i.imgur.com/xxeZCEW.png)
-
-
-
-## Assign JSX to a variable
-
-Let's update our app to store our Store Name in a variable
-
-```jsx
-const storeName = <h1 className="shop-name">React Roasts Coffee Shop</h1>
-```
-
-And update our ReactDOM.render()
+Today, you're going to help the T.A.R.D.I.S. navigate through a React App in the form of an object
 
 ```js
-const storeName = <h1 className="shop-name">React Roasts Coffee Shop</h1>
-
-ReactDOM.render(
-  storeName,
-  document.querySelector('main')
-);
-```
-
-It should look the same.
-
-### Embed and Expression
-
-Let's put our store location as a variable
-
-```jsx
-const loc = "nyc"
-const storeName = <h1 className="shop-name">React Roasts Coffee Shop, {loc}</h1>
-```
-
-### Call a function inside our Expression
-
-```jsx
-const formatLoc = l => {
-  return l.toUpperCase();
+tardis = {
+  name: 'Time and Relative Dimension in Space',
+  caps: false,
 }
 ```
 
-### Create multi-line JSX variables
+## Thinking in React
+- By now, it should be pretty obvious that React is a pretty different approach than AngularJS.
 
-wrap your `h1` in a `div` with a class of `container`
-add an h2  with a tag line like `Our coffee will get your heart racing`
+- Take a few minutes to read over
+[Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
+- Do the activity and reread this article and try to figure out how the pieces go together.
+
+## Set Up
+
+- `mkdir tardis`
+- `cd tardis`
+- `touch app.js index.html main.css`
+- html boilerplate
+- add cdn links
+- link app.js and main.css
+- div with an id of `container`
+- `ReactDOM.render()` - select the div with the id of container of where to load the React components
+
+To aid in visuilzation here is some css.
+
+Every div will have a blue border and have some space around it for easy distinction between divs.
+
+```css
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+  margin: 1em;
+  padding: 1em;
+  font-family: 'Poppins', sans-serif;
+  background: #FEFFE9;
+  text-align: center;
+}
 
 
-### Create a custom component
+div{
+  margin: auto;
+  width: 80%;
+  box-shadow: 0 0 8px dodgerblue;
+  padding: 1em;
+  background: white;
+}
+```
+![css visual](https://i.imgur.com/3e0aPea.png)
 
-Let's make a heading component. Here is a little code to get you started. We're copy pasting our multi-line jsx into our custom component. We have to add a return statement and wrap our code in `()` because it goes across multiple lines
+## Top Level
+- One `div`, you hard coded it in the html
 
-```jsx
-class Heading extends React.Component {
-  render () {
-    return (
-      <div className='container'>
-        <h1 className='shop-name'> React Roasts Coffee Shop, {formatLoc(loc)}</h1>
-        <h2> Our coffee will get your heart racing</h2>
-      </div>
-    )
+## App Level
+- Set up `ReactDOM.render()`
+- Create an `App` component class
+- Set initial state by using a constructor and passing in props. [As per official React Docs](https://reactjs.org/docs/state-and-lifecycle.html#adding-local-state-to-a-class)
+- render a `div`
+- inside the `div`, put an `h3` that will render the `name` property from `this.state`
+
+T.A.R.D.I.S. properties inside `this.state` object:
+
+```js
+tardis: {
+  name: 'Time and Relative Dimension in Space',
+  caps: false,
+}
+
+```
+
+Check your State in React Dev Tools:
+![](https://i.imgur.com/MXGaT1M.png)
+
+- Add a function that gets called on click and changes the text
+
+```js
+changeIt (text) {
+  if (this.state.tardis.caps) {
+    this.setState({
+      tardis: {
+        name: text.toLowerCase(),
+        caps: false
+      }
+    })
+  } else {
+    this.setState({
+      tardis: {
+        name: text.toUpperCase(),
+        caps: true
+      }
+    })
   }
 }
+
 ```
 
-Replace your storeLocation variable with this class component in your `ReactDOM.render` function
+- On click, the text will change from caps to lower case and change the caps property.
 
-Go ahead and add an unordered list with one list item hard coded: `espresso` under the `h2`
+- Get the click function to work
 
-![](https://i.imgur.com/G7XGhg9.png)
+## Create a New Class Component `DivOne`
+- have it render a div
+- move the h3 to inside the div in this component
+- work on passing the data from state down
+- work on getting the click function work properly
+
+## Create a New Class Component `DivTwo`
+- have it render a div
+- move the h3 to inside the div in this component
+- work on passing the data from DivOne down
+- work on getting the click function to work properly
+
+## Create a New Class Component `DivThree`
+- have it render a div
+- move the h3 to inside the div in this component
+- work on passing the data from DivTwo down
+- work on getting the click function to work properly
 
 
+## Create another `DivThree` Inside `DivTwo`
+- how should it render?
+- will the function affect one or both divThrees?
+- should it affect one or both?
 
+<details><summary>Hint</summary>
 
-### Customize an instance of a component with properties
-
-Let's wrap our custom `<Heading />` in a section tag, so we can add more custom components later
-
-Let's get the word `espresso` to render as a property
-
-```html
-<section>
-    <Heading drink="espresso"></Heading>
-</section>,
 ```
+The Data Flows Down
+Neither parent nor child components can know if a certain component is stateful or stateless, and they shouldn’t care whether it is defined as a function or a class.
 
+This is why state is often called local or encapsulated. It is not accessible to any component other than the one that owns and sets it.
 
-
-In your heading component, remove the hard coded `espresso` and replace it with `this.props.drink`
-
-```html
-<div className="container">
-  <h1 className="shop-name">React Roasts Coffee Shop {formatLoc(loc)}</h1>
-  <ul>
-    <li>{this.props.drink}</li>
-  </ul>
-</div>
+A component may choose to pass its state down as props to its child components:
 ```
-
-Add another property `price` in the ReactDOM.render() and set it to the string `$8.00`, then pass the value to the `Heading` component, inside a `span` inside the `li` element
-
-### Handle User Events
-
-When the user clicks on the espresso li, let's set an alert that says 'I love coffee'
-
-Try looking back at the notes from class to figure this out.
+[Thinking in React: The Data Flows Down](https://reactjs.org/docs/state-and-lifecycle.html#adding-local-state-to-a-class)
 
 
-### Click Event Get Property
 
-Instead of alerting with `I love coffee`, have the alert say `I love` and the name of the coffee.
+</details>
 
-Hint: Use lecture notes to refactor, there are a few things you need to do to get this working
+- Thinking in React: where should state go? Topmost component possible? Bottom Most component possible? What is the best practice
+- refactor your code so that each tardis is updating independent of the other one, if it isn't already
 
-### Make another component,
+![nearly finished](https://i.imgur.com/efZ6fZG.png)
 
-Move the `li` into their own component,
+## Write it out
 
-Then move  `drink="espresso"`  from the heading component, down into the custom Li elements, and render them there, add a few custom components
+Thinking in React means planning. Don't code the following, write it out on paper and pseudocode it. Some of the details are vague. If you're on the job and ended up with these vague details what would you do? Solve it on your own? Ask someone?
 
-so instead of `<li>{this.props.drink}</li>`
+- Which doctor is traveling with us? The doctors are currently numbered 1- 13
+- set a property `theDoctor` to render 1 inside the DivThree component - is this 'ok'? Or should this property go in App? Try to do some research to find out. Just because you can doesn't mean you should. And sometimes you should really follow best practices. Which are... what for react?
 
-You should have something like
+- When The Doctor is gravely injured he can regenerate rather than die and becomes the next doctor
+- Write a function that increases The Doctor's number called `regenerate` (when and how is this function called?)
+- Where does it go? In App? In DivThree? DivTwo?
+- How do you pass this function around?
+- Is there a way to call this function in the App Component if you've declared it further down?
+- Just because you might be able to doesn't mean you should.
+- What does Thinking in React mean?
 
-```jsx
-<ListCoffee name='espresso'/>
-<ListCoffee name='Frappuccino'/>
-<ListCoffee name='Americano'/>
-```
 
-Also try and see if you can add the price, which should always be $8.00
+- After considering the above, take time to read [Thinking in React](https://reactjs.org/docs/thinking-in-react.html) again
 
-### Hungry for More
-Follow the notes and create an array of different coffees. Render them as list items using .map
-
-Here is an array of coffee
-
-```js
-const coffees = [
-  'Americano',
-  'Café au lait',
-  'Caffé Latte',
-  'Caffé macchiato',
-  'Cafe mocha',
-  'Cappuccino',
-  'Espresso',
-  'Flat White',
-  'Frappuccino',
-  'Iced Coffee',
-  'Instant coffee',
-  'Irish coffee',
-  'Turkish coffee'
-]
-```
-Include the click event that will show the right coffee when clicked
-
-![finished](https://i.imgur.com/e5scTtJ.png)
+Revisit:
+- How is this different than AngularJS?
+- What are the pros and cons?
+- What are the best practices?
+- Why do we build and refactor so much with React?

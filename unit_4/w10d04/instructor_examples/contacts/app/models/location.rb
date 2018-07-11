@@ -29,8 +29,6 @@ class Location
         locations = []
         last_location_id = nil
         results.each do |result|
-            p "================"
-            p locations
             if result["id"] != last_location_id
                 last_location_id = result["id"]
                 locations.push Location.new({
@@ -41,7 +39,6 @@ class Location
                     "inhabitants" => [],
                 })
             end
-            p locations
             if result["people_id"]
                 new_person = Person.new({
                     "id" => result["people_id"],
@@ -50,7 +47,6 @@ class Location
                 })
                 locations.last.inhabitants.push(new_person)
             end
-            p "================"
         end
         return locations
     end

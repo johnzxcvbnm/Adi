@@ -3,7 +3,7 @@ class Company
 
     DB = PG.connect(host: "localhost", port: 5432, dbname:'contacts')
 
-    def initialize(opts)
+    def initialize(opts={})
         @id = opts["id"].to_i
         @name = opts["name"]
         @industry = opts["industry"]
@@ -17,7 +17,7 @@ class Company
         results = DB.exec("SELECT * FROM companies WHERE id=#{id};")
         return Company.new(results.first)
     end
-    def self.create(opts)
+    def self.create(opts={})
         results = DB.exec(
             <<-SQL
                 INSERT INTO companies (name, industry)
@@ -31,7 +31,7 @@ class Company
         results = DB.exec("DELETE FROM companies WHERE id=#{id}")
         return { delete:true }
     end
-    def self.update(id, opts)
+    def self.update(id, opts={})
         results = DB.exec(
             <<-SQL
                 UPDATE companies
