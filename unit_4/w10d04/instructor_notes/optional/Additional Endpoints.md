@@ -43,6 +43,11 @@ def self.setHome(person_id, home)
     # above, we don't return home_id so that the Person created here doesn't have a home property
     # this helps us in locations#create
     return Person.new(results.first)
+    return {
+        "id" => results.first["id"].to_i,
+        "name" => results.first["name"],
+        "age" => results.first["age"].to_i,
+    }
 end
 ```
 
