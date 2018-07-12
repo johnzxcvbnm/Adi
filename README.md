@@ -39,36 +39,41 @@ Adi is the Instructional Designer at GA who conceptualized and developed our rem
 ## Schedule
 | Day | Date | Weekday | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|:-----------:|:-----------:|
-| w05d1 |June 25 |Monday | [](./unit_2/w05d01/morning_exercise)| [Intro to Express, Params and Routing](./unit_2/w05d01/instructor_notes)| [tv shows, express calculator](./unit_2/w05d01/student_labs)|[](./unit_2/w05d01/homework)|
-| w05d2 |June 26 |Tuesday | [](./unit_2/w05d02/morning_exercise)| [Index and Show, MVC, EJS](./unit_2/w05d02/instructor_notes)| [superhereos, fruits](./unit_2/w05d02/student_labs)|[](./unit_2/w05d02/homework)|
-| w05d3 |June 27 |Wednesday | [](./unit_2/w05d03/morning_exercise)| [REST, New, Create, cURL, Static Assets](./unit_2/w05d03/instructor_notes)| [Products](./unit_2/w05d03/student_labs)|[](./unit_2/w05d03/homework)|
-| w05d4 |June 28 |Thursday | [](./unit_2/w05d04/morning_exercise)| [REST, Delete, method-override, Edit, Update](./unit_2/w05d04/instructor_notes)| [Exobiology](./unit_2/w05d04/student_labs)|[](./unit_2/w05d04/homework)|
-| w05d5 |June 29 |Friday | [](./unit_2/w05d05/morning_exercise)| [Intro to Mongo, Mongoose, Schemas](./unit_2/w05d05/instructor_notes)| [Intergalactic Bounty Hunters, Mongoose Vampires](./unit_2/w05d05/student_labs)|[](./unit_2/w05d05/homework)|
-| w06d1 |July 2 |Monday | [](./unit_2/w06d01/morning_exercise)| [Build App with Mongo](./unit_2/w06d01/instructor_notes)| [Captain's Log](./unit_2/w06d01/student_labs)|[](./unit_2/w06d01/homework)|
-| w06d2 |July 3 |Tuesday | [](./unit_2/w06d02/morning_exercise)| [Build App Cont.](./unit_2/w06d02/instructor_notes)| [Captain's Log Cont](./unit_2/w06d02/student_labs)|[](./unit_2/w06d02/homework)|
+| w05d1 |June 25 |Monday | [Bootstrap CSS](./unit_2/w05d01/morning_exercise)| [Intro to Express, Params and Routing](./unit_2/w05d01/instructor_notes)| [tv shows, express calculator](./unit_2/w05d01/student_labs)|[Magic 8 Ball, Express Calculator](./unit_2/w05d01/homework)|
+| w05d2 |June 26 |Tuesday | [](./unit_2/w05d02/morning_exercise)| [Index and Show, MVC, EJS](./unit_2/w05d02/instructor_notes)| [superhereos, fruits](./unit_2/w05d02/student_labs)|[Poke Express](./unit_2/w05d02/homework)|
+| w05d3 |June 27 |Wednesday | [Word Frequency](./unit_2/w05d03/morning_exercise)| [REST, New, Create, cURL, Static Assets](./unit_2/w05d03/instructor_notes)| [Products](./unit_2/w05d03/student_labs)|[Budgtr](./unit_2/w05d03/homework)|
+| w05d4 |June 28 |Thursday | [C.R.A.P. Design](./unit_2/w05d04/morning_exercise)| [REST, Delete, method-override, Edit, Update](./unit_2/w05d04/instructor_notes)| [Exobiology](./unit_2/w05d04/student_labs)|[Pokedex](./unit_2/w05d04/homework)|
+| w05d5 |June 29 |Friday | [Forms](./unit_2/w05d05/morning_exercise)| [Intro to Mongo, Mongoose, Schemas](./unit_2/w05d05/instructor_notes)| [Intergalactic Bounty Hunters, Mongoose Vampires](./unit_2/w05d05/student_labs)|[Hotels, Hamburgers and CSS Forms](./unit_2/w05d05/homework)|
+| w06d1 |July 2 |Monday | [Recursion](./unit_2/w06d01/morning_exercise)| [Build App with Mongo](./unit_2/w06d01/instructor_notes)| [Captain's Log](./unit_2/w06d01/student_labs)|[Mongoose Store](./unit_2/w06d01/homework)|
+| w06d2 |July 3 |Tuesday | [](./unit_2/w06d02/morning_exercise)| [Build App Cont.](./unit_2/w06d02/instructor_notes)| [Captain's Log Cont](./unit_2/w06d02/student_labs)|[Mongoose Store Cont.](./unit_2/w06d02/homework)|
 | w06d3 |July 4 |Wednesday | **No Class Today** |
-| w06d4 |July 5 |Thursday | [](./unit_2/w06d04/morning_exercise)| [Sessions, Auth](./unit_2/w06d04/instructor_notes)| [](./unit_2/w06d04/student_labs)|[](./unit_2/w06d04/homework)|
-| w06d5 |July 6 |Friday | [](./unit_2/w06d05/morning_exercise)| [](./unit_2/w06d05/instructor_notes)| [](./unit_2/w06d05/student_labs)|[](./unit_2/w06d05/homework)|
-| w07d1 |July 9 |Monday | [](./unit_2/w07d01/morning_exercise)| [](./unit_2/w07d01/instructor_notes)| [](./unit_2/w07d01/student_labs)|[](./unit_2/w07d01/homework)|
-| w07d2 |July 10 |Tuesday | [](./unit_2/w07d02/morning_exercise)| [](./unit_2/w07d02/instructor_notes)| [](./unit_2/w07d02/student_labs)|[](./unit_2/w07d02/homework)|
-| w07d3 |July 11 |Wednesday | [](./unit_2/w07d03/morning_exercise)| [](./unit_2/w07d03/instructor_notes)| [](./unit_2/w07d03/student_labs)|[](./unit_2/w07d03/homework)|
-| w07d4 |July 12 |Thursday | [](./unit_2/w07d04/morning_exercise)| [](./unit_2/w07d04/instructor_notes)| [](./unit_2/w07d04/student_labs)|[](./unit_2/w07d04/homework)|
+| w06d4 |July 5 |Thursday | [EJS Partials](./unit_2/w06d04/morning_exercise)| [Sessions, Auth](./unit_2/w06d04/instructor_notes)| [Rep Master](./unit_2/w06d04/student_labs)|[Kingsmen](./unit_2/w06d04/homework)|
+| w06d5 |July 6 |Friday | **Project 2**|
+| w07d1 |July 9 |Monday | **Project 2**|
+| w07d2 |July 10 |Tuesday | **Project 2**|
+| w07d3 |July 11 |Wednesday |  **Project 2**|
+| w07d4 |July 12 |Thursday | | **Project 2 Presentations** | **Ruby, Rails Postgres Install** ||
 
 ## Unit 3
 ## Schedule
 | Day | Date | Weekday | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|:-----------:|:-----------:|
-| w07d5 |July 13 |Friday | [](./unit_2/w07d05/morning_exercise)| [](./unit_2/w07d05/instructor_notes)| [](./unit_2/w07d05/student_labs)|[](./unit_2/w07d05/homework)|
-| w08d1 |July 16 |Monday | [](./unit_3/w08d01/morning_exercise)| [](./unit_3/w08d01/instructor_notes)| [](./unit_3/w08d01/student_labs)|[](./unit_3/w08d01/homework)|
-| w08d2 |July 17 |Tuesday | [](./unit_3/w08d02/morning_exercise)| [](./unit_3/w08d02/instructor_notes)| [](./unit_3/w08d02/student_labs)|[](./unit_3/w08d02/homework)|
-| w08d3 |July 18 |Wednesday | [](./unit_3/w08d03/morning_exercise)| [](./unit_3/w08d03/instructor_notes)| [](./unit_3/w08d03/student_labs)|[](./unit_3/w08d03/homework)|
-| w08d4 |July 19 |Thursday | [](./unit_3/w08d04/morning_exercise)| [](./unit_3/w08d04/instructor_notes)| [](./unit_3/w08d04/student_labs)|[](./unit_3/w08d04/homework)|
-| w08d5 |July 20 |Friday | [](./unit_3/w08d05/morning_exercise)| [](./unit_3/w08d05/instructor_notes)| [](./unit_3/w08d05/student_labs)|[](./unit_3/w08d05/homework)|
-| w09d1 |July 23 |Monday | [](./unit_3/w09d01/morning_exercise)| [](./unit_3/w09d01/instructor_notes)| [](./unit_3/w09d01/student_labs)|[](./unit_3/w09d01/homework)|
-| w09d2 |July 24 |Tuesday | [](./unit_3/w09d02/morning_exercise)| [](./unit_3/w09d02/instructor_notes)| [](./unit_3/w09d02/student_labs)|[](./unit_3/w09d02/homework)|
-| w09d3 |July 25 |Wednesday | [](./unit_3/w09d03/morning_exercise)| [](./unit_3/w09d03/instructor_notes)| [](./unit_3/w09d03/student_labs)|[](./unit_3/w09d03/homework)|
-| w09d4 |July 26 |Thursday | [](./unit_3/w09d04/morning_exercise)| [](./unit_3/w09d04/instructor_notes)| [](./unit_3/w09d04/student_labs)|[](./unit_3/w09d04/homework)|
-| w09d5 |July 27 |Friday | [](./unit_3/w09d05/morning_exercise)| [](./unit_3/w09d05/instructor_notes)| [](./unit_3/w09d05/student_labs)|[](./unit_3/w09d05/homework)|
+| w07d5 |July 13 |Friday | [Luhn Algorithm](./unit_3/w07d05/morning_exercise)| [Intro to Angular, AJAX](./unit_3/w07d05/instructor_notes)| [Data Represent, Movies](./unit_3/w07d05/student_labs)|[](./unit_3/w07d05/homework)|
+| w08d1 |July 16 |Monday | [Happy Fun Ball (Git Branching and Merging) ](./unit_3/w08d01/morning_exercise)| [Express API, Consume API with Angular - CREATE, READ](./unit_3/w08d01/instructor_notes)| [Animal Shelter](./unit_3/w08d01/student_labs)|[Bookmark'd](./unit_3/w08d01/homework)|
+| w08d2 |July 17 |Tuesday | [](./unit_3/w08d02/morning_exercise)| [Conusme API with Angular EDIT/DELETE, Auth](./unit_3/w08d02/instructor_notes)| [Animal Shelter cont.](./unit_3/w08d02/student_labs)|[](./unit_3/w08d02/homework)|
+| w08d3 |July 18 |Wednesday | [Pairing](./unit_3/w08d03/morning_exercise)| [Full CRUD Build](./unit_3/w08d03/instructor_notes)| [Continue Build](./unit_3/w08d03/student_labs)|[Coder's Choice](./unit_3/w08d03/homework)|
+| w08d4 |July 19 |Thursday | [Project Management](./unit_3/w08d04/morning_exercise)| [Intermediate/Advanced Angular](./unit_3/w08d04/instructor_notes)| [Project 3 Announcement]()|[](./unit_3/w08d04/homework)|
+| w08d5 |July 20 |Friday |  **Project 3**|
+| w09d1 |July 23 |Monday |  **Project 3**|
+| w09d2 |July 24 |Tuesday |  **Project 3**|
+| w09d3 |July 25 |Wednesday |   **Project 3 Presentations **| Install Ruby, Rails, Postgres |[](./unit_4/w09d03/homework)|
+
+## Unit 4
+## Schedule
+| Day | Date | Weekday | Morning Exercise | Lectures | Labs | Homework |
+|:---:|:-----------:|:-------:|:-----------:|:-----------:|:-----------:|:-----------:|
+| w09d4 |July 26 |Thursday | [](./unit_4/w09d04/morning_exercise)| [](./unit_4/w09d04/instructor_notes)| [](./unit_3/w09d04/student_labs)|[](./unit_4/w09d04/homework)|
+| w09d5 |July 27 |Friday | [](./unit_4/w09d05/morning_exercise)| [](./unit_4/w09d05/instructor_notes)| [](./unit_3/w09d05/student_labs)|[](./unit_4/w09d05/homework)|
 | w10d1 |July 30 |Monday | [](./unit_4/w10d01/morning_exercise)| [](./unit_4/w10d01/instructor_notes)| [](./unit_4/w10d01/student_labs)|[](./unit_4/w10d01/homework)|
 | w10d2 |July 31 |Tuesday | [](./unit_4/w10d02/morning_exercise)| [](./unit_4/w10d02/instructor_notes)| [](./unit_4/w10d02/student_labs)|[](./unit_4/w10d02/homework)|
 | w10d3 |August 1 |Wednesday | [](./unit_4/w10d03/morning_exercise)| [](./unit_4/w10d03/instructor_notes)| [](./unit_4/w10d03/student_labs)|[](./unit_4/w10d03/homework)|

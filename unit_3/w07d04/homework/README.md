@@ -17,7 +17,7 @@ After reading the above articles, create a markdown file (`.md`) and  in your ow
 4. Give two pros of a SPA
 5. Give two cons of a SPA
 6. Give two pros of a MPA
-7. GIve two cons of a MPA
+7. Give two cons of a MPA
 
 [The Secret Startup That Saved the Worst Website in America](https://www.theatlantic.com/technology/archive/2015/07/the-secret-startup-saved-healthcare-gov-the-worst-website-in-america/397784/)
 
@@ -29,7 +29,11 @@ After reading the above article, in your own words answer:
 
 *Further research may be required
 
+- Check out this site about [sites built with angular 1.x](https://www.madewithangular.com/categories/angularjs)
+
 ## Hungry For More
+
+- Read [The History of Angular](https://medium.com/the-startup-lab-blog/the-history-of-angular-3e36f7e828c7)
 
 - This is a video that will review JSON and introduce you to AJAX
 [Watch the following video on JSON and AJAX](https://www.youtube.com/watch?v=rJesac0_Ftw)
@@ -39,4 +43,4 @@ After reading the above article, in your own words answer:
 
 - [Try this Angular tutorial](https://www.codeschool.com/courses/shaping-up-with-angularjs)
 
-Note: We'll be learning Angular 1.6. Be sure to research the right version, since the difference between 1 and 2 is quite drastic
+Note: We'll be learning Angular 1.7 (also known as `AngularJS`). Be sure to research the right version, since the difference between 1.x and 2-6+ is quite drastic. (Versions 2 onwards are often called `Angular`)

@@ -87,7 +87,7 @@ You will meet with your instructor (standup leader) to get your app idea approve
 ## How to Submit Your Project
 Your project is due on Thursday, July 12 at 10:00 AM ET. You will present your project and show your code to classmates and instructors.
 
-:heavy_check_mark: Add your project to [this google sheet](https://docs.google.com/spreadsheets/d/1MzbE9DOeeJmMaZ_Y59MBGdL6wgWxTX-mQw0eWFsS8SU/edit#gid=0).
+:heavy_check_mark: Add your project to [this google sheet](https://docs.google.com/spreadsheets/d/1MzbE9DOeeJmMaZ_Y59MBGdL6wgWxTX-mQw0eWFsS8SU/edit?usp=sharing).
   - _Note:_ This will be the order you present in!
 
 ## Where to go for help during project week
@@ -97,7 +97,8 @@ Your project is due on Thursday, July 12 at 10:00 AM ET. You will present your p
 
 **TA Hours** (all times ET):
 
-- Monday - Wednesday: 1-4PM, 7-10PM
+- Monday, Wednesday: 2-5PM, 7-10PM
+- Tuesday: 1:30-4:30PM, 7-10PM
 
 ## Etc.
 

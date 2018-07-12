@@ -76,16 +76,16 @@ In student_examples
 - html boilerplate
 - link angular
 ```
-https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js
+https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js
 ```
-- link app.js below angular
+- link `app.js` below angular
 - set `<html ng-app="MovieApp">`
 - set `<body ng-controller="MainController as ctrl">`
 - Inside the body include {{ 2+ 2 }} this should evaluate and display the number 4 when we have everything set up correctly
 
 **app.js**
 
-- set a variable app to the angular module. Remember the ng-app name in the html must match the string
+- set a variable app to the angular module. Remember the `ng-app` name in the html must match the string
 
 ```js
 const app = angular.module('MoviesApp', []);
@@ -180,7 +180,7 @@ our searchURL should look like (the api key is fake, it should be the one you go
 http://www.omdbapi.com/?apikey=9999999&t=Eraserhead
 ```
 
-Note: including your API key in the app.js and then pushing it up to github makes your API key findable. OMDB keys are not that valuable, so it shouldn't be a worry.
+Note: including your API key in the `app.js` and then pushing it up to github makes your API key findable. OMDB keys are not that valuable, so it shouldn't be a worry.
 
 However, there are services that cost thousands of dollars a month. People write bots to look for exposed API keys to steal them. We don't have time to cover hiding API keys today. But keep it in mind for your projects.
 

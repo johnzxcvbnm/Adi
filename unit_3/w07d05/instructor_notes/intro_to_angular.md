@@ -1,9 +1,9 @@
-# Intro to Angular
+# Intro to AngularJS
 
 ## Learning Objectives
 - Describe what are Single Page Apps and their pros and cons
 - Describe what are front-end frameworks
-- Describe Angular and what problems it tries to solve
+- Describe AngularJS and what problems it tries to solve
 - Set up first Angular app
 - Learn some basic angular directives
 
@@ -17,7 +17,7 @@ Think about google maps that are embedded in a web page. When you click on the m
 
 This allows for a better user experience, since it is faster (no whole page reload), and generally smoother, (user keeps their place and can keep moving around the map).
 
-This opened the doors to Single Page Apps.
+This technology opened the doors to Single Page Apps.
 
 ## Single Page App Pros and Cons
 
@@ -28,7 +28,7 @@ Pros:
 
 Cons:
 - Initial load can be slow because there could be a lot of code to download
-- Building large apps gets very tricky very fast
+- Building large apps gets very tricky very fast (new frameworks try to solve this over and over again)
 
 ## Front End Frameworks
 You can build a single page application with vanilla javascript or jQuery.
@@ -61,7 +61,7 @@ Its replacement Angular (versions 2 - 5+), came out in January 2016 and was a to
 
 Angular's features include:
 - Open source, free to use
-- Handles the V in MVC (Models, Views, Controllers)* (not everyone agrees with this particular semantic, but it is close enough the alternate you might see is MVVM (Model-View-View-Model))
+- Handles the V in MVC (Models, Views, Controllers)* (not everyone agrees with this particular semantic, but it is close enough; the alternate you might see is MVVM (Model-View-View-Model))
 - 2 way data binding - the data displayed on the web page is the same as the data in js, if one is updated, the other updates as well. This is really cool, but also saves you from having to dedicate code to traverse, manipulate and listen to the DOM for every change of data on your page.
 - Fast start! Getting started with AngularJS is as simple as adding a link in the header, just like jQuery.
 - HTML Template, write your HTML as you always would, and then add in AngularJS to provide functionality where needed.
@@ -82,7 +82,7 @@ In your student examples folder
 - in the head tag add
 
 ```html
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
 ```
 and below that link our `app.js`
 ```html
@@ -174,7 +174,7 @@ All our `index.html`
 <html ng-app="MyApp">
   <head>
     <meta charset="utf-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
     <script src="app.js" charset="utf-8"></script>
     <title>My First App</title>
   </head>
@@ -261,6 +261,8 @@ this.contacts = [
 Let's make cards for each of our contacts. First let's just see if we can get their names to display
 
 **Index.html**
+
+```html
 <body ng-controller='MainController as ctrl'>
   <h1>{{ ctrl.hello }}</h1>
   <div ng-repeat="contact in ctrl.contacts">
@@ -270,7 +272,8 @@ Let's make cards for each of our contacts. First let's just see if we can get th
 ```
 
 
-Expected Apperance:
+Expected Appearance:
+
 ![angular contacts](https://i.imgur.com/uWUEkae.png)
 
 ### ng-src
@@ -284,6 +287,7 @@ We'll use another directive `ng-src` to get our images to show up correctly
 </div>
 ```
 Expected Apperance:
+
 ![angular contacts](https://i.imgur.com/bUcIntN.png)
 
 Let's add some more
@@ -299,7 +303,7 @@ Let's add some more
 </div>
 ```
 
-Cool! We can see that ng-repeat let's us loop over our array of objects and make a new element for each contact
+Cool! We can see that `ng-repeat` let's us loop over our array of objects and make a new element for each contact
 
 ### ng-if
 We may not want everything to appear. We can control what appears on the page using `ng-if`
@@ -317,7 +321,8 @@ in **index.html**
 
 Now, all of our images should disappear.
 
-Expected Appearance
+Expected Appearance:
+
 ![ng if hide images](https://i.imgur.com/l5vpQ8w.png)
 
 We can look into our Chrome console elements tab for more info
@@ -327,10 +332,12 @@ We can look into our Chrome console elements tab for more info
 **app.js**
 
 Let's change that false to true
+
 ```js
 this.showImages = true;
 ```
-Our images should reappear and in chrome console we should now see our img element. Before we just had a comment about the ng if and our element was gone. Now it should be back
+
+Our images should reappear and in chrome console we should now see our img element. Before we just had a comment about the `ng-if` and our element was gone. Now it should be back
 
 ![ng if true](https://i.imgur.com/Etn8m0R.png)
 
@@ -369,7 +376,9 @@ this.toggleInfo = () =>{
 ```
 
 Now let's add a click event to a button that will call this function
-```hmtl
+
+
+```html
 <body ng-controller='MainController as ctrl'>
   <h1>{{ ctrl.hello }}</h1>
   <button ng-click="ctrl.toggleInfo()"> Toggle Info </button>
