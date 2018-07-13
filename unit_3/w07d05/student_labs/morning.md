@@ -169,3 +169,19 @@ const caesarShift = (str, amount) => {
 </details>
 
 <br>
+
+
+## Bonus Bonus Bonus
+
+## Stop Watch
+
+- Make a new `index.html` `app.js`
+- Reuse whatever code you like from your clicker counter
+- Change your clicker counter into a stopwatch that goes up by 1 second or 100 milliseconds (your choice)
+- Research AngularJS digest loop and lifecycle events to find the right directive/service for your stopwatch
+- Have the watch stop, start, countdown and reset
+- Have the watch measure milliseconds, seconds, minutes and hours properly
+- Add a lap button that marks the time the button is pressed and adds it to a list below the stopwatch
+- Add a clear laps button that clears the lap list
+- Style it to look awesome
+
