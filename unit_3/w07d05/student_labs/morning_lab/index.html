@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <title></title>
+  </head>
+  <body ng-controller="mainController as ctrl">
+    <h1>{{ ctrl.test }}</h1>
+    <h2>First Track</h2>
+    <div>
+      <h3>Title: {{ctrl.track.Title}}</h3>
+      <p>Artist: {{ctrl.track.Artist}}</p>
+      <p>Lyric: {{ctrl.track.Lyric}}</p>
+    </div>
+    <h2>My Hit Track List Boi</h2>
+    <div class="wrapper">
+      <div ng-repeat="track in ctrl.tracks">
+        <h3>Title: {{track.Title}}</h3>
+        <p>Artist: {{track.Artist}}</p>
+        <p ng-if=" track.Artist == 'Lil Wayne'">Lyric: {{track.Lyric}}</p>
+      </div>
+    </div>
+  </body>
+  <style>
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .wrapper div {
+    width: 30%;
+    border: 2px solid black;
+    margin: 5px;
+  }
+  </style>
+</html>

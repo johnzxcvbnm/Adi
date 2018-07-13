@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="MyApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <title></title>
+  </head>
+  <body ng-controller="MainController as ctrl">
+    <h1>{{ ctrl.hello }}</h1>
+    <button ng-click="ctrl.toggleInfo()">Toggle Info</button>
+    <div ng-repeat="contact in ctrl.contacts">
+      <img ng-src="{{ contact.image }}"
+           alt="an image of {{ contact.name }}"
+           ng-if="ctrl.showImages" />
+      <dl>
+        <dt>{{ contact.name }}</dt>
+        <dd ng-show="ctrl.showInfo">{{ contact.state }}</dd>
+        <dd ng-show="ctrl.showInfo">{{ contact.phone}}</dd>
+      </dl>
+    </div>
+  </body>
+  <style>
+  img {
+    max-width: 100px;
+    display: inline-block;
+  }
+  dl {
+    display: inline-block;
+    vertical-align: top;
+  }
+</style>
+</html>

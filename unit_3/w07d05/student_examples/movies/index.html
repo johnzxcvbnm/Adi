@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="movieApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <title></title>
+  </head>
+  <body ng-controller="mainController as ctrl">
+    <!-- Title Screen -->
+    <h1>{{ ctrl.appName }}</h1>
+    <!-- Form to let the user search for movies -->
+    <form name="getMovies" ng-submit="ctrl.getMovies()">
+      <input type="text" placeholder="Movie Title" ng-model="ctrl.movieTitle" />
+      <button type="submit">SUBMIT</button>
+    </form>
+    <!-- Div used to create a flex-box -->
+    <div class="mainSection">
+      <!-- If your searching movies, the div width is 20%, otherwise it's 100%.  This is done by applying or removing the 'searchDiv' class-->
+      <div  ng-class="{searchDiv: !ctrl.showInfo}" ng-repeat="movie in ctrl.movies">
+        <!-- Clicking on the movie name or picture does another search for it using the movie ID to retrieve a single moive with all the information about the movie (Actors, Plot, etc) -->
+        <h3 ng-click="ctrl.getMovie( movie.imdbID )">{{ movie.Title }} {{ movie.Year }}</h3>
+        <img ng-click="ctrl.getMovie( movie.imdbID )" ng-src="{{ movie.Poster }}" alt="{{ movie.Title }}" ng-class="{display: ctrl.showInfo }"/>
+        <h3 ng-show="ctrl.showInfo">Starring: {{ movie.Actors }}</h3>
+        <h4 ng-show="ctrl.showInfo">Plot: {{ movie.Plot }}</h4>
+        <h5 ng-show="ctrl.showInfo">Genre: {{ movie.Genre }}</h5>
+        <h6 ng-show="ctrl.showInfo">Rated: {{ movie.Rated }}</h6>
+      </div>
+    </div>
+  </body>
+  <!------------ CSS ------------>
+  <style>
+  html {
+    text-align: center;
+  }
+
+  div {
+    border: 2px solid black;
+    margin: 10px;
+  }
+
+  img {
+    width: 100px;
+  }
+
+  .mainSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 0;
+  }
+
+  .display {
+    width: auto;
+  }
+
+  .searchDiv {
+    width: 20%;
+  }
+
+  button, input {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.5em;
+  }
+  </style>
+</html>
