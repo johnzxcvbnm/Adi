@@ -151,7 +151,7 @@ An http request requires:
 
 Let's build our first $http request.
 
-`$http` is a function. it takes one argument which **MUST** be an object.
+`$http` is a function. it takes one argument which **MUST** be an object. We'll code this out together after we put together our query string
 
 The object requires a minimum of two key value pairs
 - `method` - a string: `GET`, `POST`, `PUT`, `DELETE`
@@ -170,7 +170,7 @@ this.baseURL = 'http://www.omdbapi.com/?';
 this.apikey = 'apikey=' + 'your api key here';
 this.query = 't=';
 this.movieTitle = 'Eraserhead';
-this.searchURL = this.baseURL + this.apikey + '&' + this.query;
+this.searchURL = this.baseURL + this.apikey + '&' + this.query + this.movieTitle;
 
 console.log(this.searchURL);
 ```
@@ -320,7 +320,7 @@ We'll use a new directive `ng-submit` so that when the submit button is pushed i
 **index.html**
 
 ```html
-<form name="getMovies" ng-submit="ctrl.getMovies()">
+<form ng-submit="ctrl.getMovies()">
 	<button type="submit">SUBMIT</button>
 </form>
 ```
@@ -341,7 +341,6 @@ At first we'll just be grabbing one movie, but we'll hope to be able to grab an 
 
 ```js
 this.movies = [];
-
 
 this.getMovies = () => {
   $http({
@@ -387,7 +386,9 @@ We'll use the directive `ng-model` that will grab whatever we put in our input f
 
 Let's adjust our **app.js**
 
-change this.movieTitle to an empty string
+- change this.movieTitle to an empty string
+- remove `this.movieTitle` from `this.searchURL`
+- add `this.movieTitle` to the `url` inside the `$http` function
 
 ```js
 this.movies =[];
