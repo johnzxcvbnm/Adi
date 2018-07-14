@@ -6,15 +6,27 @@
     <script src="app.js" charset="utf-8"></script>
     <title></title>
   </head>
-  <body ng-controller="CarsController as ctrl">
-    <h1>{{ ctrl.myTitle }}</h1>
-    <h3>Car Types</h3>
-    <ul ng-repeat="type in ctrl.types">
-      <li>{{ type }}</li>
-    </ul>
-    <h3>Car Colors</h3>
-    <ul ng-repeat="color in ctrl.colors">
-      <li>{{ color }}</li>
-    </ul>
+  <body>
+    <div ng-controller="CarsController as ctrl">
+      <h1>{{ ctrl.myTitle }}</h1>
+      <h3>Car Types</h3>
+      <ul ng-repeat="type in ctrl.types">
+        <li>{{ type }}</li>
+      </ul>
+      <h3>Car Colors</h3>
+      <ul ng-repeat="color in ctrl.colors">
+        <li>{{ color }}</li>
+      </ul>
+    </div>
+    <div ng-controller="DriversController as drive">
+      <h2>The Driver Is</h2>
+      <h3>{{ drive.name }}</h3>
+      <img ng-show="!drive.isShy" ng-src="{{ drive.driverImg }}" alt="{{ drive.name }}" />
+    </div>
   </body>
+  <style>
+  html {
+    /* text-align: center; */
+  }
+  </style>
 </html>

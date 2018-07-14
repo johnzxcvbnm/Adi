@@ -9,5 +9,5 @@ app.controller("CarsController", function() {
 app.controller("DriversController", function() {
   this.name = "John Kusching, Lord of the Road";
   this.driverImg = "http://bigcitydriver.com/wp-content/uploads/2013/06/road-rage-cat-driving-300x199.jpg";
-  this.isShy = false;
+  this.isShy = true;
 });
