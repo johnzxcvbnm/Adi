@@ -1,0 +1,123 @@
+html{
+  text-align: center;
+  background: steelblue;
+  color: white;
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+.scoreWrapper {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid black; */
+  position: relative;
+  /* text-align: left; */
+}
+
+.player {
+  width: 40%;
+  margin: 10px;
+}
+
+.buttonWrapper {
+  margin: 10px;
+}
+
+.player > .buttonWrapper {
+  margin: 0px;
+}
+
+.container > .buttonWrapper {
+  margin-top: 20px;
+}
+
+.miscWrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.misc {
+  width: 40%;
+  margin: 10px;
+}
+
+.button {
+  width: 100px;
+  height: 50px;
+  font-size: 1.1em;
+  border-radius: 10px;
+  /* margin: 0 5px; */
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.increase {
+  color: #ff5fac;
+  background: #acff5f;
+}
+
+.increase:hover {
+  color: #ba4580;
+  background: #80ba45;
+}
+
+.decrease {
+  color: #e356ff;
+  background: #fff155;
+}
+
+.decrease:hover {
+  color: #b241c9;
+  background: #c9be41;
+}
+
+.qGet {
+  background: #b241c9;
+}
+
+.qGet:hover {
+  background: #9679ff;
+}
+
+.qSee {
+  background: #a4b855;
+}
+
+.qSee:hover {
+  background: #e2ff79;
+}
+
+.qReset {
+  background: #b85f55;
+}
+
+.qReset:hover {
+  background: #ff8679;
+}
+
+.qGet, .qSee, .qReset {
+  color: white;
+}
+
+.qGet:hover, .qSee:hover, .qReset:hover {
+  color: black;
+}
+
+.posScore {
+  color: #13d402;
+}
+
+.negScore {
+  color: #ff9100;
+}
+
+.header {
+  /* color: #5affc8; */
+  color: #76ff5a;
+}

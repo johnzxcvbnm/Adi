@@ -4,10 +4,54 @@
     <meta charset="utf-8">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="style.css">
     <title></title>
   </head>
   <body ng-controller="mainController as ctrl">
-    <h1>{{ ctrl.title }}</h1>
-    <button ng-click="ctrl.getQuestion()">Get Question</button>
+    <div class="container">
+      <h1>{{ ctrl.title }}</h1>
+      <div class="scoreWrapper">
+        <div class="player">
+          <h2>Player One</h2>
+          <h2><a ng-class="{ posScore: ctrl.playerOneScore > 0, negScore: ctrl.playerOneScore < 0 }">Score:</a> {{ ctrl.playerOneScore }}</h2>
+          <div class="buttonWrapper">
+            <button class="button increase" ng-click="ctrl.increasePlayerOne(ctrl.newQuestion.value)">Increase</button>
+            <button class="button decrease" ng-click="ctrl.decreasePlayerOne(ctrl.newQuestion.value)">Decrease</button>
+          </div>
+        </div>
+        <div class="player">
+          <h2>Player Two</h2>
+          <h2><a ng-class="{ posScore: ctrl.playerTwoScore > 0, negScore: ctrl.playerTwoScore < 0 }">Score:</a> {{ ctrl.playerTwoScore }}</h2>
+          <div class="buttonWrapper">
+            <button class="button increase" ng-click="ctrl.increasePlayerTwo(ctrl.newQuestion.value)">Increase</button>
+            <button class="button decrease" ng-click="ctrl.decreasePlayerTwo(ctrl.newQuestion.value)">Decrease</button>
+          </div>
+        </div>
+      </div>
+      <div class="buttonWrapper">
+        <button class="button qGet" ng-click="ctrl.getQuestion()">Get Question</button>
+        <!-- <button ng-click="ctrl.seeAnswer()">Reveal Answer</button> -->
+        <button class="button qSee" ng-click="ctrl.seeQuestion()">Reveal Question</button>
+        <button class="button qReset" ng-click="ctrl.resetGame()">Reset Game</button>
+      </div>
+      <div class="miscWrapper">
+        <div class="misc">
+        <h2><a class="header">Category</a> {{ ctrl.newQuestion.category.title }}</h2>
+        <!-- <h3>{{ ctrl.newQuestion.category.title }}</h3> -->
+        </div>
+        <div class="misc">
+          <h2><a class="header">Value</a> {{ ctrl.newQuestion.value }}</h2>
+          <!-- <h3>{{ ctrl.newQuestion.value }}</h3> -->
+        </div>
+      </div>
+      <div>
+        <h2 class="header">Answer</h2>
+        <h3 ng-show="ctrl.showAnswer">{{ ctrl.newQuestion.answer }}</h3>
+      </div>
+      <div>
+        <h2 class="header">Question</h2>
+        <h3 ng-show="ctrl.showQuestion">{{ ctrl.newQuestion.question }}</h3>
+      </div>
+    </div>
   </body>
 </html>
