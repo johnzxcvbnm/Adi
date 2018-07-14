@@ -9,16 +9,31 @@
   <body>
     <div ng-controller="CarsController as ctrl">
       <h1>{{ ctrl.myTitle }}</h1>
-      <h3>Car Types</h3>
-      <ul ng-repeat="type in ctrl.types">
-        <li>{{ type }}</li>
-      </ul>
-      <h3>Car Colors</h3>
-      <ul ng-repeat="color in ctrl.colors">
-        <li>{{ color }}</li>
-      </ul>
+      <div class="flexy">
+        <div class="leftSide">
+          <h3>Car Types</h3>
+          <form ng-submit="ctrl.addType()">
+            <input type="text" ng-model="ctrl.newType" placeholder="New Car Type" />
+            <button type="submit">ADD CAR TYPE</button>
+          </form>
+          <ul ng-repeat="type in ctrl.types">
+            <li>{{ type }}</li>
+          </ul>
+        </div>
+        <div class="rightSide">
+          <h3>Car Colors</h3>
+          <form ng-submit="ctrl.addColor()">
+            <input type="text" ng-model="ctrl.newColor" placeholder="New Color" />
+            <button type="submit">ADD COLOR</button>
+          </form>
+          <ul ng-repeat="color in ctrl.colors">
+            <li>{{ color }}</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div ng-controller="DriversController as drive">
+    <div class="bottom" ng-controller="DriversController as drive">
+      <h2 ng-click="drive.showHide()">Clicky</h2>
       <h2>The Driver Is</h2>
       <h3>{{ drive.name }}</h3>
       <img ng-show="!drive.isShy" ng-src="{{ drive.driverImg }}" alt="{{ drive.name }}" />
@@ -27,6 +42,19 @@
   <style>
   html {
     /* text-align: center; */
+  }
+
+  .flexy {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .leftSide, .rightSide {
+    width: 40%;
+  }
+
+  h1, .bottom {
+    text-align: center;
   }
   </style>
 </html>
