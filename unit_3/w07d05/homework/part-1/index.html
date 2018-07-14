@@ -7,7 +7,14 @@
     <title></title>
   </head>
   <body ng-controller="CarsController as ctrl">
-    <h1>{{ 2+2 }}</h1>
-
+    <h1>{{ ctrl.myTitle }}</h1>
+    <h3>Car Types</h3>
+    <ul ng-repeat="type in ctrl.types">
+      <li>{{ type }}</li>
+    </ul>
+    <h3>Car Colors</h3>
+    <ul ng-repeat="color in ctrl.colors">
+      <li>{{ color }}</li>
+    </ul>
   </body>
 </html>
