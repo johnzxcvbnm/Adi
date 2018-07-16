@@ -1,0 +1,26 @@
+html {
+  text-align: center;
+}
+
+.flexy {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.animalDisplay {
+  /* display: block; */
+  text-align: left;
+  width: 20%;
+  margin: 10px;
+  border: 2px solid black;
+}
+
+.animalDisplay h4 {
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+.animalDisplay ul {
+  margin-top: 2px;
+}

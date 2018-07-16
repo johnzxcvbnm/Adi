@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="ShelterApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/css/app.css">
+    <title></title>
+  </head>
+  <body ng-controller="MainController as ctrl">
+    <h1>{{ ctrl.title }}</h1>
+    <div>
+      <h3>Add Animal</h3>
+      <form ng-submit="ctrl.createAnimal()">
+        <input type="text" ng-model="ctrl.name" placeholder="name" />
+        <input type="text" ng-model="ctrl.species" placeholder="species" />
+        <input type="text" ng-model="ctrl.breed" placeholder="breed" />
+        <input type="text" ng-model="ctrl.gender" placeholder="gender" />
+        <input type="text" ng-model="ctrl.image" placeholder="image" />
+        <input type="text" ng-model="ctrl.age" placeholder="age" />
+        Adopted: <input type="checkbox" ng-model="ctrl.adopted" />
+        <input type="submit" value="Add Animal" />
+      </form>
+    </div>
+    <div>
+      <h3>Avaliable</h3>
+      <div class="flexy">
+        <div class="animalDisplay" ng-repeat="animal in ctrl.animals" >
+          <h4>{{ animal.name }}</h4>
+          <ul>
+            <li>Species: {{ animal.species }}</li>
+            <li>Breed: {{ animal.breed }}</li>
+            <li>Gender: {{ animal.gender }}</li>
+            <li>Age: {{ animal.age }}</li>
+            <li>Adopted: {{ animal.adopted }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
