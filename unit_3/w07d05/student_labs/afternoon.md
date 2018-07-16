@@ -20,3 +20,7 @@ Then, **ONLY display the movie titles**. Allow the user to click on a movie and 
 
 
   - *Example*: If a user is viewing a list of every Star Wars movie and clicks on `Star Wars: A New Hope`, detailed information about that specific movie will be displayed.
+  
+  ## Bonus
+  - Style it with some sweet sweet CSS
+  - Go back and finish up the morning lab 
