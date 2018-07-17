@@ -8,6 +8,22 @@
     <title></title>
   </head>
   <body ng-controller="MainController as ctrl">
-    <h1>{{ ctrl.title }}</h1>
+    <h1>{{ ctrl.header }}</h1>
+    <div>
+      <form ng-submit="ctrl.createBookmark()">
+        <input type="text" ng-model="ctrl.title" placeholder="Name" required />
+        <input type="text" ng-model="ctrl.url" placeholder="URL" required />
+        <input type="submit" value="Add Bookmark" />
+      </form>
+    </div>
+    <div>
+      <div ng-repeat="mark in ctrl.bookmarks">
+        <ul>
+          <li>Name: {{ mark.title }}</li>
+          <li>URL: {{ mark.url }}</li>
+          <button>Go</button>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>

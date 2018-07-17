@@ -5,7 +5,12 @@ const router = express.Router();
 
 //Get Routes
 router.get("/", (req, res) => {
-  res.send("Index");
+  // res.send("Index");
+  
+  //Find all websites and sort them by title
+  Website.find( {} ).sort( { title: 1 } ).exec( (err, foundWebsite) => {
+    res.json(foundWebsite);
+  });
 });
 
 //Delete Routes
