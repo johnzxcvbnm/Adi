@@ -52,7 +52,7 @@ Competencies: Express app with full CRUD and an Angular Frontend
 
 ## Stretch Goals 
 
-1. If you didn't complete any of [yesterday's](/unit_3/w07d03/student_labs/README.md) stretch goals, go back and do those!
+1. If you didn't complete any of [yesterday's](/unit_3/w08d01/student_labs/README.md) stretch goals, go back and do those!
 1. Keep upgrading the animal shelter app 
     - Make it so that there are different types of users, for example an admin user and a customer user 
       - Make it so that only the admin users can add/edit/declare animals officially adopted

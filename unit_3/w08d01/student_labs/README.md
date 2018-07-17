@@ -61,7 +61,7 @@ Competencies: Express app with full CRUD and an Angular Frontend
 
 1. Set up your static files (i.e. the `public` folder that will hold all our static files, like the `index.html`)
 1. Set up angular with the following link
-    `<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js" charset="utf-8"></script>`
+    `<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>`
 1. Create your angular app controller: `public/js/app.js`
 1. Don't forget to connect your app controller to your `index.html` 
 1. For now, we just want to make sure our front-end works with our API, so create a form in your `index.html` to create a new animal to be put up for adoption
@@ -70,7 +70,7 @@ Competencies: Express app with full CRUD and an Angular Frontend
 1. Now that we have animals created, let's get them all displaying on the `index.html` 
 1. Upgrade your create route in your angular app controller so that when you create a new animal, it automatically adds onto the `index.html` without having to completely refresh the page first
 
-> :cat: Afternoon Lab ends here, if you finish early, feel free to try and carry on with [tomorrow's lab](/unit_3/w07d04/student_labs/README.md), or try some of the stretch goals below. 
+> :cat: Afternoon Lab ends here, if you finish early, feel free to try and carry on with [tomorrow's lab](/unit_3/w08d02/student_labs/README.md), or try some of the stretch goals below. 
 
 ## Stretch Goals 
 1. Practice HTML/CSS by giving your animal shelter site some sweet styling
