@@ -1,47 +1,44 @@
-var express = require('express');
-var app = express();
-var mongoose = require('mongoose');
-var bodyParser = require('body-parser');
-var session = require('express-session');
-// var methodOverride = require('method-override');
-//
-// app.use(methodOverride('_method'));
-app.use(express.json());
+const express = require('express');
+const app = express();
+const mongoose = require('mongoose');
+const session = require('express-session');
+
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
 app.use(session({
-    secret: "feedmeseymour", //some random string
+    secret:'feedmeseymour',
     resave: false,
     saveUninitialized: false
 }));
 
-var usersController = require('./controllers/users.js');
-app.use('/users', usersController);
+app.use(express.urlencoded({extended:false}));
 
-var sessionsController = require('./controllers/sessions.js');
-app.use('/sessions', sessionsController);
-//
-// app.get('/', function(req, res){
-//     res.render('index.ejs', {
-//         currentUser: req.session.currentuser
-//     });
-// });
+app.get('/', (req, res)=>{
+    res.render('index.ejs', {
+        currentUser: req.session.currentUser
+    });
+});
 
-app.get('/app', function(req, res){
-    if(req.session.currentuser){
-        res.json(req.session.currentuser);
+app.get('/app', (req, res)=>{
+    if(req.session.currentUser){
+        res.send('the main app');
     } else {
-        res.status(401).json({
-            status:401,
-            message: "not logged in"
-        });
+        res.redirect('/sessions/new');
     }
-});
+})
 
-mongoose.connect('mongodb://localhost:27017/auth');
+const userController = require('./controllers/users.js')
+app.use('/users', userController);
 
-mongoose.connection.once('open', function(){
-    console.log('connected to mongo');
-});
+const sessionsController = require('./controllers/sessions.js');
+app.use('/sessions', sessionsController);
 
-app.listen(3000, function(){
+app.listen(3000, ()=>{
     console.log('listening...');
-});
+})
+
+mongoose.connect('mongodb://localhost:27017/auth', {useNewUrlParser:true});
+mongoose.connection.once('open', ()=>{
+    console.log('connected to mongo');
+})
