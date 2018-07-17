@@ -9,6 +9,26 @@
   </head>
   <body ng-controller="MainController as ctrl">
     <h1>{{ ctrl.title }}</h1>
+    <div class="flexy">
+      <div class="user">
+        <form ng-submit="ctrl.createUser()">
+          Username -> <input type="text" ng-model="ctrl.username" />
+          Password -> <input type="password" ng-model="ctrl.password" />
+          <input type="submit" value="Create User">
+        </form>
+      </div>
+      <div class="user">
+        <form ng-submit="ctrl.logIn()">
+          Username -> <input type="text" ng-model="ctrl.logUsername" />
+          Password -> <input type="password" ng-model="ctrl.logPassword" />
+          <input type="submit" value="Login User">
+        </form>
+      </div>
+    </div>
+    <!-- <a ng-click="" -->
+    <!-- <div ng-if="ctrl.loggedIn">
+      <h1>YOLO</h1>
+    </div> -->
     <div>
       <h3>Add Animal</h3>
       <form ng-submit="ctrl.createAnimal()">
@@ -26,6 +46,7 @@
       <h3>Avaliable</h3>
       <div class="flexy">
         <div class="animalDisplay" ng-repeat="animal in ctrl.animals" >
+          <!-- <img ng-src="{{ animal.image }}" /> -->
           <h4>{{ animal.name }}</h4>
           <ul>
             <li>Species: {{ animal.species }}</li>
@@ -34,6 +55,17 @@
             <li>Age: {{ animal.age }}</li>
             <li>Adopted: {{ animal.adopted }}</li>
           </ul>
+          <form ng-if="$index === ctrl.indexEdit" ng-submit="ctrl.editAnimal(animal)">
+            <input type="text" ng-model="ctrl.updatedSpecies" placeholder="Species" />
+            <input type="text" ng-model="ctrl.updatedBreed" placeholder="Breed" />
+            <input type="text" ng-model="ctrl.updatedGender" placeholder="Gender" />
+            <input type="text" ng-model="ctrl.updatedAge" placeholder="Age" />
+            <input type="text" ng-model="ctrl.updatedImage" placeholder="Image" />
+            <input type="submit" value="Update Animal" />
+          </form>
+          <button ng-if="ctrl.loggedIn" ng-click="ctrl.toggleAdopted(animal)">Pending Adoption</button>
+          <button ng-if="ctrl.loggedIn" ng-click="ctrl.indexEdit = $index">Edit</button>
+          <button ng-if="ctrl.loggedIn" ng-click="ctrl.deleteAnimal(animal)">Adopted</button>
         </div>
       </div>
     </div>

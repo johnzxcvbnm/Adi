@@ -3,8 +3,8 @@ const app = express();
 const mongoose = require('mongoose');
 const session = require('express-session');
 
-const methodOverride = require('method-override');
-app.use(methodOverride('_method'));
+// const methodOverride = require('method-override');
+// app.use(methodOverride('_method'));
 
 app.use(session({
     secret:'feedmeseymour',
@@ -12,21 +12,34 @@ app.use(session({
     saveUninitialized: false
 }));
 
-app.use(express.urlencoded({extended:false}));
+// app.use(express.urlencoded({extended:false}));
+app.use(express.json());
+app.use(express.static("public"));
 
-app.get('/', (req, res)=>{
-    res.render('index.ejs', {
-        currentUser: req.session.currentUser
+// app.get('/', (req, res)=>{
+//     res.render('index.ejs', {
+//         currentUser: req.session.currentUser
+//     });
+// });
+
+// app.get('/app', (req, res)=>{
+//     if(req.session.currentUser){
+//         res.send('the main app');
+//     } else {
+//         res.redirect('/sessions/new');
+//     }
+// })
+
+app.get("/app", (req, res) => {
+  if(req.session.currentUser){
+    res.json(req.session.currentUser);
+  } else {
+    res.status(401).json({
+      status: 401,
+      message: "Not logged in"
     });
+  }
 });
-
-app.get('/app', (req, res)=>{
-    if(req.session.currentUser){
-        res.send('the main app');
-    } else {
-        res.redirect('/sessions/new');
-    }
-})
 
 const userController = require('./controllers/users.js')
 app.use('/users', userController);

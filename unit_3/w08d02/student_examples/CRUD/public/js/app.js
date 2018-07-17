@@ -2,6 +2,8 @@ const app = angular.module('MyApp', []);
 
 app.controller('MyController', ['$http', function($http){
     const controller = this;
+    this.indexOfEditFormToShow = -1;
+
     this.createTodo = function(){
         $http({
             method:'POST',
@@ -23,5 +25,51 @@ app.controller('MyController', ['$http', function($http){
             // console.log(controller);
         })
     }
+
+    this.toggleTodoComplete = (todo) => {
+      // console.log(todo);
+
+      let newCompleteValue = !todo.complete;
+
+      $http({
+        method: "PUT",
+        url: `/todos/${todo._id}`,
+        data: {
+          description: todo.descrition,
+          complete: newCompleteValue
+        }
+      }).then( (res) => {
+        controller.getTodos();
+      }, () => {
+        console.log("Error PUT");
+      });
+    }
+
+    this.deleteTodo = (todo) => {
+      $http({
+        method: "DELETE",
+        url: `/todos/${todo._id}`
+      }).then( (res) => {
+        controller.getTodos();
+      }, (error) => {
+        console.log(`Error Deleting`);
+      });
+    }
+
+    this.editTodo = (todo) => {
+      $http({
+        method: "PUT",
+        url: `/todos/${todo._id}`,
+        data: {
+          description: this.updatedDescription,
+          complete: todo.complete
+        }
+      }).then( (res) => {
+        controller.getTodos();
+      }, (error) => {
+        console.log("Error PUT");
+      });
+    }
+
     this.getTodos();
 }]);
