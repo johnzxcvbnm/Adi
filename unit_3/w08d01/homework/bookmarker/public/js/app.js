@@ -8,7 +8,7 @@ app.controller("MainController", ["$http", function($http) {
 
 
   this.createBookmark = (user) => {
-    console.log(user);
+    // console.log(user);
     $http({
       method: "POST",
       url: "/bookmarker",

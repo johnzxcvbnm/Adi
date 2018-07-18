@@ -36,14 +36,15 @@
     </div>
     <div>
       <div ng-repeat="mark in ctrl.bookmarks">
-        <ul>
+        <h3><a href="http://{{mark.url}}">{{mark.title}}</a></h3>
+        <!-- <ul>
           <li>Name: {{ mark.title }}</li>
           <li>URL: {{ mark.url }}</li>
-          <li>Owner: {{ mark.owner }}
+          <li>Owner: {{ mark.owner }} -->
           <!-- <button>Go</button> -->
-          <button ng-click="ctrl.indexEdit = $index">Edit</button>
-          <button ng-click="ctrl.deleteBookmark(mark)">Delete</button>
-        </ul>
+          <button ng-if="ctrl.loggedIn === mark.owner" ng-click="ctrl.indexEdit = $index">Edit</button>
+          <button ng-if="ctrl.loggedIn === mark.owner" ng-click="ctrl.deleteBookmark(mark)">Delete</button>
+        <!-- </ul> -->
         <form ng-if="$index === ctrl.indexEdit" ng-submit="ctrl.editBookmark(mark)">
           <input type="text" ng-model="ctrl.updatedTitle" placeholder="Name" />
           <input type="text" ng-model="ctrl.updatedUrl" placeholder="Url" />
