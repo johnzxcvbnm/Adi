@@ -27,7 +27,7 @@ Competencies: Express app with full CRUD and an Angular Frontend
 ### Guide 
 
 1. Add a button onto each animal that reads "Pending Adoption"
-1. Make it so that when a user clicks the button, it will toggle between the animal's status of pending/not pending (recall that in our schema we added a boolean value for 'pending') 
+1. Make it so that when a user clicks the button, it will toggle between the animal's status of adopted/not adopted (recall that in our schema we added a boolean value for 'adopted') 
 1. Add another button onto each animal that reads "Officialy Adopted" 
 1. Make it so that when a user clicks that button, it will remove the animal from the database and the page, since they've now gone to a loving home!
 1. Make it so that you can edit an animal's details 
