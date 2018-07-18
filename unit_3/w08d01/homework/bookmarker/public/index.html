@@ -10,7 +10,25 @@
   <body ng-controller="MainController as ctrl">
     <h1>{{ ctrl.header }}</h1>
     <div>
-      <form ng-submit="ctrl.createBookmark()">
+      <form ng-submit="ctrl.createUser()">
+        Register
+        Username -> <input type="text" ng-model="ctrl.username" />
+        Password -> <input type="password" ng-model="ctrl.password" />
+        <input type="submit" value="Create User">
+      </form>
+    </div>
+    <div>
+      <form ng-submit="ctrl.logIn()">
+        Login
+        Username -> <input type="text" ng-model="ctrl.logUsername" />
+        Password -> <input type="password" ng-model="ctrl.logPassword" />
+        <input type="submit" value="Login User">
+      </form>
+    <!-- </div>
+      <h2 ng-if="ctrl.loggedIn">YOLO</h2>
+    <div> -->
+      <form ng-if="ctrl.loggedIn" ng-submit="ctrl.createBookmark(ctrl.loggedIn)">
+        <h3>Add New Bookmark</h3>
         <input type="text" ng-model="ctrl.title" placeholder="Name" required />
         <input type="text" ng-model="ctrl.url" placeholder="URL" required />
         <input type="submit" value="Add Bookmark" />
@@ -21,8 +39,16 @@
         <ul>
           <li>Name: {{ mark.title }}</li>
           <li>URL: {{ mark.url }}</li>
-          <button>Go</button>
+          <li>Owner: {{ mark.owner }}
+          <!-- <button>Go</button> -->
+          <button ng-click="ctrl.indexEdit = $index">Edit</button>
+          <button ng-click="ctrl.deleteBookmark(mark)">Delete</button>
         </ul>
+        <form ng-if="$index === ctrl.indexEdit" ng-submit="ctrl.editBookmark(mark)">
+          <input type="text" ng-model="ctrl.updatedTitle" placeholder="Name" />
+          <input type="text" ng-model="ctrl.updatedUrl" placeholder="Url" />
+          <input type="submit" value="Edit Bookmark" />
+        </form>
       </div>
     </div>
   </body>
