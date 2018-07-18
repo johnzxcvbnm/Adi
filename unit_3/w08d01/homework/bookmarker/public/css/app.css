@@ -1,0 +1,21 @@
+:root {
+  --mainBackground: #9cfffc;
+  --bookBackground: #ffce9c;
+  --bookBorder: #ff9c9e;
+}
+
+html {
+  background: var(--mainBackground);
+}
+
+a {
+  display: inline;
+}
+
+.bookField {
+  width: 300px;
+  height: 75px;
+  border: 2px solid var(--bookBorder);
+  background: var(--bookBackground);
+  margin:
+}
