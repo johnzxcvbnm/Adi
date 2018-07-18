@@ -25,7 +25,7 @@ Using collaboration via GitHub, each pair will create a new repo **outside the c
 ## Setup
 #### Make a plan/assign tasks
 - Let's read the homework together
-- [Tonight's Homework](/unit_3/w07d05/homework)
+- [Tonight's Homework](/unit_3/w08d03/homework)
 - [How to tell if you're working in groups](/projects/project_3/working_in_groups.md)
 - To be sure everyone is getting practice pulling and pushing be sure to keep communication open on who is working on what task
 - _Note:_ It is fine for the group to screenshare and work on one file simultaneously - feel free to create a way of working together that will help you get the deliverable complete
@@ -104,9 +104,9 @@ Using collaboration via GitHub, each pair will create a new repo **outside the c
 ### Next Steps
 - Agree on what your app will be about
 - Plan how you will tackle this project together
-- Remember this is a weekend homework, keep it simple but make it watertight and polish it, rather than trying to add another model or some other big feature!
+- Remember this is a one evening homework, keep it simple but make it watertight and polish it, rather than trying to add another model or some other big feature!
 ### Resources
-- [Class Wiki](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Outrun/wiki/Git-Cheatsheet)
-- [Happy Fun Ball](/unit_3/w07d04/morning_exercise)
+- [Class Wiki](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Adi/wiki/Git-Cheatsheet)
+- [Happy Fun Ball](/unit_3/w08d01/morning_exercise)
 - [GitHub Guides](https://guides.GitHub.com/introduction/flow/?utm_source=onboarding-series&utm_medium=email&utm_content=read-the-guide-cta&utm_campaign=learn-GitHub-flow-email)
 - [Another GitHub cheatsheet](https://education.GitHub.com/git-cheat-sheet-education.pdf)
