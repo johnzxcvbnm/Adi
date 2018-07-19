@@ -76,9 +76,6 @@ app.controller("MainController", ["$http", function($http) {
   }
 
   this.editAnimal = (animal) => {
-  // this.editAnimal = function(animal) {
-    // console.log("Made it!");
-    // console.log(this.breed);
     this.indexEdit = -1;
     $http({
       method: "PUT",

@@ -1,14 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="HolidaysApp">
   <head>
     <meta charset="utf-8">
     <title>Holiday Celebrations</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js" charset="utf-8"></script>
+    <script src="./js/app.js" charset="utf-8"></script>
 
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/skeleton.css">
     <link rel="stylesheet" href="/css/main.css">
   </head>
-   <body>
-
+   <body ng-controller="MainController as ctrl" ng-class="(ctrl.showModel ? 'dim' : '')">
+     <div class="container">
+       <h5>{{ ctrl.h5 }}</h5>
+       <form ng-submit="ctrl.createHoliday()">
+         <input type="text" ng-model="ctrl.createForm.name" placeholder="Holiday Name" required />
+         <input type="submit" value="Create New Holiday" />
+       </form>
+       <table>
+         <tr ng-repeat="holiday in ctrl.holidays">
+           <td ng-dblclick="ctrl.updateCelebrated( holiday )"
+               ng-class="(holiday.celebrated ? 'celebrated' : '')"
+               ng-mouseover="ctrl.chooseOneHoliday( holiday )"
+           >{{ holiday.name }} Day</td>
+           <td>{{ holiday.likes }}</td>
+           <td><img ng-click="ctrl.updateLikes( holiday )" src="./assets/two-balloon-icons-68911.png"></td>
+           <td><img
+             ng-mouseover="ctrl.chooseOneHoliday( holiday )"
+             ng-click="ctrl.toggleModel()" src="./assets/simpleiconDOTcom-pen-15-64x64.png"></td>
+           <td ng-click="ctrl.deleteHoliday( holiday._id )">X</td>
+         </tr>
+       </table>
+       <div class="details">
+         <h3>Holiday Info:</h3>
+         <hr>
+         <h4>{{ ctrl.holiday.name }}</h4>
+         <h6><span> Celebrated: </span> {{ ctrl.holiday.celebrated }} </h6>
+         <h6><span> Likes: </span> {{ ctrl.holiday.likes }}</h6>
+         <p><span> Description: </span> {{ ctrl.holiday.description }}</h6>
+       </div>
+       <div class="modal" ng-class="(ctrl.showModel ? 'edit' : '')">
+         <form>
+           <div class="row">
+               <label for="name">Name</label>
+               <input ng-model="ctrl.holiday.name" type="text" placeholder="" id="name">
+               <!-- <label for="celebrated">Celebrated</label> -->
+               <!-- <input type="text" placeholder=""  id="celebrated"> -->
+               <label for="likes">Likes</label>
+               <input ng-model="ctrl.holiday.likes" min="0" type="number" placeholder="" id="likes">
+               <label for="description">Description</label>
+                 <textarea class="u-full-width" ng-model="ctrl.holiday.description" placeholder="" id="description">{{ctrl.holiday.description}}</textarea>
+                 <input ng-click="ctrl.editHoliday(holiday)" type="submit" value="Update Holiday" class="button-primary">
+                 <button ng-click="ctrl.toggleModel()" class="button-red"> Don't Update </button>
+             </div>
+         </form>
+       </div>
+     </div>
   </body>
 </html>
