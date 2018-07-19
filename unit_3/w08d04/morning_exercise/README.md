@@ -69,6 +69,13 @@ The work of all Kanban teams revolves around a Kanban board, a tool used to visu
 
 ![kanban board](https://i.imgur.com/4kfEDN2.png)
 
+### The Different Types of Project Management 
+
+<details><summary>A comic from toggl</summary>
+
+  ![project management comic](https://i.imgur.com/IMPvTZd.jpg)
+</details>
+
 ## :boom: Tracking in Agile Development
 
 There are few different tools that can be used to plan scrum development.  Real-world projects could have the following lists on their boards organized from left-to-right:
