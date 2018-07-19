@@ -35,7 +35,7 @@ Read more about daily scrum/stand-ups [here](/unit_3/w08d04/morning_exercise)!
 * **Be deployed online** and accessible to the public via **Heroku**
 * :heavy_exclamation_mark: A git repository **not inside the class repo**.  
    - *At least* one GitHub commit per day *per person*.
-* A **daily tracker** that all group members use which can be reviewed by the instructional team
+* Use some sort of **daily tracker** that all group members use to help organize your workflow.
 * **A ``README.md`` file** with explanations of the technologies used, the approach was taken, unsolved problems, user stories, and notes to yourself so you can come back to your project later in the course and be able to pick up your train of thought, etc
   - Have a **link to your hosted working app** in the **`README.md`** file in your github repo
 
