@@ -59,4 +59,4 @@ Competencies: Rails
 
 ## Hungry for More
 
-Finish early? You'll be learning it next week, but see if you can find out how to relate your `users` and `photos` table so that they have a one-to-many relationship (i.e. users have many photos, photos belong to a user) 
+Finish early? You'll be learning it tomorrow, but see if you can find out how to relate your `users` and `photos` table so that they have a one-to-many relationship (i.e. users have many photos, photos belong to a user) 
