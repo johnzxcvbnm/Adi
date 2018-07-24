@@ -2,6 +2,11 @@ const app = angular.module('WaterApp', []);
 
 app.controller('BaseCtrl', [function(){
 
+this.includePath = 'partials/menu.html';
+
+this.changeInclude = (path) => {
+  this.includePath = 'partials/' + path + '.html';
+}
 
 this.waters = [
   {

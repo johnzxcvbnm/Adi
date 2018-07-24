@@ -8,17 +8,11 @@
 		<script src="app.js" charset="utf-8"></script>
 	</head>
 	<body ng-controller="BaseCtrl as ctrl">
+		<nav ng-include="'partials/navigation.html'"></nav>
 		<h1>Water Bar</h1>
 		<h2>We only serve water</h2>
 		<div class="container">
-			<div class="menu">
-				<h3>Menu</h3>
-				<hr>
-						<dl ng-repeat="water in ctrl.waters">
-							<dt>{{water.brand}}</dt>
-							<dd>${{water.price}}</dd>
-						</dl>
-			</div>
+			<div ng-include="ctrl.includePath"></div>
 		</div>
 	</body>
 </html>

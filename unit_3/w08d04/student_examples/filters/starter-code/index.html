@@ -6,11 +6,22 @@
 		<title>Nozama Filters</title>
 	</head>
 	<body ng-controller="BaseCtrl as ctrl">
-		<h1>{{ ctrl.storeName }}</h1>
-		<h2>{{ ctrl.jingle }}</h2>
-		<h3>You are right here, right now: {{ ctrl.date }}</h3>
+		<h1>{{ ctrl.storeName | uppercase }}</h1>
+		<h2>{{ ctrl.jingle | limitTo: 8}}</h2>
+		<h3>You are right here, right now: {{ ctrl.date | date:'MM/dd/yyyy @ h:mm:ssa' }}</h3>
+		<div>
+  <label for="price-up">Price Low to High</label>
+  <input type="radio" name="order" value="price" ng-model='order' id="price-up"/>
+  <label for="price-down">Price High to Low</label>
+  <input type="radio" name="order" value="-price" ng-model='order'id="price-down"/>
+  <label for="product-asc">Product Name</label>
+  <input type="radio" name="order" value="product" ng-model='order' id="product"/>
+</div>
 		<ul>
-			<li ng-repeat="product in ctrl.products">{{product.name}}:<span>{{product.price}}</span></li>
+			<label form="Search by">
+				<input type="text" placeholder="Product Name" ng-model="searchBox" />
+			</label>
+			<li ng-repeat="product in ctrl.products | orderBy:  order | filter:searchBox">{{product.name}}:<span>{{product.price | currency}}</span></li>
 		</ul>
 	</body>
   <style media="screen">
