@@ -56,3 +56,18 @@ p nums.group_by { |i| i % 3 }
 
 # 12. use `minmax` to return the smallest and largest number
 p nums.minmax
+
+### Enumerables ###
+p "----------Enumerables-----------"
+
+# 1. use `.all?` to check if all the numbers are greater than 0?
+p "All of nums > 0: #{ nums.all? { |i| i > 0} }"
+
+# 2. use `any?` to check if there are any numbers that are divisible by 8
+p "Any divisible by 8: #{ nums.any? { |i| i % 8 == 0 } }"
+
+# 3. use `.reject` to return all the numbers that are NOT divisible by 3
+p nums.reject { |i| i % 3 == 0 }
+
+# 4. use `.select` to return all the numbers divisible by 5
+p nums.select { |i| i % 5 == 0}
