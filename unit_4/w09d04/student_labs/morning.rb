@@ -14,9 +14,9 @@ even_nums = [0, 2, 4, 6]
 odd_nums = [1, 5, 7, 9]
 mixed_nums = [0, 2, 4, 7]
 
-class Diagnostic
+
   # Question 1
-  # Write ruby code to return the longest entry in the list supplied ( words ) 
+  # Write ruby code to return the longest entry in the list supplied ( words )
   # Assume each entry in the list implements a length method that returns
   # a Fixnum.
   def longest(list)
@@ -51,6 +51,6 @@ class Diagnostic
   def transform(words)
     # Your code goes here
   end
-  
+
   # Question 6
   # Return to the previous day's labs and hw and work on any of the hungry for more questions
