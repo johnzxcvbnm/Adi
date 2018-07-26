@@ -119,8 +119,3 @@ h = [
 ```
 
 </details>
-
-
-###### Credit for Spiral:
-
-Credit and inspiration for this exercise goes to [Jesse Farmer](https://gist.github.com/jfarmer/b043eee597d2f4934fb2#file-spiral-md).
