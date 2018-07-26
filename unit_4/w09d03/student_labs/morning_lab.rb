@@ -270,7 +270,21 @@ def mbtaProblem(station1, station2)
   end
 end
 
-mbtaProblem("South Station", "Forest Hills")
+# mbtaProblem("South Station", "Forest Hills")
 # p getStationDifference(green_line, "Government Center", "Kenmore")
 # p returnLine(red_line, green_line, orange_line, "North Station")
 # p green_line.index("Park Street") - green_line.index("Boylston")
+
+mbtaProblem "State", "Back Bay"
+mbtaProblem "Park Street", "State"
+mbtaProblem "Chinatown", "Davis"
+mbtaProblem "Chinatown", "Arlington"
+mbtaProblem "North Station", "Government Center"
+mbtaProblem "Park Street", "Haymarket"
+
+# "There are 3 stops from State to Back Bay"
+# "There are 1 stops from Park Street to State including a transer at Park Street"
+# "There are 8 stops from Chinatown to Davis including a transer at Park Street"
+# "There are 5 stops from Chinatown to Arlington including a transer at Park Street"
+# "There are 3 stops from North Station to Government Center including a transer at Park Street"
+# "There are 1 stops from Park Street to Haymarket including a transer at Park Street"

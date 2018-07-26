@@ -1,0 +1,76 @@
+html {
+  // background: thistle;
+}
+
+div {
+  // border: 1px solid gold;
+}
+
+.container {
+  width: 98%;
+  margin: auto;
+  min-width: 500px;
+  min-height: 500px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.body {
+  border: 3px solid blue;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  // box-shadow: 2px 2px black;
+}
+
+.display {
+  border: 2px solid grey;
+  width: 325px;
+  height: 60px;
+  margin: 30px auto;
+
+
+  h1 {
+    text-align: right;
+  }
+}
+
+.buttonWrapper {
+  border: 1px solid grey;
+  width: 325px;
+  height: 240px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.button {
+  width: 38px;
+  height: 38px;
+  margin: 7px;
+  text-align: center;
+  border: 1px solid black;
+  box-shadow: 2px 2px black;
+}
+
+.greyButton {
+  color: white;
+  background-color: grey;
+}
+
+.whiteButton {
+  color: blue;
+  background-color: white;
+}
+
+.redButton {
+  @extend .greyButton;
+  background-color: red;
+}
+
+.bigButton{
+  height: 90px
+}
