@@ -6,17 +6,14 @@ Competencies: Basic Ruby<br>
 
 ---
 
-# Objects
+# Objects/Classes
 
-Abstraction
 
-> A Structure is one data type in programming. A structure is used to represent information about something more complicated than a single number, character, or boolean can do (and more complicated than an array of the above data types can do). For example, a Student can be defined by his or her name, gpa, age, uid, etc. Each of these pieces of information should be labeled with an easily understood descriptive title, and then combined to form a whole (the structure).
+In Ruby, these are often referred to as hashes, in Python: dictionaries, in JavaScript: objects
 
-> In Ruby, these are often referred to as hashes, in Python: dictionaries, in JavaScript: objects
 
-> We use the "DOT" notation to access a structure stored in a variable, thus, car.max_speed, car.number_of_doors, car.ac, are all valid references to a structure.
 
-Abstraction
+Abstraction of Classes:
 
 > A template by which Objects can be constructed
 >
@@ -29,8 +26,6 @@ Abstraction
 Caveat: [Not quite](http://rubylearning.com/blog/2010/09/27/almost-everything-is-an-object-and-everything-is-almost-an-object/)
 
 Deeper Dive: [What is an object?](https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/39-ruby-s-object-model/lessons/127-object-identity-what-is-an-object)
-* create a file `objects.rb` in `student_examples`
-
 
 * create a file `objects.rb` in `student_examples`
 
@@ -147,9 +142,10 @@ world1.name = "Tatooine"
 
 Does not work, instead we have to make a **setter method** in the class.
 
-First, abstract `name` into an **instance variable** that will have scope over all methods in the class.
+First, let's put `name` into an **instance variable** that will have scope over all methods in the class.
 
 We can make an **initialize** method in our class that will automatically run when we instantiate an object.
+Let's test our code :
 
 ```ruby
 class World
@@ -170,7 +166,11 @@ p world1.name
 
 The **initialize** method is just like the **constructor** method we used in JavaScript classes.
 
-Then, make a setter method with special
+
+Now let's work on being able to update the name:
+
+
+Let's make a setter method with special
 `something=input` syntax:
 
 ```ruby
@@ -200,7 +200,7 @@ We are getting closer to learning how to make objects that have all the function
 
 ## Behavior
 
-Let's make it so the worlds we make will do something.
+Let's make it so the worlds we make will do something (add a method).
 
 Let's make it so a world can populate itself with people.
 
@@ -236,7 +236,7 @@ class World
   end
 
   def populate
-    @people << { name: "Shrimpy McShrimpsonsky", age: 20 }
+    @people << { name: "Shrimpy McShrimpsky", age: 20 }
   end
 
 end
@@ -253,7 +253,7 @@ world1.populate
 p world1.people
 ```
 
-> [{:name=>"Shrimpy McShrimpsonsky", :age=>20}, {:name=>"Shrimpy McShrimpsonsky", :age=>20}, {:name=>"Shrimpy McShrimpsonsky", :age=>20}]
+> [{:name=>"Shrimpy McShrimpsky", :age=>20}, {:name=>"Shrimpy McShrimpsky", :age=>20}, {:name=>"Shrimpy McShrimpsky", :age=>20}]
 
 
 ## Provide data to new object
@@ -268,6 +268,8 @@ We can provide input to the **initialize** method:
     @people = []
   end
 ```
+
+Now we can easlily create many new worlds with the same properties and methods
 
 ```
 world1 = World.new "Panthelassa"
@@ -289,6 +291,7 @@ p world4.name
 "Nothing But Shrimp"
 "San Junipero"
 
+We can also update our class (blueprint/template) in one place and thus keep our code DRY (Don't Repeat Yourself)
 Add in `shape`
 
 ```ruby
