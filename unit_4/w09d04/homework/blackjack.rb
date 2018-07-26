@@ -38,6 +38,7 @@ class Deck
   # Used for testing and debugging purposes
   def print_all
     for i in @deck do
+      print i
       p "Value: #{i.value}  Face: #{i.face}  Suit: #{i.suit}"
     end
   end
@@ -58,6 +59,11 @@ class Deck
     end
   end
 
+  def draw
+    @deck.unshift(@deck.pop)
+    @deck[0]
+  end
+
 end #End of Deck Class
 
 # Create a new Deck
@@ -67,4 +73,4 @@ my_deck = Deck.new
 my_deck.shuffle
 
 # Test Print
-my_deck.print_all
+# my_deck.print_all
