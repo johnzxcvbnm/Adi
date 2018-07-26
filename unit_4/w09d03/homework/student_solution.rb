@@ -161,3 +161,34 @@ end
 
 my_num = 1000
 p "Euler sum of #{my_num} is #{euler(my_num)}"
+
+### PRIMES ###
+# Write a method called check_prime? that will test whether a number is Prime. The method will return true if Prime, false if not.
+#
+# Write another method called get_primes that will print all the Primes up to an arbitrary limit. For example, if you invoke your method with get_primes 100, it will print all the Prime numbers up to and including 100.
+#
+# This method can call on the previous check_prime? method.
+#
+# A Prime number is a number that is not evenly divisible by another number except 1 and itself.
+#
+# To test whether a number is Prime, you only need to test as far as the square root of that number. This is advisable for optimization and testing large numbers.
+require "Prime"
+
+def check_prime(arg)
+  Prime.prime?(arg)
+end
+
+def get_primes(limit)
+  my_arr = []
+  for i in 0..limit do
+    if check_prime(i)
+      my_arr.push(i)
+    end
+  end
+  my_arr
+end
+
+my_prime = 7
+p "My number is #{my_prime} and is prime: #{check_prime(my_prime)}"
+my_prime_list = 100
+p "My prime numbers upto #{my_prime_list} is #{get_primes(my_prime_list)}"
