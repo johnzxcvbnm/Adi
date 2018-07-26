@@ -229,3 +229,23 @@ p "#{my_test2} is pandigital: #{pandigital(my_test2)}"
 p "#{my_test3} is pandigital: #{pandigital(my_test3)}"
 p "#{my_test4} is pandigital: #{pandigital(my_test4)}"
 p "#{my_test5} is pandigital: #{pandigital(my_test5)}"
+
+### WORD FREQUENCY ###
+# Find the word that appears in a given sentence with the greatest frequency. If there is a tie, either of the words will do as a result.
+
+def word_frequency(sen)
+  my_array = sen.split(' ')
+  max = 0
+  my_word = ""
+  for i in my_array do
+    if my_array.count(i) > max
+      max = my_array.count(i)
+      my_word = i
+    end
+  end
+  my_word
+end
+
+long_string = "I love really love lamp lamp love what is going on what a zzt"
+long_string2 = "Find the word that appears in a given sentence with the greatest frequency. If there is a tie, either of the words will do as a result."
+p word_frequency(long_string2)
