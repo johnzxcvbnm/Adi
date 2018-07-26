@@ -190,5 +190,42 @@ end
 
 my_prime = 7
 p "My number is #{my_prime} and is prime: #{check_prime(my_prime)}"
+
 my_prime_list = 100
 p "My prime numbers upto #{my_prime_list} is #{get_primes(my_prime_list)}"
+
+### PANDIGITAL NUMBERS ###
+# A number of length n is 1-to-n pandigital if it makes use of all the digits 1 to n exactly once.
+#
+# The number 15234 is 1-to-n pandigital.
+#
+# The number 333 is not 1-to-n pandigital.
+#
+# The number 0 is not 1-to-n pandigital.
+#
+# The number 10 is not 1-to-n pandigital.
+#
+# The number 987654321 is 1-to-n pandigital.
+#
+# Write a method that checks if a number is 1-to-n pandigital.
+
+def pandigital(num)
+  my_array = num.to_s.chars.map(&:to_i).sort
+  for i in 0...my_array.size do
+    if my_array[i] != (i + 1)
+      return false
+    end
+  end
+  true
+end
+
+my_test = 15234
+my_test2 = 333
+my_test3 = 0
+my_test4 = 10
+my_test5 = 987654321
+p "#{my_test} is pandigital: #{pandigital(my_test)}"
+p "#{my_test2} is pandigital: #{pandigital(my_test2)}"
+p "#{my_test3} is pandigital: #{pandigital(my_test3)}"
+p "#{my_test4} is pandigital: #{pandigital(my_test4)}"
+p "#{my_test5} is pandigital: #{pandigital(my_test5)}"
