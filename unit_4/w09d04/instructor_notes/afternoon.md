@@ -429,7 +429,7 @@ planets = %w(Mercury Venus Earth Mars Jupiter Saturn Uranus Pluto)
 milky_way = []
 
 planets.each do |planet|
-  world = World.new planet, "Oblique Spheroid"
+  world = World.new planet, "oblate spheroid"
   milky_way << world
 end
 
