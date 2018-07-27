@@ -58,22 +58,22 @@ Modified By: Jerrica Bobadilla
 
 	```
 	\copy routes FROM 'routes.csv' DELIMITER ',' CSV
-	``` 
+	```
 	- You should get back `COPY 67663` if you were successful
-	
+
 	```
 	\copy airports FROM 'airports.csv' DELIMITER ',' CSV
-	``` 
+	```
 	- You should get back `COPY 8107` if you were successful
-	
+
 	```
 	\copy airlines FROM 'airlines.csv' DELIMITER ',' CSV
-	``` 
+	```
 	- You should get back `COPY 6048` if you were successful
 
 1. You should now have seeded three tables with flight data!
 
-## Activity 
+## Activity
 
 > Our **main goal is to find out how many flights go from NYC to Paris.**
 
@@ -93,13 +93,19 @@ Modified By: Jerrica Bobadilla
 ### Steps to think about
 
 1. Find all airports that originate from New York
-1. Find all destination airports in Paris 
+1. Find all destination airports in Paris
 1. Find out how many routes originate from New York
-1. Find out how many routes have destinations in Paris 
-1. Try to decide which statements are necessary and find how to combine them to find out how many routes originate from New York and land in Paris! 
+1. Find out how many routes have destinations in Paris
+1. Try to decide which statements are necessary and find how to combine them to find out how many routes originate from New York and land in Paris!
 
 ## Stretch Goals
 
 - Do this so that just the number appears as the result of only one SQL statement
 - Which airlines travel from NYC to Paris?
 - Find all the flights that leave NYC.  Give a list of how many go to each destination city.
+
+Answer -
+SELECT * FROM airports JOIN routes ON airports.iata_faa = routes.origin_code JOIN airports AS des ON routes.dest_code = des.iata_faa WHERE des.city = 'Paris' AND airports.city = 'New York';
+
+Formatted -
+SELECT (airports.name, airports.city, airports.iata_faa, origin_code, dest_code, des.name, des.city, des.iata_faa) FROM airports JOIN routes ON airports.iata_faa = routes.origin_code JOIN airports AS des ON routes.dest_code = des.iata_faa WHERE des.city = 'Paris' AND airports.city = 'New York';
