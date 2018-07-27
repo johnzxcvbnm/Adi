@@ -28,13 +28,13 @@ This game will be made up of two players. One will be a person interacting with 
 - Cards should have at least one property `value`
 - Cards can have more properties like `face` and `suit`, but these are not needed for the core functionality of your game. Try pracicing YAGNI (You Ain't Gonna Need It). Perhaps in building your cards, your solution will make more sense to have one or both properties, but don't add them just for the sake of adding them. 
 
-### 14 cards: 
+### 13 cards: 
   - cards 2 - 10 have the same face and value (a card with a face of 2 is worth 2 points)
   - cards Jack, Queen and King are all worth 10
   - An Ace should start out with a value of 11
 
 ### 4 sets of 13
-  - Find a way to make 4 sets of the 14 cards
+  - Find a way to make 4 sets of the 13 cards
   
 **Bonus**
   - Add a suit of 'hearts', 'diamonds', 'spades' or 'clubs' to each set of 14 cards
