@@ -68,6 +68,12 @@ class Deck
     @deck[0]
   end
 
+  def cheat_draw(num)
+    while(@deck[0].value != num)
+      self.draw
+    end
+  end
+
 end #End of Deck Class
 
 class Player
@@ -146,31 +152,38 @@ win_condition = 200
 lose_condition = 0
 bet = 10
 
-player.draw(my_deck.draw)
-player.draw(my_deck.draw)
-dealer.draw(my_deck.draw)
-dealer.draw(my_deck.draw)
 
-puts " "
-player.show_hand
-puts "Hand Total: #{player.hand_total}"
-puts " "
-dealer.show_hand
-puts "Hand Total: #{dealer.hand_total}"
-puts " "
+# loop do
+#   input = gets.chomp
 
-if(player.hand_total > dealer.hand_total)
-  puts "You win!"
-  player.more_money(bet)
-  puts "Player Money: #{player.money}"
+  player.empty_hand
+  player.draw(my_deck.draw)
+  player.draw(my_deck.draw)
+  dealer.empty_hand
+  dealer.draw(my_deck.draw)
+  dealer.draw(my_deck.draw)
+
   puts " "
-elsif(player.hand_total < dealer.hand_total)
-  puts "You lose!"
-  player.more_money(-1 * bet)
-  puts "Player Money: #{player.money}"
+  player.show_hand
+  puts "Hand Total: #{player.hand_total}"
   puts " "
-else
-  puts "It's a tie!"
-  puts "Player Money: #{player.money}"
+  dealer.show_hand
+  puts "Hand Total: #{dealer.hand_total}"
   puts " "
-end
+
+  if(player.hand_total > dealer.hand_total)
+    puts "You win!"
+    player.more_money(bet)
+    puts "Player Money: #{player.money}"
+    puts " "
+  elsif(player.hand_total < dealer.hand_total)
+    puts "You lose!"
+    player.more_money(-1 * bet)
+    puts "Player Money: #{player.money}"
+    puts " "
+  else
+    puts "It's a tie!"
+    puts "Player Money: #{player.money}"
+    puts " "
+  end
+# end
