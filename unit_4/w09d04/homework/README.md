@@ -37,7 +37,8 @@ This game will be made up of two players. One will be a person interacting with 
   - Find a way to make 4 sets of the 13 cards
   
 **Bonus**
-  - Add a suit of 'hearts', 'diamonds', 'spades' or 'clubs' to each set of 14 cards
+  - Add a suit of 'hearts', 'diamonds', 'spades' or 'clubs' to each set of 13 cards
+  - use symbols (google which work with ruby/ your console) 
 
 ### Card Properties
  - a value that is between 1 - 11 that is readable, it should not be allowed to be overwritten when created
