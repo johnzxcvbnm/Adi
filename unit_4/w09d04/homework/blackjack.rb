@@ -5,6 +5,10 @@ class Card
     @value = value
     @face = face
     @suit = suit
+  end # End of Card Class
+
+  def print_card
+    puts "#{face} of #{suit}"
   end
 end
 
@@ -39,7 +43,7 @@ class Deck
   def print_all
     for i in @deck do
       print i
-      p "Value: #{i.value}  Face: #{i.face}  Suit: #{i.suit}"
+      puts "Value: #{i.value}  Face: #{i.face}  Suit: #{i.suit}"
     end
   end
 
@@ -66,6 +70,59 @@ class Deck
 
 end #End of Deck Class
 
+class Player
+  attr_reader :name, :hidden
+  attr_accessor :hand, :money
+
+  def initialize(name="John")
+    @name = name
+    @hand = []
+    @money = 100
+    @hidden = false
+  end
+
+  def hidden_true
+    hidden = true
+  end
+
+  def hidden_false
+    hidden = false
+  end
+
+  def draw(card)
+    hand.push(card)
+  end
+
+  def empty_hand
+    hand = []
+  end
+
+  def more_money(num)
+    @money = @money += num
+  end
+
+
+  def show_hand
+    start = 0
+    puts "#{name}'s Hand:"
+    if(hidden)
+      start = 1
+      puts "Face Down Card"
+    end
+    for i in start...hand.size do
+      hand[i].print_card
+    end
+  end
+
+  def hand_total
+    sum = 0
+    for i in hand do
+      sum += i.value
+    end
+    sum
+  end
+end # End of Player Class
+
 # Create a new Deck
 my_deck = Deck.new
 
@@ -74,3 +131,46 @@ my_deck.shuffle
 
 # Test Print
 # my_deck.print_all
+
+##### Set up the Variables ####
+dealer_names = ["Joe Bob Dingles", "Joe Bob Dingles", "Devil Dealer", "Jerimey Jones", "Thor"]
+
+# print "Enter your name: "
+# player_name = gets.chomp
+player_name = "John"
+
+player = Player.new(player_name)
+dealer = Player.new(dealer_names.sample)
+
+win_condition = 200
+lose_condition = 0
+bet = 10
+
+player.draw(my_deck.draw)
+player.draw(my_deck.draw)
+dealer.draw(my_deck.draw)
+dealer.draw(my_deck.draw)
+
+puts " "
+player.show_hand
+puts "Hand Total: #{player.hand_total}"
+puts " "
+dealer.show_hand
+puts "Hand Total: #{dealer.hand_total}"
+puts " "
+
+if(player.hand_total > dealer.hand_total)
+  puts "You win!"
+  player.more_money(bet)
+  puts "Player Money: #{player.money}"
+  puts " "
+elsif(player.hand_total < dealer.hand_total)
+  puts "You lose!"
+  player.more_money(-1 * bet)
+  puts "Player Money: #{player.money}"
+  puts " "
+else
+  puts "It's a tie!"
+  puts "Player Money: #{player.money}"
+  puts " "
+end
