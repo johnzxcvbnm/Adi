@@ -24,4 +24,4 @@ Adapted By: Jerrica Bobadilla
 
 ### Hungry for More?
 
-If you finish both files, try out the [realty lab](/unit_4/w09d04/student_labs/realty)! 
+If you finish both files, try out the [realty lab](/unit_4/w09d05/student_labs/realty)! 
