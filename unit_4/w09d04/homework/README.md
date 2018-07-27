@@ -23,7 +23,7 @@ This game will be made up of two players. One will be a person interacting with 
 - Create an empty array that will hold your card objects. This can just be an array, it does not need to be a class
 
 ## Cards
-- Using classes, make 52 card objects which should be made up of 4 sets of 14 cards. 
+- Using classes, make 52 card objects which should be made up of 4 sets of 13 cards. 
   - Hint: as you make each card, put it into your deck array
 - Cards should have at least one property `value`
 - Cards can have more properties like `face` and `suit`, but these are not needed for the core functionality of your game. Try pracicing YAGNI (You Ain't Gonna Need It). Perhaps in building your cards, your solution will make more sense to have one or both properties, but don't add them just for the sake of adding them. 
@@ -33,7 +33,7 @@ This game will be made up of two players. One will be a person interacting with 
   - cards Jack, Queen and King are all worth 10
   - An Ace should start out with a value of 11
 
-### 4 sets of 14
+### 4 sets of 13
   - Find a way to make 4 sets of the 14 cards
   
 **Bonus**
