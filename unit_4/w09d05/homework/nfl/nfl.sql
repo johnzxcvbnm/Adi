@@ -32,13 +32,14 @@ SELECT * FROM players ORDER BY salary DESC LIMIT 1;
 SELECT (name, position) FROM players ORDER BY salary ASC LIMIT 100;
 
 -- 11. The average salary for a DE in the nfl
-
+SELECT AVG(salary) FROM players WHERE position = 'DE';
 
 --COMMIT
 -- 12. The names of all the players on the Buffalo Bills
-
+SELECT players.name, teams.name FROM players, teams WHERE players.team_id=teams.id AND teams.name LIKE 'Buffalo Bills';
 
 -- 13. The total salary of all players on the New York Giants
-
+SELECT SUM(salary) FROM players, teams WHERE players.team_id = teams.id AND teams.name LIKE 'New York Giants';
 
 -- 14. The player with the lowest salary on the Green Bay Packers
+SELECT players.name, salary FROM players, teams WHERE players.team_id = teams.id AND teams.name LIKE 'Green Bay Packers' ORDER BY salary ASC LIMIT 1;
