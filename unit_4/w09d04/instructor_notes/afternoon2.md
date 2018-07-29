@@ -28,13 +28,13 @@ puts "You wrote: #{input}"
 
 `gets` also includes the newline char `\n`, therefore a check on the input will need to include it:
 
-```
+```ruby
 if input == "something\n" puts "YOU WROTE SOMETHING"
 ```
 
 Alternatively, we can use `.chomp` to remove the newline char.
 
-```
+```ruby
 input = gets.chomp
 ```
 
@@ -50,7 +50,7 @@ puts "The word has #{word.length} letters."
 
 input = gets.chomp
 
-if input == word 
+if input == word
 	puts "Yep. You got it. The word was #{word}."
 else
 	puts "WRONG"
@@ -62,11 +62,11 @@ end
 
 **Indefinite looping**
 
-```
+```ruby
 loop do
 	input = gets.chomp
 
-	if input == word 
+	if input == word
 		puts "Yep. You got it. The word was #{word}."
 		break
 	else
@@ -85,7 +85,7 @@ Each word is its own object, objects have **state**. We can track and update the
 ```ruby
 class Word
 
-	def initialize word	
+	def initialize word
 		letters = word.split('')
 		@letters_display = letters.map do |l|
 			{ letter: l, hidden: true }
@@ -128,7 +128,7 @@ loop do
 	current_word.render
 	input = gets.chomp
 
-	if input == current_word 
+	if input == current_word
 		puts "Yep. You got it. The word was #{word}."
 		break
 	else

@@ -1,6 +1,5 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# WDIR-Space-Ghost
 
 ---
 Title: Ruby classes <br>
@@ -73,7 +72,7 @@ q.honk
 <br>
 
 
-# 3. Inheritance 
+# 3. Inheritance
 Watch the short video [here](https://www.youtube.com/watch?v=FmZT4SUC5n0&t=0s&list=PLdnONIhPScSQ4BDEoYv1gImEvLFnpgVXo&index=5). 6 mins 56 seconds.
 
 
@@ -114,7 +113,7 @@ What's in a Class? A class can contain any number of variables and any number of
 
 9. Time to make a parallel universe. Make a new instance of your universe called `parallel`, and put three new things into it.
 
-10. Make a method `check_density` that changes `expanding` to `false` if there are more than ten things in the universe (more than ten items in the `@items` array). This will mean that the universe is now contracting under its own gravity . . .  there's no stable universe in this scenario. We'll come back to this in a minute . . . 
+10. Make a method `check_density` that changes `expanding` to `false` if there are more than ten things in the universe (more than ten items in the `@items` array). This will mean that the universe is now contracting under its own gravity . . .  there's no stable universe in this scenario. We'll come back to this in a minute . . .
 
 11. Make a method called `energy_conservation` that changes `conservation` from `true` to `false` if all items in the `@items` array are identical. Hint: check out the `.uniq` method.
 
@@ -125,7 +124,7 @@ What's in a Class? A class can contain any number of variables and any number of
 12. Make a method called `crunch?` wherein, if `expanding` equals `false`, goes through each item in the `@items` array, sets it to `nil` and prints a string saying the name of the item and that it has been crunched due to gravity. When the entire contents of the array are `nil`, set the array itself to `nil` and print "The Universe has ended." If the universe has ended, set `@crunched` to `true`
 
 13. Write your Universal Simulator that runs the following steps in a loop until the Universe has ended. The Universe has ended when `@crunched` is `true`. You might want to make `@crunched` available with `attr_accessor`. Start by making a new instance of the Universe.
- 
+
 	* print the contents of `@items`
 	* add an item to `@items`
 	* check conservation
@@ -162,6 +161,3 @@ Watch the short video [here](https://www.youtube.com/watch?v=0r93ZhzpeqI). 8 min
 	- In your Muppet class, add an instance variable that gives your Muppet a characteristic or quality such as 'zany', 'quiet', 'twitchy' to the instance of the Muppet.
 	- Add a class method of `make_muppet` to your Muppet class that takes in two Muppets and returns a new Muppet.  
 	- The new Muppet should have the color of the first Muppet and the quality of the second Muppet. Make some Muppets.
-	 
-
-
