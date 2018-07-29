@@ -1,10 +1,26 @@
+# Intro to Rails
 ## Set up CRUD for Locations
+
+Most apps have more than one model. They may have tens or possibly, hundreds!
+
+Models can be unrelated. But often they have relations. Two common ones are `one to many` - for example, a company can have many employees. Another one is `many to many` a contact can have many locations (home, work), and a location can have many people (companies typically have more than one employee, households often have more than one person).
+
+Throughout the next few days, you'll be adding relations to the models. But for today let's practice building out models without relations.
 
 In `psql`:
 
+```sql
+CREATE TABLE locations (id SERIAL, street VARCHAR(255), city VARCHAR(160), state VARCHAR(2));
+INSERT INTO locations (street, city, state) VALUES ('718 Dreama Alley', 'East Tawnhaven', 'RI');
+INSERT INTO locations (street, city, state) VALUES ('5 Herman Locks', 'Lake Woodbury', 'WY');
+INSERT INTO locations (street, city, state) VALUES ('2757 Vernice Knolls', 'Olindaview', 'NV');
+INSERT INTO locations (street, city, state) VALUES ('687 Cammy Coves', 'Port Cecelia', 'FL');
+INSERT INTO locations (street, city, state) VALUES ('91 Nicky Street', 'Wilmerton', 'MA');
+INSERT INTO locations (street, city, state) VALUES ('444 Bogdan Burgs', 'South Lorna', 'NJ');
+
 ```
-CREATE TABLE locations (id SERIAL, street VARCHAR(16), city VARCHAR(16), state VARCHAR(2));
-```
+
+Data brought to you by [faker](https://github.com/stympy/faker)
 
 In `config/routes.rb`:
 

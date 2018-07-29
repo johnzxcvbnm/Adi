@@ -1,5 +1,10 @@
 # Intro to Rails
 
+## What We'll Be Building
+We'll be building an app that keeps track of contacts. People will have a name and an age (keepin' it simple - checking out how to handle strings and number datatypes). Locations, where one or more people will be able to live/work. And finally, companies, where multiple people can work. 
+
+Once we build our back end, we'll move to the front and start building our app with React.
+
 # What is Rails?
 [Rails is a server-side web application framework written in Ruby](https://en.wikipedia.org/wiki/Ruby_on_Rails).
 
@@ -88,10 +93,13 @@ Open the `app` folder to see `controllers`, `models`,  and `views`
 
 - `rails s`
  - error in terminal?
+
  ![rails s error](https://i.imgur.com/aGUaN70.png)
+
  - make sure to `cd contacts`
 
 Server running successfully:
+
 ![rails s works](https://i.imgur.com/CNhfeN5.png)
 
 
@@ -99,6 +107,7 @@ Server running successfully:
 
  ![forgot to start postgres](https://i.imgur.com/87yDFUJ.png)
 
+- Looks like we forgot to start Postgres
 - open a new tab and start postgres
   - in terminal remember it is:
 
@@ -110,12 +119,12 @@ Server running successfully:
 
 ![No database error](https://i.imgur.com/fWAB5Wj.png)
 
+- We don't have a database set up yet.
 - open a new tab so you don't have to stop  `rails s` (later on we'll be making new files and other things so it'll be handy to have an extra tab)
 - run `rails db:create`
 - you might need to restart `rails s`
 
 ![success db:create](https://i.imgur.com/f8Caedy.png)
 
-
-Success
+We did it! We set up our new Rails app!
 ![Rails Broswer success](https://i.imgur.com/zkHZ9Hv.png)
