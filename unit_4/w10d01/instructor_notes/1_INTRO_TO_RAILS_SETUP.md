@@ -74,6 +74,7 @@ Open the `app` folder to see `controllers`, `models`,  and `views`
 ![inside the app folder ](https://i.imgur.com/Pha6qSK.png)
 
 
+
 ||Express| Rails|Comments|
 |:-:|:-:|:-:|:-:|:-:|
 |project meta-data| package.json | Gemfile | Rails 5.x has a `package.json` by default as well, but that's for extra stuff, not the main meta-data file|
@@ -82,6 +83,8 @@ Open the `app` folder to see `controllers`, `models`,  and `views`
 | Models | models | app/models | part of MVC |
 |Controllers| controllers | app/controllers | part of MVC |
 |Views|we used ejs (handlebars is another common one), but we also used Angular| erb, BUT! We won't use it, when we're ready we'll jump into using React|part of MVC|
+
+
 
 ---
 ## Get New Project Running
