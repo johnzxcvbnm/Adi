@@ -48,6 +48,8 @@ Something we haven't seen yet, is a new philosophy called `Convention over Confi
 
 ## Set up a new rails project
 
+Let's be sure to make some mistakes along the way to start getting familar with Rails errors.
+
 First set up a new project:
 
 ```
