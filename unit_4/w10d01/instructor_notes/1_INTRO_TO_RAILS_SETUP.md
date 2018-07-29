@@ -9,7 +9,6 @@
 - MVC framework (Model View Controller)
 - RESTful application design
 <!-- - Built-in server-side rendering with .erb (**E**mbedded **R**u**B**y) -->
-
 - Built-in ORM (Object Relational Mapping  programming technique for converting
    data between incompatible type systems using OOP. Example: converting data that is in rows/columns/tables into JSON), called Active Record, based on [Active Record Pattern](https://en.wikipedia.org/wiki/Active_record_pattern)
 - Encourages Agile web development
@@ -26,13 +25,14 @@ Something we haven't seen yet, is a new philosophy called `Convention over Confi
 - Express is a minimalist framework, where you add in each piece of functionality that you need. Therefore you must also configure everything. There are some recommended patterns, but you can really build the app any way you want.
 
 - Rails provides you with tons of functionality. However, in order to utilize this right-out-of-the-box functionality you must follow all of the Rails conventions.
+  - This means proper pluralization and capitalization will make or break your app (literally)
 
 #### Express vs. Rails in our course
 
 ||Express| Rails|Comments|
 |:-:|:-:|:-:|:-:|:-:|
 |Language|JavaScript| Ruby | Still need JS on the front end|
-|Database| MongoDB| Postgres ||
+|Database| MongoDB| Postgres |MongoDB is considered NoSQL, while Postgres is SQL|
 |ODM/ORM| Mongoose| ~~Active Record~~ |We'll be writing our own SQL in order to build our SQL skillset|
 |Third Party Code|NPM| Gem/ bundler/ bundler install|By default Gems are installed globally by default, npm packages, by default, are local|
 |server-side rendering|EJS or Handlebars| ~~erb~~|We'll be skipping right into rendering our views with React|
@@ -110,7 +110,12 @@ Server running successfully:
 
 ![No database error](https://i.imgur.com/fWAB5Wj.png)
 
-- `control c`  on `rails s`
+- open a new tab so you don't have to stop  `rails s` (later on we'll be making new files and other things so it'll be handy to have an extra tab)
 - run `rails db:create`
+- you might need to restart `rails s`
 
 ![success db:create](https://i.imgur.com/f8Caedy.png)
+
+
+Success
+![Rails Broswer success](https://i.imgur.com/zkHZ9Hv.png)
