@@ -34,6 +34,8 @@ Something we haven't seen yet, is a new philosophy called `Convention over Confi
 
 #### Express vs. Rails in our course
 
+# 
+
 ||Express| Rails|Comments|
 |:-:|:-:|:-:|:-:|:-:|
 |Language|JavaScript| Ruby | Still need JS on the front end|
@@ -44,7 +46,14 @@ Something we haven't seen yet, is a new philosophy called `Convention over Confi
 |run the server |nodemon| rails s| You'll see something called puma running in terminal|
 
 
+![git rendering fail ](https://i.imgur.com/NPNDXh1.png)
+
+
+
+
 ## Set up a new rails project
+
+Let's be sure to make some mistakes along the way to start getting familar with Rails errors.
 
 First set up a new project:
 
@@ -78,8 +87,9 @@ Open the `app` folder to see `controllers`, `models`,  and `views`
 
 ![inside the app folder ](https://i.imgur.com/Pha6qSK.png)
 
+#  
 
-||Express| Rails|Comments|
+| |Express| Rails|Comments|
 |:-:|:-:|:-:|:-:|:-:|
 |project meta-data| package.json | Gemfile | Rails 5.x has a `package.json` by default as well, but that's for extra stuff, not the main meta-data file|
 | Server | Express | Puma/Rack |Puma is the server, Rack deals with the middleware, these are configured and arranged pretty differently from Express, so you won't see a `server` file in the root|
@@ -87,6 +97,9 @@ Open the `app` folder to see `controllers`, `models`,  and `views`
 | Models | models | app/models | part of MVC |
 |Controllers| controllers | app/controllers | part of MVC |
 |Views|we used ejs (handlebars is another common one), but we also used Angular| erb, BUT! We won't use it, when we're ready we'll jump into using React|part of MVC|
+
+
+![git rendering fail](https://i.imgur.com/VYv7Uqf.png)
 
 ---
 ## Get New Project Running
