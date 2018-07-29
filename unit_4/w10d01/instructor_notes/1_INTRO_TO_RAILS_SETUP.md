@@ -1,7 +1,7 @@
 # Intro to Rails
 
 ## What We'll Be Building
-We'll be building an app that keeps track of contacts. People will have a name and an age (keepin' it simple - checking out how to handle strings and number datatypes). Locations, where one or more people will be able to live/work. And finally, companies, where multiple people can work. 
+We'll be building an app that keeps track of contacts. People will have a name and an age (keepin' it simple - checking out how to handle strings and number datatypes). Locations,¸ where one or more people will be able to live/work. And finally, companies, where multiple people can work. 
 
 Once we build our back end, we'll move to the front and start building our app with React.
 
