@@ -14,34 +14,38 @@ Your boss wants you to design and build an API. The API is going to deliver some
 
 You know you will be dealing with **share prices** and **stocks**, and that the two things are related.
 
+You've been given a rails project that has the stock routes. You'll be adding prices to the database and API.
+
 We will be continuing the lab in the afternoon.
 
 ## Set Up
 
-1. Set up a new rails project and name the directory 'stock-prices'
-  - :red_circle: Don't forget to set the database to postgresql _and_ use '--skip-git'!
-1. Set up a postgres database called 'stocks'.
-1. Create 'stocks' and 'prices' tables in your database. See below for the information the tables should store.
-1. Set up a one-to-many relationship between stocks and prices
+
+1. Set up a postgres database called 'stock_prices', add a table for 'stocks', and seed the database.
+
+```
+CREATE DATABASE stock_prices;
+\c stock_prices
+CREATE TABLE stocks (id SERIAL, company VARCHAR(40), symbol VARCHAR(40));
+INSERT INTO stocks (company, symbol) VALUES ('Apple', 'APPL');
+INSERT INTO stocks (company, symbol) VALUES ('Microsoft', 'MS');
+INSERT INTO stocks (company, symbol) VALUES ('Mad Man Drones', 'WHEEEEE');
+```
+
+1. Create the 'prices' table in your database. See below for the information the table should store. Seed your database with a few prices.
+1. Set up a one-to-many relationship between stocks and prices for each stock.
 
 ## User Stories
 
-  - As a user, I can add a new stock to the database.
-    - Stock information
-      - Company name
-      - Stock ticker symbol
   - As a user, I can add a new stock price to the database.
     - Price information
       - Date
       - Price
       - Stock ID
-  - As a user, I can get all stocks in the database
   - As a user, I can get all prices in the database
   - As a user, I can get all prices for a single stock
+  - As a user, I can delete a stock price
+  - As a user, I can update a stock
 
 Test your routes with Postman as you go.
    - :exclamation: Remember to use "raw" when post/putting.
-
-## Hungry For More
-
-Add routes for updating and deleting both stocks and prices.

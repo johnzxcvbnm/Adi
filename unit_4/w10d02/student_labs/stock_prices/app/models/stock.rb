@@ -1,5 +1,5 @@
 class Stock
-  DB = PG.connect({:host=> "localhost", :port => 5432, :dbname => 'stocks'})
+  DB = PG.connect({:host=> "localhost", :port => 5432, :dbname => 'stock_prices'})
 
   def self.all
     results = DB.exec("SELECT * FROM stocks;")
