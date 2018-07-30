@@ -43,6 +43,7 @@ INSERT INTO stocks (company, symbol) VALUES ('Mad Man Drones', 'WHEEEEE');
       - Price
       - Stock ID
   - As a user, I can get all prices in the database
+  - As a user, I can get a single price in the database
   - As a user, I can get all prices for a single stock
   - As a user, I can delete a stock price
   - As a user, I can update a stock
