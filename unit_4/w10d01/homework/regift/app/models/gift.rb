@@ -75,5 +75,5 @@ class Gift
         "got_from" => results["got_from"]
       }
   end
-
+ 
 end
