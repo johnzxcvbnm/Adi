@@ -14,4 +14,10 @@ Rails.application.routes.draw do
   delete '/locations/:id', to: 'locations#delete'
   put '/locations/:id', to: 'locations#update'
 
+  get '/companies', to: 'companies#index'
+  get '/companies/:id', to: 'companies#show'
+  post '/companies', to: 'companies#create'
+  delete '/companies/:id', to: 'companies#delete'
+  put '/companies/:id', to: 'companies#update'
+
 end
