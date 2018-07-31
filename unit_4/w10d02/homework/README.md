@@ -43,8 +43,8 @@ All Nintendo has told you about what they want is that...
         - game_id: int
         - image: text
         - has_been_released: boolean
-  - As a user, I can get all amiibos in the database
-  - As a user, I can get an individual amiibo's information from the database
+  - As a user, I can get all amiibos in the database. Include the amiibo's game name and game image.
+  - As a user, I can get an individual amiibo's information from the database.  Include the amiibo's game name and game image.
   - As a user, I can remove an amiibo from the database in case any of them get pulled out of production
   - As a user, I can edit an amiibo's information
 
