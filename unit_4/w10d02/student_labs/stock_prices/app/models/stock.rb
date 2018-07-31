@@ -2,24 +2,60 @@ class Stock
   DB = PG.connect({:host=> "localhost", :port => 5432, :dbname => 'stock_prices'})
 
   def self.all
-    results = DB.exec("SELECT * FROM stocks;")
+    results = DB.exec(
+      <<-SQL
+      SELECT
+        stocks.*,
+        prices.the_date,
+        prices.value
+      FROM stocks
+      JOIN prices
+        ON stocks.id = prices.stock_id;
+      SQL
+    )
     return results.map do |result|
       {
         "id" => result["id"].to_i,
         "company" => result["company"],
-        "symbol" => result["symbol"]
+        "symbol" => result["symbol"],
+        "the_date" => result["the_date"],
+        "value" => result["value"].to_f
       }
     end
   end
 
   def self.find(id)
-    results = DB.exec("SELECT * FROM stocks WHERE id=#{id};")
-    result = results.first;
-    return {
-      "id" => result["id"].to_i,
-      "company" => result["company"],
-      "symbol" => result["symbol"]
-    }
+    results = DB.exec(
+      <<-SQL
+        SELECT
+          stocks.*,
+          prices.the_date,
+          prices.value
+        FROM stocks
+        JOIN prices
+          ON stocks.id = prices.stock_id
+        WHERE stocks.id=#{id};
+      SQL
+    )
+    return results.map do |result|
+      {
+        "id" => result["id"].to_i,
+        "company" => result["company"],
+        "symbol" => result["symbol"],
+        "the_date" => result["the_date"],
+        "value" => result["value"].to_f
+      }
+    end
+    # p "!!!!!!!!"
+    # p results.first;
+    # result = results.first;
+    # return {
+    #   "id" => result["id"].to_i,
+    #   "company" => result["company"],
+    #   "symbol" => result["symbol"],
+    #   "the_date" => result["the_date"],
+    #   "value" => result["value"].to_f
+    # }
   end
 
   def self.create(opts)
