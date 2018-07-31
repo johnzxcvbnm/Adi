@@ -37,7 +37,7 @@ Create `app/models/location.rb`:
 ```ruby
 class Location
     # connect to postgres
-    DB = PG.connect({:host => "localhost", :port => 5432, :dbname => 'contacts'})
+    DB = PG.connect({:host => "localhost", :port => 5432, :dbname => 'contacts_development'})
 
     def self.all
         results = DB.exec("SELECT * FROM locations;")

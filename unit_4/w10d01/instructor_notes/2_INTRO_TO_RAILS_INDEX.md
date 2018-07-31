@@ -157,7 +157,7 @@ First let's make sure we can connect to our DB and console our results. We'll le
 ```ruby
 class Person
     # connect to postgres
-    DB = PG.connect({:host => "localhost", :port => 5432, :dbname => 'contacts'})
+    DB = PG.connect({:host => "localhost", :port => 5432, :dbname => 'contacts_development'})
 
     def self.all
         results = DB.exec("SELECT * FROM people;")
