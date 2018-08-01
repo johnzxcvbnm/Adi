@@ -35,7 +35,7 @@ Competencies: Rails, One-to-Many relationships
     - date
     - user id
 
-You won't be create full CRUD for either model.
+You don't need to create full CRUD for either model. Just make the routes listed below.
 
 `users` routes:
   - index
