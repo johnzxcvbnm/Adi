@@ -1,62 +1,60 @@
 ![](/ga_cog.png)
 
 ---
-Title: Instaphoto <br> 
+Title: Instaphoto <br>
 Type: Lab <br>
 Creator: Jerrica Bobadilla<Br>
-Competencies: Rails 
+Modified by: Mark De May<br>
+Competencies: Rails, One-to-Many relationships
 
 ---
 
-# Instaphoto 
+# Instaphoto
 
 ![](https://imgur.com/CSP45cO.png)
 
 > You've decided there aren't nearly enough photo sharing apps out there, so let's make a new one!
 
-## Activity 
+## Activity
 
-#### Set up a new rails project 
-1. Inside the `student_labs` folder for today, set up a new rails project and name it instaphoto like so: 
-    
+#### Set up a new rails project
+1. Inside the `student_labs` folder for today, set up a new rails project and name it instaphoto like so:
+
     `rails new instaphoto -d postgresql --skip-git`
 
     :red_circle: Don't forget the --skip-git flag so that you don't initialize a repo within a repo!
-    
-1. In terminal, create a database called `instaphoto` 
-1. Still in terminal and inside of your `instaphoto` database, create a table called `photos` with the following columns, you decide what data type each column should be: 
+1. Create a database called `instaphoto`
+1. Create a table for `users` with the following columns, again it's up to you to decide the datatypes
     - id
-    - img_url 
+    - username
+1. Create a table called `photos` with the following columns, you decide what data type each column should be:
+    - id
+    - img_url
     - caption
-    - likes 
-    - date 
-1. Still inside your database, insert some data, for example:
-    ```
-    INSERT INTO photos (img_url, caption, likes, date) VALUES ('https://imgur.com/gFT4Iwg.png', 'nine NINE!', 0, current_timestamp);
-    INSERT INTO photos (img_url, caption, likes, date) VALUES ('https://imgur.com/yw77pz0.png', 'cheddar ♡ terry', 0, current_timestamp);
-    ```
-#### Connecting your database to your rails project 
-1. Open your `instaphoto` rails project in atom
-1. Create an index route for the photos 
-1. Create a model for your photos 
-    - Connect it to your postgres `photos` database 
-    - Set up an initializer so that we can create new Photos
-        - Don't forget about `attr_reader`
-1. Create a controller for your photos
-    - Define the index and have it render all your `photos` data as json 
+    - likes
+    - date
+    - user id
 
-#### Set up full CRUD for the photos
-1. Create a show route 
-1. Create a create route 
-1. Create a delete route 
-1. Create an update route 
+You won't be create full CRUD for either model.
 
-#### Creating users 
-1. Create a table for `users` with the following columns, again it's up to you to decide the datatypes 
-    - id
-    - username 
-1. Set up full CRUD for users!
+`users` routes:
+  - index
+  - show
+  - create
+
+`photos` routes:
+  - index
+  - create
+
+##### User Stories
+
+1. As a user, I can create an account
+1. As a user, I can add a photo to my account
+1. As a user, I can see all users with their photos. (This is the users' index route)
+1. As a user, I can see all photos in my account. (This is the users' show route)
+1. As a user, I can see all photos with the user name. (This is the photos' index route)
 
 ## Hungry for More
 
-Finish early? You'll be learning it next week, but see if you can find out how to relate your `users` and `photos` table so that they have a one-to-many relationship (i.e. users have many photos, photos belong to a user) 
+1. Create full CRUD for both models.
+1. Use the [faker](https://github.com/stympy/faker) gem to seed your database. Faker::Placeholdit creates urls to images.
