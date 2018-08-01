@@ -74,11 +74,11 @@ Adi is the Instructional Designer at GA who conceptualized and developed our rem
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|:-----------:|:-----------:|
 | w09d3 |July 25 |Wednesday | [Intro to Sass](./unit_4/w09d04/morning_exercise) |  [Intro to Ruby, Ruby Enumerables](./unit_4/w09d03/instructor_notes)| [JS/Ruby Differences](./unit_4/w09d03/student_labs)|[Ruby Drills](./unit_4/w09d03/homework)|
 | w09d4 |July 26 |Thursday | [Sass Practice - Calculator](./unit_4/w09d04/morning_exercise)| [Student Teachbacks Methods, Classes, Objects](./unit_4/w09d04/instructor_notes)| [Ruby Method Diagnostic(no tests), Muppets, Birds and the Universe](./unit_3/w09d04/student_labs)|[Ruby Blackjack](./unit_4/w09d04/homework)|
-| w09d5 |July 27 |Friday | [](./unit_4/w09d05/morning_exercise)| [](./unit_4/w09d05/instructor_notes)| [](./unit_3/w09d05/student_labs)|[](./unit_4/w09d05/homework)|
-| w10d1 |July 30 |Monday | [](./unit_4/w10d01/morning_exercise)| [](./unit_4/w10d01/instructor_notes)| [](./unit_4/w10d01/student_labs)|[](./unit_4/w10d01/homework)|
-| w10d2 |July 31 |Tuesday | [](./unit_4/w10d02/morning_exercise)| [](./unit_4/w10d02/instructor_notes)| [](./unit_4/w10d02/student_labs)|[](./unit_4/w10d02/homework)|
-| w10d3 |August 1 |Wednesday | [](./unit_4/w10d03/morning_exercise)| [](./unit_4/w10d03/instructor_notes)| [](./unit_4/w10d03/student_labs)|[](./unit_4/w10d03/homework)|
-| w10d4 |August 2 |Thursday | [](./unit_4/w10d04/morning_exercise)| [](./unit_4/w10d04/instructor_notes)| [](./unit_4/w10d04/student_labs)|[](./unit_4/w10d04/homework)|
+| w09d5 |July 27 |Friday | [Luhn Revisit, Unfurl Spiral Array](./unit_4/w09d05/morning_exercise)| [Intro to SQL](./unit_4/w09d05/instructor_notes)| [Computers, TVs, Real Estate, Airports](./unit_3/w09d05/student_labs)|[Carmen Sandiego, NFL](./unit_4/w09d05/homework)|
+| w10d1 |July 30 |Monday | [SQL Zoo](./unit_4/w10d01/morning_exercise)| [Intro to Rails - People, Locations](./unit_4/w10d01/instructor_notes)| [Intro to Rails - Buildl Companies](./unit_4/w10d01/student_labs)|[Regftr](./unit_4/w10d01/homework)|
+| w10d2 |July 31 |Tuesday | [](./unit_4/w10d02/morning_exercise)| [One to Many, Foreign Key](./unit_4/w10d02/instructor_notes)| [Stocks and Prices](./unit_4/w10d02/student_labs)|[Amiibo](./unit_4/w10d02/homework)|
+| w10d3 |August 1 |Wednesday | [Find Vowel, Loop the Loop](./unit_4/w10d03/morning_exercise)| [One to Many self.find, self.all, join table](./unit_4/w10d03/instructor_notes)| [Books](./unit_4/w10d03/student_labs)|[](./unit_4/w10d03/homework)|
+| w10d4 |August 2 |Thursday | [Clock Hands](./unit_4/w10d04/morning_exercise)| [](./unit_4/w10d04/instructor_notes)| [](./unit_4/w10d04/student_labs)|[](./unit_4/w10d04/homework)|
 | w10d5 |August 3 |Friday | [](./unit_4/w10d05/morning_exercise)| [](./unit_4/w10d05/instructor_notes)| [](./unit_4/w10d05/student_labs)|[](./unit_4/w10d05/homework)|
 | w11d1 |August 6 |Monday | [](./unit_4/w11d01/morning_exercise)| [](./unit_4/w11d01/instructor_notes)| [](./unit_4/w11d01/student_labs)|[](./unit_4/w11d01/homework)|
 | w11d2 |August 7 |Tuesday | [](./unit_4/w11d02/morning_exercise)| [](./unit_4/w11d02/instructor_notes)| [](./unit_4/w11d02/student_labs)|[](./unit_4/w11d02/homework)|
