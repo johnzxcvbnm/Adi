@@ -18,13 +18,13 @@ Competencies: Rails, One-to-Many relationships
 ## Activity
 
 #### Set up a new rails project
-1. Inside the `homework` folder for today, set up a new rails project and name it instaphoto like so:
+1. Inside the `homework` folder for today, set up a new rails project and name it `instaphoto` like so:
 
     `rails new instaphoto -d postgresql --skip-git`
 
     :red_circle: Don't forget the --skip-git flag so that you don't initialize a repo within a repo!
 1. Create a database called `instaphoto`
-1. Create a table for `users` with the following columns, again it's up to you to decide the datatypes
+1. Create a table for `users` with the following columns, it's up to you to decide the datatypes
     - id
     - username
 1. Create a table called `photos` with the following columns, you decide what data type each column should be:
