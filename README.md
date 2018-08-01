@@ -65,14 +65,15 @@ Adi is the Instructional Designer at GA who conceptualized and developed our rem
 | w08d4 |July 19 |Thursday | [Project Management](./unit_3/w08d04/morning_exercise)| [Intermediate/Advanced Angular](./unit_3/w08d04/instructor_notes)| [Project 3 Announcement]()|[](./unit_3/w08d04/homework)|
 | w08d5 |July 20 |Friday |  **Project 3**|
 | w09d1 |July 23 |Monday |  **Project 3**|
-| w09d2 |July 24 |Tuesday |  **Project 3**|
-| w09d3 |July 25 |Wednesday |   **Project 3 Presentations **| Install Ruby, Rails, Postgres |[](./unit_4/w09d03/homework)|
+| w09d2 |July 24 |Tuesday |  **Project 3 Presentations** | Install Ruby, Rails, Postgres |[](./unit_4/w09d03/homework)|
+
 
 ## Unit 4
 ## Schedule
 | Day | Date | Weekday | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|:-----------:|:-----------:|
-| w09d4 |July 26 |Thursday | [](./unit_4/w09d04/morning_exercise)| [](./unit_4/w09d04/instructor_notes)| [](./unit_3/w09d04/student_labs)|[](./unit_4/w09d04/homework)|
+| w09d3 |July 25 |Wednesday | [Intro to Sass](./unit_4/w09d04/morning_exercise) |  [Intro to Ruby, Ruby Enumerables](./unit_4/w09d03/instructor_notes)| [JS/Ruby Differences](./unit_4/w09d03/student_labs)|[Ruby Drills](./unit_4/w09d03/homework)|
+| w09d4 |July 26 |Thursday | [Sass Practice - Calculator](./unit_4/w09d04/morning_exercise)| [Student Teachbacks Methods, Classes, Objects](./unit_4/w09d04/instructor_notes)| [Ruby Method Diagnostic(no tests), Muppets, Birds and the Universe](./unit_3/w09d04/student_labs)|[Ruby Blackjack](./unit_4/w09d04/homework)|
 | w09d5 |July 27 |Friday | [](./unit_4/w09d05/morning_exercise)| [](./unit_4/w09d05/instructor_notes)| [](./unit_3/w09d05/student_labs)|[](./unit_4/w09d05/homework)|
 | w10d1 |July 30 |Monday | [](./unit_4/w10d01/morning_exercise)| [](./unit_4/w10d01/instructor_notes)| [](./unit_4/w10d01/student_labs)|[](./unit_4/w10d01/homework)|
 | w10d2 |July 31 |Tuesday | [](./unit_4/w10d02/morning_exercise)| [](./unit_4/w10d02/instructor_notes)| [](./unit_4/w10d02/student_labs)|[](./unit_4/w10d02/homework)|
