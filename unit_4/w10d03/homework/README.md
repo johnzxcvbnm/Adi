@@ -18,7 +18,7 @@ Competencies: Rails, One-to-Many relationships
 ## Activity
 
 #### Set up a new rails project
-1. Inside the `student_labs` folder for today, set up a new rails project and name it instaphoto like so:
+1. Inside the `homework` folder for today, set up a new rails project and name it instaphoto like so:
 
     `rails new instaphoto -d postgresql --skip-git`
 
