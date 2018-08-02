@@ -4,7 +4,14 @@ class Photo
   def self.all
     results = DB.exec(
       <<-SQL
-        SELECT * FROM photos;
+        SELECT
+          photos.*,
+          users.id AS user_id,
+          username
+        FROM photos
+        LEFT JOIN users
+          ON photos.user_id = users.id;
+        -- ORDER BY photos.id ASC
       SQL
     )
     return results.map do |result|
@@ -14,7 +21,8 @@ class Photo
         "caption" => result["caption"],
         "likes" => result["likes"].to_i,
         "date" => result["date"].to_date,
-        "user_id" => result["user_id"].to_i
+        "user_id" => result["user_id"].to_i,
+        "user_name" => result["username"]
       }
     end
   end

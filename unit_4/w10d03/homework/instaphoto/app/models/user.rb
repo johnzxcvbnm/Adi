@@ -6,7 +6,7 @@ class User
       <<-SQL
         SELECT
           users.*,
-          -- photos
+          photos.id AS photo_id,
           photos.img_url,
           photos.caption,
           photos.likes,
@@ -17,40 +17,62 @@ class User
         ORDER BY users.id ASC;
       SQL
     )
-    photos = []
+    users = []
     last_id = nil
     results.each do |result|
       if result["id"] != last_id
-        photos.push(
-          {
-            "id" => result["id"].to_i,
-            "img_url" => result["img_url"],
-            "caption" => result["caption"],
-            "likes" => result["likes"].to_i,
-            "date" => result["date"].to_date
-          }
-        )
-        
-    return results.map do |result|
-      {
-        "id" => result["id"].to_i,
-        "username" => result["username"]
-      }
+        users.push({
+          "id" => result["id"].to_i,
+          "username" => result["username"],
+          "photos" => []
+        })
+        last_id = result["id"]
+      end
+      if result["photo_id"]
+        users.last["photos"].push({
+          "id" => result["photo_id"].to_i,
+          "img_url" => result["img_url"],
+          "caption" => result["caption"],
+          "likes" => result["likes"].to_i,
+          "date" => result["date"].to_date
+        })
+      end
     end
+    return users
   end
 
   def self.find(id)
-    result = DB.exec(
+    results = DB.exec(
       <<-SQL
         SELECT
-          *
+          users.*,
+          photos.id AS photo_id,
+          photos.img_url,
+          photos.caption,
+          photos.likes,
+          photos.date
         FROM users
-        WHERE id = #{id};
+        LEFT JOIN photos
+          ON users.id = photos.user_id
+        WHERE users.id = #{id};
       SQL
-    ).first
+    )
+    photos = []
+    results.each do |result|
+      if result["photo_id"]
+        photos.push({
+          "id" => result["photo_id"].to_i,
+          "img_url" => result["img_url"],
+          "caption" => result["caption"],
+          "likes" => result["likes"].to_i,
+          "date" => result["date"].to_date
+        })
+      end
+    end
     return {
-      "id" => result["id"].to_i,
-      "username" => result["username"]
+      "id" => results.first["id"].to_i,
+      "username" => results.first["username"],
+      "photos" => photos
     }
   end
 
