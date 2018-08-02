@@ -4,9 +4,33 @@ class User
   def self.all
     results = DB.exec(
       <<-SQL
-        SELECT * FROM users;
+        SELECT
+          users.*,
+          -- photos
+          photos.img_url,
+          photos.caption,
+          photos.likes,
+          photos.date
+        FROM users
+        LEFT JOIN photos
+          ON users.id = photos.user_id
+        ORDER BY users.id ASC;
       SQL
     )
+    photos = []
+    last_id = nil
+    results.each do |result|
+      if result["id"] != last_id
+        photos.push(
+          {
+            "id" => result["id"].to_i,
+            "img_url" => result["img_url"],
+            "caption" => result["caption"],
+            "likes" => result["likes"].to_i,
+            "date" => result["date"].to_date
+          }
+        )
+        
     return results.map do |result|
       {
         "id" => result["id"].to_i,
