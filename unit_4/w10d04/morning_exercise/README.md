@@ -50,9 +50,9 @@ Write the function `hasRepeats?` that takes a string and interger `n` and return
 ##### Expected output:
 
 ```
-hasRepeats "This returns true because This happens twice", 4
+hasRepeats? "This returns true because This happens twice", 4
 => true
-hasRepeats "This returns false."
+hasRepeats? "This returns false."
 => false
 ```
 
@@ -60,9 +60,9 @@ Now change `hasRepeats?` to look for repeated sequences anywhere within the stri
 
 ##### Expected output:
 ```
-hasRepeats "This returns true because true happens twice", 4
+hasRepeats? "This returns true because true happens twice", 4
 => true
-hasRepeats "This still returns false."
+hasRepeats? "This still returns false."
 => false
 ```
 
@@ -76,7 +76,7 @@ hasRepeats "one two three four three two one"
 
 ## Make Change
 
-Write the funcion `makeChange` that takes how much your coffee costs and how much you gave the barista and prints out your change using the fewest number of coins.
+Write the function `makeChange` that takes how much your coffee costs and how much you gave the barista and prints out your change using the fewest number of coins.
 
 ##### Expected output:
 
@@ -127,4 +127,4 @@ isBalanced? "[(])"
 
 ## Hungry For More?
 
-Head over to [hackerrank](www.hackerrank.com/domains/ruby) and try a few problems. Companies use hackerrank for code challenges during their interview process so it's good to be familiar with how it works.
+Head over to [hackerrank](https://www.hackerrank.com) and try a few problems. Companies use hackerrank for code challenges during their interview process so it's good to be familiar with how it works.
