@@ -10,4 +10,10 @@ Rails.application.routes.draw do
   post '/photos', to: 'photos#create'
   delete '/photos/:id', to: 'photos#delete'
   put '/photos/:id', to: 'photos#update'
+
+  get '/tags', to: 'tags#index'
+  get '/tags/:id', to: 'tags#show'
+  post '/tags', to: 'tags#create'
+  delete '/tags/:id', to: 'tags#delete'
+  put '/tags/:id', to: 'tags#update'
 end
