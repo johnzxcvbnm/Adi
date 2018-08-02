@@ -3,22 +3,76 @@ class Company
     DB = PG.connect({:host => "localhost", :port => 5432, :dbname => 'contacts_development'})
 
     def self.all
-        results = DB.exec("SELECT * FROM companies;")
-        return results.map do |result|
-            {
-                "id" => result["id"].to_i,
-                "name" => result["name"],
-                "industry" => result["industry"],
-            }
+        results = DB.exec(
+            <<-SQL
+                SELECT
+                    companies.*,
+                    people.id AS person_id,
+                    people.name AS person_name,
+                    people.age
+                FROM
+                    companies
+                LEFT JOIN jobs
+                    ON companies.id = jobs.company_id
+                LEFT JOIN people ON jobs.person_id = people.id
+                ORDER BY companies.id;
+            SQL
+        )
+        companies = []
+        last_company_id = nil
+        results.each do |result|
+            if result["id"] != last_company_id
+                companies.push({
+                    "id" => result["id"].to_i,
+                    "name" => result["name"],
+                    "industry" => result["industry"],
+                    "employees" => []
+                })
+                last_company_id = result["id"]
+            end
+            if result["person_id"]
+                new_person = {
+                    "id" => result["person_id"].to_i,
+                    "name" => result["person_name"],
+                    "age" => result["age"].to_i
+                }
+                companies.last["employees"].push(new_person)
+            end
         end
+        return companies
     end
 
     def self.find(id)
-        results = DB.exec("SELECT * FROM companies WHERE id=#{id};")
+        results = DB.exec(
+            <<-SQL
+                SELECT
+                    companies.*,
+                    people.id AS person_id,
+                    people.name AS person_name,
+                    people.age
+                FROM companies
+                LEFT JOIN jobs
+                    ON companies.id = jobs.company_id
+                LEFT JOIN people
+                    ON jobs.person_id = people.id
+                WHERE companies.id = #{id};
+            SQL
+        )
+        employees = []
+        results.each do |result|
+            if result["person_id"]
+                employees.push({
+                    "id" => result["person_id"],
+                    "name" => result["person_name"],
+                    "age" => result["age"]
+                })
+            end
+        end
         return {
             "id" => results.first["id"].to_i,
             "name" => results.first["name"],
             "industry" => results.first["industry"],
+            "employees" => employees
         }
     end
 
