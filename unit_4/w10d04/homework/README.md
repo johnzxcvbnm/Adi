@@ -46,7 +46,7 @@ cp -r unit_4/w10d03/homework/instaphoto unit_4/w10d04/homework/instaphoto
 ## Hungry for More
 
 1. Additional User Stories:
-  1. As a user, I can see all users, including which photos they're in.
-  1. As a user, I can see all photos, including which users are in the photo.
-1. Create full CRUD for `tags`.
+  - As a user, I can see all users, including which photos they're in.
+  - As a user, I can see all photos, including which users are in the photo.
+2. Create full CRUD for `tags`.
 1. Use the [faker](https://github.com/stympy/faker) gem to seed your database. Faker::Placeholdit creates urls to images.
