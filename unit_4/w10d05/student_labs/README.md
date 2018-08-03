@@ -22,12 +22,7 @@ rails db:create
 psql -f enemies_setup.sql enemies_development
 ```
 
-You should be ready to go. Start your rails server and test things out in `postman` by doing a `get` on `localhost:3000/superheros` and `localhost:3000/`
-1. Create a new rails project
-```
-rails new enemies -d postgresql --skip-git
-rails db:create
-```
+You should be ready to go. Start your rails server and test things out in `postman` by doing a `get` on `localhost:3000/superheros` and `localhost:3000/scientists`
 
 ### The Linking Table
 
@@ -51,4 +46,4 @@ Once you've created the new table, update the show and index routes for superher
 ##### Leading Questions to Think About
 
  - What routes will we need for this join table?
- - What actions will the reviews controller need?
+ - What actions will the new controller need?
