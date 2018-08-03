@@ -1,72 +1,206 @@
-# DOM Tree Tea House
+# Korrila React Receipts
 
-Tea is the new coffee!
+Korilla is Korean barbecue tacos truck that makes thousands of hungry customers happy every year.
 
-You are almost done with WDI! These instructions are significantly more vague than the morning lab! Use those brain muscles, find your own solutions, use class notes and morning lab to help yourself achieve glorious success!
+Their CEO is thinking of updating their short order tracking system using React.
 
-## Set Up
-- `mkdir tea`
-- `cd tea`
-- `touch index.html app.js`
-- create a new react app (follow instructions from class/previous lab)
-- using react, render an `h1` with the name of this 'business'
+Build a prototype of this short order receipts tracker.
 
-## Build a custom component that will contain an `ul`
-For now, just have it have one `li` that says `tea`
+## Part 1: Get Started
 
-**GOTCHA** : Remember render() can only return one html element. You can nest as many elements inside of that element though
+Create a new folder for this project. Make an `index.html` and `app.js` ... follow the notes from class/lab to create an App component that renders
+ an `h1` with some text inside it
 
 
-## Conditionally render HTML
+## Part 2: Sample Receipts
 
-- make a new variable called `open`, set it to true to start. For the next two steps, just change the value in your `app.js` file (WHERE do you make this? globally? inside the class? as props? set it inside of state? Look back at the lecture notes and follow along)
-- if `open` is true, render an `h2` that says 'Yes, we are open'
-- if `open` is false, render an `h3` that says 'Sorry, we are closed'
-<br>
-
-![open](https://i.imgur.com/8CrqDjn.png)
-
-![closed](https://i.imgur.com/SPvPQ1i.png)
-
-Now make it so you can change the value of `open` through your page:
-
-- write a function that will toggle open from true to false and false to true (hint something like `open = !open` )
-- Add a click handler to the h1 or make a button to call the function and change the value of open, the `h2` should update as the value of `open` changes
-
-## Use `.map` to render `li` with the following tea data
-Change the `li` from a hard coded `tea` to render this 'data':
+You'll be rendering some sample receipts:
 
 ```js
-const tea = ['Maple Bacon Tea', 'Chardonnay Tea', 'Dolphin Blue Tea', 'Labrador Tea', 'Ginko Biloba Tea']
+const receipt1 =
+  {
+    person: 'Karolin',
+    order: {
+      main: 'Burrito',
+      protein: 'Organic Tofu',
+      rice: 'Purple Rice',
+      sauce: 'Green Crack',
+      toppings: [
+        'Baby Bok Choy', 'Cucumber Kimchi'
+      ],
+      drink: 'Korchata',
+      cost: 22
+    },
+    paid: false
+  }
+const receipt2 = {
+  person: 'Jerrica',
+  order: {
+    main: 'Rice Bowl',
+    protein: 'Ginger Soy Chix',
+    rice: 'Sticky Rice',
+    sauce: 'Korilla',
+    toppings: [
+      'Yuzu Pickled Sweet Pepper', 'Kale'
+    ],
+    drink: 'Korchata',
+    cost: 19
+  },
+  paid: false
+}
+const receipt3 = {
+  person: 'Matt',
+  order: {
+    main: 'Salad Bowl',
+    protein: 'Organic Tofu',
+    rice: 'none',
+    sauce: "K'lla",
+    toppings: [
+      'Blue Potato Salad', 'Pico De Gallo', 'Red Kimchi'
+    ],
+    drink: 'Sparkling Blood Orange Soda',
+    cost: 20
+  },
+  paid: true
+}
 
 ```
 
+- Add these the first receipt to the state of the app:
 
-## Pass Properties to Children
- - Remove `tea` as a global variable and instead add the `tea` array to state
-
- - Break list items (`li`) into their own component and pass down the data from the component that has the `ul`
-
-## Add a Click Handler That Calls a Function
-It will alert the customer that they are drinking whatever tea they clicked on
-
-Thought question - where should this function go? In the list item component or its parent?
+```js
+class App extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = receipt1
+  }
+```
 
 
-## Change a Component's State Through Interaction
-- Create a form with a submit button
-- Add the input to the tea array and have it render immediately on submit
+- Make a Receipt component that renders the first receipt's
+  - person
+  - order
+      - main
+      - protein
+      - rice
+      - sauce
+      - drink
+      - cost
 
-## Use `this.props  children`
-In your component that renders the list items, put some text between the tags like `The finest `
+Hungry for More: render the toppings
 
-Then pass in to the list item child component `this.props.children` to render
 
-![](https://i.imgur.com/cpczbhN.png)
+Add the next two receipts to state and make two more Receipt components so that you get a veiw like this (a little css provided for clarity, but not required)
 
-This may seem a bit weird! Reread the notes, keep working on it
+![korilla receipts rendered Mark](https://i.imgur.com/27V4KW8.png)
 
-Final:
+<!-- ![korilla receipts rendered Jerrica ](https://i.imgur.com/QMwgKOK.png) -->
 
-![final](https://i.imgur.com/bRd4kc2.png)
+<details><summary> Hint 1</summary>
 
+![the solution](https://i.imgur.com/OQ8sEtr.png)
+
+</details>
+
+<details><summary> Hint 2 </summary>
+
+![the solution](https://i.imgur.com/cQMrYAX.png)
+
+</details>
+
+
+### Part 3: Conditionally Render the receipts if they have been paid or not
+
+Right now, all the receipts are not paid ( `paid: false`)
+
+Set up a ternary operator to display the receipt if it has not been paid.
+
+Then go into the receipt data and change the value to true and check that the receipt will not display
+
+
+![Matt has settled his bill](https://i.imgur.com/90oM59b.png)
+
+
+<details><summary> Hint 3 </summary>
+
+![the solution](https://i.imgur.com/I3BcdqO.png)
+
+</details>
+
+
+## Part 4: Refactor for Dynamic Rendering
+
+3 receipts is pretty limiting. Let's put them in an array and then map over them for rendering.
+
+Update your code so it renders the same, but instead of hard coding 3 receipts, it maps over the array.
+
+```js
+const receipts = [
+  {
+    person: 'Karolin',
+    order: {
+      main: 'Burrito',
+      protein: 'Organic Tofu',
+      rice: 'Purple Rice',
+      sauce: 'Green Crack',
+      toppings: [
+        'Baby Bok Choy', 'Cucumber Kimchi'
+      ],
+      drink: 'Korchata',
+      cost: 22
+    },
+    paid: false
+  },
+  {
+    person: 'Jerrica',
+    order: {
+      main: 'Rice Bowl',
+      protein: 'Ginger Soy Chix',
+      rice: 'Sticky Rice',
+      sauce: 'Korilla',
+      toppings: [
+        'Yuzu Pickled Sweet Pepper', 'Kale'
+      ],
+      drink: 'Korchata',
+      cost: 19
+    },
+    paid: false
+  },
+  {
+    person: 'Matt',
+    order: {
+      main: 'Salad Bowl',
+      protein: 'Organic Tofu',
+      rice: 'none',
+      sauce: "K'lla",
+      toppings: [
+        'Blue Potato Salad', 'Pico De Gallo', 'Red Kimchi'
+      ],
+      drink: 'Sparkling Blood Orange Soda',
+      cost: 20
+    },
+    paid: true
+  }
+]
+```
+
+
+<details><summary> Hint 4 </summary>
+
+![the solution](https://i.imgur.com/A1ZQTzW.png)
+
+</details>
+
+## Hungry For More
+
+You'll have to read ahead in the notes...
+
+Add a click event on the receipt that changes the value of paid from false to true. Once clicked the receipt should immediately disappear from the browser view
+
+You'll have to research on your own...
+
+How do you style react components within react?
+
+[A nice place to start](https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822)
+
+But also, [why would one style components...rather than use a good old css file?](https://medium.com/@perezpriego7/css-evolution-from-css-sass-bem-css-modules-to-styled-components-d4c1da3a659b)

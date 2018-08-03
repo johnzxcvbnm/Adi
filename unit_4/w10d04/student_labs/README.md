@@ -16,7 +16,7 @@ Heavily Modified by: Jerrica Bobadilla
 
 Your friend had a new idea for the book app - let the users add reviews for books! 
 
-> :books: [If you didn't complete yesterday's lab, go back and complete that first before starting this lab.](/unit_4/w10d01/student_labs/README.md) 
+> :books: [If you didn't complete yesterday's lab, go back and complete that first before starting this lab.](/unit_4/w10d03/student_labs/README.md) 
 
 ### What We Know
 

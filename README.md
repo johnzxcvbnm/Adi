@@ -65,25 +65,26 @@ Adi is the Instructional Designer at GA who conceptualized and developed our rem
 | w08d4 |July 19 |Thursday | [Project Management](./unit_3/w08d04/morning_exercise)| [Intermediate/Advanced Angular](./unit_3/w08d04/instructor_notes)| [Project 3 Announcement]()|[](./unit_3/w08d04/homework)|
 | w08d5 |July 20 |Friday |  **Project 3**|
 | w09d1 |July 23 |Monday |  **Project 3**|
-| w09d2 |July 24 |Tuesday |  **Project 3**|
-| w09d3 |July 25 |Wednesday |   **Project 3 Presentations **| Install Ruby, Rails, Postgres |[](./unit_4/w09d03/homework)|
+| w09d2 |July 24 |Tuesday |  **Project 3 Presentations** | Install Ruby, Rails, Postgres |[](./unit_4/w09d03/homework)|
+
 
 ## Unit 4
 ## Schedule
 | Day | Date | Weekday | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|:-----------:|:-----------:|
-| w09d4 |July 26 |Thursday | [](./unit_4/w09d04/morning_exercise)| [](./unit_4/w09d04/instructor_notes)| [](./unit_3/w09d04/student_labs)|[](./unit_4/w09d04/homework)|
-| w09d5 |July 27 |Friday | [](./unit_4/w09d05/morning_exercise)| [](./unit_4/w09d05/instructor_notes)| [](./unit_3/w09d05/student_labs)|[](./unit_4/w09d05/homework)|
-| w10d1 |July 30 |Monday | [](./unit_4/w10d01/morning_exercise)| [](./unit_4/w10d01/instructor_notes)| [](./unit_4/w10d01/student_labs)|[](./unit_4/w10d01/homework)|
-| w10d2 |July 31 |Tuesday | [](./unit_4/w10d02/morning_exercise)| [](./unit_4/w10d02/instructor_notes)| [](./unit_4/w10d02/student_labs)|[](./unit_4/w10d02/homework)|
-| w10d3 |August 1 |Wednesday | [](./unit_4/w10d03/morning_exercise)| [](./unit_4/w10d03/instructor_notes)| [](./unit_4/w10d03/student_labs)|[](./unit_4/w10d03/homework)|
-| w10d4 |August 2 |Thursday | [](./unit_4/w10d04/morning_exercise)| [](./unit_4/w10d04/instructor_notes)| [](./unit_4/w10d04/student_labs)|[](./unit_4/w10d04/homework)|
-| w10d5 |August 3 |Friday | [](./unit_4/w10d05/morning_exercise)| [](./unit_4/w10d05/instructor_notes)| [](./unit_4/w10d05/student_labs)|[](./unit_4/w10d05/homework)|
-| w11d1 |August 6 |Monday | [](./unit_4/w11d01/morning_exercise)| [](./unit_4/w11d01/instructor_notes)| [](./unit_4/w11d01/student_labs)|[](./unit_4/w11d01/homework)|
-| w11d2 |August 7 |Tuesday | [](./unit_4/w11d02/morning_exercise)| [](./unit_4/w11d02/instructor_notes)| [](./unit_4/w11d02/student_labs)|[](./unit_4/w11d02/homework)|
-| w11d3 |August 8 |Wednesday | [](./unit_4/w11d03/morning_exercise)| [](./unit_4/w11d03/instructor_notes)| [](./unit_4/w11d03/student_labs)|[](./unit_4/w11d03/homework)|
-| w11d4 |August 9 |Thursday | [](./unit_4/w11d04/morning_exercise)| [](./unit_4/w11d04/instructor_notes)| [](./unit_4/w11d04/student_labs)|[](./unit_4/w11d04/homework)|
-| w11d5 |August 10 |Friday | [](./unit_4/w11d05/morning_exercise)| [](./unit_4/w11d05/instructor_notes)| [](./unit_4/w11d05/student_labs)|[](./unit_4/w11d05/homework)|
+| w09d3 |July 25 |Wednesday | [Intro to Sass](./unit_4/w09d04/morning_exercise) |  [Intro to Ruby, Ruby Enumerables](./unit_4/w09d03/instructor_notes)| [JS/Ruby Differences](./unit_4/w09d03/student_labs)|[Ruby Drills](./unit_4/w09d03/homework)|
+| w09d4 |July 26 |Thursday | [Sass Practice - Calculator](./unit_4/w09d04/morning_exercise)| [Student Teachbacks Methods, Classes, Objects](./unit_4/w09d04/instructor_notes)| [Ruby Method Diagnostic(no tests), Muppets, Birds and the Universe](./unit_3/w09d04/student_labs)|[Ruby Blackjack](./unit_4/w09d04/homework)|
+| w09d5 |July 27 |Friday | [Luhn Revisit, Unfurl Spiral Array](./unit_4/w09d05/morning_exercise)| [Intro to SQL](./unit_4/w09d05/instructor_notes)| [Computers, TVs, Real Estate, Airports](./unit_3/w09d05/student_labs)|[Carmen Sandiego, NFL](./unit_4/w09d05/homework)|
+| w10d1 |July 30 |Monday | [SQL Zoo](./unit_4/w10d01/morning_exercise)| [Intro to Rails - People, Locations](./unit_4/w10d01/instructor_notes)| [Intro to Rails - Buildl Companies](./unit_4/w10d01/student_labs)|[Regftr](./unit_4/w10d01/homework)|
+| w10d2 |July 31 |Tuesday | [](./unit_4/w10d02/morning_exercise)| [One to Many, Foreign Key](./unit_4/w10d02/instructor_notes)| [Stocks and Prices](./unit_4/w10d02/student_labs)|[Amiibo](./unit_4/w10d02/homework)|
+| w10d3 |August 1 |Wednesday | [Find Vowel, Loop the Loop](./unit_4/w10d03/morning_exercise)| [One to Many self.find, self.all, join table](./unit_4/w10d03/instructor_notes)| [Books](./unit_4/w10d03/student_labs)|[Instaphoto Part 1](./unit_4/w10d03/homework)|
+| w10d4 |August 2 |Thursday | [Clock Hands](./unit_4/w10d04/morning_exercise)| [Many to Many join table, Company SHow, Company Index](./unit_4/w10d04/instructor_notes)| [Books Continued](./unit_4/w10d04/student_labs)|[](./unit_4/w10d04/homework)|
+| w10d5 |August 3 |Friday | [Intro to SVG](./unit_4/w10d05/morning_exercise)| [Many to many people Show](./unit_4/w10d05/instructor_notes)| [](./unit_4/w10d05/student_labs)|[Tweetr](./unit_4/w10d05/homework)|
+| w11d1 |August 6 |Monday | [Bubble Sort](./unit_4/w11d01/morning_exercise)| [Intro to React, Basics, Props, Control Flow](./unit_4/w11d01/instructor_notes)| [Static Dashboard, Korilla Receipts](./unit_4/w11d01/student_labs)|[Dr. Who's Police Box + Finish Labs](./unit_4/w11d01/homework)|
+| w11d2 |August 7 |Tuesday | [](./unit_4/w11d02/morning_exercise)| [React Events, Children State,](./unit_4/w11d02/instructor_notes)| [React Roasts, React Tea Shop](./unit_4/w11d02/student_labs)|[Heirloom Furniture](./unit_4/w11d02/homework)|
+| w11d3 |August 8 |Wednesday | [100 Goblins](./unit_4/w11d03/morning_exercise)| [React Refs, Children, AJAX](./unit_4/w11d03/instructor_notes)| [?????, React Taco](./unit_4/w11d03/student_labs)|[jService React Style](./unit_4/w11d03/homework)|
+| w11d4 |August 9 |Thursday | [](./unit_4/w11d04/morning_exercise)| [Full Day Build Labor Dept (People) with React Front End](./unit_4/w11d04/instructor_notes)| [](./unit_4/w11d04/student_labs)|[Render Companies with React](./unit_4/w11d04/homework)|
+| w11d5 |August 10 |Friday | [](./unit_4/w11d05/morning_exercise)| [Keep Building! Finsh Labor Dept](./unit_4/w11d05/instructor_notes)| [](./unit_4/w11d05/student_labs)|[](./unit_4/w11d05/homework)|
 | w12d1 |August 13 |Monday | [](./unit_5/w12d01/morning_exercise)| [](./unit_5/w12d01/instructor_notes)| [](./unit_5/w12d01/student_labs)|[](./unit_5/w12d01/homework)|
 | w12d2 |August 14 |Tuesday | [](./unit_5/w12d02/morning_exercise)| [](./unit_5/w12d02/instructor_notes)| [](./unit_5/w12d02/student_labs)|[](./unit_5/w12d02/homework)|
 | w12d3 |August 15 |Wednesday | [](./unit_5/w12d03/morning_exercise)| [](./unit_5/w12d03/instructor_notes)| [](./unit_5/w12d03/student_labs)|[](./unit_5/w12d03/homework)|
@@ -93,4 +94,4 @@ Adi is the Instructional Designer at GA who conceptualized and developed our rem
 | w13d2 |August 21 |Tuesday | [](./unit_5/w13d02/morning_exercise)| [](./unit_5/w13d02/instructor_notes)| [](./unit_5/w13d02/student_labs)|[](./unit_5/w13d02/homework)|
 | w13d3 |August 22 |Wednesday | [](./unit_5/w13d03/morning_exercise)| [](./unit_5/w13d03/instructor_notes)| [](./unit_5/w13d03/student_labs)|[](./unit_5/w13d03/homework)|
 | w13d4 |August 23 |Thursday | [](./unit_5/w13d04/morning_exercise)| [](./unit_5/w13d04/instructor_notes)| [](./unit_5/w13d04/student_labs)|[](./unit_5/w13d04/homework)|
-| w13d5 |August 24 |Friday | [](./unit_5/w13d05/morning_exercise)| [](./unit_5/w13d05/instructor_notes)| [](./unit_5/w13d05/student_labs)|[](./unit_5/w13d05/homework)|
+| w13d5 |August 24 |Friday | **FINAL PRESENTATIONS AND GRADUATION** |

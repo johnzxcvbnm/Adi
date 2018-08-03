@@ -39,19 +39,19 @@ class Location
         VALUES ( '#{opts["street"]}', '#{opts["city"]}', '#{opts["state"]}')
         RETURNING id, street, city, state;
       SQL
-    ).first
+    )
     return {
-      "id" => results["id"].to_i,
-      "street" => results["street"],
-      "city" => results["city"],
-      "state" => results["state"],
+      "id" => results.first["id"].to_i,
+      "street" => results.first["street"],
+      "city" => results.first["city"],
+      "state" => results.first["state"],
     }
 
   end
 
   def self.delete(id)
     results = DB.exec("DELETE FROM locations WHERE id=#{id};")
-    return {"deltoid" => true}
+    return {"deleted" => true}
   end
 
   def self.update(id, opts)
@@ -62,12 +62,12 @@ class Location
         WHERE id=#{id}
         RETURNING id, street, city, state;
       SQL
-    ).first
+    )
     return {
-      "id" => results["id"].to_i,
-      "street" => results["street"],
-      "city" => results["city"],
-      "state" => results["state"],
+      "id" => results.first["id"].to_i,
+      "street" => results.first["street"],
+      "city" => results.first["city"],
+      "state" => results.first["state"],
     }
 
   end
