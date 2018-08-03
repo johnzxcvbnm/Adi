@@ -6,41 +6,75 @@ class Photo
       <<-SQL
         SELECT
           photos.*,
+          tags.comment,
           users.id AS user_id,
           username
         FROM photos
+        LEFT JOIN tags
+          ON photos.id = tags.photo_id
         LEFT JOIN users
-          ON photos.user_id = users.id;
-        -- ORDER BY photos.id ASC
+          ON tags.user_id = users.id
+        ORDER BY photos.id ASC;
       SQL
     )
-    return results.map do |result|
-      {
-        "id" => result["id"].to_i,
-        "img_url" => result["img_url"],
-        "caption" => result["caption"],
-        "likes" => result["likes"].to_i,
-        "date" => result["date"].to_date,
-        "user_id" => result["user_id"].to_i,
-        "user_name" => result["username"]
-      }
+    photos = []
+    last_id = nil
+    results.each do |result|
+      if result["id"] != last_id
+        photos.push({
+          "id" => result["id"].to_i,
+          "img_url" => result["img_url"],
+          "caption" => result["caption"],
+          "likes" => result["likes"].to_i,
+          "date" => result["date"].to_date,
+          "users" => []
+          })
+        last_id = result["id"]
+      end
+      if result["user_id"]
+        photos.last["users"].push({
+          "id" => result["user_id"].to_i,
+          "user_name" => result["username"],
+          "comment" => result["comment"]
+          })
+      end
     end
+    return photos
   end
 
   def self.find(id)
-    result = DB.exec(
+    results = DB.exec(
       <<-SQL
-        SELECT * FROM photos
-        WHERE id = #{id};
+        SELECT
+          photos.*,
+          tags.comment,
+          users.id AS user_id,
+          username
+        FROM photos
+        LEFT JOIN tags
+          ON photos.id = tags.photo_id
+        LEFT JOIN users
+          ON users.id = tags.user_id
+        WHERE photos.id = #{id};
       SQL
-    ).first
+    )
+    users = []
+    results.each do |result|
+      if result["user_id"]
+        users.push({
+          "id" => result["user_id"].to_i,
+          "user_name" => result["username"],
+          "comment" => result["comment"]
+          })
+      end
+    end
     return {
-      "id" => result["id"].to_i,
-      "img_url" => result["img_url"],
-      "caption" => result["caption"],
-      "likes" => result["likes"].to_i,
-      "date" => result["date"].to_date,
-      "user_id" => result["user_id"].to_i
+      "id" => results.first["id"].to_i,
+      "img_url" => results.first["img_url"],
+      "caption" => results.first["caption"],
+      "likes" => results.first["likes"].to_i,
+      "date" => results.first["date"].to_date,
+      "users" => users
     }
   end
 

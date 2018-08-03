@@ -6,14 +6,17 @@ class User
       <<-SQL
         SELECT
           users.*,
+          tags.comment,
           photos.id AS photo_id,
           photos.img_url,
           photos.caption,
           photos.likes,
           photos.date
         FROM users
+        LEFT JOIN tags
+          ON users.id = tags.user_id
         LEFT JOIN photos
-          ON users.id = photos.user_id
+          ON tags.photo_id = photos.id
         ORDER BY users.id ASC;
       SQL
     )
@@ -35,6 +38,7 @@ class User
           "caption" => result["caption"],
           "likes" => result["likes"].to_i,
           "date" => result["date"].to_date
+          # "comment" => result["comment"]
         })
       end
     end
@@ -46,14 +50,17 @@ class User
       <<-SQL
         SELECT
           users.*,
+          tags.comment,
           photos.id AS photo_id,
           photos.img_url,
           photos.caption,
           photos.likes,
           photos.date
         FROM users
+        LEFT JOIN tags
+          ON users.id = tags.user_id
         LEFT JOIN photos
-          ON users.id = photos.user_id
+          ON tags.photo_id = photos.id
         WHERE users.id = #{id};
       SQL
     )
@@ -66,6 +73,7 @@ class User
           "caption" => result["caption"],
           "likes" => result["likes"].to_i,
           "date" => result["date"].to_date
+          # "comment" => result["comment"]
         })
       end
     end
