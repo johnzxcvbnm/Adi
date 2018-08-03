@@ -2,7 +2,7 @@
 
 ---
 Title: Instaphoto - Part2 <br>
-Type: Lab <br>
+Type: Homework <br>
 Creator: Mark De May<Br>
 Competencies: Rails, Many-to-Many relationships
 
