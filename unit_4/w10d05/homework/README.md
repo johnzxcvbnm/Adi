@@ -26,7 +26,7 @@ You'll be making a Rails API for a twitter-like app. By the end of the assignmen
 - In your homework folder for tonight, create a new rails app called `tweeter_app_api`.
   - Don't forget to set your database to postgresql
   - Don't forget to `--skip-git`
-- In terminal, create a database called `tweeter_app_api`
+- In terminal, create a database called `tweeter_app_api_development`
 
 ### Users Model
 
