@@ -21,9 +21,6 @@ class Person
                 ON people.home_id = locations.id;
             SQL
         )
-        results.each do |result|
-            p result
-        end
         return results.map do |result|
             if result["home_id"]
                 home = {
