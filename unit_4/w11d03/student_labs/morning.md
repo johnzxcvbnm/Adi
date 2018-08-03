@@ -1,6 +1,6 @@
 # Audubon Society Bird Photo Contest
 
-![Shoebill Stork](http://www.trendsandlife.com/wp-content/uploads/2016/10/2985311_orig.jpg)
+![Shoebill Stork](https://www.trendsandlife.com/wp-content/uploads/2016/10/2985311_orig.jpg)
 
 Your local Audubon Society has reached out to you to help them put together an online contest.
 
