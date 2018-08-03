@@ -1,6 +1,6 @@
 # Audubon Society Bird Photo Contest
 
-![Shoebill Stork](/2985311_orig.jpg)
+![Shoebill Stork]('/2985311_orig.jpg')
 
 Your local Audubon Society has reached out to you to help them put together an online contest.
 
