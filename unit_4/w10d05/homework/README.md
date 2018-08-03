@@ -5,7 +5,7 @@ Title: Tweet_r <br>
 Type: Homework<br>
 Duration: Weekend homework<br>
 Creator: Thom Page <br>
-Modified By: Jerrica Bobadilla<br>
+Modified By: Jerrica Bobadilla, Mark De May<br>
 Topics: Rails, routes, Postman
 
 ---
@@ -19,7 +19,7 @@ Real Cool Twitter API in the Sky
 
 ## Activity
 
-This will be a two-day homework assignment where you'll be making a Rails API for a twitter-like app. By the end of the assignment, the app should have 3 models (tweets, users, likes) with both a one-to-many and many-to-many relationship. The app should have full CRUD functionality that can be tested via cURL or Postman. It will be up to you how you want to tackle the workflow on building this API based on the app requirements provided below.
+You'll be making a Rails API for a twitter-like app. By the end of the assignment, the app should have 3 models (tweets, users, likes) with both a one-to-many and many-to-many relationship. The app should have full CRUD functionality that can be tested via cURL or Postman. It will be up to you how you want to tackle the workflow on building this API based on the app requirements provided below.
 
 ### Setting up
 
@@ -96,4 +96,4 @@ This will be a two-day homework assignment where you'll be making a Rails API fo
 - Similarly, when viewing _a user_, instead of showing their tweets in order of id, have it show up in order of tweets with the most likes
 - Try using the faker gem you used during lab to seed your database
 - Add an Angular front end. Put your html files in the `public` directory and the rails server will serve them up.
-- Get a head start on React. Checkout [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
+- Get a head start on React. Check out [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
