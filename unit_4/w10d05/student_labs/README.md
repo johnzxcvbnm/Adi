@@ -1,4 +1,4 @@
-VARCHAR![](/ga_cog.png)
+![](/ga_cog.png)
 
 ---
 Title: Superhero vs. Evil Scientist<br>
