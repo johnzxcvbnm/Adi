@@ -71,7 +71,6 @@ class Person
     end
 
     def self.create(opts)
-        p opts
         results = DB.exec(
             <<-SQL
             INSERT INTO people (name, age, home_id)
