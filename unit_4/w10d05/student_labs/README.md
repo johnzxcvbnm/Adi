@@ -1,47 +1,54 @@
-![](/ga_cog.png)
+VARCHAR![](/ga_cog.png)
 
 ---
-Title: Book Catalogue Part 2<br>
+Title: Superhero vs. Evil Scientist<br>
 Type: Lab<br>
-Creator: Thom Page<br>
-Heavily Modified by: Jerrica Bobadilla
+Creator: Mark De May<br>
 
 ---
 
-# Book Catalogue 
-
-![](https://cdn-images-1.medium.com/max/1024/1*YLlZ96J3p8GFkIh1USVMzg.jpeg)
+# Superhero vs Evil Scientist
 
 ## Activity
 
-Your friend had a new idea for the book app - let the users add reviews for books! 
+Let's give forgetful superheroes a hand in remembering who their nemeses are. Create a many-to-many relationship between superheroes and evil scientists using a linking table. A rails project has already been set up for you that has everything you need for superheros and evil scientists.
 
-> :books: [If you didn't complete yesterday's lab, go back and complete that first before starting this lab.](/unit_4/w10d01/student_labs/README.md) 
+### Set Up
 
-### What We Know
+`cd` into `enemies` and run these commands:
+```
+bundle
+rails db:create
+psql -f enemies_setup.sql enemies_development
+```
 
-Yesterday, we created a two model API with books and users. The books and users had a one-to-many relationship where users can have many books in their catalogue, and books belong to a user. 
+You should be ready to go. Start your rails server and test things out in `postman` by doing a `get` on `localhost:3000/superheros` and `localhost:3000/`
+1. Create a new rails project
+```
+rails new enemies -d postgresql --skip-git
+rails db:create
+```
 
-Today, we're going to introduce a third model: reviews. 
+### The Linking Table
 
-##### Reviews Model
- 
-  - book_id
-  - user_id 
-  - review_content
+Using the superheros and scientists tables already in the project you're going to add a new table to create a many-to-many relationship between them. The new table should have these columns:
+  - id
+  - superhero_id
+  - scientist_id
 
-The book_id should refer to the book being reviewed, the user_id should refer to the user leaving the review, and the review_content is the actual content of the review. 
+Create full CRUD for the new table.
 
-##### User Stories 
- 
- - As a user, I can create a review for a book, even if the book 'belongs' to another user
- - As a user, when I look at all the books, I can see all the reviews that every book has  
- - As a user, when I look at one book, I can see all the reviews that book has
- - As a user, I can delete a review 
- - As a user, I can edit a review
+Once you've created the new table, update the show and index routes for superheros to include their archenemies. Then update the show and index routes for scientists to include their archenemies.
 
-##### Leading Questions to Think About 
+### User Stories
 
- - What routes will we need for this join table? 
- - What actions will the reviews controller need? 
+ - As a user, I can create a new relationship between a superhero and an evil scientist
+ - As a user, when I look at all superheros, it includes an array of their enemy scientist's information.
+ - As a user, when I look at one superhero, it includes an array of their enemy scientist's information.
+ - As a user, when I look at all scientists, it includes an array of their enemy superhero's information.
+ - As a user, when I look at one scientist, it includes an array of their enemy superhero's information.
 
+##### Leading Questions to Think About
+
+ - What routes will we need for this join table?
+ - What actions will the reviews controller need?

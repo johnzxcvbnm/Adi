@@ -10,7 +10,7 @@ class ScientistsController < ApplicationController
   end
 
   def create
-    render json: Scientist.create(params["Scientist"])
+    render json: Scientist.create(params["scientist"])
   end
 
   def delete
@@ -18,6 +18,6 @@ class ScientistsController < ApplicationController
   end
 
   def update
-    render json: Scientist.update(params["id"], params["Scientist"])
+    render json: Scientist.update(params["id"], params["scientist"])
   end
 end

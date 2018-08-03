@@ -1,7 +1,7 @@
 DROP TABLE superheros;
 CREATE TABLE superheros (id SERIAL, name VARCHAR(40), battlecry VARCHAR(100));
 INSERT INTO superheros (name, battlecry)
-  VALUES ('Adequate Man', 'That is good enough. Time for a map.');
+  VALUES ('Adequate Man', 'That is good enough. Time for a nap.');
 INSERT INTO superheros (name, battlecry)
   VALUES ('Spider Pig', 'Oink!');
 INSERT INTO superheros (name, battlecry)

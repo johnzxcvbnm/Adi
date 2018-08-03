@@ -1,4 +1,4 @@
-class Superhero
+class Scientist
   DB = PG.connect({
     :host => "localhost",
     :port => 5432,
@@ -12,7 +12,7 @@ class Superhero
       {
         "id" => result["id"],
         "name" => result["name"],
-        "battlecry" => result["battlecry"]
+        "lair_type" => result["lair_type"]
       }
     end
   end
@@ -23,23 +23,23 @@ class Superhero
     return {
         "id" => result["id"],
         "name" => result["name"],
-        "battlecry" => result["battlecry"]
+        "lair_type" => result["lair_type"]
       }
   end
 
   def self.create(opts)
     results = DB.exec(
       <<-SQL
-        INSERT INTO scientists (name, battlecry)
-        VALUES ('#{opts["name"]}', '#{opts["battlecry"]}')
-        RETURNING id, name, battlecry
+        INSERT INTO scientists (name, lair_type)
+        VALUES ('#{opts["name"]}', '#{opts["lair_type"]}')
+        RETURNING id, name, lair_type
       SQL
     )
     result = results.first
     return {
       "id" => result["id"].to_i,
       "name" => result["name"],
-      "battlecry" => result["battlecry"]
+      "lair_type" => result["lair_type"]
     }
   end
 
@@ -47,16 +47,16 @@ class Superhero
     results = DB.exec(
       <<-SQL
         UPDATE scientists
-        SET name='#{opts['name']}', battlecry='#{opts["battlecry"]}'
+        SET name='#{opts['name']}', lair_type='#{opts["lair_type"]}'
         WHERE id=#{id}
-        RETURNING id, name, battlecry
+        RETURNING id, name, lair_type
       SQL
     )
     result = results.first
     return {
       "id" => result["id"].to_i,
       "name" => result["name"],
-      "battlecry" => result["battlecry"]
+      "lair_type" => result["lair_type"]
     }
   end
 
