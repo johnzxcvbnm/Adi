@@ -8,38 +8,52 @@ class Person
           people.*,
           locations.street,
           locations.city,
-          locations.state
+          locations.state,
+          companies.id AS company_id,
+          companies.name as company,
+          companies.industry
         FROM people
         LEFT JOIN locations
-          ON people.home_id = locations.id;
+          ON people.home_id = locations.id
+        LEFT JOIN jobs
+          ON people.id = jobs.person_id
+        LEFT JOIN companies
+          ON jobs.company_id = companies.id
+        ORDER BY people.id ASC;
       SQL
     )
-    return results.map do |result|
-      if result["home_id"]
-        home = {
-          "id" => result["home_id"].to_i,
-          "street" => result["street"],
-          "city" => result["city"],
-          "state" => result["state"]
+    people = []
+    last_person_id = nil
+    results.each do |result|
+      if result["id"] != last_person_id
+        if result["home_id"]
+          home = {
+            "id" => result["home_id"].to_i,
+            "street" => result["street"],
+            "city" => result["city"],
+            "state" => result["state"]
+          }
+        end
+        new_person = {
+          "id" => result["id"].to_i,
+          "name" => result["name"],
+          "age" => result["age"].to_i,
+          "home" => home,
+          "employers" => []
         }
+        people.push(new_person)
+        last_person_id = result["id"]
       end
-      {
-        "id" => result["id"].to_i,
-        "name" => result["name"],
-        "age" => result["age"].to_i,
-        "home" => home
-      }
+      if result["company_id"]
+        employer = {
+          "id" => result["company_id"].to_i,
+          "name" => result["company"],
+          "industry" => result["industry"]
+        }
+        people.last["employers"].push(employer)
+      end
     end
-
-  #   results = DB.exec("SELECT * FROM people;")
-  #   return results.map do |result|
-  #     {
-  #       "id" => result["id"].to_i,
-  #       "name" => result["name"],
-  #       "age" => result["age"].to_i,
-  #       "home_id" => result["home_id"].to_i
-  #     }
-  #   end
+    return people
   end
 
   def self.find(id)
@@ -49,10 +63,17 @@ class Person
           people.*,
           locations.street,
           locations.city,
-          locations.state
+          locations.state,
+          companies.id AS company_id,
+          companies.name AS company,
+          companies.industry
         FROM people
         LEFT JOIN locations
           ON people.home_id = locations.id
+        LEFT JOIN jobs
+          ON people.id = jobs.person_id
+        LEFT JOIN companies
+          ON jobs.company_id = companies.id
         WHERE people.id=#{id};
       SQL
     )
@@ -65,11 +86,23 @@ class Person
         "state" => result["state"]
       }
     end
+    employers = []
+    results.each do |result|
+      if result["company_id"]
+        employers.push({
+          "id" => result["company_id"].to_i,
+          "name" => result["company"],
+          "idustry" => result["industry"]
+        })
+      end
+    end
+
     return {
         "id" => result["id"].to_i,
         "name" => result["name"],
         "age" => result["age"].to_i,
-        "home" => home
+        "home" => home,
+        "employers" => employers
       }
   end
 

@@ -7,23 +7,75 @@ class Scientist
 
 
   def self.all
-    results = DB.exec( "SELECT * FROM scientists;")
-    return results.map do |result|
-      {
-        "id" => result["id"],
-        "name" => result["name"],
-        "lair_type" => result["lair_type"]
-      }
+    results = DB.exec(
+      <<-SQL
+        SELECT
+          scientists.*,
+          links.superhero_id,
+          superheros.name AS superhero_name,
+          superheros.battlecry
+        FROM scientists
+        LEFT JOIN links
+          ON scientists.id = links.scientist_id
+        LEFT JOIN superheros
+          ON links.superhero_id = superheros.id
+        ORDER BY scientists.id ASC;
+      SQL
+    )
+    scientists = []
+    last_id = nil
+    results.each do |result|
+      if result["id"] != last_id
+        scientists.push({
+          "id" => result["id"].to_i,
+          "name" => result["name"],
+          "lair_type" => result["lair_type"],
+          "superheros" => []
+        })
+      end
+      last_id = result["id"]
+      if result["superhero_id"]
+        scientists.last["superheros"].push({
+          "id" => result["superhero_id"].to_i,
+          "name" => result["superhero_name"],
+          "battlecry" => result["battlecry"]
+        })
+      end
     end
+    return scientists
   end
 
   def self.find(id)
-    results = DB.exec( "SELECT * FROM scientists WHERE id = #{id};")
-    result = results.first
+    results = DB.exec(
+      <<-SQL
+        SELECT
+          scientists.*,
+          links.superhero_id,
+          superheros.name AS superhero_name,
+          superheros.battlecry
+        FROM scientists
+        LEFT JOIN links
+          ON scientists.id = links.scientist_id
+        LEFT JOIN superheros
+          ON links.superhero_id = superheros.id
+        WHERE scientists.id = #{id};
+      SQL
+    )
+    superheros = []
+    results.each do |result|
+      if result["superhero_id"]
+        superheros.push({
+          "id" => result["superhero_id"].to_i,
+          "name" => result["superhero_name"],
+          "battlecry" => result["battlecry"]
+        })
+      end
+    end
     return {
-        "id" => result["id"],
-        "name" => result["name"],
-        "lair_type" => result["lair_type"]
+        "id" => results.first["id"],
+        "name" => results.first["name"],
+        "lair_type" => results.first["lair_type"],
+        "superheros" => superheros
       }
   end
 
