@@ -9,31 +9,66 @@ class User
     results = DB.exec(
       <<-SQL
         SELECT
-          *
-        FROM users;
+          users.*,
+          tweets.id AS tweet_id,
+          tweets.tweet_content,
+          tweets.user_id
+        FROM users
+        LEFT JOIN tweets
+          ON users.id = tweets.user_id
+        ORDER BY users.id;
       SQL
     )
-    return results.map do |result|
-      {
-        "id" => result["id"].to_i,
-        "user_name" => result["user_name"],
-        "password" => result["password"]
-      }
+    users = []
+    last_id = nil
+    results.each do |result|
+      if result["id"] != last_id
+        users.push({
+          "id" => result["id"].to_i,
+          "user_name" => result["user_name"],
+          "password" => result["password"],
+          "tweets" => []
+        })
+        last_id = result["id"]
+      end
+      if result["tweet_id"]
+        users.last["tweets"].push({
+          "id" => result["tweet_id"].to_i,
+          "tweet_content" => result["tweet_content"],
+          "user_id" => result["user_id"].to_i
+        })
+      end
     end
+    return users
   end
 
   def self.find(id)
     results = DB.exec(
       <<-SQL
-        SELECT *
+        SELECT
+          users.*,
+          tweets.id AS tweet_id,
+          tweets.tweet_content
         FROM users
-        WHERE id = #{id};
+        LEFT JOIN tweets
+          ON users.id = tweets.user_id
+        WHERE users.id = #{id};
       SQL
-    ).first
+    )
+    tweets = []
+    results.each do |result|
+      if result["tweet_id"]
+        tweets.push({
+          "id" => result["tweet_id"].to_i,
+          "tweet_content" => result["tweet_content"]
+        })
+      end
+    end
     return {
-      "id" => results["id"].to_i,
-      "user_name" => results["user_name"],
-      "password" => results["password"]
+      "id" => results.first["id"].to_i,
+      "user_name" => results.first["user_name"],
+      "password" => results.first["password"],
+      "tweets" => tweets
     }
   end
 
