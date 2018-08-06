@@ -34,7 +34,7 @@ const receipt1 =
     paid: false
   }
 const receipt2 = {
-  person: 'Jerrica',
+  person: 'Mark',
   order: {
     main: 'Rice Bowl',
     protein: 'Ginger Soy Chix',
@@ -66,7 +66,7 @@ const receipt3 = {
 
 ```
 
-- Add these the first receipt to the state of the app:
+- Add the first receipt to the state of the app:
 
 ```js
 class App extends React.Component {
@@ -154,7 +154,7 @@ const receipts = [
     paid: false
   },
   {
-    person: 'Jerrica',
+    person: 'Mark',
     order: {
       main: 'Rice Bowl',
       protein: 'Ginger Soy Chix',
