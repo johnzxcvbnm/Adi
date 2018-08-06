@@ -29,7 +29,7 @@ There are two major systems for representing graphic information on computers:
 
 **Vector Graphics** - images are represented as geometric shapes that are drawn by the viewing program. Examples are CAD (computer assisted drafting), Adobe Illustrator, Sketch, and Macromedia Flash. Pros: can scale up or down (from the size of a postage stamp to a billboard) - without loss of image quality. Cons: difficult to make ultra complex images (like photos) in SVG, at this time.
 
-Vector graphics are scalable. Let's look at some examples from [SVG Essentials on O'Reilly Commons](http://commons.oreilly.com/wiki/index.php/SVG_Essentials/Getting_Started)
+Vector graphics are scalable. Let's look at some examples from [SVG Essentials on O'Reilly Commons](https://www.safaribooksonline.com/library/view/svg-essentials-2nd/9781491945308/ch01.html)
 
 SVGs are part of HTML web standards (and have been since the late 90s). This allows SVGs to be adapted for many purposes. SVGs are written with XML tags and have attributes (and thus can be manipulated by CSS and JavaScript to be even more dynamic, interactive and awesome).
 
