@@ -141,3 +141,10 @@ Server running successfully:
 
 We did it! We set up our new Rails app!
 ![Rails Broswer success](https://i.imgur.com/zkHZ9Hv.png)
+
+## Aside
+Rails has conventions on how to pluralize and singularize words.
+
+If you would like to check the singular or plural of a word, you can do it by running `rails c` (to quit, type `quit`
+
+![rails c pluralize, singularize ](https://i.imgur.com/RiV71w5.png)

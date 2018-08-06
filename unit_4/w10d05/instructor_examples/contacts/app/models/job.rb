@@ -1,50 +1,60 @@
 class Job
-    attr_reader :id, :person_id, :company_id
-    DB = PG.connect(host: "localhost", port: 5432, dbname: 'contacts')
-
-    def initialize(opts)
-        @id = opts["id"].to_i
-        @person_id = opts["person_id"].to_i
-        @company_id = opts["company_id"].to_i
-    end
+    # connect to postgres
+    DB = PG.connect({:host => "localhost", :port => 5432, :dbname => 'contacts_development'})
 
     def self.all
-        results = DB.exec("SELECT * FROM jobs")
-        return results.map{ |result| Job.new(result)}
+        results = DB.exec("SELECT * FROM jobs;")
+        return results.map do |result|
+            {
+                "id" => result["id"].to_i,
+                "person_id" => result["person_id"].to_i,
+                "company_id" => result["company_id"].to_i
+            }
+        end
     end
 
     def self.find(id)
-        results = DB.exec("SELECT * FROM jobs WHERE id = #{id};")
-        return Job.new(results.first)
+        results = DB.exec("SELECT * FROM jobs WHERE id=#{id};")
+        return {
+            "id" => results.first["id"].to_i,
+            "person_id" => results.first["person_id"].to_i,
+            "company_id" => results.first["company_id"].to_i
+        }
     end
 
     def self.create(opts)
         results = DB.exec(
             <<-SQL
                 INSERT INTO jobs (person_id, company_id)
-                VALUES (#{opts["person_id"]}, #{opts["company_id"]})
+                VALUES ( #{opts["person_id"]}, #{opts["company_id"]} )
                 RETURNING id, person_id, company_id;
             SQL
         )
-        return Job.new(results.first)
+        return {
+            "id" => results.first["id"].to_i,
+            "person_id" => results.first["person_id"].to_i,
+            "company_id" => results.first["company_id"].to_i
+        }
+    end
+
+    def self.delete(id)
+        results = DB.exec("DELETE FROM jobs WHERE id=#{id};")
+        return { "deleted" => true }
     end
 
     def self.update(id, opts)
         results = DB.exec(
             <<-SQL
                 UPDATE jobs
-                SET
-                    person_id=#{opts["person_id"]},
-                    company_id=#{opts["company_id"]}
-                WHERE id = #{id}
-                RETURNING id, person_id, company_id
+                SET person_id=#{opts["person_id"]}, company_id=#{opts["company_id"]}
+                WHERE id=#{id}
+                RETURNING id, person_id, company_id;
             SQL
         )
-        return Job.new(results.first)
-    end
-
-    def self.delete(id)
-        results = DB.exec("DELETE FROM jobs WHERE id=#{id};")
-        return { deleted: true}
+        return {
+            "id" => results.first["id"].to_i,
+            "person_id" => results.first["person_id"].to_i,
+            "company_id" => results.first["company_id"].to_i
+        }
     end
 end

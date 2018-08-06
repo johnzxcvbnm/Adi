@@ -1,5 +1,5 @@
 class PeopleController < ApplicationController
-    skip_before_action :verify_authenticity_token
+    skip_before_action :verify_authenticity_token, raise: false
 
     def index
         render json: Person.all
@@ -20,4 +20,5 @@ class PeopleController < ApplicationController
     def update
         render json: Person.update(params["id"], params["person"])
     end
+
 end
