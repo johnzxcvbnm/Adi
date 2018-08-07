@@ -4,6 +4,7 @@ class Furniture extends React.Component {
         <li>
           {this.props.piece}
           { (this.props.made) ? null : <button onClick={() => (this.props.restore(this.props.id))}>Restoration Advice</button> }
+          <button onClick={() => (this.props.delete(this.props.id))}>DELETE</button>
         </li>
     )
   }
@@ -37,14 +38,21 @@ class App extends React.Component {
         }
       ]
     }
+    this.delete = this.delete.bind(this);
     this.restore = this.restore.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+  delete (index) {
+    // console.log("Index of " + index);
+    const copy_array = this.state.furniture;
+    copy_array.splice(index, 1);
+    this.setState({furniture: copy_array})
+  }
   restore (index) {
     const copy_array = this.state.furniture;
-    copy_array[index - 1] = {
-      piece: `Paint ${copy_array[index -1 ]["piece"]} white`,
+    copy_array[index] = {
+      piece: `Paint ${copy_array[index]["piece"]} white`,
       recommendationMade: true,
       id: index
     };
@@ -76,7 +84,7 @@ class App extends React.Component {
           <input type="submit" />
         </form>
         <ul>
-          {this.state.furniture.map( (fp) => <Furniture piece={fp.piece} made={fp.recommendationMade} restore={this.restore} id={fp.id}/> )}
+          {this.state.furniture.map( (fp, index) => <Furniture piece={fp.piece} made={fp.recommendationMade} restore={this.restore} delete={this.delete} id={index}/> )}
         </ul>
       </div>
     )
