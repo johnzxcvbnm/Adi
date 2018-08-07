@@ -26,6 +26,11 @@ More details here: https://github.com/facebook/create-react-app
 
 - Make a new HelloAgain component. You must `import React` and `export` the component
 
+**src/components/HelloAgain.js**
+
 ![Hello Again Component](https://i.imgur.com/tcfcmBl.png)
 
 - `import` it in `App.js` and then include it as a component in `App`
+
+**src/App.js** Updated to include HelloAgain component
+![App.js with HelloAgain Component](https://i.imgur.com/mbomvYc.png)
