@@ -14,6 +14,18 @@ const articleStyle = {
   width: "100%"
 }
 
+const footerStyle = {
+  display: "inline"
+  // width: "100%"
+}
+
+const footerImageStyle = {
+  margin: "2px",
+  width: "24%",
+  boxSizing: "border-box",
+  border: "5px solid rgba(192,192,192,0.7)"
+}
+
 class Header extends React.Component {
   render() {
     return (
@@ -43,6 +55,29 @@ class TextArticle extends React.Component {
   }
 }
 
+class FooterLinks extends React.Component {
+  render() {
+    return (
+      <div style={footerStyle}>
+        <img style={footerImageStyle} src="/images/press-nbcnewyork.gif" />
+        <img style={footerImageStyle} src="/images/press-huffpost.gif" />
+        <img style={footerImageStyle} src="/images/press-logo_lucky.gif" />
+        <img style={footerImageStyle} src="/images/press-marieclaire.gif" />
+      </div>
+    )
+  }
+}
+
+class Copyright extends React.Component {
+  render() {
+    return (
+      <div style={headerStyle}>
+        <p>Copyright 1999</p>
+      </div>
+    )
+  }
+}
+
 class App extends React.Component {
   render() {
     return (
@@ -51,7 +86,8 @@ class App extends React.Component {
         <Article path="/images/home-bloghero.png" />
         <Article path="/images/home-rings.png" />
         <TextArticle />
-
+        <FooterLinks />
+        <Copyright />
       </div>
     )
   }
