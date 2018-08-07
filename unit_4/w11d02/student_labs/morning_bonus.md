@@ -4,28 +4,28 @@ Try `create-react-app`
 
 More details here: https://github.com/facebook/create-react-app
 
-`create-react-app tea-shop`
-watch a bunch of stuff download
-`cd tea-shop`
-`atom .`
-`npm start`
+- `create-react-app tea-shop`
+- watch a bunch of stuff download
+- `cd tea-shop`
+- `atom .`
+- `npm start`
 
-see server start, should auto open in your browser
+- see server start, should auto open in your browser
 
 ![success react in browser](https://i.imgur.com/ByNRBtM.png)
 
-Swap out what is inside the render return for your code:
+- Swap out what is inside the render return for your code (the stuff in this component):
 
-![](https://i.imgur.com/1QYVtYn.png)
+![this is the default render](https://i.imgur.com/1QYVtYn.png)
 
-Import a new component
+- Import a new component
 
-mkdir `src/components`
+- mkdir `src/components`
 
-touch `src/components/HelloAgain.js`
+- touch `src/components/HelloAgain.js`
 
-Make a new HelloAgain component. You must `import React` and `export` the component
+- Make a new HelloAgain component. You must `import React` and `export` the component
 
 ![Hello Again Component][https://i.imgur.com/tcfcmBl.png]
 
-`import` it in `App.js` and then include it as a component in `App`
+- `import` it in `App.js` and then include it as a component in `App`
