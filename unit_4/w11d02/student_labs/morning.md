@@ -1,206 +1,72 @@
-# React Roasts Lab
+# DOM Tree Tea House
 
-## Set up
-- `mkdir react_roasts`
-- `cd react_roasts `
-- `touch app.js index.html`
-- `atom .`
+Tea is the new coffee!
 
-**index.html**
-- add html boilerplate
-- add script tags
-- add a `main` tag inside the `body`
+You are almost done with WDI! These instructions are significantly more vague than the morning lab! Use those brain muscles, find your own solutions, use class notes and morning lab to help yourself achieve glorious success!
 
-```html
+## Set Up
+- `mkdir tea`
+- `cd tea`
+- `touch index.html app.js`
+- create a new react app (follow instructions from class/previous lab)
+- using react, render an `h1` with the name of this 'business'
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.3.2/umd/react.production.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.3.2/umd/react-dom.production.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
-<script type="text/babel" src="app.js"></script>
-```
+## Build a custom component that will contain an `ul`
+For now, just have it have one `li` that says `tea`
 
-**app.js**
-
-- render and `h1` tag using react
-
-```jsx
-ReactDOM.render(
-  <h1 className="shop-name">React Roasts Coffee Shop</h1>,
-  document.querySelector('main')
-);
-```
-
-#### Run a simple server:
-- If you have python 2.x
-  - `python -m SimpleHTTPServer`
-
-- If you have python 3.x
-  - `python -m http.server [<portNo>]`
-    ex:`python -m http.server 8080`
-
-- If you want to use npm
-    - Install, if you haven't already, with `npm install -g http-server` (might need to run `sudo npm install -g http-server`)
-    - run `http-server -o`
-
-### Important Note
-- To see updates you must refresh your browser, all three of the servers above do cache things, so you may have to do a hard refresh (hold shift key when doing a refresh) to see your changes. Remember `command shift r` as the hot keys
-
-Example Appearance:
-
-![React App Started](https://i.imgur.com/xxeZCEW.png)
+**GOTCHA** : Remember render() can only return one html element. You can nest as many elements inside of that element though
 
 
+## Conditionally render HTML
 
-## Assign JSX to a variable
+- make a new variable called `open`, set it to true to start. For the next two steps, just change the value in your `app.js` file (WHERE do you make this? globally? inside the class? as props? set it inside of state? Look back at the lecture notes and follow along)
+- if `open` is true, render an `h2` that says 'Yes, we are open'
+- if `open` is false, render an `h3` that says 'Sorry, we are closed'
+<br>
 
-Let's update our app to store our Store Name in a variable
+![open](https://i.imgur.com/8CrqDjn.png)
 
-```jsx
-const storeName = <h1 className="shop-name">React Roasts Coffee Shop</h1>
-```
+![closed](https://i.imgur.com/SPvPQ1i.png)
 
-And update our ReactDOM.render()
+Now make it so you can change the value of `open` through your page:
+
+- write a function that will toggle open from true to false and false to true (hint something like `open = !open` )
+- Add a click handler to the h1 or make a button to call the function and change the value of open, the `h2` should update as the value of `open` changes
+
+## Use `.map` to render `li` with the following tea data
+Change the `li` from a hard coded `tea` to render this 'data':
 
 ```js
-const storeName = <h1 className="shop-name">React Roasts Coffee Shop</h1>
+const tea = ['Maple Bacon Tea', 'Chardonnay Tea', 'Dolphin Blue Tea', 'Labrador Tea', 'Ginko Biloba Tea']
 
-ReactDOM.render(
-  storeName,
-  document.querySelector('main')
-);
-```
-
-It should look the same.
-
-### Embed and Expression
-
-Let's put our store location as a variable
-
-```jsx
-const loc = "nyc"
-const storeName = <h1 className="shop-name">React Roasts Coffee Shop, {loc}</h1>
-```
-
-### Call a function inside our Expression
-
-```jsx
-const formatLoc = l => {
-  return l.toUpperCase();
-}
-```
-
-### Create multi-line JSX variables
-
-wrap your `h1` in a `div` with a class of `container`
-add an h2  with a tag line like `Our coffee will get your heart racing`
-
-
-### Create a custom component
-
-Let's make a heading component. Here is a little code to get you started. We're copy pasting our multi-line jsx into our custom component. We have to add a return statement and wrap our code in `()` because it goes across multiple lines
-
-```jsx
-class Heading extends React.Component {
-  render () {
-    return (
-      <div className='container'>
-        <h1 className='shop-name'> React Roasts Coffee Shop, {formatLoc(loc)}</h1>
-        <h2> Our coffee will get your heart racing</h2>
-      </div>
-    )
-  }
-}
-```
-
-Replace your storeLocation variable with this class component in your `ReactDOM.render` function
-
-Go ahead and add an unordered list with one list item hard coded: `espresso` under the `h2`
-
-![](https://i.imgur.com/G7XGhg9.png)
-
-
-
-
-### Customize an instance of a component with properties
-
-Let's wrap our custom `<Heading />` in a section tag, so we can add more custom components later
-
-Let's get the word `espresso` to render as a property
-
-```html
-<section>
-    <Heading drink="espresso"></Heading>
-</section>,
 ```
 
 
+## Pass Properties to Children
+ - Remove `tea` as a global variable and instead add the `tea` array to state
 
-In your heading component, remove the hard coded `espresso` and replace it with `this.props.drink`
+ - Break list items (`li`) into their own component and pass down the data from the component that has the `ul`
 
-```html
-<div className="container">
-  <h1 className="shop-name">React Roasts Coffee Shop {formatLoc(loc)}</h1>
-  <ul>
-    <li>{this.props.drink}</li>
-  </ul>
-</div>
-```
+## Add a Click Handler That Calls a Function
+It will alert the customer that they are drinking whatever tea they clicked on
 
-Add another property `price` in the ReactDOM.render() and set it to the string `$8.00`, then pass the value to the `Heading` component, inside a `span` inside the `li` element
-
-### Handle User Events
-
-When the user clicks on the espresso li, let's set an alert that says 'I love coffee'
-
-Try looking back at the notes from class to figure this out.
+Thought question - where should this function go? In the list item component or its parent?
 
 
-### Click Event Get Property
+## Change a Component's State Through Interaction
+- Create a form with a submit button
+- Add the input to the tea array and have it render immediately on submit
 
-Instead of alerting with `I love coffee`, have the alert say `I love` and the name of the coffee.
+## Use `this.props  children`
+In your component that renders the list items, put some text between the tags like `The finest `
 
-Hint: Use lecture notes to refactor, there are a few things you need to do to get this working
+Then pass in to the list item child component `this.props.children` to render
 
-### Make another component,
+![](https://i.imgur.com/cpczbhN.png)
 
-Move the `li` into their own component,
+This may seem a bit weird! Reread the notes, keep working on it
 
-Then move  `drink="espresso"`  from the heading component, down into the custom Li elements, and render them there, add a few custom components
+Final:
 
-so instead of `<li>{this.props.drink}</li>`
+![final](https://i.imgur.com/bRd4kc2.png)
 
-You should have something like
-
-```jsx
-<ListCoffee name='espresso'/>
-<ListCoffee name='Frappuccino'/>
-<ListCoffee name='Americano'/>
-```
-
-Also try and see if you can add the price, which should always be $8.00
-
-### Hungry for More
-Follow the notes and create an array of different coffees. Render them as list items using .map
-
-Here is an array of coffee
-
-```js
-const coffees = [
-  'Americano',
-  'Café au lait',
-  'Caffé Latte',
-  'Caffé macchiato',
-  'Cafe mocha',
-  'Cappuccino',
-  'Espresso',
-  'Flat White',
-  'Frappuccino',
-  'Iced Coffee',
-  'Instant coffee',
-  'Irish coffee',
-  'Turkish coffee'
-]
-```
-Include the click event that will show the right coffee when clicked
-
-![finished](https://i.imgur.com/e5scTtJ.png)

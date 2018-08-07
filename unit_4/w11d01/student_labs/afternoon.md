@@ -34,7 +34,7 @@ const receipt1 =
     paid: false
   }
 const receipt2 = {
-  person: 'Jerrica',
+  person: 'Mark',
   order: {
     main: 'Rice Bowl',
     protein: 'Ginger Soy Chix',
@@ -66,7 +66,7 @@ const receipt3 = {
 
 ```
 
-- Add these the first receipt to the state of the app:
+- Add the first receipt to the state of the app:
 
 ```js
 class App extends React.Component {
@@ -121,6 +121,8 @@ Then go into the receipt data and change the value to true and check that the re
 ![Matt has settled his bill](https://i.imgur.com/90oM59b.png)
 
 
+To seee the `React` tab in the Dev Console, you have to download it as a [Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+
 <details><summary> Hint 3 </summary>
 
 ![the solution](https://i.imgur.com/I3BcdqO.png)
@@ -152,7 +154,7 @@ const receipts = [
     paid: false
   },
   {
-    person: 'Jerrica',
+    person: 'Mark',
     order: {
       main: 'Rice Bowl',
       protein: 'Ginger Soy Chix',
