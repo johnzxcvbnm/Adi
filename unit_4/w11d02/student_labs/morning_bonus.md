@@ -33,4 +33,6 @@ More details here: https://github.com/facebook/create-react-app
 - `import` it in `App.js` and then include it as a component in `App`
 
 **src/App.js** Updated to include HelloAgain component
-![App.js with HelloAgain Component](https://i.imgur.com/mbomvYc.png)
+
+
+![App.js with HelloAgain Component](https://i.imgur.com/xiWvA4Q.png)
