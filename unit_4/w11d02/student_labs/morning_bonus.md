@@ -30,9 +30,9 @@ More details here: https://github.com/facebook/create-react-app
 
 ![Hello Again Component](https://i.imgur.com/tcfcmBl.png)
 
-This syntax also works -it is slightly different than what you learned in lecture. 
+This syntax also works -it is slightly different than what you learned in lecture:
 
-~[just Component instead of React.Component](https://i.imgur.com/uA0EBXq.png)
+![just Component instead of React.Component](https://i.imgur.com/uA0EBXq.png)
 
 - `import` it in `App.js` and then include it as a component in `App`
 
