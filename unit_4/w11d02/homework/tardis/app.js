@@ -1,8 +1,30 @@
 class DivThree extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = this.props.state;
+    this.changeIt = this.changeIt.bind(this);
+  }
+  changeIt(text) {
+    if (this.state.tardis.caps){
+      this.setState({
+        tardis: {
+          name: text.toLowerCase(),
+          caps: false
+        }
+      })
+    } else {
+      this.setState({
+        tardis: {
+          name: text.toUpperCase(),
+          caps: true
+        }
+      })
+    }
+  }
   render() {
     return (
       <div>
-        <h3 onClick={ () => this.props.changeIt(this.props.name)}>{this.props.name}</h3>
+        <h3 onClick={ () => this.changeIt(this.state.tardis.name)}>{this.state.tardis.name}</h3>
       </div>
     )
   }
@@ -12,8 +34,8 @@ class DivTwo extends React.Component {
   render() {
     return (
       <div>
-        <DivThree changeIt={this.props.changeIt} name={this.props.name} />
-        <DivThree changeIt={this.props.changeIt} name={this.props.name} />
+        <DivThree state={this.props.state} changeIt={this.props.changeIt} name={this.props.name} />
+        <DivThree state={this.props.state} changeIt={this.props.changeIt} name={this.props.name} />
       </div>
     )
   }
@@ -23,7 +45,7 @@ class DivOne extends React.Component {
   render() {
     return (
       <div>
-        <DivTwo changeIt={this.props.changeIt} name={this.props.name} />
+        <DivTwo state={this.props.state} changeIt={this.props.changeIt} name={this.props.name} />
       </div>
     )
   }
@@ -59,7 +81,7 @@ class App extends React.Component {
   }
   render() {
     return (
-        <DivOne changeIt={this.changeIt} name={this.state.tardis.name}/>
+        <DivOne state={this.state} changeIt={this.changeIt} name={this.state.tardis.name}/>
     )
   }
 }
