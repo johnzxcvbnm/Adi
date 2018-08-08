@@ -147,11 +147,10 @@ We'll put two functions in `People`
 - avoid directly mutating state to avoid rendering issues
 
 ```js
-handleCreate (person) {
-  const updatedPeople = this.state.people
-  updatedPeople.unshift(person)
-  this.setState({people: updatedPeople})
-}
+  handleCreate (person) {
+    console.log([person, ...this.state.people])
+    this.setState({people: [person, ...this.state.people]})
+  }
 ```
 
 - make a fetch request POST the form data
@@ -417,11 +416,10 @@ class People extends React.Component {
         })
       })
   }
-
+  
   handleCreate (person) {
-    const updatedPeople = this.state.people
-    updatedPeople.unshift(person)
-    this.setState({people: updatedPeople})
+    console.log([person, ...this.state.people])
+    this.setState({people: [person, ...this.state.people]})
   }
 
   handleCreateSubmit (person) {
