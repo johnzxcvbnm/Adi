@@ -4,7 +4,11 @@ Tea is the new coffee!
 
 You are almost done with WDI! These instructions are significantly more vague than the morning lab! Use those brain muscles, find your own solutions, use class notes and morning lab to help yourself achieve glorious success!
 
+
+
 ## Set Up
+
+- Note if your comfort is a 4 or 5 try using `create-react-app` to build this app, some more info in [Morning Bonus](morning_bonus.md)
 - `mkdir tea`
 - `cd tea`
 - `touch index.html app.js`
