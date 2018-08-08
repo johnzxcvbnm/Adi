@@ -1,67 +1,76 @@
 // class Heading extends React.Component {
-//     constructor(props){
-//         super(props)
-//         this.sayHello = this.sayHello.bind(this);
-//     }
-//     sayHello(){
-//         console.log(this.props);
-//         alert("My name is " + this.props.name)
-//     }
-//     render(){
-//         return <h1 onClick={this.sayHello}>Hello, {this.props.name}!</h1>
-//     }
+//   constructor(props){
+//     super(props);
+//     this.state = { username: null }
+//     this.updateUsername = this.updateUsername.bind(this);
+//   }
+//   updateUsername(newName){
+//     this.setState({username: newName})
+//   }
+//   render() {
+//     return <header>
+//       <Greeting name={this.state.username} />
+//       <Auth onLogin={this.updateUsername}/>
+//     </header>
+//   }
 // }
 //
+//
 // ReactDOM.render(
-//     <section>
-//         <Heading name="Matt"></Heading>
-//         <Heading name="Helen"></Heading>
-//     </section>,
+//     <Heading />,
 //     document.querySelector('main')
 // );
 
-// const nums = [1,5,8,10];
-//
-// class ListItem extends React.Component {
-//     render(){
-//         return <li>This is a list item:{this.props.number}</li>
-//     }
-// }
-//
-// class List extends React.Component {
-//     render(){
-//         return <ul>
-//             {nums.map((num, index) => <ListItem number={num} key={index}></ListItem>)}
-//         </ul>
-//     }
-// }
-//
-// ReactDOM.render(
-//     <List></List>,
-//     document.querySelector('main')
-// )
+class MovieInfo extends React.Component {
+  render() {
+    return (
+      <ul>
+        <li>Title: {this.props.data.Title}</li>
+        <li>Director: {this.props.data.Director}</li>
+        <li>Actors: {this.props.data.Actors}</li>
+        <li>Year: {this.props.data.Year}</li>
+        <li>Rated: {this.props.data.Rated}</li>
+      </ul>
+    )
+  }
+}
 
-// class Person extends React.Component {
-//     render(){
-//         return <div>
-//             The name of the person is {this.props.children}
-//         </div>
-//     }
-// }
-//
-// ReactDOM.render(
-//     <section>
-//         <Person age="5">
-//             <em>Bob</em>. He is awesome
-//         </Person>
-//         <Person>Sally. All hail Sally</Person>
-//     </section>,
-//     document.querySelector('main')
-// )
+class OMDBQueryForm extends React.Component {
+  constructor(props){
+    super(props);
+    this.queryOMDB = this.queryOMDB.bind(this);
+    this.state = { foundMovie: null }
+  }
 
+  queryOMDB(event){
+      event.preventDefault();
+      fetch('http://www.omdbapi.com/?apikey=53aa2cd6&t=' + this.refs.title.value).then((response)=>{
+          response.json().then((data)=>{
+              this.setState({foundMovie: data})
+              // console.log(data);
+          });
+      });
+  }
 
+  render() {
+    return <form onSubmit={this.queryOMDB}>
+    {/*Comments*/}
+        <input
+          ref="title"
+          type="text"
+          placeholder="Movie Title" />
+        <input type="submit" value="Find Movie Info" />
+        {
+          (this.state.foundMovie !== null)?
+            <MovieInfo data={this.state.foundMovie}/>
+          :
+            null
+        }
+      </form>
+  }
+}
 
 ReactDOM.render(
-    <Auth></Auth>,
-    document.querySelector('main')
+  <OMDBQueryForm />,
+  document.querySelector("main")
 );
