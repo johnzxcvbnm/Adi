@@ -69,7 +69,9 @@ class CompanyList extends React.Component {
                   <button className="button is-warning is-small">Edit</button>
                 </td>
                 <td>
-                  <button className="button is-danger is-small">
+                  <button
+                    className="button is-danger is-small"
+                    onClick={() => this.props.deleteCompany(company, index)}>
                     Delete
                   </button>
                 </td>
@@ -97,6 +99,24 @@ class Companies extends React.Component {
     this.componentDidMount = this.componentDidMount.bind(this);
     this.getCompanies = this.getCompanies.bind(this);
     this.getCompany = this.getCompany.bind(this);
+    this.deleteCompany = this.deleteCompany.bind(this);
+  }
+
+  deleteCompany(company, index){
+    // console.log("DELETING");
+    // console.log(company);
+    fetch("/companies/" + company.id,
+    {
+      method: 'DELETE'
+    })
+    .then(data => {
+      this.setState({
+        companies: [
+          ...this.state.companies.slice(0, index),
+          ...this.state.companies.slice(index + 1)
+        ]
+      })
+    })
   }
 
   getCompanies() {
@@ -141,9 +161,10 @@ class Companies extends React.Component {
         {
           this.state.companyList ?
             <CompanyList
-              getCompany={this.getCompany}
               companies={this.state.companies}
-              toggleState={this.toggleState}/>
+              getCompany={this.getCompany}
+              toggleState={this.toggleState}
+              deleteCompany={this.deleteCompany}/>
           : ''
         }
         {
