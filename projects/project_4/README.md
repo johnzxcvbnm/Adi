@@ -56,7 +56,7 @@ _Your instructor will contact you to setup a meeting time for project approval_
 * A **daily tracker** that all group members use (Trello, github issues, or another similar tracker)
 * **Be deployed online** and accessible to the public via Heroku
 * **A ``README.md`` file** with explanations of the technologies used, the approach was taken, unsolved problems, and notes to yourself/group members so you can come back to your project later and be able to pick up your train of thought, etc. As well as a **link to your hosted working app**
-* **Info filled out in the google sheet** - you can add it [here](https://docs.google.com/spreadsheets/u/1/d/1nwHLf7zIangGmKpxXCu1t7BQHNlXDEy3owYEBmrvLYc/edit?usp=drive_web&ouid=112602722655819861257).
+* **Info filled out in the google sheet** - you can add it [here](https://docs.google.com/spreadsheets/d/1eCsd_jUARVJZ377EEQj3KeaZV58TIBWhzcnjAoOrgmQ/edit#gid=0).
 
 ALSO, don't forget: a **technical demonstration** of your app which:
 
