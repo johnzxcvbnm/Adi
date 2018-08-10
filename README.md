@@ -85,10 +85,10 @@ Adi is the Instructional Designer at GA who conceptualized and developed our rem
 | w11d3 |August 8 |Wednesday | [100 Goblins](./unit_4/w11d03/morning_exercise)| [React Refs, Children, AJAX](./unit_4/w11d03/instructor_notes)| [Audubon Society Photo Contest, React Taco](./unit_4/w11d03/student_labs)|[jService React Style](./unit_4/w11d03/homework)|
 | w11d4 |August 9 |Thursday | [Spread/Rest JS Operators](./unit_4/w11d04/morning_exercise)| [Full Day Build Labor Dept (People) with React Front End](./unit_4/w11d04/instructor_examples)| [](./unit_4/w11d04/student_labs)|[Render Companies with React](./unit_4/w11d04/homework)|
 | w11d5 |August 10 |Friday | [](./unit_4/w11d05/morning_exercise)| [Keep Building! Finsh Labor Dept](./unit_4/w11d04/instructor_examples)| [](./unit_4/w11d05/student_labs)|[](./unit_4/w11d05/homework)|
-| w12d1 |August 13 |Monday | [](./unit_5/w12d01/morning_exercise)| [](./unit_5/w12d01/instructor_notes)| [](./unit_5/w12d01/student_labs)|[](./unit_5/w12d01/homework)|
-| w12d2 |August 14 |Tuesday | [](./unit_5/w12d02/morning_exercise)| [](./unit_5/w12d02/instructor_notes)| [](./unit_5/w12d02/student_labs)|[](./unit_5/w12d02/homework)|
-| w12d3 |August 15 |Wednesday | [](./unit_5/w12d03/morning_exercise)| [](./unit_5/w12d03/instructor_notes)| [](./unit_5/w12d03/student_labs)|[](./unit_5/w12d03/homework)|
-| w12d4 |August 16 |Thursday | [](./unit_5/w12d04/morning_exercise)| [](./unit_5/w12d04/instructor_notes)| [](./unit_5/w12d04/student_labs)|[](./unit_5/w12d04/homework)|
+| w12d1 |August 13 |Monday | **Project 4** |
+| w12d2 |August 14 |Tuesday | **Project 4** |
+| w12d3 |August 15 |Wednesday | **Project 4** |
+| w12d4 |August 16 |Thursday | **Project 4 Presentations**|
 | w12d5 |August 17 |Friday | [](./unit_5/w12d05/morning_exercise)| [](./unit_5/w12d05/instructor_notes)| [](./unit_5/w12d05/student_labs)|[](./unit_5/w12d05/homework)|
 | w13d1 |August 20 |Monday | [](./unit_5/w13d01/morning_exercise)| [](./unit_5/w13d01/instructor_notes)| [](./unit_5/w13d01/student_labs)|[](./unit_5/w13d01/homework)|
 | w13d2 |August 21 |Tuesday | [](./unit_5/w13d02/morning_exercise)| [](./unit_5/w13d02/instructor_notes)| [](./unit_5/w13d02/student_labs)|[](./unit_5/w13d02/homework)|
