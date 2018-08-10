@@ -23,7 +23,12 @@ class Person extends React.Component {
             </div>
             </div>
           </div>
-          <PersonForm />
+          <PersonForm
+            toggleState={this.props.toggleState}
+            toggle1={"peopleListIsVisible"}
+            toggle2={"addPersonIsVisible"}
+            person={this.props.person}
+            handleSubmit={this.props.handleSubmit}/>
         </div>
     )
   }

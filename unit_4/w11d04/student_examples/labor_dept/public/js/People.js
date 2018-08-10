@@ -13,10 +13,57 @@ class People extends React.Component {
     this.getPeople = this.getPeople.bind(this);
     this.getPerson = this.getPerson.bind(this);
     this.deletePerson = this.deletePerson.bind(this);
+    this.handleCreate = this.handleCreate.bind(this);
+    this.handleCreateSubmit = this.handleCreateSubmit.bind(this);
+    this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this);
   }
 
   componentDidMount() {
     this.getPeople();
+  }
+
+  handleUpdateSubmit (person) {
+    fetch("/people/" + person.id, {
+      body: JSON.stringify(person),
+      method: "PUT",
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(updatedPerson => {
+      return updatedPerson.json()
+    })
+    .then(jsonedPerson => {
+      //Call the DB to update the view
+      this.getPeople()
+      this.toggleState("peopleListIsVisible", "personIsVisible")
+    })
+    .catch(error => console.log(error))
+  }
+
+  handleCreate (person) {
+    console.log([person, ...this.state.people]);
+    this.setState({people: [person, ...this.state.people]})
+  }
+
+  handleCreateSubmit (person) {
+    fetch("/people", {
+      body: JSON.stringify(person),
+      method: "POST",
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(createdPerson => {
+      return createdPerson.json()
+    })
+    .then(jsonedPerson => {
+      this.handleCreate(jsonedPerson)
+      this.toggleState("addPersonIsVisible", "peopleListIsVisible")
+    })
+    .catch(error => console.log(error))
   }
 
   deletePerson(person, index){
@@ -84,6 +131,10 @@ class People extends React.Component {
           this.state.addPersonIsVisible ?
           <PersonForm
             toggleState={this.toggleState}
+            toggle1={"peopleListIsVisible"}
+            toggle2={"addPersonIsVisible"}
+            handleCreate={this.handleCreate}
+            handleSubmit={this.handleCreateSubmit}
           />
           : ''
         }
@@ -92,6 +143,7 @@ class People extends React.Component {
           <Person
             person={this.state.person}
             toggleState={this.toggleState}
+            handleSubmit={this.handleUpdateSubmit}
           />
           : ''
         }
