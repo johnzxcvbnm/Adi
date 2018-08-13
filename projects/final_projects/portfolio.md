@@ -33,4 +33,4 @@ Create a site that shows off your work
 
 
 ## WordPress
-- It is estsimated that 31% of webpages are built with WordPress. If you think you'd like to work in Wordpress then it is strongly encouraged that you have your porfolio built in Wordpress. [More info on wordpress](https://wordpress.org/about/
+- It is estsimated that 31% of webpages are built with WordPress. If you think you'd like to work in Wordpress then it is strongly encouraged that you have your porfolio built in Wordpress. [More info on wordpress](https://wordpress.org/about/)
