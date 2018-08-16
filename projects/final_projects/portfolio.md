@@ -2,8 +2,8 @@
 
 Create a site that shows off your work
 
-- Suggested to be created with HTML, CSS, and Javascript
-- No templates are permitted. Frameworks like Bootstrap, Materialize, Bourbon, etc. are okay, but templates like WordPress, Hugo, Wix, Weebly, Squarespace etc. are **not** okay. If you aren't sure about it, ask an instructor.
+- Suggested to be created with HTML, CSS, and Javascript **OR** Wordpress (see below)
+- No templates are permitted. Frameworks like Bootstrap, Materialize, Bourbon, etc. are okay, but templates like Hugo, Wix, Weebly, Squarespace etc. are **not** okay. If you aren't sure about it, ask an instructor.
 - Deployed to github pages or hosted somewhere else
 - Contains a list of your current projects (with links to the live sites)
 - Contains your resume
@@ -29,3 +29,8 @@ Create a site that shows off your work
 - Optional: Is linked to a purchased URL (possibly your name (.com)).
 
 - See a pretty decent walkthrough [here](https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages)
+
+
+
+## WordPress
+- It is estsimated that 31% of webpages are built with WordPress. If you think you'd like to work in Wordpress then it is strongly encouraged that you have your porfolio built in Wordpress. [More info on wordpress](https://wordpress.com/)
