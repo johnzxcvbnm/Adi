@@ -231,7 +231,7 @@ align-self: [ start | left | center | end | right | stretch ]
 ```
 
 ```
-#item {
+#item1 {
   justify-self: start;
   align-self: end;
 }
