@@ -115,6 +115,8 @@ _Your instructor will contact you to setup a meeting time to approve your final 
     </details>
 
 
+**Special Note** : Students who are enrolled in the next cohort have been invited to pop by and check out your presentations! 
+
 ALSO, don't forget: a **technical demonstration** of your app which:
 
   * Is ~5-10 minutes in length
