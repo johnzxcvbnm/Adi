@@ -73,11 +73,11 @@ grid-template-columns: 1fr 2fr 3fr;
 
 ### Content-Aware Tracks
 
+You can make the grid cell fit the contents of the grid item using ```min-content``` and ```max-content```.
+
 ```
 grid-template-columns: 1fr max-content 3fr;
 ```
-min-content
-max-content
 
 ## Grid Areas
 
@@ -231,7 +231,7 @@ align-self: [ start | left | center | end | right | stretch ]
 ```
 
 ```
-#item {
+#item1 {
   justify-self: start;
   align-self: end;
 }
