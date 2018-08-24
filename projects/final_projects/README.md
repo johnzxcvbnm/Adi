@@ -119,11 +119,13 @@ _Your instructor will contact you to setup a meeting time to approve your final 
 
 ALSO, don't forget: a **technical demonstration** of your app which:
 
-  * Is ~5-10 minutes in length
-  * Shows off all features of the app
-  * Explains the technical details
-  * Explains the technical challenges
-  * Explains which improvements you might make
+* Is ~5-10 minutes in length
+* Use 1-3 minutes to show off your portfolio then switch over and talk about your app
+* Shows off the features of the app
+* Be sure to talk about the new thing you taught yourself
+* Explains the technical details
+* Explains the technical challenges
+* Explains which improvements you might make
 
 <hr>
 
